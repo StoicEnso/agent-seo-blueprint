@@ -127,6 +127,13 @@
     ],
     "playbooks": [
       "research/keyword-fundamentals.md"
+    ],
+    "aliases": [
+      "latent semantic keywords",
+      "LSI keywords",
+      "semantically related keywords",
+      "synonyms and related phrases",
+      "entity keywords"
     ]
   },
   {
@@ -165,6 +172,13 @@
     ],
     "playbooks": [
       "research/match-and-exceed.md"
+    ],
+    "aliases": [
+      "beat the competition",
+      "outrank competitors",
+      "content type that ranks",
+      "replicate improve outcompete",
+      "SERP appetite"
     ]
   },
   {
@@ -184,6 +198,15 @@
     ],
     "playbooks": [
       "research/seo-metrics.md"
+    ],
+    "aliases": [
+      "keyword difficulty",
+      "KD",
+      "domain authority",
+      "DR",
+      "CPC",
+      "which metrics matter",
+      "reading the numbers"
     ]
   },
   {
@@ -222,6 +245,18 @@
     ],
     "playbooks": [
       "research/finding-and-validating-niches.md"
+    ],
+    "aliases": [
+      "find a startup idea",
+      "find a niche to build",
+      "product idea from keyword data",
+      "buildable opportunity",
+      "proactive niche discovery",
+      "what should i build",
+      "greenfield niche",
+      "data-dump hunt",
+      "find a gap to build a startup",
+      "demand-driven product idea"
     ]
   },
   {
@@ -242,6 +277,13 @@
     "playbooks": [
       "research/finding-and-validating-niches.md",
       "research/keyword-to-sitemap.md"
+    ],
+    "aliases": [
+      "validate a startup idea",
+      "is there real demand",
+      "market validation",
+      "should i build this",
+      "willingness to pay"
     ]
   },
   {
@@ -261,6 +303,12 @@
     ],
     "playbooks": [
       "research/competitor-research.md"
+    ],
+    "aliases": [
+      "competitor research",
+      "spy on competitors",
+      "steal competitor keywords",
+      "competitor gap"
     ]
   },
   {
@@ -280,6 +328,11 @@
     ],
     "playbooks": [
       "research/keyword-to-sitemap.md"
+    ],
+    "aliases": [
+      "keyword cluster to sitemap",
+      "site structure from keywords",
+      "plan pages from keywords"
     ]
   },
   {
@@ -299,6 +352,13 @@
     ],
     "playbooks": [
       "research/finding-and-validating-niches.md"
+    ],
+    "aliases": [
+      "bad niche",
+      "when to walk away",
+      "no demand niche",
+      "avoid this niche",
+      "empty keyword cluster"
     ]
   },
   {
@@ -318,6 +378,11 @@
     ],
     "playbooks": [
       "research/research-for-existing-sites.md"
+    ],
+    "aliases": [
+      "seo for existing business",
+      "existing site keyword research",
+      "grow an existing site"
     ]
   },
   {
@@ -356,6 +421,12 @@
     ],
     "playbooks": [
       "research/research-for-existing-sites.md"
+    ],
+    "aliases": [
+      "keyword gap",
+      "content gap analysis",
+      "gaps versus competitors",
+      "keywords competitors rank for"
     ]
   },
   {
@@ -375,6 +446,11 @@
     ],
     "playbooks": [
       "research/research-for-existing-sites.md"
+    ],
+    "aliases": [
+      "also ranks for",
+      "sibling keywords",
+      "expand a page's keywords"
     ]
   },
   {
@@ -435,6 +511,12 @@
     ],
     "playbooks": [
       "content/programmatic-seo.md"
+    ],
+    "aliases": [
+      "programmatic SEO",
+      "pSEO",
+      "generate pages at scale",
+      "data-driven pages"
     ]
   },
   {
@@ -515,6 +597,11 @@
     ],
     "playbooks": [
       "content/free-tools-strategy.md"
+    ],
+    "aliases": [
+      "free tool seo",
+      "build a free tool for traffic",
+      "tool as marketing"
     ]
   },
   {
@@ -905,6 +992,11 @@
     ],
     "playbooks": [
       "authority/link-stealing.md"
+    ],
+    "aliases": [
+      "link stealing",
+      "steal competitor backlinks",
+      "get added to roundups"
     ]
   },
   {
@@ -962,6 +1054,12 @@
     ],
     "playbooks": [
       "authority/haro.md"
+    ],
+    "aliases": [
+      "HARO",
+      "help a reporter out",
+      "journalist backlinks",
+      "press mentions"
     ]
   },
   {

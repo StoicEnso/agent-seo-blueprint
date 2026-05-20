@@ -59,6 +59,7 @@ def search(query, full=False, limit=8):
     for e in load_index():
         s = 0.0
         s += score(qtoks, e.get("title", ""), 5.0)
+        s += score(qtoks, " ".join(e.get("aliases", [])), 6.0)
         s += score(qtoks, " ".join(e.get("key_takeaways", [])), 3.0)
         s += score(qtoks, e.get("summary", ""), 2.5)
         s += score(qtoks, e.get("chapterName", ""), 1.5)
