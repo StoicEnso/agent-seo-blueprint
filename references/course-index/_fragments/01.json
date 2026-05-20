@@ -1,0 +1,32 @@
+{
+  "01-01": {
+    "summary": "Danny Postma introduces himself (serial bootstrapped founder behind products like Headshot Pro, Profile Picture AI, Landingfolio, Tattoos AI) and the origin of the course. Core thesis: the success of his startups comes from SEO. He practices demand-driven product development — doing SEO research first to confirm real search demand before building anything. Bootstrappers should not try to build a market; they should build where a market already exists, like setting up a store next to an already-busy street. The course teaches going from zero to the #1 position in Google.",
+    "key_takeaways": [
+      "Validate search demand with SEO research before building a product (demand-driven development).",
+      "Don't build the market — building demand is for VC-funded companies; bootstrappers go where users already are.",
+      "Every successful project came from doing SEO research first, not building first.",
+      "Goal of the course: a repeatable path from localhost to #1 in Google."
+    ],
+    "playbooks": ["foundations/seo-philosophy.md"]
+  },
+  "01-02": {
+    "summary": "Outline of the course's four-stage workflow: Research (finding niches and keyword opportunities for new and existing businesses), Content creation (what content to make and how), Building authority (acquiring backlinks to rank and outrank competitors), and Maintenance (defending top positions). By the end you should know which niches to target, how to create content, and how to build authority — going from localhost to #1. The course is applied and in-depth: it shows exactly how Danny grew his businesses, even where that diverges from textbook expert opinion.",
+    "key_takeaways": [
+      "The SEO workflow has four stages: Research, Content, Authority, Maintenance.",
+      "Research covers both new niches and existing businesses; authority is about outranking competitors via backlinks.",
+      "The course is applied and battle-tested, not academic — it follows what actually worked.",
+      "End goal restated: localhost to #1 by mastering niche selection, content, and authority."
+    ],
+    "playbooks": ["foundations/seo-process-overview.md"]
+  },
+  "01-03": {
+    "summary": "Addresses whether SEO still matters in the age of AI/ChatGPT. Danny argues it matters more than ever: LLMs are trained on millions of web pages, so the more your content and links appear across the web, the more the model treats you as the authority and recommends you. AI search tools (e.g. ChatGPT via its Bing/Microsoft partnership) pull live from the top search results, read the ranking blogs, and summarize them — so ranking and being mentioned directly drives AI recommendations. SEO and LLM/AI optimization are effectively the same thing: be visible, build authority.",
+    "key_takeaways": [
+      "SEO is more important in the AI era, not less.",
+      "LLMs learn authority from how often your name/content/links appear across the web — mentions act as votes.",
+      "AI assistants summarize the top-ranking search results, so rankings feed AI answers.",
+      "SEO and LLM/AI optimization are the same discipline — no separate playbook needed."
+    ],
+    "playbooks": ["foundations/seo-and-ai-future.md"]
+  }
+}

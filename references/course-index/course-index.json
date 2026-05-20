@@ -1,0 +1,1198 @@
+[
+  {
+    "code": "01-01",
+    "chapterNum": "01",
+    "chapterName": "Introduction",
+    "lessonNum": "01",
+    "title": "Introduction",
+    "transcript": "_source/transcripts/01-01_introduction.txt",
+    "words": 584,
+    "summary": "Danny Postma introduces himself (serial bootstrapped founder behind products like Headshot Pro, Profile Picture AI, Landingfolio, Tattoos AI) and the origin of the course. Core thesis: the success of his startups comes from SEO. He practices demand-driven product development \u2014 doing SEO research first to confirm real search demand before building anything. Bootstrappers should not try to build a market; they should build where a market already exists, like setting up a store next to an already-busy street. The course teaches going from zero to the #1 position in Google.",
+    "key_takeaways": [
+      "Validate search demand with SEO research before building a product (demand-driven development).",
+      "Don't build the market \u2014 building demand is for VC-funded companies; bootstrappers go where users already are.",
+      "Every successful project came from doing SEO research first, not building first.",
+      "Goal of the course: a repeatable path from localhost to #1 in Google."
+    ],
+    "playbooks": [
+      "foundations/seo-philosophy.md"
+    ]
+  },
+  {
+    "code": "01-02",
+    "chapterNum": "01",
+    "chapterName": "Introduction",
+    "lessonNum": "02",
+    "title": "Outline",
+    "transcript": "_source/transcripts/01-02_outline.txt",
+    "words": 228,
+    "summary": "Outline of the course's four-stage workflow: Research (finding niches and keyword opportunities for new and existing businesses), Content creation (what content to make and how), Building authority (acquiring backlinks to rank and outrank competitors), and Maintenance (defending top positions). By the end you should know which niches to target, how to create content, and how to build authority \u2014 going from localhost to #1. The course is applied and in-depth: it shows exactly how Danny grew his businesses, even where that diverges from textbook expert opinion.",
+    "key_takeaways": [
+      "The SEO workflow has four stages: Research, Content, Authority, Maintenance.",
+      "Research covers both new niches and existing businesses; authority is about outranking competitors via backlinks.",
+      "The course is applied and battle-tested, not academic \u2014 it follows what actually worked.",
+      "End goal restated: localhost to #1 by mastering niche selection, content, and authority."
+    ],
+    "playbooks": [
+      "foundations/seo-process-overview.md"
+    ]
+  },
+  {
+    "code": "01-03",
+    "chapterNum": "01",
+    "chapterName": "Introduction",
+    "lessonNum": "03",
+    "title": "Future of SEO and AI",
+    "transcript": "_source/transcripts/01-03_future-of-seo-and-ai.txt",
+    "words": 272,
+    "summary": "Addresses whether SEO still matters in the age of AI/ChatGPT. Danny argues it matters more than ever: LLMs are trained on millions of web pages, so the more your content and links appear across the web, the more the model treats you as the authority and recommends you. AI search tools (e.g. ChatGPT via its Bing/Microsoft partnership) pull live from the top search results, read the ranking blogs, and summarize them \u2014 so ranking and being mentioned directly drives AI recommendations. SEO and LLM/AI optimization are effectively the same thing: be visible, build authority.",
+    "key_takeaways": [
+      "SEO is more important in the AI era, not less.",
+      "LLMs learn authority from how often your name/content/links appear across the web \u2014 mentions act as votes.",
+      "AI assistants summarize the top-ranking search results, so rankings feed AI answers.",
+      "SEO and LLM/AI optimization are the same discipline \u2014 no separate playbook needed."
+    ],
+    "playbooks": [
+      "foundations/seo-and-ai-future.md"
+    ]
+  },
+  {
+    "code": "02-01",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "01",
+    "title": "Introduction",
+    "transcript": "_source/transcripts/02-01_introduction.txt",
+    "words": 235,
+    "summary": "Opens the Research chapter by framing research as the highest-leverage part of SEO: pick the wrong keyword and you can waste years building a product nobody searches for. Chapter splits into fundamentals, research for new projects, and research for existing projects.",
+    "key_takeaways": [
+      "Research is the most important phase \u2014 it determines whether the whole effort is worthwhile.",
+      "Choosing a low-volume or hyper-competitive keyword wastes years of work.",
+      "The chapter covers SEO fundamentals, finding/validating new niches, and competitor-driven research for existing sites."
+    ],
+    "playbooks": [
+      "foundations/seo-process-overview.md"
+    ]
+  },
+  {
+    "code": "02-02",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "02",
+    "title": "Fundamentals",
+    "transcript": "_source/transcripts/02-02_fundamentals.txt",
+    "words": 59,
+    "summary": "A brief setup lesson stating the fundamentals to cover before research: types of keywords, user intent, and match-and-exceed. Flags that three keyword types matter most in practice.",
+    "key_takeaways": [
+      "Fundamentals to master first: keyword types, user intent, and match-and-exceed.",
+      "Of many keyword types, three are the most useful for real research (short-tail, long-tail, LSI)."
+    ],
+    "playbooks": [
+      "research/keyword-fundamentals.md"
+    ]
+  },
+  {
+    "code": "02-03",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "03",
+    "title": "Short-tail vs long-tail keywords",
+    "transcript": "_source/transcripts/02-03_short-tail-vs-long-tail-keywords.txt",
+    "words": 412,
+    "summary": "Explains short-tail vs long-tail keywords. Short-tail head terms have high volume but high competition and low supply; long-tails have low volume each but low competition (often KD under 20) and high supply, so a cluster of them can equal a head term's traffic with realistic ranking odds.",
+    "key_takeaways": [
+      "Short-tail = high volume, high competition, scarce \u2192 home-page/brand target, long game.",
+      "Long-tail = low volume each, low competition (KD often <20), abundant \u2192 where new sites actually rank.",
+      "Roughly a dozen long-tails can match one short-tail's traffic, but with far better odds.",
+      "Short-tail terms usually live inside their long-tail variants."
+    ],
+    "playbooks": [
+      "research/keyword-fundamentals.md"
+    ]
+  },
+  {
+    "code": "02-04",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "04",
+    "title": "LSI Keywords",
+    "transcript": "_source/transcripts/02-04_lsi-keywords.txt",
+    "words": 402,
+    "summary": "Covers LSI (semantically related) keywords \u2014 synonyms and related phrases for your main term. Generate them via an LLM or Ahrefs, re-measure volume/KD across the synonym set to find hidden goldmines, then pick one main keyword and weave the LSI variants through the content so Google ranks the page for all of them.",
+    "key_takeaways": [
+      "List every synonym/related phrase for your main keyword (ask GPT; Ahrefs also surfaces them).",
+      "A low-KD synonym can have far more volume than the obvious head term (e.g. DP maker vs PFP maker).",
+      "Choose one main keyword, then mention LSI variants in the content for full topical coverage.",
+      "LSI expansion reveals the true size of an opportunity beyond a single term."
+    ],
+    "playbooks": [
+      "research/keyword-fundamentals.md"
+    ]
+  },
+  {
+    "code": "02-05",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "05",
+    "title": "User intent",
+    "transcript": "_source/transcripts/02-05_user-intent.txt",
+    "words": 585,
+    "summary": "Breaks down the four search intents and the content each demands: informational (how-to/what-is \u2192 articles), commercial (best/vs/review \u2192 comparison/curation pages), transactional (buy/download/tools \u2192 landing pages, convert now), and navigational (branded \u2192 ignore). Misreading intent wastes the click.",
+    "key_takeaways": [
+      "Match content type to intent; never send a transactional searcher to a blog post.",
+      "Informational \u2192 articles/guides; commercial \u2192 comparisons/top-10s; transactional \u2192 landing pages/tools.",
+      "Many generator/maker queries are effectively transactional even without 'buy'.",
+      "Ignore navigational/branded keywords in research; the live SERP is the final intent arbiter."
+    ],
+    "playbooks": [
+      "research/search-intent.md"
+    ]
+  },
+  {
+    "code": "02-06",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "06",
+    "title": "Match and exceed",
+    "transcript": "_source/transcripts/02-06_match-and-exceed.txt",
+    "words": 435,
+    "summary": "Introduces match-and-exceed: read Google's top 3 to learn the content format it rewards (its 'appetite'), match that format, then assess whether you can exceed the incumbents' quality. Low KD alone isn't permission \u2014 weak top results (thin tools, Pinterest, low page authority) are green lights; strong, well-linked incumbents are not.",
+    "key_takeaways": [
+      "The top-3 content type tells you what to build; build the same format, not a blog post if they're tools.",
+      "Always ask 'can I make better content than this?' even when KD is low.",
+      "Pinterest/Wikipedia/thin sites ranking = easy to exceed with richer content + a free tool.",
+      "Strong, content-heavy, heavily-linked incumbents need authority you may not have yet."
+    ],
+    "playbooks": [
+      "research/match-and-exceed.md"
+    ]
+  },
+  {
+    "code": "02-07",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "07",
+    "title": "Understanding Key SEO Metrics",
+    "transcript": "_source/transcripts/02-07_understanding-key-seo-metrics.txt",
+    "words": 968,
+    "summary": "Defines the four decision metrics and their thresholds: Keyword Difficulty (target <20, ~10 backlinks to rank), Domain vs Page Authority (page authority/URL rating is the real bar; authority is logarithmic), Search Volume (skip <100, discount <500; click curve ~30/15/10% for positions 1/2/3), and CPC (monetization filter \u2014 high volume + ~$0 CPC = worthless traffic).",
+    "key_takeaways": [
+      "KD <20 \u2192 rankable as a new site in ~1-2 months with ~10 backlinks.",
+      "Volume <100 = skip; <500 = discount; apply the 30/15/10% click curve to size real clicks.",
+      "Page authority (URL rating / links to the URL) matters more than domain authority.",
+      "High volume + low/zero CPC = nobody monetizes it; high volume + solid CPC + low KD = priority."
+    ],
+    "playbooks": [
+      "research/seo-metrics.md"
+    ]
+  },
+  {
+    "code": "02-08",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "08",
+    "title": "Tools",
+    "transcript": "_source/transcripts/02-08_tools.txt",
+    "words": 375,
+    "summary": "Tooling guidance: all SEO tools buy from the same data brokers, so numbers are largely identical and the difference is UI/UX. Recommends picking one paid tool (Ahrefs, SEMrush, or cheaper Mongools); the course uses Ahrefs. Free tools (Keyword Planner, Answer The Public) are mostly lead magnets and insufficient.",
+    "key_takeaways": [
+      "Keyword data is the same across paid tools \u2014 choose on UI/UX.",
+      "Course standardizes on Ahrefs; cheapest tier (~$29/mo) suffices for one project.",
+      "Pay for a tool if serious; free tools won't give the depth research needs.",
+      "If a user already pays for SEMrush/Mongools, map panel names rather than switch."
+    ],
+    "playbooks": [
+      "research/keyword-research-tools.md"
+    ]
+  },
+  {
+    "code": "02-09",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "09",
+    "title": "Finding new niches",
+    "transcript": "_source/transcripts/02-09_finding-new-niches.txt",
+    "words": 850,
+    "summary": "Demonstrates the data-dump hunt for new niches: open Ahrefs Keyword Explorer, filter KD<20, volume>100, country US, then add a buildable 'include' word (generator/maker/free/AI) to surface low-KD high-volume tool opportunities. Browse for buildable gems and write them down \u2014 illustrated by finding AI tattoo generator (KD ~9, 20k searches).",
+    "key_takeaways": [
+      "Empty Keyword Explorer + filters (KD<20, vol>100, US, include 'generator'/'AI') = a list of buildable niches.",
+      "Filter by transactional/commercial intent where you intend to monetize.",
+      "Most of the list is junk; you're mining for one or two buildable gems.",
+      "AI as a modifier finds fresh niches where KD is still low."
+    ],
+    "playbooks": [
+      "research/finding-and-validating-niches.md"
+    ]
+  },
+  {
+    "code": "02-10",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "10",
+    "title": "Validating new niches",
+    "transcript": "_source/transcripts/02-10_validating-new-niches.txt",
+    "words": 1379,
+    "summary": "Validates a candidate keyword through a gauntlet: confirm low KD, that searchers want something you can build, that they pay (CPC/paid competitors), solid volume/geography, a beatable live SERP, and \u2014 critically \u2014 size the whole cluster via Keyword Ideas and Also Ranks For. AI tattoo generator's 19k head term implied an 80k+ cluster and hundreds of thousands across tattoo ideas/styles/near-me.",
+    "key_takeaways": [
+      "Validate the cluster (Keyword Ideas + Also Ranks For), not just the head term.",
+      "Confirm buildability, willingness to pay (CPC/competitors), and a beatable SERP.",
+      "A head term at ~19k can imply 80k+ across related terms \u2014 that's the real prize.",
+      "Also Ranks For reveals adjacent category directions (ideas, styles, locations) for a content site."
+    ],
+    "playbooks": [
+      "research/finding-and-validating-niches.md",
+      "research/keyword-to-sitemap.md"
+    ]
+  },
+  {
+    "code": "02-11",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "11",
+    "title": "Competitor research for new niches",
+    "transcript": "_source/transcripts/02-11_competitor-research-for-new-niches.txt",
+    "words": 668,
+    "summary": "Competitor research for the validated niche: open each ranking site in Ahrefs Site Explorer and compare domain vs page authority (URL rating) \u2014 a high-DA site often has a weakly-linked top page (~16 links, URL rating ~7) that's beatable. Then mine each competitor's Organic Keywords to harvest LSI variants (creator, designs, designer, maker) you missed.",
+    "key_takeaways": [
+      "Page authority (URL rating / referring domains to the URL) decides winnability, not domain authority.",
+      "Top-3 pages with few backlinks are beatable with modest links + better content.",
+      "Mine competitors' Organic Keywords for LSI/keyword expansion; ignore their branded terms.",
+      "Newer (AI-era) modifiers stay low-KD because incumbents rank for older terms."
+    ],
+    "playbooks": [
+      "research/competitor-research.md"
+    ]
+  },
+  {
+    "code": "02-12",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "12",
+    "title": "Keyword ideas to sitemap",
+    "transcript": "_source/transcripts/02-12_keyword-ideas-to-sitemap.txt",
+    "words": 946,
+    "summary": "Turns the validated keyword cluster into a website sitemap: home page targets the main short-tail keyword (built as a better free tool with added text), category/hub pages cover each keyword group (tattoo ideas, styles, artists), and long-tail keywords get programmatic SEO pages \u2014 all internally linked back to the converting tool, with loved features paywalled to monetize.",
+    "key_takeaways": [
+      "Home page = one short-tail, commercial main keyword that contains the broad category term.",
+      "One category/hub page per keyword direction; long-tails handled via programmatic SEO.",
+      "Every sub-page links up to and upsells the home-page tool.",
+      "Ship the tool free, then paywall the most-used features; add text to thin tool pages for ranking/dwell."
+    ],
+    "playbooks": [
+      "research/keyword-to-sitemap.md"
+    ]
+  },
+  {
+    "code": "02-13",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "13",
+    "title": "Spotting bad niches",
+    "transcript": "_source/transcripts/02-13_spotting-bad-niches.txt",
+    "words": 1018,
+    "summary": "Teaches when to abandon a niche, with two failure modes: too little demand (head term has some volume but an empty surrounding cluster, near-zero CPC, no buyers \u2014 e.g. ComfyUI workflows) and too much competition (huge volume but KD in the 80s, only elite sites rank \u2014 e.g. car insurance). For too-hard niches, optionally hunt low-KD sub-niches but verify page authority.",
+    "key_takeaways": [
+      "Empty cluster around the head term + low CPC = the market voting no; skip it.",
+      "Don't build a 'startup bet' on a near-empty niche when you need traffic now.",
+      "KD in the 50s-80s with high-DA incumbents = unwinnable for a new site.",
+      "In too-hard niches, mine sub-niches but re-check page authority before committing."
+    ],
+    "playbooks": [
+      "research/finding-and-validating-niches.md"
+    ]
+  },
+  {
+    "code": "02-14",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "14",
+    "title": "Research for existing businesses",
+    "transcript": "_source/transcripts/02-14_research-for-existing-businesses.txt",
+    "words": 723,
+    "summary": "Starts research for existing businesses: find the top competitor for your main keyword, load their Organic Keywords in Ahrefs Site Explorer, and list terms you don't rank for. The cheapest wins come from adding a missing phrase to an existing page, since Google often doesn't equate synonyms (PFP vs DP, picture vs photo).",
+    "key_takeaways": [
+      "Reverse-engineer the top competitor's Organic Keywords to find terms you're missing.",
+      "Quickest win: add a missing keyword/phrase to an existing page.",
+      "Google doesn't always merge synonyms \u2014 add the variant explicitly (e.g. DP pic).",
+      "Prioritize low/zero-KD terms with real volume that you don't yet rank for."
+    ],
+    "playbooks": [
+      "research/research-for-existing-sites.md"
+    ]
+  },
+  {
+    "code": "02-15",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "15",
+    "title": "Finding keywords in top pages",
+    "transcript": "_source/transcripts/02-15_finding-keywords-in-top-pages.txt",
+    "words": 798,
+    "summary": "Uses Ahrefs Top Pages to find pages a competitor built that you didn't think of: open a high-traffic page's overview to see its keywords, spot whole new page angles (a crypto laser-eyes page, a funny-PFP page) on low-KD terms, and exploit competitor keyword cannibalization. Build the missing page, make it better, and upsell your main product from it.",
+    "key_takeaways": [
+      "Top Pages reveals new page concepts, not just keywords.",
+      "Build the missing page (often a quick tool/variant), exceed it, and upsell your core product.",
+      "Spot competitor keyword cannibalization (multiple pages on one term) as an opening.",
+      "Keep one focused page per main keyword; create new pages for secondary keywords."
+    ],
+    "playbooks": [
+      "research/research-for-existing-sites.md"
+    ]
+  },
+  {
+    "code": "02-16",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "16",
+    "title": "Content gaps",
+    "transcript": "_source/transcripts/02-16_content-gaps.txt",
+    "words": 248,
+    "summary": "Covers Ahrefs Content Gap (competitive analysis): enter your domain plus competitors to automatically surface keywords where they rank in the top and you don't. Triage out the too-hard terms, then drill into promising gaps with Keyword Ideas/Also Ranks For. This automated method complements \u2014 but doesn't replace \u2014 the manual Top Pages dig.",
+    "key_takeaways": [
+      "Content Gap automatically lists keywords competitors rank for that you don't.",
+      "Filter out high-KD/high-authority terms; keep realistic gaps.",
+      "Drill into promising gaps with deeper keyword research before committing.",
+      "Run both automated (Content Gap) and manual (Top Pages) gap-finding \u2014 HeadshotPro was found this way."
+    ],
+    "playbooks": [
+      "research/research-for-existing-sites.md"
+    ]
+  },
+  {
+    "code": "02-17",
+    "chapterNum": "02",
+    "chapterName": "Research",
+    "lessonNum": "17",
+    "title": "Also ranks for",
+    "transcript": "_source/transcripts/02-17_also-ranks-for.txt",
+    "words": 417,
+    "summary": "The Also Ranks For rabbit hole for existing sites: put your main keyword in Keyword Explorer, open Also Ranks For, filter to ~500+ volume and strip branded/non-commercial terms, then keep going deeper to surface long-tail and regional variants (DP for Instagram in Asia vs PFP in the West). Related terms are easy for your site to rank for.",
+    "key_takeaways": [
+      "Also Ranks For surfaces related terms your site is well-positioned to rank for.",
+      "Filter to ~500+ volume; remove branded and non-commercial terms.",
+      "Descend the rabbit hole repeatedly to find long-tail and regional variants.",
+      "Regional naming differs (DP vs PFP) \u2014 target the high-volume regional variant."
+    ],
+    "playbooks": [
+      "research/research-for-existing-sites.md"
+    ]
+  },
+  {
+    "code": "03-01",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "01",
+    "title": "Fundamentals",
+    "transcript": "_source/transcripts/03-01_fundamentals.txt",
+    "words": 661,
+    "summary": "Content for SEO must satisfy two parties at once \u2014 the human searcher and Google \u2014 and the way to do both is match-and-exceed: read what already ranks for a keyword, copy its format, and beat it on value plus backlinks.",
+    "key_takeaways": [
+      "Two audiences: serve the user and Google simultaneously.",
+      "Read the live top-3 SERP to learn the format/intent Google rewards for a keyword.",
+      "Near-identical phrasings can flip intent: 'AI headshot generator' (transactional, landing pages) vs 'best AI headshot generator' (informational, articles/Reddit).",
+      "Match the dominant format then exceed it; pair with backlinks to actually rank.",
+      "What ranks for a keyword changes over time (e.g. blog posts to landing pages) \u2014 re-check."
+    ],
+    "playbooks": [
+      "content/content-fundamentals.md"
+    ]
+  },
+  {
+    "code": "03-02",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "02",
+    "title": "Content Types",
+    "transcript": "_source/transcripts/03-02_content-types.txt",
+    "words": 115,
+    "summary": "Overview of the content-creation chapter: three primary formats are covered in depth (programmatic SEO, free tools, content pages), plus landing pages, articles, content rings, and a few on-page optimizations.",
+    "key_takeaways": [
+      "Three core formats: programmatic SEO, free tools, content pages.",
+      "Supporting formats: landing pages, articles, content rings.",
+      "Methods are taught via real case studies from the operator's own products.",
+      "On-page tips included to save time and reduce errors."
+    ],
+    "playbooks": [
+      "content/content-types-overview.md",
+      "content/content-fundamentals.md"
+    ]
+  },
+  {
+    "code": "03-03",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "03",
+    "title": "Programmatic SEO",
+    "transcript": "_source/transcripts/03-03_programmatic-seo.txt",
+    "words": 806,
+    "summary": "Programmatic SEO uses code to generate hundreds/thousands of pages from a dataset. Six steps: identify a scalable opportunity, design page structure first, gather raw data, shape it into content, template the display, then inject your offer.",
+    "key_takeaways": [
+      "pSEO is for scalable informational/curation content (hundreds of pages), not 3-5 pages.",
+      "Lock head + long-tail keyword structure before generating, to avoid wasting AI credits.",
+      "Pipeline: gather ugly data (UGC / API / scraper) -> shape with AI (rewrite, tag, group, count) -> template hub + leaf pages -> inject product CTAs.",
+      "Use crons to keep new data and pages flowing automatically.",
+      "Monetize informational pages by promoting your own product inside them (e.g. a featured 'position 3')."
+    ],
+    "playbooks": [
+      "content/programmatic-seo.md"
+    ]
+  },
+  {
+    "code": "03-04",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "04",
+    "title": "Case Study: pSEO for TattoosAI",
+    "transcript": "_source/transcripts/03-04_case-study-pseo-for-tattoosai.txt",
+    "words": 939,
+    "summary": "Worked pSEO example (successful): TattoosAI ranked for 'tattoo ideas' long-tails using a free/paid AI tattoo generator so users generated the content; daily crons tagged, grouped, and counted tattoos, auto-creating category pages (100+ items) with AI descriptions, and CTAs upsold the paid generator (~$4k/mo, autonomous).",
+    "key_takeaways": [
+      "Opportunity found in Ahrefs: ~2000 low-difficulty 'tattoo ideas' page options.",
+      "Structure: hub 'tattoo ideas' -> leaf '{keyword} tattoo ideas'.",
+      "User-generated content (the generator) supplied raw data at scale.",
+      "Crons + AI auto-tagged/grouped and spun up category pages once a category passed ~100 items.",
+      "'Design your own tattoo' CTAs converted free traffic to the paid product, fully on autopilot."
+    ],
+    "playbooks": [
+      "content/programmatic-seo.md"
+    ]
+  },
+  {
+    "code": "03-05",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "05",
+    "title": "Case Study: pSEO for Landingfolio",
+    "transcript": "_source/transcripts/03-05_case-study-pseo-for-landingfolio.txt",
+    "words": 998,
+    "summary": "Worked pSEO example (successful): Landingfolio curates landing-page screenshots by category. A screenshot API + Product Hunt scraper feed MongoDB; one hub + one leaf template swap only the keyword and a live count; auto titles like '{count} Best Marketing Landing Page Designs'. Curation drives 1-2k visitors/day and an upsell component library.",
+    "key_takeaways": [
+      "Opportunity: search demand for landing-page inspiration by type (SaaS, product, marketing).",
+      "Data via screenshot API (desktop+mobile, later pricing pages) and a Product Hunt scraper.",
+      "Just ONE template: swaps keyword + count in title/body; categories from MongoDB, built on deploy.",
+      "Curation = bundling the best of what already exists; scraping /pricing opened a new ranking surface for free.",
+      "Monetized later with a paid Figma/Webflow/Tailwind component library; runs untouched for years."
+    ],
+    "playbooks": [
+      "content/programmatic-seo.md"
+    ]
+  },
+  {
+    "code": "03-06",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "06",
+    "title": "Case Study: pSEO for HeadshotPro",
+    "transcript": "_source/transcripts/03-06_case-study-pseo-for-headshotpro.txt",
+    "words": 878,
+    "summary": "Worked pSEO example (FAILED): HeadshotPro's 'headshots near me' built city pages from Google Maps API + scraped reviews, AI-writing Yelp-style top-5 breakdowns. It never ranked and was removed \u2014 the content was shallow, adding nothing a user couldn't get by filtering Google Maps directly.",
+    "key_takeaways": [
+      "Structure: country -> city -> 'professional headshots in {city}' (52 US cities, ~240 studios).",
+      "Data via Google Maps API + scraping competitor sites and reviews.",
+      "Failure cause: shallow content with no value beyond the underlying data source.",
+      "pSEO only works when each page adds real value over its raw source \u2014 otherwise it won't rank.",
+      "Lesson reinforced against the successful TattoosAI/Landingfolio examples."
+    ],
+    "playbooks": [
+      "content/programmatic-seo.md"
+    ]
+  },
+  {
+    "code": "03-07",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "07",
+    "title": "Free Tools",
+    "transcript": "_source/transcripts/03-07_free-tools.txt",
+    "words": 382,
+    "summary": "Free tools solve a problem instantly (vs explaining it in a blog post), rank for generator/maker/calculator keywords, attract natural backlinks, and feed a paid product. Ahrefs Keyword Explorer surfaces tens of thousands of tool keywords from seeds like 'generator' and 'calculator'.",
+    "key_takeaways": [
+      "Ideal SEO format for developers who'd rather build than write.",
+      "Target action keywords: generator, maker, calculator, converter, checker, editor.",
+      "Ahrefs: seed 'generator' (~70k kw), 'calculator' (~96k kw); filter by keyword difficulty.",
+      "Tools earn links naturally because they provide value.",
+      "Use tools as top-of-funnel that upsells the paid product."
+    ],
+    "playbooks": [
+      "content/free-tools-strategy.md"
+    ]
+  },
+  {
+    "code": "03-08",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "08",
+    "title": "Case Study: Free Tool for PFP.AI",
+    "transcript": "_source/transcripts/03-08_case-study-free-tool-for-pfpai.txt",
+    "words": 345,
+    "summary": "Worked free-tool example: ProfilePicture.AI built a free profile-picture generator (upload photo, swap background/colors) as the free counterpart of its paid product, capturing 'profile picture generator/maker free' demand; a download pop-up upsells the paid product, converting ~5-6% of free users.",
+    "key_takeaways": [
+      "Pattern: a free, lesser version of your paid product captures 'free X' demand.",
+      "Built a customizable generator (background removal/swap, color).",
+      "Monetized via a pop-up on download linking to the paid product.",
+      "Most free users won't convert, but a meaningful slice (~5-6%) will.",
+      "Ranks well for 'profile picture maker'-type queries."
+    ],
+    "playbooks": [
+      "content/free-tools-strategy.md"
+    ]
+  },
+  {
+    "code": "03-09",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "09",
+    "title": "Case Study: Free Tool for HeadshotPro",
+    "transcript": "_source/transcripts/03-09_case-study-free-tool-for-headshotpro.txt",
+    "words": 340,
+    "summary": "Worked free-tool example: HeadshotPro built a free LinkedIn profile generator (upload CV PDF, AI writes the profile) for an adjacent audience \u2014 LinkedIn/job-seekers who also need a headshot. A contextual prompt upsells a new profile picture, driving sales and ranking in a niche outside the core keyword intents.",
+    "key_takeaways": [
+      "Adjacent-audience play: tool unrelated to the product but reaching its buyers.",
+      "AI parses an uploaded CV into a copy-paste LinkedIn profile.",
+      "A hover '+' prompt offers a new profile picture, linking to checkout.",
+      "Expands ranking into new niches outside the company's normal keyword intents.",
+      "Drives real sales from people upgrading their LinkedIn presence."
+    ],
+    "playbooks": [
+      "content/free-tools-strategy.md"
+    ]
+  },
+  {
+    "code": "03-10",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "10",
+    "title": "The autonomy of a free tool",
+    "transcript": "_source/transcripts/03-10_the-autonomy-of-a-free-tool.txt",
+    "words": 651,
+    "summary": "The 'autonomy of a good tool' = three essentials: make it better (mainly easier \u2014 less manual input, more automatic output), add a killer keyword-clear title/meta with variants, and add a little content (How-it-works steps + FAQ) so the page isn't thin. Plus the upsell.",
+    "key_takeaways": [
+      "Make it better usually means make it EASIER than the top-3 competitors.",
+      "Lower bounce-back to Google is read as a positive ranking signal.",
+      "Title = exact main keyword; meta/H2 weave in close variants for intent coverage.",
+      "Add How-it-works steps (signals 'this is a tool') + FAQ (more keywords) for ~100+ words.",
+      "Backlinks + a clearly better tool can overtake older incumbents; finish with an upsell."
+    ],
+    "playbooks": [
+      "content/free-tools-strategy.md"
+    ]
+  },
+  {
+    "code": "03-11",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "11",
+    "title": "Content Pages",
+    "transcript": "_source/transcripts/03-11_content-pages.txt",
+    "words": 165,
+    "summary": "A content page is a hybrid of a landing page and a blog post: blog-level depth with landing-page structure and components. It targets informational/structured intent and comes in several sub-patterns.",
+    "key_takeaways": [
+      "Content page = content-rich but structured, with landing-page-style components.",
+      "Works well for informational user intent that wants rich, organized content (not plain prose).",
+      "Distinct from both a typical blog post and a typical landing page.",
+      "Multiple sub-patterns follow (comparison, success stories, niche hubs, examples, integrations)."
+    ],
+    "playbooks": [
+      "content/content-pages.md",
+      "content/content-types-overview.md"
+    ]
+  },
+  {
+    "code": "03-12",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "12",
+    "title": "Case study: Comparison Pages",
+    "transcript": "_source/transcripts/03-12_case-study-comparison-pages.txt",
+    "words": 381,
+    "summary": "Comparison pages target vs/comparison/compare keywords with a rich content page describing product differences. Owning these (e.g. 'Ahrefs vs SEMrush') lets you frame the comparison in your favor instead of letting affiliate-incentivized third parties recommend a competitor.",
+    "key_takeaways": [
+      "Keywords: vs, comparison, compare.",
+      "Present as a content page (screenshots, separate pricing/testimonial blocks), not a plain blog post.",
+      "Owning the comparison controls the narrative against competitors.",
+      "Vendors without an affiliate program especially need to rank here, since affiliates push commission-paying rivals.",
+      "These SERPs frequently flip between blog posts and content pages \u2014 verify live."
+    ],
+    "playbooks": [
+      "content/content-pages.md"
+    ]
+  },
+  {
+    "code": "03-13",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "13",
+    "title": "Case study: Success Stories",
+    "transcript": "_source/transcripts/03-13_case-study-success-stories.txt",
+    "words": 265,
+    "summary": "Success-story / review content pages target review/case-study keywords. Build your own '[Product] review' page (positive reviews, Trustpilot, examples) and/or a customer success-stories hub to capture trust-checking searchers and convince them with your own curated proof.",
+    "key_takeaways": [
+      "Keywords: review, case studies, customer stories.",
+      "Own '[Product] review' to capture 'is [product] trustworthy?' searchers.",
+      "Display Trustpilot, positive reviews, and user examples.",
+      "A customer success-stories/case-studies hub is a strong companion page.",
+      "Owning the position keeps competitor-funded negative reviews off the top spot."
+    ],
+    "playbooks": [
+      "content/content-pages.md"
+    ]
+  },
+  {
+    "code": "03-14",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "14",
+    "title": "Case study: Niche Content Hubs",
+    "transcript": "_source/transcripts/03-14_case-study-niche-content-hubs.txt",
+    "words": 296,
+    "summary": "Niche content hubs are groups of pages hyper-focused on a niche within your business (e.g. actor/doctor/real-estate headshots). They hold niche keywords deliberately kept off the homepage to rank without cannibalizing it; Google switched these from blog-post to content-page intent.",
+    "key_takeaways": [
+      "Hyper-focused pages per niche under a broader category.",
+      "Load niche keywords here, NOT on the homepage, to avoid cannibalization/clutter.",
+      "Tailor content to what searchers want for that specific niche.",
+      "Google shifted intent from blog posts to content pages for these \u2014 they were rebuilt accordingly.",
+      "Each page targets its own #1 keyword (e.g. 'actor headshots')."
+    ],
+    "playbooks": [
+      "content/content-pages.md"
+    ]
+  },
+  {
+    "code": "03-15",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "15",
+    "title": "Case study: Example Pages",
+    "transcript": "_source/transcripts/03-15_case-study-example-pages.txt",
+    "words": 156,
+    "summary": "Example/how-to content pages target examples, how-to, and use-case keywords with a directory of use cases, tutorials, and examples of using your product (e.g. SEMrush's examples marketplace ranking #1 for 'SEMrush examples'), keeping searchers on your property and funneling them to a trial.",
+    "key_takeaways": [
+      "Keywords: examples, how to, use cases.",
+      "Build a directory of use cases, case studies, tutorials, and examples.",
+      "Keeps the searcher on your site instead of a third-party blog.",
+      "Use the content to push a trial/conversion.",
+      "Example: SEMrush ranks #1 for 'SEMrush examples' with its own examples marketplace."
+    ],
+    "playbooks": [
+      "content/content-pages.md"
+    ]
+  },
+  {
+    "code": "03-16",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "16",
+    "title": "Case study: Integration Pages",
+    "transcript": "_source/transcripts/03-16_case-study-integration-pages.txt",
+    "words": 229,
+    "summary": "Integration content pages target 'X for [platform]' keywords (e.g. 'pop-ups for Wix', 'email software for Shopify'). Build a directory and one page per host platform explaining how your tool integrates, repeated dozens of times to capture all the platform-specific demand.",
+    "key_takeaways": [
+      "Keywords: '[your category] for [platform]' (Wix, Shopify, WordPress, BigCommerce, ...).",
+      "Explain how to integrate and use your software on each platform.",
+      "Repeat across dozens of platforms \u2014 scales like programmatic SEO.",
+      "Example: PopupSmart's integration directory ranks for 'pop-ups for BigCommerce' etc.",
+      "Strong play for SaaS that can plug into many host platforms."
+    ],
+    "playbooks": [
+      "content/content-pages.md"
+    ]
+  },
+  {
+    "code": "03-17",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "17",
+    "title": "Other types of content",
+    "transcript": "_source/transcripts/03-17_other-types-of-content.txt",
+    "words": 103,
+    "summary": "Transition lesson: after the three favored in-depth formats, the chapter briefly covers landing pages, articles, and content rings \u2014 situational supporting formats with plenty of external resources, included to show when to use each.",
+    "key_takeaways": [
+      "The deep-dive favorites are programmatic SEO, free tools, content pages.",
+      "Landing pages, articles, content rings are covered briefly as supporting formats.",
+      "These are well-documented elsewhere; the focus is on WHEN to use them.",
+      "Choose format by matching it to user intent and your strengths."
+    ],
+    "playbooks": [
+      "content/content-types-overview.md"
+    ]
+  },
+  {
+    "code": "03-18",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "18",
+    "title": "Landing Pages",
+    "transcript": "_source/transcripts/03-18_landing-pages.txt",
+    "words": 228,
+    "summary": "Use landing pages for transactional intent \u2014 when the SERP shows landing pages (e.g. 'AI headshots') and the searcher is ready to buy. Build one landing page on the exact keyword, inform, and link straight to purchase; don't use a blog post, content page, or free tool here.",
+    "key_takeaways": [
+      "Transactional intent = Google shows landing pages in the top results.",
+      "Focus one landing page on the specific transactional keyword.",
+      "Link directly to purchase; no detour through other content types.",
+      "One main keyword per page (avoid cannibalization).",
+      "Landing-page conversion craft is covered deeply by other resources."
+    ],
+    "playbooks": [
+      "content/landing-pages.md"
+    ]
+  },
+  {
+    "code": "03-19",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "19",
+    "title": "Articles",
+    "transcript": "_source/transcripts/03-19_articles.txt",
+    "words": 480,
+    "summary": "Articles suit purely informational intent but only work when genuinely good and human-written. AI-generated/shallow articles backfire (a 13-article AI batch tanked rankings for ~a year). If you won't invest in real writing, use a different format; it's fine to run zero blog content.",
+    "key_takeaways": [
+      "Use articles only for clear informational intent and only with quality writing.",
+      "Hire a real copywriter who researches and writes entertaining content with examples.",
+      "If using AI, only draft fast then heavily human-rewrite \u2014 never publish raw AI output.",
+      "Users detect AI/shallow content quickly; rankings drop once recognized.",
+      "Articles are not the default for every keyword \u2014 match format to intent and strengths."
+    ],
+    "playbooks": [
+      "content/articles.md"
+    ]
+  },
+  {
+    "code": "03-20",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "20",
+    "title": "Content Rings",
+    "transcript": "_source/transcripts/03-20_content-rings.txt",
+    "words": 532,
+    "summary": "Content rings = a small set of separate owned sites (usually free tools/resources) that earn their own links and traffic, then link back to your main business to boost authority and funnel visitors. Keep it small; overdoing it becomes a penalized private blog network.",
+    "key_takeaways": [
+      "Build/acquire a few genuinely useful sites (free tools/resources) that attract links.",
+      "Older, established, topically-distinct satellites pass natural authority back to the main site.",
+      "Cross-promote overlapping audiences (e.g. landing-page visitors who might want a headshot).",
+      "Few strong properties beat many weak blogs.",
+      "Don't scale to 20-30+ sites \u2014 Google detects common ownership and discounts/penalizes (PBN)."
+    ],
+    "playbooks": [
+      "content/content-rings.md"
+    ]
+  },
+  {
+    "code": "03-21",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "21",
+    "title": "What not to do",
+    "transcript": "_source/transcripts/03-21_what-not-to-do.txt",
+    "words": 1040,
+    "summary": "Content mistakes that get sites penalized or blacklisted: AI content spam, ignoring crawl budget (mass-publishing), keyword stuffing, duplicate content (stolen or repeated meta), keyword cannibalization, and thin content. Avoiding these protects all legitimate work.",
+    "key_takeaways": [
+      "No AI content spam \u2014 human-rewrite drafts to add real value before publishing.",
+      "Respect crawl budget: release pages in monthly batches; no-index/hide the rest so important pages index first.",
+      "No keyword stuffing \u2014 write naturally; check frequency with a tool like Surfer SEO.",
+      "No duplicate content \u2014 unique titles/descriptions/body per page (watch programmatic meta tags).",
+      "No cannibalization (one main keyword per page) and no thin content (~100-200+ words minimum)."
+    ],
+    "playbooks": [
+      "content/content-what-not-to-do.md"
+    ]
+  },
+  {
+    "code": "03-22",
+    "chapterNum": "03",
+    "chapterName": "Content creation",
+    "lessonNum": "22",
+    "title": "On-page optimization",
+    "transcript": "_source/transcripts/03-22_on-page-optimization.txt",
+    "words": 701,
+    "summary": "Four high-impact on-page basics: internal linking (spreads authority and clarifies structure), meta titles/descriptions (main keyword in title, variants in description, must match intent), page speed (favor static generation), and canonicals (consolidate duplicate/parameterized URLs onto the main page).",
+    "key_takeaways": [
+      "Internal links spread page authority and help Google understand site structure \u2014 link related pages.",
+      "Meta title = main keyword; description = synonyms/variants; both must match user intent or users bounce.",
+      "Page speed matters for rankings and conversion \u2014 prefer statically generated pages.",
+      "Canonicals tell Google the main page, consolidating duplicate/URL-parameter pages (e.g. affiliate links).",
+      "These four are easy to do well and have outsized impact on rankings."
+    ],
+    "playbooks": [
+      "content/on-page-optimization.md"
+    ]
+  },
+  {
+    "code": "04-01",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "01",
+    "title": "Introduction to Building Authority",
+    "transcript": "_source/transcripts/04-01_introduction-to-building-authority.txt",
+    "words": 132,
+    "summary": "Opens chapter 4 on building authority: even excellent content and keywords earn no traffic without authority. Outlines the chapter as how authority works, case studies of the author's own link-building strategies, additional tactics he sometimes uses, and the do's and don'ts.",
+    "key_takeaways": [
+      "Authority (backlinks) is the third pillar after keywords and content; without it Google sends no traffic.",
+      "Chapter structure: how authority works, then real case studies, then other tactics, then what not to do.",
+      "The strategies taught are the author's own, meant to be replicated."
+    ],
+    "playbooks": [
+      "authority/understanding-authority.md"
+    ]
+  },
+  {
+    "code": "04-02",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "02",
+    "title": "Understanding Authority in SEO",
+    "transcript": "_source/transcripts/04-02_understanding-authority-in-seo.txt",
+    "words": 841,
+    "summary": "Defines authority as backlinks: a link from another site is a vote of confidence. Links aren't equal value scales with the linking domain's authority (logarithmic: DR 50 is ~10x DR 40) and is diluted across all outbound links on a page, so high-DR shared listicle links are weak. Backlinks also drive LLM answers, so they matter more than ever.",
+    "key_takeaways": [
+      "A backlink is a vote; Google assumes good sites won't link to bad ones.",
+      "Value is logarithmic by domain authority and shared across every outbound link on the page.",
+      "Bought links on shared repositories/listicles are low-value despite high DR because value is split.",
+      "Backlinks increasingly influence LLM (ChatGPT) recommendations, raising their long-term importance."
+    ],
+    "playbooks": [
+      "authority/understanding-authority.md"
+    ]
+  },
+  {
+    "code": "04-03",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "03",
+    "title": "Case Studies Intro",
+    "transcript": "_source/transcripts/04-03_case-studies-intro.txt",
+    "words": 64,
+    "summary": "Brief intro to the case-studies section: the author will break down ~10 link-building strategies he has personally implemented for his products and show how to replicate them.",
+    "key_takeaways": [
+      "The chapter's value is in real, implemented strategies, not theory.",
+      "About ten replicable link-building case studies follow."
+    ],
+    "playbooks": [
+      "authority/understanding-authority.md"
+    ]
+  },
+  {
+    "code": "04-04",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "04",
+    "title": "Build Good Products",
+    "transcript": "_source/transcripts/04-04_build-good-products.txt",
+    "words": 276,
+    "summary": "Precondition for all link building: nobody links to a bad product. A link is a public endorsement, so the product and user experience (no intrusive pop-ups, good landing pages) must be genuinely good. Ties back to 'match and exceed' since later tactics involve displacing competitors, which only works if you're better.",
+    "key_takeaways": [
+      "A link is a public endorsement; bad products and bad UX don't get linked.",
+      "Remove intrusive pop-ups and fix the experience before outreach.",
+      "Displacement tactics require you to actually be better than the incumbent (match and exceed)."
+    ],
+    "playbooks": [
+      "authority/understanding-authority.md"
+    ]
+  },
+  {
+    "code": "04-05",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "05",
+    "title": "Link Stealing",
+    "transcript": "_source/transcripts/04-05_link-stealing.txt",
+    "words": 424,
+    "summary": "Link stealing: find blog posts/listicles linking to a weaker competitor and get added or substituted in. Google the keyword to find the #1 competitor, Site Explorer it in Ahrefs, open the Backlinks report, find roundups that list the competitor but not you, get the writer's email via Hunter.io, and draft a personal pitch. For freelancer-written publisher pages, a paid placement can work.",
+    "key_takeaways": [
+      "Use Ahrefs Backlinks of the top competitor to find pages already writing about your category.",
+      "Target roundups that list the competitor but not you; pitch to be added or to replace a weak resource.",
+      "Hunter.io supplies the writer's email; keep pitches personal and lead with why you're better.",
+      "Most emails get no reply; paid placement on freelancer-controlled pages is sometimes possible."
+    ],
+    "playbooks": [
+      "authority/link-stealing.md"
+    ]
+  },
+  {
+    "code": "04-06",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "06",
+    "title": "Affiliate Programs",
+    "transcript": "_source/transcripts/04-06_affiliate-programs.txt",
+    "words": 752,
+    "summary": "Affiliate programs as a backlink engine: affiliates are paid to link to you. Use Rewardful (clean ?via= links that point to your domain, Stripe integration, easy payouts) and set generous commissions. Mine competitor affiliates in Ahrefs by filtering Target URL contains '?via=', recruit them via Hunter.io quoting your conversion rate, offer VIP rates to top sites, and disavow affiliate spam in Search Console.",
+    "key_takeaways": [
+      "Affiliate links must point to your own domain (Rewardful ?via=) so backlink value lands on you.",
+      "Set commissions higher than competitors; quote conversion rate to make the math compelling.",
+      "Find competitor affiliates in Ahrefs (Target URL contains ?via=) and recruit them with Hunter.io.",
+      "Offer VIP commissions to high-DR sites to become their top pick; disavow affiliate spam links."
+    ],
+    "playbooks": [
+      "authority/affiliate-programs.md"
+    ]
+  },
+  {
+    "code": "04-07",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "07",
+    "title": "Acquiring or Taking Over Domain Authority",
+    "transcript": "_source/transcripts/04-07_acquiring-or-taking-over-domain-authority.txt",
+    "words": 483,
+    "summary": "Acquiring/taking over domain authority: buy an aged site with a strong backlink profile instead of building one. Blast 'open to selling?' emails to relevant free-tool owners to plant seeds; vet age and backlinks in Ahrefs when one bites; then either link from it, 301-redirect the whole domain to yours, or move the tool onto your domain and 301 the old URL. Authority transfers gradually.",
+    "key_takeaways": [
+      "Buy aged, on-topic domains with real backlinks to fast-track authority.",
+      "Seed-emailing owners pays off later (one returned after four months to sell a 14-year domain).",
+      "301-redirecting transfers backlinks/authority to your site over weeks-to-months.",
+      "Only 301 when niches match; mismatched niches get de-ranked."
+    ],
+    "playbooks": [
+      "authority/acquiring-domain-authority.md"
+    ]
+  },
+  {
+    "code": "04-08",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "08",
+    "title": "Help A Reporter Out (HARO)",
+    "transcript": "_source/transcripts/04-08_help-a-reporter-out-haro.txt",
+    "words": 737,
+    "summary": "HARO (Help a Reporter Out) and successors like Help a B2B Writer Out: reply to journalist/writer source requests with expert quotes to earn elite DR 90+ editorial links. Sign up, triage requests by DR and topic fit, draft a credible reply (credibility hook + substantive answer + name/link), add a personal touch like a Loom to beat AI spam, and nurture writer relationships. Low hit rate, long lead times, huge payoff.",
+    "key_takeaways": [
+      "Source networks yield DR 90+ links competitors can't easily replicate.",
+      "Reply with a credibility hook, a specific substantive answer, and a link; add a Loom to stand out.",
+      "Very low hit rate and months-long lead times; treat as a volume game.",
+      "Use a VA to draft but have the named expert review/send; nurture writers for repeat placements."
+    ],
+    "playbooks": [
+      "authority/haro.md"
+    ]
+  },
+  {
+    "code": "04-09",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "09",
+    "title": "Case Studies for Backlinks",
+    "transcript": "_source/transcripts/04-09_case-studies-for-backlinks.txt",
+    "words": 307,
+    "summary": "Case studies for backlinks: if you genuinely use and like a tool, offer to write a case study in exchange for a backlink. Companies want happy-customer case studies, so it's mutually beneficial. Target smaller tools with few or no existing case studies for the best odds; their content writer interviews you and publishes the case study linking back to you.",
+    "key_takeaways": [
+      "Offer a positive case study to a tool you use in exchange for a backlink.",
+      "Target less-popular tools with few case studies for higher success.",
+      "Companies welcome customer case studies, making this a high-yield, win-win ask."
+    ],
+    "playbooks": [
+      "authority/manual-outreach.md"
+    ]
+  },
+  {
+    "code": "04-10",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "10",
+    "title": "Content Rings",
+    "transcript": "_source/transcripts/04-10_content-rings.txt",
+    "words": 333,
+    "summary": "Content rings: maintain a portfolio of your own free tools/sites that have earned real domain authority, then link from all of them to each new product you launch. Because Google already crawls the established sites regularly, it discovers and indexes the new site faster, and the new site starts with strong, self-owned backlinks. Builders should create a few free tools to seed future launches.",
+    "key_takeaways": [
+      "Own a stable of authoritative free tools and link new launches from all of them.",
+      "Google recrawls established sites, so the new site gets discovered and indexed faster.",
+      "Distinct from manipulative PBNs: these are real, useful, individually-earned properties."
+    ],
+    "playbooks": [
+      "authority/content-rings-for-links.md"
+    ]
+  },
+  {
+    "code": "04-11",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "11",
+    "title": "Manual Outreach",
+    "transcript": "_source/transcripts/04-11_manual-outreach.txt",
+    "words": 452,
+    "summary": "Manual outreach: the reliable core of link building. Personally email writers/outlets where adding your link makes sense. Give a high-authority outlet that previously covered your category a fresh reason (e.g. a new model) plus free access/coupon with no ask; ask for missing links when you're featured without one; offer free access to anyone currently covering your space. Keep it personal, never spam.",
+    "key_takeaways": [
+      "Offer free access/coupon with no obligation to outlets that previously covered your topic.",
+      "When featured without a link (e.g. a podcast), simply ask for the backlink to be added.",
+      "Only reach out where the link genuinely fits; personal, not spam, protects your reputation.",
+      "Hit-and-miss but strong; consistency and relevance win."
+    ],
+    "playbooks": [
+      "authority/manual-outreach.md"
+    ]
+  },
+  {
+    "code": "04-12",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "12",
+    "title": "Building an Audience or Leveraging Others",
+    "transcript": "_source/transcripts/04-12_building-an-audience-or-leveraging-others.txt",
+    "words": 341,
+    "summary": "Building or leveraging an audience: with a following, product launches get discovered by writers who publish about you (Medium posts, articles, even reporter pickups). Without an audience, borrow influencers' instead of cold-DMing, engage genuinely, build rapport, or pay smaller creators (e.g. ~$200 TikTok reviews) for exposure. Goal is reach; any share, even a tweet, is a signal to Google.",
+    "key_takeaways": [
+      "An audience is a discovery engine: launches get written up by writers who follow you.",
+      "No audience? Leverage influencers via genuine engagement, not cold DMs; pay small creators for exposure.",
+      "Even a large following rarely helps with reporter source requests.",
+      "Any share is a backlink/signal; volume of exposure matters more than account size."
+    ],
+    "playbooks": [
+      "authority/building-an-audience.md"
+    ]
+  },
+  {
+    "code": "04-13",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "13",
+    "title": "Other Types Of Link Building",
+    "transcript": "_source/transcripts/04-13_other-types-of-link-building.txt",
+    "words": 1022,
+    "summary": "Other link-building tactics: linkable assets (infographics), broken-link building (Ahrefs finds dead links to replace), the skyscraper technique, guest posting, podcasts (show notes + host site links), link swapping (sparingly), forum participation (devalued, add value only), and ABC link boosting (gray/black-hat link buying to skip). A grab-bag to layer on top of the core tactics.",
+    "key_takeaways": [
+      "Durable, low-risk plays: infographics, broken-link replacement, skyscraper upgrades, guest posts, podcasts.",
+      "Link swaps and forum links work only in small, genuine doses; overuse triggers penalties.",
+      "Podcasts yield show-notes and host-site backlinks plus visibility.",
+      "ABC link boosting is gray/black-hat link buying and a banning risk; default to skipping it."
+    ],
+    "playbooks": [
+      "authority/other-link-building.md"
+    ]
+  },
+  {
+    "code": "04-14",
+    "chapterNum": "04",
+    "chapterName": "Building authority",
+    "lessonNum": "14",
+    "title": "What not to do when it comes to linkbuilding",
+    "transcript": "_source/transcripts/04-14_what-not-to-do-when-it-comes-to-linkbuilding.txt",
+    "words": 803,
+    "summary": "What not to do: penalties from manipulative link building can be permanent. Avoid cheap bought link packages, over-optimized exact-keyword anchors, spamming URLs across forums, link farms/PBNs, and off-topic/irrelevant or niche-mismatched domains (the fit.nl travel-to-fitness de-ranking). Clean up unwanted third-party/affiliate spam by disavowing those links in Google Search Console.",
+    "key_takeaways": [
+      "Cheap bought links and uniform keyword anchors get flagged and often permanently de-ranked.",
+      "Avoid forum spam, link farms/PBNs, and links from irrelevant or niche-mismatched sites.",
+      "Niche mismatch (rebuilding a travel domain as fitness) gets de-ranked by Google.",
+      "Disavow unwanted/affiliate-spam links via Search Console to protect your profile."
+    ],
+    "playbooks": [
+      "authority/linkbuilding-what-not-to-do.md"
+    ]
+  },
+  {
+    "code": "05-01",
+    "chapterNum": "05",
+    "chapterName": "Maintaining",
+    "lessonNum": "01",
+    "title": "Introduction to Maintenance",
+    "transcript": "_source/transcripts/05-01_introduction-to-maintenance.txt",
+    "words": 514,
+    "summary": "Introduces the maintenance phase. After keywords, content, and backlinks are in place, the hardest part begins: patience. Content can take months or years to rank even when it's good and well-linked. A new page typically starts ranking around three months in, then Google trials it across positions (#1, #3, #50) to test how users interact \u2014 widely believed to involve click-through and bounce/return behavior. New domains take ~3\u20136 months to settle; aged domains with existing backlinks settle faster. Expect heavy early volatility; don't celebrate an early #1. Once settled, ongoing maintenance defends the position against updates and competitors via weekly and monthly work.",
+    "key_takeaways": [
+      "Ranking takes patience \u2014 months to years even for good, well-linked content.",
+      "Google trials new pages across positions before they settle (CTR/bounce signals).",
+      "New domains take ~3-6 months to settle; aged domains rank faster.",
+      "Don't over-react to early volatility; maintenance is ongoing weekly/monthly defense."
+    ],
+    "playbooks": [
+      "maintenance/navigating-google-updates.md"
+    ]
+  },
+  {
+    "code": "05-02",
+    "chapterNum": "05",
+    "chapterName": "Maintaining",
+    "lessonNum": "02",
+    "title": "Keyword Volitility and Navigating Google Updates",
+    "transcript": "_source/transcripts/05-02_keyword-volitility-and-navigating-google-updates.txt",
+    "words": 590,
+    "summary": "Covers keyword volatility and Google core/spam updates \u2014 dreaded because an update can overnight decide your content is less valuable and drop your rankings. Updates land several times a year and cause sudden up or down movement. A 'helpful content'-style core update can suddenly reward a previously sidelined site (e.g. Landingfolio jumping to #1), while a spam update can hammer thin/AI-generated content (e.g. Tattoos AI after scaling such pages). Lesson: build genuine user value, not tricks \u2014 tricks win briefly then collapse on an update. Never be 100% reliant on Google; it can change the rules anytime. Rankings are inherently a sawtooth of tops and bottoms, so don't despair at dips.",
+    "key_takeaways": [
+      "Google core/spam updates can reshuffle rankings overnight; expect several per year.",
+      "Updates rewarding 'helpful content' lift genuinely valuable sites; spam updates punish thin/AI content.",
+      "Build value for users, not tricks \u2014 gaming Google works briefly then gets deranked.",
+      "Never rely 100% on Google; volatility (tops and bottoms) is normal, so don't over-react to dips.",
+      "Use GSC/GA4 to confirm whether update movement is real impact vs. noise."
+    ],
+    "playbooks": [
+      "maintenance/navigating-google-updates.md"
+    ]
+  },
+  {
+    "code": "05-03",
+    "chapterNum": "05",
+    "chapterName": "Maintaining",
+    "lessonNum": "03",
+    "title": "Evolution of Keyword Intents",
+    "transcript": "_source/transcripts/05-03_evolution-of-keyword-intents.txt",
+    "words": 353,
+    "summary": "Keyword intent can evolve: the content format Google favors for a query changes over time (e.g. landing pages giving way to blog posts, or blogs giving way to content/landing pages). When a top-3 page de-ranks with no update to explain it, a shift in user intent / preferred format is a likely cause. Example: a landing page ranking for 'best AI headshot generator' dropped when Google began favoring review-style blog posts; conversely, blogs for 'doctor headshot'/'artist headshot' slipped when Google started preferring landing/content pages. The fix is to convert content to the now-preferred format. Review your top pages monthly (e.g. Ahrefs Site Explorer \u2192 Top Pages) to catch shifts, and consider keeping an alternate format ready for high-value keywords.",
+    "key_takeaways": [
+      "The content format Google rewards for a keyword can flip over time.",
+      "Unexplained de-ranking of a top page often signals an intent/format shift.",
+      "Fix by converting content to the format now dominating the top results.",
+      "Review top pages monthly to detect shifts early; pre-build alternate formats for key terms."
+    ],
+    "playbooks": [
+      "maintenance/keyword-intent-evolution.md"
+    ]
+  },
+  {
+    "code": "05-04",
+    "chapterNum": "05",
+    "chapterName": "Maintaining",
+    "lessonNum": "04",
+    "title": "Staying Ahead With Backlinks",
+    "transcript": "_source/transcripts/05-04_staying-ahead-with-backlinks.txt",
+    "words": 336,
+    "summary": "Staying ahead with backlinks is a monthly competitive discipline. Each month, compare net-new unique backlinks for yourself and ~3 competitors (plus any emerging ones) so you consistently out-acquire them \u2014 backlink building is a marathon, and winning monthly compounds into a year-plus lead. Method: in Ahrefs Site Explorer \u2192 Backlinks for each domain, filter domain authority above ~25 (strip spam), select one link per domain (unique referring domains), and view 'new' links over the last 30 days; count them and log in a Google Sheet. Also track high-DR links (80-90+) separately since quality beats quantity. Falling behind on links is a leading indicator of future ranking loss.",
+    "key_takeaways": [
+      "Track net-new unique backlinks monthly for yourself and ~3 competitors (plus newcomers).",
+      "Ahrefs filters: DR > ~25, one link per domain, 'new' in last 30 days; log counts in a sheet.",
+      "Count high-authority (DR 80-90+) links separately \u2014 quality outweighs quantity.",
+      "Backlink building is a marathon; consistently out-acquiring competitors compounds into a durable lead.",
+      "Being behind on links predicts future ranking loss."
+    ],
+    "playbooks": [
+      "maintenance/staying-ahead-with-backlinks.md"
+    ]
+  },
+  {
+    "code": "05-05",
+    "chapterNum": "05",
+    "chapterName": "Maintaining",
+    "lessonNum": "05",
+    "title": "Measure if your work pays off",
+    "transcript": "_source/transcripts/05-05_measure-if-your-work-pays-off.txt",
+    "words": 400,
+    "summary": "Measure whether your work pays off using leading indicators (actions you control) rather than trailing indicators (rankings/traffic that arrive too late to fix). Track six monthly tasks: ship X content, target new keywords/content, optimize a few existing pages (speed, content type), identify and contact link opportunities, count backlinks acquired, and track top 3-5 competitors' backlinks. Also monitor your most important keywords' positions to catch switches early. Build a weekly dashboard of these lead indicators, do a monthly review, and a quarterly analysis comparing inputs to actual rank/traffic changes (pull trailing results from GSC and GA4). Consistently doing the work guarantees you out-grow competitors and aren't blindsided by drops.",
+    "key_takeaways": [
+      "Monitor leading indicators (actions) you control, not trailing results that come too late.",
+      "Six monthly tasks: content shipped, new keywords, existing-page optimization, link outreach, backlinks acquired, competitor backlinks tracked.",
+      "Weekly dashboard of inputs, monthly review, quarterly input-vs-output analysis.",
+      "Pull trailing rank/traffic data from GSC and GA4 at review time.",
+      "Consistently doing the work prevents surprise drops and out-grows competitors."
+    ],
+    "playbooks": [
+      "maintenance/measuring-seo-results.md"
+    ]
+  },
+  {
+    "code": "06-01",
+    "chapterNum": "06",
+    "chapterName": "Conclusion",
+    "lessonNum": "01",
+    "title": "Conclusion",
+    "transcript": "_source/transcripts/06-01_conclusion.txt",
+    "words": 989,
+    "summary": "The conclusion recaps the full course as a quick-start. Step 1 \u2014 Research: pick a main keyword/niche with high search volume, low keyword difficulty, and (most important) genuine enjoyment for you; don't rush \u2014 sleep on it a few days. Step 2 \u2014 Content: build for the user, not yourself; match the user intent and the format Google ranks, then exceed it (don't make a free tool if blogs rank). Step 3 \u2014 Authority: kickstart backlinks with four immediate moves \u2014 submit to industry repositories/galleries (Product Hunt, design galleries), reach out to sites linking to competitors (link stealing), launch an affiliate program for paid products and pitch competitor-linkers, and pay small influencers ($100-$200) to post for a chance at viral links. 'Build it and they will come' is not a strategy \u2014 tell the world. Step 4 \u2014 Maintenance: out-acquire competitors on backlinks, monitor user intent in the top results and reformat content to match, and keep creating content to fill gaps and win new keywords.",
+    "key_takeaways": [
+      "Niche selection rests on three factors: high volume, low difficulty, and enjoyment \u2014 and don't rush the decision.",
+      "Build content for the user, matching intent and the ranking format, then exceeding it.",
+      "Kickstart authority fast: repositories/galleries, link stealing, affiliate program, paid micro-influencers.",
+      "'Build it and they will come' fails \u2014 distribution is mandatory.",
+      "Maintain forever: out-acquire competitor backlinks, track intent shifts and reformat, fill content gaps for new keywords."
+    ],
+    "playbooks": [
+      "foundations/seo-process-overview.md",
+      "foundations/seo-philosophy.md"
+    ]
+  }
+]

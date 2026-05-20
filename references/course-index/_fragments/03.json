@@ -1,0 +1,241 @@
+{
+  "03-01": {
+    "summary": "Content for SEO must satisfy two parties at once — the human searcher and Google — and the way to do both is match-and-exceed: read what already ranks for a keyword, copy its format, and beat it on value plus backlinks.",
+    "key_takeaways": [
+      "Two audiences: serve the user and Google simultaneously.",
+      "Read the live top-3 SERP to learn the format/intent Google rewards for a keyword.",
+      "Near-identical phrasings can flip intent: 'AI headshot generator' (transactional, landing pages) vs 'best AI headshot generator' (informational, articles/Reddit).",
+      "Match the dominant format then exceed it; pair with backlinks to actually rank.",
+      "What ranks for a keyword changes over time (e.g. blog posts to landing pages) — re-check."
+    ],
+    "playbooks": ["content/content-fundamentals.md"]
+  },
+  "03-02": {
+    "summary": "Overview of the content-creation chapter: three primary formats are covered in depth (programmatic SEO, free tools, content pages), plus landing pages, articles, content rings, and a few on-page optimizations.",
+    "key_takeaways": [
+      "Three core formats: programmatic SEO, free tools, content pages.",
+      "Supporting formats: landing pages, articles, content rings.",
+      "Methods are taught via real case studies from the operator's own products.",
+      "On-page tips included to save time and reduce errors."
+    ],
+    "playbooks": ["content/content-types-overview.md", "content/content-fundamentals.md"]
+  },
+  "03-03": {
+    "summary": "Programmatic SEO uses code to generate hundreds/thousands of pages from a dataset. Six steps: identify a scalable opportunity, design page structure first, gather raw data, shape it into content, template the display, then inject your offer.",
+    "key_takeaways": [
+      "pSEO is for scalable informational/curation content (hundreds of pages), not 3-5 pages.",
+      "Lock head + long-tail keyword structure before generating, to avoid wasting AI credits.",
+      "Pipeline: gather ugly data (UGC / API / scraper) -> shape with AI (rewrite, tag, group, count) -> template hub + leaf pages -> inject product CTAs.",
+      "Use crons to keep new data and pages flowing automatically.",
+      "Monetize informational pages by promoting your own product inside them (e.g. a featured 'position 3')."
+    ],
+    "playbooks": ["content/programmatic-seo.md"]
+  },
+  "03-04": {
+    "summary": "Worked pSEO example (successful): TattoosAI ranked for 'tattoo ideas' long-tails using a free/paid AI tattoo generator so users generated the content; daily crons tagged, grouped, and counted tattoos, auto-creating category pages (100+ items) with AI descriptions, and CTAs upsold the paid generator (~$4k/mo, autonomous).",
+    "key_takeaways": [
+      "Opportunity found in Ahrefs: ~2000 low-difficulty 'tattoo ideas' page options.",
+      "Structure: hub 'tattoo ideas' -> leaf '{keyword} tattoo ideas'.",
+      "User-generated content (the generator) supplied raw data at scale.",
+      "Crons + AI auto-tagged/grouped and spun up category pages once a category passed ~100 items.",
+      "'Design your own tattoo' CTAs converted free traffic to the paid product, fully on autopilot."
+    ],
+    "playbooks": ["content/programmatic-seo.md"]
+  },
+  "03-05": {
+    "summary": "Worked pSEO example (successful): Landingfolio curates landing-page screenshots by category. A screenshot API + Product Hunt scraper feed MongoDB; one hub + one leaf template swap only the keyword and a live count; auto titles like '{count} Best Marketing Landing Page Designs'. Curation drives 1-2k visitors/day and an upsell component library.",
+    "key_takeaways": [
+      "Opportunity: search demand for landing-page inspiration by type (SaaS, product, marketing).",
+      "Data via screenshot API (desktop+mobile, later pricing pages) and a Product Hunt scraper.",
+      "Just ONE template: swaps keyword + count in title/body; categories from MongoDB, built on deploy.",
+      "Curation = bundling the best of what already exists; scraping /pricing opened a new ranking surface for free.",
+      "Monetized later with a paid Figma/Webflow/Tailwind component library; runs untouched for years."
+    ],
+    "playbooks": ["content/programmatic-seo.md"]
+  },
+  "03-06": {
+    "summary": "Worked pSEO example (FAILED): HeadshotPro's 'headshots near me' built city pages from Google Maps API + scraped reviews, AI-writing Yelp-style top-5 breakdowns. It never ranked and was removed — the content was shallow, adding nothing a user couldn't get by filtering Google Maps directly.",
+    "key_takeaways": [
+      "Structure: country -> city -> 'professional headshots in {city}' (52 US cities, ~240 studios).",
+      "Data via Google Maps API + scraping competitor sites and reviews.",
+      "Failure cause: shallow content with no value beyond the underlying data source.",
+      "pSEO only works when each page adds real value over its raw source — otherwise it won't rank.",
+      "Lesson reinforced against the successful TattoosAI/Landingfolio examples."
+    ],
+    "playbooks": ["content/programmatic-seo.md"]
+  },
+  "03-07": {
+    "summary": "Free tools solve a problem instantly (vs explaining it in a blog post), rank for generator/maker/calculator keywords, attract natural backlinks, and feed a paid product. Ahrefs Keyword Explorer surfaces tens of thousands of tool keywords from seeds like 'generator' and 'calculator'.",
+    "key_takeaways": [
+      "Ideal SEO format for developers who'd rather build than write.",
+      "Target action keywords: generator, maker, calculator, converter, checker, editor.",
+      "Ahrefs: seed 'generator' (~70k kw), 'calculator' (~96k kw); filter by keyword difficulty.",
+      "Tools earn links naturally because they provide value.",
+      "Use tools as top-of-funnel that upsells the paid product."
+    ],
+    "playbooks": ["content/free-tools-strategy.md"]
+  },
+  "03-08": {
+    "summary": "Worked free-tool example: ProfilePicture.AI built a free profile-picture generator (upload photo, swap background/colors) as the free counterpart of its paid product, capturing 'profile picture generator/maker free' demand; a download pop-up upsells the paid product, converting ~5-6% of free users.",
+    "key_takeaways": [
+      "Pattern: a free, lesser version of your paid product captures 'free X' demand.",
+      "Built a customizable generator (background removal/swap, color).",
+      "Monetized via a pop-up on download linking to the paid product.",
+      "Most free users won't convert, but a meaningful slice (~5-6%) will.",
+      "Ranks well for 'profile picture maker'-type queries."
+    ],
+    "playbooks": ["content/free-tools-strategy.md"]
+  },
+  "03-09": {
+    "summary": "Worked free-tool example: HeadshotPro built a free LinkedIn profile generator (upload CV PDF, AI writes the profile) for an adjacent audience — LinkedIn/job-seekers who also need a headshot. A contextual prompt upsells a new profile picture, driving sales and ranking in a niche outside the core keyword intents.",
+    "key_takeaways": [
+      "Adjacent-audience play: tool unrelated to the product but reaching its buyers.",
+      "AI parses an uploaded CV into a copy-paste LinkedIn profile.",
+      "A hover '+' prompt offers a new profile picture, linking to checkout.",
+      "Expands ranking into new niches outside the company's normal keyword intents.",
+      "Drives real sales from people upgrading their LinkedIn presence."
+    ],
+    "playbooks": ["content/free-tools-strategy.md"]
+  },
+  "03-10": {
+    "summary": "The 'autonomy of a good tool' = three essentials: make it better (mainly easier — less manual input, more automatic output), add a killer keyword-clear title/meta with variants, and add a little content (How-it-works steps + FAQ) so the page isn't thin. Plus the upsell.",
+    "key_takeaways": [
+      "Make it better usually means make it EASIER than the top-3 competitors.",
+      "Lower bounce-back to Google is read as a positive ranking signal.",
+      "Title = exact main keyword; meta/H2 weave in close variants for intent coverage.",
+      "Add How-it-works steps (signals 'this is a tool') + FAQ (more keywords) for ~100+ words.",
+      "Backlinks + a clearly better tool can overtake older incumbents; finish with an upsell."
+    ],
+    "playbooks": ["content/free-tools-strategy.md"]
+  },
+  "03-11": {
+    "summary": "A content page is a hybrid of a landing page and a blog post: blog-level depth with landing-page structure and components. It targets informational/structured intent and comes in several sub-patterns.",
+    "key_takeaways": [
+      "Content page = content-rich but structured, with landing-page-style components.",
+      "Works well for informational user intent that wants rich, organized content (not plain prose).",
+      "Distinct from both a typical blog post and a typical landing page.",
+      "Multiple sub-patterns follow (comparison, success stories, niche hubs, examples, integrations)."
+    ],
+    "playbooks": ["content/content-pages.md", "content/content-types-overview.md"]
+  },
+  "03-12": {
+    "summary": "Comparison pages target vs/comparison/compare keywords with a rich content page describing product differences. Owning these (e.g. 'Ahrefs vs SEMrush') lets you frame the comparison in your favor instead of letting affiliate-incentivized third parties recommend a competitor.",
+    "key_takeaways": [
+      "Keywords: vs, comparison, compare.",
+      "Present as a content page (screenshots, separate pricing/testimonial blocks), not a plain blog post.",
+      "Owning the comparison controls the narrative against competitors.",
+      "Vendors without an affiliate program especially need to rank here, since affiliates push commission-paying rivals.",
+      "These SERPs frequently flip between blog posts and content pages — verify live."
+    ],
+    "playbooks": ["content/content-pages.md"]
+  },
+  "03-13": {
+    "summary": "Success-story / review content pages target review/case-study keywords. Build your own '[Product] review' page (positive reviews, Trustpilot, examples) and/or a customer success-stories hub to capture trust-checking searchers and convince them with your own curated proof.",
+    "key_takeaways": [
+      "Keywords: review, case studies, customer stories.",
+      "Own '[Product] review' to capture 'is [product] trustworthy?' searchers.",
+      "Display Trustpilot, positive reviews, and user examples.",
+      "A customer success-stories/case-studies hub is a strong companion page.",
+      "Owning the position keeps competitor-funded negative reviews off the top spot."
+    ],
+    "playbooks": ["content/content-pages.md"]
+  },
+  "03-14": {
+    "summary": "Niche content hubs are groups of pages hyper-focused on a niche within your business (e.g. actor/doctor/real-estate headshots). They hold niche keywords deliberately kept off the homepage to rank without cannibalizing it; Google switched these from blog-post to content-page intent.",
+    "key_takeaways": [
+      "Hyper-focused pages per niche under a broader category.",
+      "Load niche keywords here, NOT on the homepage, to avoid cannibalization/clutter.",
+      "Tailor content to what searchers want for that specific niche.",
+      "Google shifted intent from blog posts to content pages for these — they were rebuilt accordingly.",
+      "Each page targets its own #1 keyword (e.g. 'actor headshots')."
+    ],
+    "playbooks": ["content/content-pages.md"]
+  },
+  "03-15": {
+    "summary": "Example/how-to content pages target examples, how-to, and use-case keywords with a directory of use cases, tutorials, and examples of using your product (e.g. SEMrush's examples marketplace ranking #1 for 'SEMrush examples'), keeping searchers on your property and funneling them to a trial.",
+    "key_takeaways": [
+      "Keywords: examples, how to, use cases.",
+      "Build a directory of use cases, case studies, tutorials, and examples.",
+      "Keeps the searcher on your site instead of a third-party blog.",
+      "Use the content to push a trial/conversion.",
+      "Example: SEMrush ranks #1 for 'SEMrush examples' with its own examples marketplace."
+    ],
+    "playbooks": ["content/content-pages.md"]
+  },
+  "03-16": {
+    "summary": "Integration content pages target 'X for [platform]' keywords (e.g. 'pop-ups for Wix', 'email software for Shopify'). Build a directory and one page per host platform explaining how your tool integrates, repeated dozens of times to capture all the platform-specific demand.",
+    "key_takeaways": [
+      "Keywords: '[your category] for [platform]' (Wix, Shopify, WordPress, BigCommerce, ...).",
+      "Explain how to integrate and use your software on each platform.",
+      "Repeat across dozens of platforms — scales like programmatic SEO.",
+      "Example: PopupSmart's integration directory ranks for 'pop-ups for BigCommerce' etc.",
+      "Strong play for SaaS that can plug into many host platforms."
+    ],
+    "playbooks": ["content/content-pages.md"]
+  },
+  "03-17": {
+    "summary": "Transition lesson: after the three favored in-depth formats, the chapter briefly covers landing pages, articles, and content rings — situational supporting formats with plenty of external resources, included to show when to use each.",
+    "key_takeaways": [
+      "The deep-dive favorites are programmatic SEO, free tools, content pages.",
+      "Landing pages, articles, content rings are covered briefly as supporting formats.",
+      "These are well-documented elsewhere; the focus is on WHEN to use them.",
+      "Choose format by matching it to user intent and your strengths."
+    ],
+    "playbooks": ["content/content-types-overview.md"]
+  },
+  "03-18": {
+    "summary": "Use landing pages for transactional intent — when the SERP shows landing pages (e.g. 'AI headshots') and the searcher is ready to buy. Build one landing page on the exact keyword, inform, and link straight to purchase; don't use a blog post, content page, or free tool here.",
+    "key_takeaways": [
+      "Transactional intent = Google shows landing pages in the top results.",
+      "Focus one landing page on the specific transactional keyword.",
+      "Link directly to purchase; no detour through other content types.",
+      "One main keyword per page (avoid cannibalization).",
+      "Landing-page conversion craft is covered deeply by other resources."
+    ],
+    "playbooks": ["content/landing-pages.md"]
+  },
+  "03-19": {
+    "summary": "Articles suit purely informational intent but only work when genuinely good and human-written. AI-generated/shallow articles backfire (a 13-article AI batch tanked rankings for ~a year). If you won't invest in real writing, use a different format; it's fine to run zero blog content.",
+    "key_takeaways": [
+      "Use articles only for clear informational intent and only with quality writing.",
+      "Hire a real copywriter who researches and writes entertaining content with examples.",
+      "If using AI, only draft fast then heavily human-rewrite — never publish raw AI output.",
+      "Users detect AI/shallow content quickly; rankings drop once recognized.",
+      "Articles are not the default for every keyword — match format to intent and strengths."
+    ],
+    "playbooks": ["content/articles.md"]
+  },
+  "03-20": {
+    "summary": "Content rings = a small set of separate owned sites (usually free tools/resources) that earn their own links and traffic, then link back to your main business to boost authority and funnel visitors. Keep it small; overdoing it becomes a penalized private blog network.",
+    "key_takeaways": [
+      "Build/acquire a few genuinely useful sites (free tools/resources) that attract links.",
+      "Older, established, topically-distinct satellites pass natural authority back to the main site.",
+      "Cross-promote overlapping audiences (e.g. landing-page visitors who might want a headshot).",
+      "Few strong properties beat many weak blogs.",
+      "Don't scale to 20-30+ sites — Google detects common ownership and discounts/penalizes (PBN)."
+    ],
+    "playbooks": ["content/content-rings.md"]
+  },
+  "03-21": {
+    "summary": "Content mistakes that get sites penalized or blacklisted: AI content spam, ignoring crawl budget (mass-publishing), keyword stuffing, duplicate content (stolen or repeated meta), keyword cannibalization, and thin content. Avoiding these protects all legitimate work.",
+    "key_takeaways": [
+      "No AI content spam — human-rewrite drafts to add real value before publishing.",
+      "Respect crawl budget: release pages in monthly batches; no-index/hide the rest so important pages index first.",
+      "No keyword stuffing — write naturally; check frequency with a tool like Surfer SEO.",
+      "No duplicate content — unique titles/descriptions/body per page (watch programmatic meta tags).",
+      "No cannibalization (one main keyword per page) and no thin content (~100-200+ words minimum)."
+    ],
+    "playbooks": ["content/content-what-not-to-do.md"]
+  },
+  "03-22": {
+    "summary": "Four high-impact on-page basics: internal linking (spreads authority and clarifies structure), meta titles/descriptions (main keyword in title, variants in description, must match intent), page speed (favor static generation), and canonicals (consolidate duplicate/parameterized URLs onto the main page).",
+    "key_takeaways": [
+      "Internal links spread page authority and help Google understand site structure — link related pages.",
+      "Meta title = main keyword; description = synonyms/variants; both must match user intent or users bounce.",
+      "Page speed matters for rankings and conversion — prefer statically generated pages.",
+      "Canonicals tell Google the main page, consolidating duplicate/URL-parameter pages (e.g. affiliate links).",
+      "These four are easy to do well and have outsized impact on rankings."
+    ],
+    "playbooks": ["content/on-page-optimization.md"]
+  }
+}

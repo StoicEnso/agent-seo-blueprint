@@ -1,0 +1,7 @@
+_source/**
+!_source/.gitignore
+!_source/SOURCE.md
+scripts/.venv/
+__pycache__/
+*.pyc
+seo-workspace/

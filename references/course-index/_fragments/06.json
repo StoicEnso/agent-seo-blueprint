@@ -1,0 +1,13 @@
+{
+  "06-01": {
+    "summary": "The conclusion recaps the full course as a quick-start. Step 1 — Research: pick a main keyword/niche with high search volume, low keyword difficulty, and (most important) genuine enjoyment for you; don't rush — sleep on it a few days. Step 2 — Content: build for the user, not yourself; match the user intent and the format Google ranks, then exceed it (don't make a free tool if blogs rank). Step 3 — Authority: kickstart backlinks with four immediate moves — submit to industry repositories/galleries (Product Hunt, design galleries), reach out to sites linking to competitors (link stealing), launch an affiliate program for paid products and pitch competitor-linkers, and pay small influencers ($100-$200) to post for a chance at viral links. 'Build it and they will come' is not a strategy — tell the world. Step 4 — Maintenance: out-acquire competitors on backlinks, monitor user intent in the top results and reformat content to match, and keep creating content to fill gaps and win new keywords.",
+    "key_takeaways": [
+      "Niche selection rests on three factors: high volume, low difficulty, and enjoyment — and don't rush the decision.",
+      "Build content for the user, matching intent and the ranking format, then exceeding it.",
+      "Kickstart authority fast: repositories/galleries, link stealing, affiliate program, paid micro-influencers.",
+      "'Build it and they will come' fails — distribution is mandatory.",
+      "Maintain forever: out-acquire competitor backlinks, track intent shifts and reformat, fill content gaps for new keywords."
+    ],
+    "playbooks": ["foundations/seo-process-overview.md", "foundations/seo-philosophy.md"]
+  }
+}

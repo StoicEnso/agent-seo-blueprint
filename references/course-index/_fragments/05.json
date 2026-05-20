@@ -1,0 +1,55 @@
+{
+  "05-01": {
+    "summary": "Introduces the maintenance phase. After keywords, content, and backlinks are in place, the hardest part begins: patience. Content can take months or years to rank even when it's good and well-linked. A new page typically starts ranking around three months in, then Google trials it across positions (#1, #3, #50) to test how users interact — widely believed to involve click-through and bounce/return behavior. New domains take ~3–6 months to settle; aged domains with existing backlinks settle faster. Expect heavy early volatility; don't celebrate an early #1. Once settled, ongoing maintenance defends the position against updates and competitors via weekly and monthly work.",
+    "key_takeaways": [
+      "Ranking takes patience — months to years even for good, well-linked content.",
+      "Google trials new pages across positions before they settle (CTR/bounce signals).",
+      "New domains take ~3-6 months to settle; aged domains rank faster.",
+      "Don't over-react to early volatility; maintenance is ongoing weekly/monthly defense."
+    ],
+    "playbooks": ["maintenance/navigating-google-updates.md"]
+  },
+  "05-02": {
+    "summary": "Covers keyword volatility and Google core/spam updates — dreaded because an update can overnight decide your content is less valuable and drop your rankings. Updates land several times a year and cause sudden up or down movement. A 'helpful content'-style core update can suddenly reward a previously sidelined site (e.g. Landingfolio jumping to #1), while a spam update can hammer thin/AI-generated content (e.g. Tattoos AI after scaling such pages). Lesson: build genuine user value, not tricks — tricks win briefly then collapse on an update. Never be 100% reliant on Google; it can change the rules anytime. Rankings are inherently a sawtooth of tops and bottoms, so don't despair at dips.",
+    "key_takeaways": [
+      "Google core/spam updates can reshuffle rankings overnight; expect several per year.",
+      "Updates rewarding 'helpful content' lift genuinely valuable sites; spam updates punish thin/AI content.",
+      "Build value for users, not tricks — gaming Google works briefly then gets deranked.",
+      "Never rely 100% on Google; volatility (tops and bottoms) is normal, so don't over-react to dips.",
+      "Use GSC/GA4 to confirm whether update movement is real impact vs. noise."
+    ],
+    "playbooks": ["maintenance/navigating-google-updates.md"]
+  },
+  "05-03": {
+    "summary": "Keyword intent can evolve: the content format Google favors for a query changes over time (e.g. landing pages giving way to blog posts, or blogs giving way to content/landing pages). When a top-3 page de-ranks with no update to explain it, a shift in user intent / preferred format is a likely cause. Example: a landing page ranking for 'best AI headshot generator' dropped when Google began favoring review-style blog posts; conversely, blogs for 'doctor headshot'/'artist headshot' slipped when Google started preferring landing/content pages. The fix is to convert content to the now-preferred format. Review your top pages monthly (e.g. Ahrefs Site Explorer → Top Pages) to catch shifts, and consider keeping an alternate format ready for high-value keywords.",
+    "key_takeaways": [
+      "The content format Google rewards for a keyword can flip over time.",
+      "Unexplained de-ranking of a top page often signals an intent/format shift.",
+      "Fix by converting content to the format now dominating the top results.",
+      "Review top pages monthly to detect shifts early; pre-build alternate formats for key terms."
+    ],
+    "playbooks": ["maintenance/keyword-intent-evolution.md"]
+  },
+  "05-04": {
+    "summary": "Staying ahead with backlinks is a monthly competitive discipline. Each month, compare net-new unique backlinks for yourself and ~3 competitors (plus any emerging ones) so you consistently out-acquire them — backlink building is a marathon, and winning monthly compounds into a year-plus lead. Method: in Ahrefs Site Explorer → Backlinks for each domain, filter domain authority above ~25 (strip spam), select one link per domain (unique referring domains), and view 'new' links over the last 30 days; count them and log in a Google Sheet. Also track high-DR links (80-90+) separately since quality beats quantity. Falling behind on links is a leading indicator of future ranking loss.",
+    "key_takeaways": [
+      "Track net-new unique backlinks monthly for yourself and ~3 competitors (plus newcomers).",
+      "Ahrefs filters: DR > ~25, one link per domain, 'new' in last 30 days; log counts in a sheet.",
+      "Count high-authority (DR 80-90+) links separately — quality outweighs quantity.",
+      "Backlink building is a marathon; consistently out-acquiring competitors compounds into a durable lead.",
+      "Being behind on links predicts future ranking loss."
+    ],
+    "playbooks": ["maintenance/staying-ahead-with-backlinks.md"]
+  },
+  "05-05": {
+    "summary": "Measure whether your work pays off using leading indicators (actions you control) rather than trailing indicators (rankings/traffic that arrive too late to fix). Track six monthly tasks: ship X content, target new keywords/content, optimize a few existing pages (speed, content type), identify and contact link opportunities, count backlinks acquired, and track top 3-5 competitors' backlinks. Also monitor your most important keywords' positions to catch switches early. Build a weekly dashboard of these lead indicators, do a monthly review, and a quarterly analysis comparing inputs to actual rank/traffic changes (pull trailing results from GSC and GA4). Consistently doing the work guarantees you out-grow competitors and aren't blindsided by drops.",
+    "key_takeaways": [
+      "Monitor leading indicators (actions) you control, not trailing results that come too late.",
+      "Six monthly tasks: content shipped, new keywords, existing-page optimization, link outreach, backlinks acquired, competitor backlinks tracked.",
+      "Weekly dashboard of inputs, monthly review, quarterly input-vs-output analysis.",
+      "Pull trailing rank/traffic data from GSC and GA4 at review time.",
+      "Consistently doing the work prevents surprise drops and out-grows competitors."
+    ],
+    "playbooks": ["maintenance/measuring-seo-results.md"]
+  }
+}

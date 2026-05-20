@@ -1,0 +1,169 @@
+{
+  "02-01": {
+    "summary": "Opens the Research chapter by framing research as the highest-leverage part of SEO: pick the wrong keyword and you can waste years building a product nobody searches for. Chapter splits into fundamentals, research for new projects, and research for existing projects.",
+    "key_takeaways": [
+      "Research is the most important phase — it determines whether the whole effort is worthwhile.",
+      "Choosing a low-volume or hyper-competitive keyword wastes years of work.",
+      "The chapter covers SEO fundamentals, finding/validating new niches, and competitor-driven research for existing sites."
+    ],
+    "playbooks": []
+  },
+  "02-02": {
+    "summary": "A brief setup lesson stating the fundamentals to cover before research: types of keywords, user intent, and match-and-exceed. Flags that three keyword types matter most in practice.",
+    "key_takeaways": [
+      "Fundamentals to master first: keyword types, user intent, and match-and-exceed.",
+      "Of many keyword types, three are the most useful for real research (short-tail, long-tail, LSI)."
+    ],
+    "playbooks": ["research/keyword-fundamentals.md"]
+  },
+  "02-03": {
+    "summary": "Explains short-tail vs long-tail keywords. Short-tail head terms have high volume but high competition and low supply; long-tails have low volume each but low competition (often KD under 20) and high supply, so a cluster of them can equal a head term's traffic with realistic ranking odds.",
+    "key_takeaways": [
+      "Short-tail = high volume, high competition, scarce → home-page/brand target, long game.",
+      "Long-tail = low volume each, low competition (KD often <20), abundant → where new sites actually rank.",
+      "Roughly a dozen long-tails can match one short-tail's traffic, but with far better odds.",
+      "Short-tail terms usually live inside their long-tail variants."
+    ],
+    "playbooks": ["research/keyword-fundamentals.md"]
+  },
+  "02-04": {
+    "summary": "Covers LSI (semantically related) keywords — synonyms and related phrases for your main term. Generate them via an LLM or Ahrefs, re-measure volume/KD across the synonym set to find hidden goldmines, then pick one main keyword and weave the LSI variants through the content so Google ranks the page for all of them.",
+    "key_takeaways": [
+      "List every synonym/related phrase for your main keyword (ask GPT; Ahrefs also surfaces them).",
+      "A low-KD synonym can have far more volume than the obvious head term (e.g. DP maker vs PFP maker).",
+      "Choose one main keyword, then mention LSI variants in the content for full topical coverage.",
+      "LSI expansion reveals the true size of an opportunity beyond a single term."
+    ],
+    "playbooks": ["research/keyword-fundamentals.md"]
+  },
+  "02-05": {
+    "summary": "Breaks down the four search intents and the content each demands: informational (how-to/what-is → articles), commercial (best/vs/review → comparison/curation pages), transactional (buy/download/tools → landing pages, convert now), and navigational (branded → ignore). Misreading intent wastes the click.",
+    "key_takeaways": [
+      "Match content type to intent; never send a transactional searcher to a blog post.",
+      "Informational → articles/guides; commercial → comparisons/top-10s; transactional → landing pages/tools.",
+      "Many generator/maker queries are effectively transactional even without 'buy'.",
+      "Ignore navigational/branded keywords in research; the live SERP is the final intent arbiter."
+    ],
+    "playbooks": ["research/search-intent.md"]
+  },
+  "02-06": {
+    "summary": "Introduces match-and-exceed: read Google's top 3 to learn the content format it rewards (its 'appetite'), match that format, then assess whether you can exceed the incumbents' quality. Low KD alone isn't permission — weak top results (thin tools, Pinterest, low page authority) are green lights; strong, well-linked incumbents are not.",
+    "key_takeaways": [
+      "The top-3 content type tells you what to build; build the same format, not a blog post if they're tools.",
+      "Always ask 'can I make better content than this?' even when KD is low.",
+      "Pinterest/Wikipedia/thin sites ranking = easy to exceed with richer content + a free tool.",
+      "Strong, content-heavy, heavily-linked incumbents need authority you may not have yet."
+    ],
+    "playbooks": ["research/match-and-exceed.md"]
+  },
+  "02-07": {
+    "summary": "Defines the four decision metrics and their thresholds: Keyword Difficulty (target <20, ~10 backlinks to rank), Domain vs Page Authority (page authority/URL rating is the real bar; authority is logarithmic), Search Volume (skip <100, discount <500; click curve ~30/15/10% for positions 1/2/3), and CPC (monetization filter — high volume + ~$0 CPC = worthless traffic).",
+    "key_takeaways": [
+      "KD <20 → rankable as a new site in ~1-2 months with ~10 backlinks.",
+      "Volume <100 = skip; <500 = discount; apply the 30/15/10% click curve to size real clicks.",
+      "Page authority (URL rating / links to the URL) matters more than domain authority.",
+      "High volume + low/zero CPC = nobody monetizes it; high volume + solid CPC + low KD = priority."
+    ],
+    "playbooks": ["research/seo-metrics.md"]
+  },
+  "02-08": {
+    "summary": "Tooling guidance: all SEO tools buy from the same data brokers, so numbers are largely identical and the difference is UI/UX. Recommends picking one paid tool (Ahrefs, SEMrush, or cheaper Mongools); the course uses Ahrefs. Free tools (Keyword Planner, Answer The Public) are mostly lead magnets and insufficient.",
+    "key_takeaways": [
+      "Keyword data is the same across paid tools — choose on UI/UX.",
+      "Course standardizes on Ahrefs; cheapest tier (~$29/mo) suffices for one project.",
+      "Pay for a tool if serious; free tools won't give the depth research needs.",
+      "If a user already pays for SEMrush/Mongools, map panel names rather than switch."
+    ],
+    "playbooks": ["research/keyword-research-tools.md"]
+  },
+  "02-09": {
+    "summary": "Demonstrates the data-dump hunt for new niches: open Ahrefs Keyword Explorer, filter KD<20, volume>100, country US, then add a buildable 'include' word (generator/maker/free/AI) to surface low-KD high-volume tool opportunities. Browse for buildable gems and write them down — illustrated by finding AI tattoo generator (KD ~9, 20k searches).",
+    "key_takeaways": [
+      "Empty Keyword Explorer + filters (KD<20, vol>100, US, include 'generator'/'AI') = a list of buildable niches.",
+      "Filter by transactional/commercial intent where you intend to monetize.",
+      "Most of the list is junk; you're mining for one or two buildable gems.",
+      "AI as a modifier finds fresh niches where KD is still low."
+    ],
+    "playbooks": ["research/finding-and-validating-niches.md"]
+  },
+  "02-10": {
+    "summary": "Validates a candidate keyword through a gauntlet: confirm low KD, that searchers want something you can build, that they pay (CPC/paid competitors), solid volume/geography, a beatable live SERP, and — critically — size the whole cluster via Keyword Ideas and Also Ranks For. AI tattoo generator's 19k head term implied an 80k+ cluster and hundreds of thousands across tattoo ideas/styles/near-me.",
+    "key_takeaways": [
+      "Validate the cluster (Keyword Ideas + Also Ranks For), not just the head term.",
+      "Confirm buildability, willingness to pay (CPC/competitors), and a beatable SERP.",
+      "A head term at ~19k can imply 80k+ across related terms — that's the real prize.",
+      "Also Ranks For reveals adjacent category directions (ideas, styles, locations) for a content site."
+    ],
+    "playbooks": ["research/finding-and-validating-niches.md", "research/keyword-to-sitemap.md"]
+  },
+  "02-11": {
+    "summary": "Competitor research for the validated niche: open each ranking site in Ahrefs Site Explorer and compare domain vs page authority (URL rating) — a high-DA site often has a weakly-linked top page (~16 links, URL rating ~7) that's beatable. Then mine each competitor's Organic Keywords to harvest LSI variants (creator, designs, designer, maker) you missed.",
+    "key_takeaways": [
+      "Page authority (URL rating / referring domains to the URL) decides winnability, not domain authority.",
+      "Top-3 pages with few backlinks are beatable with modest links + better content.",
+      "Mine competitors' Organic Keywords for LSI/keyword expansion; ignore their branded terms.",
+      "Newer (AI-era) modifiers stay low-KD because incumbents rank for older terms."
+    ],
+    "playbooks": ["research/competitor-research.md"]
+  },
+  "02-12": {
+    "summary": "Turns the validated keyword cluster into a website sitemap: home page targets the main short-tail keyword (built as a better free tool with added text), category/hub pages cover each keyword group (tattoo ideas, styles, artists), and long-tail keywords get programmatic SEO pages — all internally linked back to the converting tool, with loved features paywalled to monetize.",
+    "key_takeaways": [
+      "Home page = one short-tail, commercial main keyword that contains the broad category term.",
+      "One category/hub page per keyword direction; long-tails handled via programmatic SEO.",
+      "Every sub-page links up to and upsells the home-page tool.",
+      "Ship the tool free, then paywall the most-used features; add text to thin tool pages for ranking/dwell."
+    ],
+    "playbooks": ["research/keyword-to-sitemap.md"]
+  },
+  "02-13": {
+    "summary": "Teaches when to abandon a niche, with two failure modes: too little demand (head term has some volume but an empty surrounding cluster, near-zero CPC, no buyers — e.g. ComfyUI workflows) and too much competition (huge volume but KD in the 80s, only elite sites rank — e.g. car insurance). For too-hard niches, optionally hunt low-KD sub-niches but verify page authority.",
+    "key_takeaways": [
+      "Empty cluster around the head term + low CPC = the market voting no; skip it.",
+      "Don't build a 'startup bet' on a near-empty niche when you need traffic now.",
+      "KD in the 50s-80s with high-DA incumbents = unwinnable for a new site.",
+      "In too-hard niches, mine sub-niches but re-check page authority before committing."
+    ],
+    "playbooks": ["research/finding-and-validating-niches.md"]
+  },
+  "02-14": {
+    "summary": "Starts research for existing businesses: find the top competitor for your main keyword, load their Organic Keywords in Ahrefs Site Explorer, and list terms you don't rank for. The cheapest wins come from adding a missing phrase to an existing page, since Google often doesn't equate synonyms (PFP vs DP, picture vs photo).",
+    "key_takeaways": [
+      "Reverse-engineer the top competitor's Organic Keywords to find terms you're missing.",
+      "Quickest win: add a missing keyword/phrase to an existing page.",
+      "Google doesn't always merge synonyms — add the variant explicitly (e.g. DP pic).",
+      "Prioritize low/zero-KD terms with real volume that you don't yet rank for."
+    ],
+    "playbooks": ["research/research-for-existing-sites.md"]
+  },
+  "02-15": {
+    "summary": "Uses Ahrefs Top Pages to find pages a competitor built that you didn't think of: open a high-traffic page's overview to see its keywords, spot whole new page angles (a crypto laser-eyes page, a funny-PFP page) on low-KD terms, and exploit competitor keyword cannibalization. Build the missing page, make it better, and upsell your main product from it.",
+    "key_takeaways": [
+      "Top Pages reveals new page concepts, not just keywords.",
+      "Build the missing page (often a quick tool/variant), exceed it, and upsell your core product.",
+      "Spot competitor keyword cannibalization (multiple pages on one term) as an opening.",
+      "Keep one focused page per main keyword; create new pages for secondary keywords."
+    ],
+    "playbooks": ["research/research-for-existing-sites.md"]
+  },
+  "02-16": {
+    "summary": "Covers Ahrefs Content Gap (competitive analysis): enter your domain plus competitors to automatically surface keywords where they rank in the top and you don't. Triage out the too-hard terms, then drill into promising gaps with Keyword Ideas/Also Ranks For. This automated method complements — but doesn't replace — the manual Top Pages dig.",
+    "key_takeaways": [
+      "Content Gap automatically lists keywords competitors rank for that you don't.",
+      "Filter out high-KD/high-authority terms; keep realistic gaps.",
+      "Drill into promising gaps with deeper keyword research before committing.",
+      "Run both automated (Content Gap) and manual (Top Pages) gap-finding — HeadshotPro was found this way."
+    ],
+    "playbooks": ["research/research-for-existing-sites.md"]
+  },
+  "02-17": {
+    "summary": "The Also Ranks For rabbit hole for existing sites: put your main keyword in Keyword Explorer, open Also Ranks For, filter to ~500+ volume and strip branded/non-commercial terms, then keep going deeper to surface long-tail and regional variants (DP for Instagram in Asia vs PFP in the West). Related terms are easy for your site to rank for.",
+    "key_takeaways": [
+      "Also Ranks For surfaces related terms your site is well-positioned to rank for.",
+      "Filter to ~500+ volume; remove branded and non-commercial terms.",
+      "Descend the rabbit hole repeatedly to find long-tail and regional variants.",
+      "Regional naming differs (DP vs PFP) — target the high-volume regional variant."
+    ],
+    "playbooks": ["research/research-for-existing-sites.md"]
+  }
+}

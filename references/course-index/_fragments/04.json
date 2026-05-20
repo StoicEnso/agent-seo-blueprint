@@ -1,0 +1,136 @@
+{
+  "04-01": {
+    "summary": "Opens chapter 4 on building authority: even excellent content and keywords earn no traffic without authority. Outlines the chapter as how authority works, case studies of the author's own link-building strategies, additional tactics he sometimes uses, and the do's and don'ts.",
+    "key_takeaways": [
+      "Authority (backlinks) is the third pillar after keywords and content; without it Google sends no traffic.",
+      "Chapter structure: how authority works, then real case studies, then other tactics, then what not to do.",
+      "The strategies taught are the author's own, meant to be replicated."
+    ],
+    "playbooks": ["authority/understanding-authority.md"]
+  },
+  "04-02": {
+    "summary": "Defines authority as backlinks: a link from another site is a vote of confidence. Links aren't equal value scales with the linking domain's authority (logarithmic: DR 50 is ~10x DR 40) and is diluted across all outbound links on a page, so high-DR shared listicle links are weak. Backlinks also drive LLM answers, so they matter more than ever.",
+    "key_takeaways": [
+      "A backlink is a vote; Google assumes good sites won't link to bad ones.",
+      "Value is logarithmic by domain authority and shared across every outbound link on the page.",
+      "Bought links on shared repositories/listicles are low-value despite high DR because value is split.",
+      "Backlinks increasingly influence LLM (ChatGPT) recommendations, raising their long-term importance."
+    ],
+    "playbooks": ["authority/understanding-authority.md"]
+  },
+  "04-03": {
+    "summary": "Brief intro to the case-studies section: the author will break down ~10 link-building strategies he has personally implemented for his products and show how to replicate them.",
+    "key_takeaways": [
+      "The chapter's value is in real, implemented strategies, not theory.",
+      "About ten replicable link-building case studies follow."
+    ],
+    "playbooks": ["authority/understanding-authority.md"]
+  },
+  "04-04": {
+    "summary": "Precondition for all link building: nobody links to a bad product. A link is a public endorsement, so the product and user experience (no intrusive pop-ups, good landing pages) must be genuinely good. Ties back to 'match and exceed' since later tactics involve displacing competitors, which only works if you're better.",
+    "key_takeaways": [
+      "A link is a public endorsement; bad products and bad UX don't get linked.",
+      "Remove intrusive pop-ups and fix the experience before outreach.",
+      "Displacement tactics require you to actually be better than the incumbent (match and exceed)."
+    ],
+    "playbooks": ["authority/understanding-authority.md"]
+  },
+  "04-05": {
+    "summary": "Link stealing: find blog posts/listicles linking to a weaker competitor and get added or substituted in. Google the keyword to find the #1 competitor, Site Explorer it in Ahrefs, open the Backlinks report, find roundups that list the competitor but not you, get the writer's email via Hunter.io, and draft a personal pitch. For freelancer-written publisher pages, a paid placement can work.",
+    "key_takeaways": [
+      "Use Ahrefs Backlinks of the top competitor to find pages already writing about your category.",
+      "Target roundups that list the competitor but not you; pitch to be added or to replace a weak resource.",
+      "Hunter.io supplies the writer's email; keep pitches personal and lead with why you're better.",
+      "Most emails get no reply; paid placement on freelancer-controlled pages is sometimes possible."
+    ],
+    "playbooks": ["authority/link-stealing.md"]
+  },
+  "04-06": {
+    "summary": "Affiliate programs as a backlink engine: affiliates are paid to link to you. Use Rewardful (clean ?via= links that point to your domain, Stripe integration, easy payouts) and set generous commissions. Mine competitor affiliates in Ahrefs by filtering Target URL contains '?via=', recruit them via Hunter.io quoting your conversion rate, offer VIP rates to top sites, and disavow affiliate spam in Search Console.",
+    "key_takeaways": [
+      "Affiliate links must point to your own domain (Rewardful ?via=) so backlink value lands on you.",
+      "Set commissions higher than competitors; quote conversion rate to make the math compelling.",
+      "Find competitor affiliates in Ahrefs (Target URL contains ?via=) and recruit them with Hunter.io.",
+      "Offer VIP commissions to high-DR sites to become their top pick; disavow affiliate spam links."
+    ],
+    "playbooks": ["authority/affiliate-programs.md"]
+  },
+  "04-07": {
+    "summary": "Acquiring/taking over domain authority: buy an aged site with a strong backlink profile instead of building one. Blast 'open to selling?' emails to relevant free-tool owners to plant seeds; vet age and backlinks in Ahrefs when one bites; then either link from it, 301-redirect the whole domain to yours, or move the tool onto your domain and 301 the old URL. Authority transfers gradually.",
+    "key_takeaways": [
+      "Buy aged, on-topic domains with real backlinks to fast-track authority.",
+      "Seed-emailing owners pays off later (one returned after four months to sell a 14-year domain).",
+      "301-redirecting transfers backlinks/authority to your site over weeks-to-months.",
+      "Only 301 when niches match; mismatched niches get de-ranked."
+    ],
+    "playbooks": ["authority/acquiring-domain-authority.md"]
+  },
+  "04-08": {
+    "summary": "HARO (Help a Reporter Out) and successors like Help a B2B Writer Out: reply to journalist/writer source requests with expert quotes to earn elite DR 90+ editorial links. Sign up, triage requests by DR and topic fit, draft a credible reply (credibility hook + substantive answer + name/link), add a personal touch like a Loom to beat AI spam, and nurture writer relationships. Low hit rate, long lead times, huge payoff.",
+    "key_takeaways": [
+      "Source networks yield DR 90+ links competitors can't easily replicate.",
+      "Reply with a credibility hook, a specific substantive answer, and a link; add a Loom to stand out.",
+      "Very low hit rate and months-long lead times; treat as a volume game.",
+      "Use a VA to draft but have the named expert review/send; nurture writers for repeat placements."
+    ],
+    "playbooks": ["authority/haro.md"]
+  },
+  "04-09": {
+    "summary": "Case studies for backlinks: if you genuinely use and like a tool, offer to write a case study in exchange for a backlink. Companies want happy-customer case studies, so it's mutually beneficial. Target smaller tools with few or no existing case studies for the best odds; their content writer interviews you and publishes the case study linking back to you.",
+    "key_takeaways": [
+      "Offer a positive case study to a tool you use in exchange for a backlink.",
+      "Target less-popular tools with few case studies for higher success.",
+      "Companies welcome customer case studies, making this a high-yield, win-win ask."
+    ],
+    "playbooks": ["authority/manual-outreach.md"]
+  },
+  "04-10": {
+    "summary": "Content rings: maintain a portfolio of your own free tools/sites that have earned real domain authority, then link from all of them to each new product you launch. Because Google already crawls the established sites regularly, it discovers and indexes the new site faster, and the new site starts with strong, self-owned backlinks. Builders should create a few free tools to seed future launches.",
+    "key_takeaways": [
+      "Own a stable of authoritative free tools and link new launches from all of them.",
+      "Google recrawls established sites, so the new site gets discovered and indexed faster.",
+      "Distinct from manipulative PBNs: these are real, useful, individually-earned properties."
+    ],
+    "playbooks": ["authority/content-rings-for-links.md"]
+  },
+  "04-11": {
+    "summary": "Manual outreach: the reliable core of link building. Personally email writers/outlets where adding your link makes sense. Give a high-authority outlet that previously covered your category a fresh reason (e.g. a new model) plus free access/coupon with no ask; ask for missing links when you're featured without one; offer free access to anyone currently covering your space. Keep it personal, never spam.",
+    "key_takeaways": [
+      "Offer free access/coupon with no obligation to outlets that previously covered your topic.",
+      "When featured without a link (e.g. a podcast), simply ask for the backlink to be added.",
+      "Only reach out where the link genuinely fits; personal, not spam, protects your reputation.",
+      "Hit-and-miss but strong; consistency and relevance win."
+    ],
+    "playbooks": ["authority/manual-outreach.md"]
+  },
+  "04-12": {
+    "summary": "Building or leveraging an audience: with a following, product launches get discovered by writers who publish about you (Medium posts, articles, even reporter pickups). Without an audience, borrow influencers' instead of cold-DMing, engage genuinely, build rapport, or pay smaller creators (e.g. ~$200 TikTok reviews) for exposure. Goal is reach; any share, even a tweet, is a signal to Google.",
+    "key_takeaways": [
+      "An audience is a discovery engine: launches get written up by writers who follow you.",
+      "No audience? Leverage influencers via genuine engagement, not cold DMs; pay small creators for exposure.",
+      "Even a large following rarely helps with reporter source requests.",
+      "Any share is a backlink/signal; volume of exposure matters more than account size."
+    ],
+    "playbooks": ["authority/building-an-audience.md"]
+  },
+  "04-13": {
+    "summary": "Other link-building tactics: linkable assets (infographics), broken-link building (Ahrefs finds dead links to replace), the skyscraper technique, guest posting, podcasts (show notes + host site links), link swapping (sparingly), forum participation (devalued, add value only), and ABC link boosting (gray/black-hat link buying to skip). A grab-bag to layer on top of the core tactics.",
+    "key_takeaways": [
+      "Durable, low-risk plays: infographics, broken-link replacement, skyscraper upgrades, guest posts, podcasts.",
+      "Link swaps and forum links work only in small, genuine doses; overuse triggers penalties.",
+      "Podcasts yield show-notes and host-site backlinks plus visibility.",
+      "ABC link boosting is gray/black-hat link buying and a banning risk; default to skipping it."
+    ],
+    "playbooks": ["authority/other-link-building.md"]
+  },
+  "04-14": {
+    "summary": "What not to do: penalties from manipulative link building can be permanent. Avoid cheap bought link packages, over-optimized exact-keyword anchors, spamming URLs across forums, link farms/PBNs, and off-topic/irrelevant or niche-mismatched domains (the fit.nl travel-to-fitness de-ranking). Clean up unwanted third-party/affiliate spam by disavowing those links in Google Search Console.",
+    "key_takeaways": [
+      "Cheap bought links and uniform keyword anchors get flagged and often permanently de-ranked.",
+      "Avoid forum spam, link farms/PBNs, and links from irrelevant or niche-mismatched sites.",
+      "Niche mismatch (rebuilding a travel domain as fitness) gets de-ranked by Google.",
+      "Disavow unwanted/affiliate-spam links via Search Console to protect your profile."
+    ],
+    "playbooks": ["authority/linkbuilding-what-not-to-do.md"]
+  }
+}
