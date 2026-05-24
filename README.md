@@ -13,8 +13,8 @@ Think of it as two planes that reference each other:
 2. **Pipeline layer** — 5 job-oriented workflows that compose those playbooks, drive the data integrations, summon
    customer-persona subagents for ideation, and produce concrete deliverables.
 
-> **Status:** private / pre-release. Self-contained: clones and runs with **no API keys and no `pip install`** (data
-> access and full-text search are optional add-ons). Not affiliated with or endorsed by any course author.
+> **Self-contained:** clones and runs with **no API keys and no `pip install`** — data access and full-text search are
+> optional add-ons. Independent reimplementation; not affiliated with, sponsored by, or endorsed by any course author.
 
 ---
 
@@ -256,14 +256,14 @@ Ask the agent things like:
 ## Self-contained design & the private `_source/`
 
 This repo is **self-contained**: a fresh clone validates and runs (search, workspace, report, all data scripts) with no
-extra setup. What's *not* shipped is the paid-course **transcripts**, which live only in a gitignored `_source/` folder
-on the author's machine.
+extra setup. What's *not* shipped is the paid-course **transcripts** — they are private and never redistributed.
 
-- The shipped `references/course-index/` provides summaries, key takeaways, and playbook links — so search and routing
-  work fully without transcripts.
-- Only `search_course.py --full` (transcript full-text search) needs `_source/`; it degrades gracefully when absent.
-- If you own the course, you can populate `_source/transcripts/` with your own copies (one `.txt` per lesson, named
-  `<chapter>-<lesson>_<slug>.txt`) to enable `--full`. See `_source/SOURCE.md`.
+- The included `references/course-index/` provides summaries, key takeaways, and playbook links, so search and routing
+  work fully **without** transcripts.
+- Only `search_course.py --full` (transcript full-text search) needs a local `_source/transcripts/`, and it degrades
+  gracefully when absent.
+- If you own the course, drop your own `.txt` per lesson (named `<chapter>-<lesson>_<slug>.txt`) into
+  `_source/transcripts/` to enable `--full`. See `_source/SOURCE.md`.
 
 ---
 
@@ -292,4 +292,5 @@ copyrightable; the course **transcripts themselves are not included** and are ne
 here (playbooks, index summaries, workflows, scripts) is original synthesis. Not affiliated with, sponsored by, or
 endorsed by the course author.
 
-**License:** private / all rights reserved for now. A license will be chosen before any public release.
+**License:** MIT — see [`LICENSE`](LICENSE). Covers the original work in this repo (playbooks, course index, workflows,
+scripts, templates). Course transcripts are not included and are not covered.
