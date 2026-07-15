@@ -32,7 +32,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Find/validate a niche, do keyword research, plan a sitemap, find competitor gaps | `workflows/research-and-ideation.md` |
 | Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, on-page, draft QA | `workflows/content-production.md` |
 | Audit a live site (technical + on-page + content) with a prioritized fix list | `workflows/site-audit.md` |
-| Get backlinks / build authority (link stealing, HARO, affiliate, outreach, content rings) | `workflows/authority-and-links.md` |
+| Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
 | Monitor rankings/traffic, respond to Google updates, measure ROI | `workflows/monitoring.md` |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
 | Ideate content angles / pressure-test a niche with customer personas | ICP personas (below) |
@@ -58,7 +58,8 @@ Distilled, original methodology grouped by area. Load the specific file a step n
   landing-pages, articles, content-rings, on-page-optimization, content-what-not-to-do,
   agent-article-production-qa
 - **authority/** — understanding-authority, link-stealing, affiliate-programs, acquiring-domain-authority, haro,
-  manual-outreach, building-an-audience, content-rings-for-links, other-link-building, linkbuilding-what-not-to-do
+  manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, other-link-building,
+  linkbuilding-what-not-to-do
 - **foundations/** — seo-philosophy, seo-and-ai-future, seo-process-overview
 - **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks, measuring-seo-results
 
@@ -99,6 +100,8 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   then get explicit user confirmation before acting. Never auto-send.
 - **Article QA** uses evidence-backed claims, hard-fail checks, and at most two automated revision passes. A score never
   overrides fabricated/unsupported claims, product-truth violations, intent mismatch, or the human publication gate.
+- **Directory submissions** are relevance-first entity/citation work: live-verify public indexability and eligibility,
+  treat DR screenshots as leads rather than facts, and require explicit approval before any account/listing write.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Source material** in `_source/` is private paid-course content (gitignored). The playbooks are original distillations
   and are the only course-derived material safe to share.

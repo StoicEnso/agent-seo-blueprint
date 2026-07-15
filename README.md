@@ -8,7 +8,8 @@ into a per-project workspace.
 Think of it as two planes that reference each other:
 
 1. **Knowledge layer** — 36 distilled, original-wording playbooks covering the entire course (62 lessons, proven
-   coverage), one operational article-production QA playbook, and a searchable course index so any agent can answer
+   coverage), operational article-production QA and directory/entity-submission playbooks, and a searchable course
+   index so any agent can answer
    *"what does the course say about X?"* and pull the right playbook.
 2. **Pipeline layer** — 5 job-oriented workflows that compose those playbooks, drive the data integrations, summon
    customer-persona subagents for ideation, and produce concrete deliverables.
@@ -23,7 +24,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-37-playbooks)
+- [The knowledge layer](#the-knowledge-layer-38-playbooks)
 - [The workflows](#the-workflows-5-pipelines)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -43,7 +44,8 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **37 playbooks**: 36 original course distillations plus one operational article-production QA playbook;
+- **38 playbooks**: 36 original course distillations plus operational article-production QA and
+  directory/entity-submission playbooks;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
 - **5 end-to-end workflows**: research & ideation, content production, site audit, authority/links, monitoring.
 - **5 data integrations**, each with an API path **and** a documented browser-fallback procedure (Ahrefs, GSC, GA4,
@@ -84,10 +86,10 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 1 operational QA playbook
+  playbooks/                   # 36 course distillations + 2 operational playbooks
     research/        (9)        # keyword research, niches, intent, metrics, match-and-exceed…
     content/         (11)       # programmatic SEO, free tools, content/landing pages, article QA…
-    authority/       (10)       # link stealing, HARO, affiliate, outreach, content rings…
+    authority/       (11)       # link stealing, HARO, directories, affiliate, outreach, content rings…
     foundations/     (3)        # SEO philosophy, SEO & AI, process overview
     maintenance/     (4)        # Google updates, intent evolution, backlinks, measuring ROI
   course-index/
@@ -114,7 +116,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (37 playbooks)
+## The knowledge layer (38 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -128,8 +130,8 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 `agent-article-production-qa`
 
 **authority/** — `understanding-authority` · `link-stealing` · `affiliate-programs` · `acquiring-domain-authority` ·
-`haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` · `other-link-building` ·
-`linkbuilding-what-not-to-do`
+`haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` · `directory-submissions` ·
+`other-link-building` · `linkbuilding-what-not-to-do`
 
 **foundations/** — `seo-philosophy` · `seo-and-ai-future` · `seo-process-overview`
 
