@@ -3,7 +3,7 @@
 Per-project workspace manager for the agent-seo-blueprint skill.
 
 A workspace holds everything for ONE site/project: config, audits, keyword maps,
-content briefs, monitoring history, outreach lists.
+content briefs, review drafts, monitoring history, outreach lists.
 
 Usage:
     python3 scripts/workspace.py status [--path DIR]      # show/resolve workspace
@@ -19,7 +19,7 @@ Secrets (API keys) are NEVER stored here — project.json references them by env
 import argparse, json, sys, datetime
 from pathlib import Path
 
-SUBDIRS = ["audits", "keywords", "briefs", "monitoring", "outreach", "research"]
+SUBDIRS = ["audits", "keywords", "briefs", "drafts", "monitoring", "outreach", "research"]
 
 PROJECT_TEMPLATE = {
     "name": "",

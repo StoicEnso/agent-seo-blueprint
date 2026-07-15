@@ -105,7 +105,8 @@ points → artifacts to emit (into the workspace). The five:
 1. **research-and-ideation** — niche finding/validation, keyword research, competitor gap analysis, match-and-exceed,
    keyword→sitemap planning. Can summon ICP personas for divergent ideation.
 2. **content-production** — content-type selection, programmatic SEO planning, free-tool page design, landing pages,
-   articles, content rings, on-page optimization; emits content briefs.
+   articles, content rings, and on-page optimization; emits content briefs and, when explicitly requested, an
+   evidence packet, review draft, and bounded content-QA report.
 3. **site-audit** — technical + on-page + content audit of a live site → prioritized, severity-ranked fix list.
 4. **authority-and-links** — link stealing, HARO, affiliate, manual outreach, content rings → opportunity lists +
    drafted outreach (never sent without confirmation).
@@ -136,7 +137,8 @@ points → artifacts to emit (into the workspace). The five:
   - If the user names/points to one, use it.
   - Else look for `./seo-workspace/<project>/`; if none, **ask** the user before creating.
 - Contents: `project.json` (domain(s), niche, Ahrefs workspace/API key ref, GSC property, GA4 property id, locale),
-  plus dated artifacts: audit reports, keyword maps (CSV), content briefs, monitoring history, outreach lists.
+  plus dated artifacts: audit reports, keyword maps (CSV), content briefs, source packets, review drafts, content-QA
+  reports, monitoring history, outreach lists.
 - `project.json` schema documented in a reference; secrets referenced by env-var name, never stored in plaintext.
 
 ### Routing (`SKILL.md`)
