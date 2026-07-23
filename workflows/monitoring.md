@@ -6,6 +6,7 @@ playbooks:
   - references/playbooks/maintenance/staying-ahead-with-backlinks.md
   - references/playbooks/maintenance/navigating-google-updates.md
   - references/playbooks/maintenance/keyword-intent-evolution.md
+  - references/playbooks/maintenance/seo-operational-checklist.md
   - references/playbooks/foundations/seo-process-overview.md
 scripts:
   - scripts/workspace.py
@@ -52,6 +53,8 @@ outputs:
 
 7. **Emit the snapshot + run the review.** Assemble `{site, period, metrics:{clicks,impressions,avg_position,sessions,...}, keywords:[{keyword,position,change}], notes}` and run `python3 scripts/report.py monitoring --workspace <DIR> --data <snapshot.json>` → `monitoring/<date>_snapshot.md`. Save the raw payload too. On the configured cadence: **monthly** review the trend; **quarterly** tie the leading indicators (step 4) to the trailing results (step 3) — did the inputs translate into rankings/traffic? If inputs were done consistently and rankings still flat after a quarter, dig into the trailing data for a diagnosis.
 
+8. **Re-test operational regressions and opportunities.** Load `references/playbooks/maintenance/seo-operational-checklist.md` and re-check the prior audit's failed/partial rows that can change over time: traffic/ranking declines, page-two opportunities, high-impression/low-CTR pages, sitemap processing, robots/noindex, truthful freshness signals, broken links, CWV, schema validation, and branded/site SERP anomalies. Use GSC for indexation; treat `site:` checks as directional only. Append status changes and evidence to the current snapshot rather than rerunning all 37 checks blindly.
+
 **Decision points.**
 - **Cadence** (asked at setup): weekly inputs / monthly outputs / quarterly analysis is the recommended default — but the user chooses.
 - **On-demand vs scheduled** → run now (steps 3–7) vs register via `schedule`/`loop` (user-confirmed).
@@ -63,4 +66,4 @@ outputs:
 - `monitoring/<date>_leading-indicators.json` — the six action-task checklist for the period.
 - `monitoring/<date>_snapshot.json` — raw payload for trend diffing.
 
-**Done when.** A snapshot + leading-indicator log are written for the period, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes.
+**Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes.

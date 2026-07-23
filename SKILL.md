@@ -61,7 +61,8 @@ Distilled, original methodology grouped by area. Load the specific file a step n
   manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, other-link-building,
   linkbuilding-what-not-to-do
 - **foundations/** — seo-philosophy, seo-and-ai-future, seo-process-overview
-- **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks, measuring-seo-results
+- **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
+  measuring-seo-results, evidence-backed 37-check operational SEO coverage
 
 ## Data integrations (`references/integrations/` + `scripts/`)
 
@@ -102,6 +103,8 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   overrides fabricated/unsupported claims, product-truth violations, intent mismatch, or the human publication gate.
 - **Directory submissions** are relevance-first entity/citation work: live-verify public indexability and eligibility,
   treat DR screenshots as leads rather than facts, and require explicit approval before any account/listing write.
+- **Operational SEO checklists** are coverage ledgers, not ranking formulas: preserve conditional guidance, use GSC over
+  `site:` counts for indexation, and require URL/template-level evidence before marking a check complete.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Source material** in `_source/` is private paid-course content (gitignored). The playbooks are original distillations
   and are the only course-derived material safe to share.

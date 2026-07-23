@@ -3,6 +3,7 @@ title: Directory & Entity Submissions
 area: authority
 source_lessons: []
 operational_addition: true
+source: "https://x.com/hridoyreh/status/2079831605863178416"
 ---
 
 # Directory & Entity Submissions
@@ -43,7 +44,9 @@ Reject the candidate when the only link is inside a private account, the listing
 
 ## Sourced candidate set — July 2026
 
-These are discovery leads from a public X checklist. **No DR values are preserved because they are unverified and mutable.** Five were already present in the maintained directory catalog; twelve are newly recorded candidates.
+These are discovery leads from a public X checklist. **No DR values are preserved in this curated table because they are unverified and mutable.** Five were already present in the maintained directory catalog; twelve are newly recorded candidates.
+
+The broader source intake is stored in `assets/startup-backlink-candidates.csv`: 127 source mentions normalized to 122 unique candidate names, with duplicate source row numbers and mention counts preserved. The asset is deliberately a research queue, not an approved directory list. Its `source_claimed_dr_unverified` values are source-reported snapshots only; never sort or recommend on them without current verification. Promote a row into the submission tracker only after completing the verification checklist below.
 
 | Destination | Route type | Catalog status | What to verify before use |
 |---|---|---|---|

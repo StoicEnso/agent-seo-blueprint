@@ -15,6 +15,7 @@ playbooks:
   - references/playbooks/content/agent-article-production-qa.md
   - references/playbooks/research/match-and-exceed.md
   - references/playbooks/research/search-intent.md
+  - references/playbooks/maintenance/seo-operational-checklist.md
 scripts:
   - scripts/workspace.py
   - scripts/search_course.py
@@ -60,6 +61,8 @@ outputs:
    - **Content page:** choose the sub-pattern (comparison / success-story-review / niche hub / examples-how-to / integration); plan sections, screenshots, pricing/testimonial blocks; load niche/long-tail keywords here, off the homepage.
    - **Landing page:** one keyword per page, inform + link straight to checkout.
    - **Article:** confirm you'll invest in genuine human writing; if not, pick a different format.
+
+   Apply the relevant content checks from `references/playbooks/maintenance/seo-operational-checklist.md`: titles are intent-first (50–60 characters is guidance, not a hard pass/fail), authorship/E-E-A-T signals must be real, schema must match visible content, `dateModified` changes only after material edits, and FAQ/PAA sections belong on the most appropriate page unless a standalone page has distinct demand and enough value.
 
 5. **Apply on-page optimization to the brief.** Load `references/playbooks/content/on-page-optimization.md`. Specify: meta title (main keyword, intent-matched, natural) and description (synonyms/variants); internal links to/from related pages; a page-speed plan (prefer static generation); and canonicals for any parameterized/duplicate URLs.
 
