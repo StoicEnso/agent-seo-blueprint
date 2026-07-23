@@ -40,7 +40,7 @@ _Generated {{DATE}}_
 - **Suggested title tag:** {{≤60 chars, primary keyword near the front}}
 - **Suggested H1:** {{can differ from title; written for the human}}
 - **Meta description:** {{≤155 chars, includes the keyword + a reason to click}}
-- **Word-count target:** {{range, justified by what the top results carry — match or exceed}}
+- **Coverage target:** {{sections, examples, evidence, or tools needed to satisfy intent; use a word-count range only when the live SERP makes it useful}}
 
 ## Outline (H2 / H3)
 
@@ -65,6 +65,25 @@ Structure that covers the intent fully and works in the cluster terms naturally.
 - **Supporting proof:** {{testimonial, before/after, trust signal that neutralizes the
   main objection}}
 
+## Product truth contract
+
+- **Approved product facts + evidence:**
+  - {{fact}} — {{source / proof}}
+- **Required product URL(s):** {{URL(s)}}
+- **Approved CTA language:** {{exact or bounded language}}
+- **Forbidden / unsupported claims:** {{claims the draft must not make}}
+- **Comparison boundaries:** {{what may and may not be said about alternatives}}
+- **Reviewer / open questions:** {{unknowns that must remain flagged}}
+
+## Research evidence plan
+
+Map every material claim or outline section to the evidence it requires. Evidence quality
+matters more than an arbitrary source count.
+
+| Claim / section | Evidence needed | Preferred source | Freshness requirement |
+|---|---|---|---|
+| {{claim or H2}} | {{fact, quote, data, screenshot, or example}} | {{official / primary / credible secondary}} | {{current / dated / evergreen}} |
+
 ## On-page checklist
 
 - [ ] Primary keyword in title, H1, first 100 words, and URL
@@ -73,6 +92,8 @@ Structure that covers the intent fully and works in the cluster terms naturally.
 - [ ] Content genuinely exceeds the top 3 (more depth / better tool / better UX)
 - [ ] Internal links added in both directions
 - [ ] CTA + proof element present and placed
+- [ ] Product claims match the truth contract; forbidden claims are absent
+- [ ] Every material factual claim has inspectable evidence
 - [ ] Meta description written and within length
 - [ ] Image alt text + descriptive filenames
 - [ ] Mobile-friendly and fast (no layout shift, fast LCP)

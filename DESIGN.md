@@ -56,8 +56,8 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── playbooks/                  # LAYER 1: distilled, original, 1-for-1 methodology
 │   │   ├── research/               #   niches, keywords, intent, match-and-exceed, metrics, tools...
 │   │   ├── content/                #   content types, programmatic SEO, free tools, pages, on-page...
-│   │   ├── authority/              #   link stealing, HARO, affiliate, outreach, content rings...
-│   │   └── maintenance/            #   volatility, Google updates, intent evolution, measurement...
+│   │   ├── authority/              #   link stealing, HARO, verified directories, affiliate, outreach, content rings...
+│   │   └── maintenance/            #   volatility, updates, intent, measurement, operational coverage...
 │   ├── course-index/               # mirrored, searchable course
 │   │   ├── course-index.json       #   62 lessons: title, summary, takeaways, →playbook, →transcript
 │   │   └── course-index.md         #   human-readable mirror (chapter/lesson outline + links)
@@ -80,8 +80,9 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── gsc_pull.py  ga4_pull.py  serp_capture.py  pagespeed_run.py
 │   ├── workspace.py                #   find/create per-project workspace + project.json
 │   └── report.py                   #   render audit/keyword/brief artifacts from data
-├── assets/                         # templates
+├── assets/                         # templates + source-lead research assets
 │   ├── audit-report.md  content-brief.md  keyword-map.csv  outreach-email.md  monitoring-snapshot.md
+│   └── startup-backlink-candidates.csv # 127 source mentions → 122 unverified leads
 └── _source/                        # GITIGNORED: transcripts + link to iCloud archive (private authority)
     └── .gitignore                  # ignores everything here
 ```
@@ -105,12 +106,18 @@ points → artifacts to emit (into the workspace). The five:
 1. **research-and-ideation** — niche finding/validation, keyword research, competitor gap analysis, match-and-exceed,
    keyword→sitemap planning. Can summon ICP personas for divergent ideation.
 2. **content-production** — content-type selection, programmatic SEO planning, free-tool page design, landing pages,
-   articles, content rings, on-page optimization; emits content briefs.
+   articles, content rings, and on-page optimization; emits content briefs and, when explicitly requested, an
+   evidence packet, review draft, and bounded content-QA report.
 3. **site-audit** — technical + on-page + content audit of a live site → prioritized, severity-ranked fix list.
 4. **authority-and-links** — link stealing, HARO, affiliate, manual outreach, content rings → opportunity lists +
    drafted outreach (never sent without confirmation).
 5. **monitoring** — rank/traffic snapshots, Google-update detection/response, "is it paying off" measurement; on-demand
    plus optional scheduled (via the `schedule`/`loop` skills) with a recommended cadence chosen at setup.
+
+Operational additions compose into these five workflows rather than creating parallel pipelines: the 37-check SEO
+ledger routes evidence across audit/research/content/monitoring, while the startup backlink asset feeds the
+directory/entity verification path. Neither source-derived artifact turns heuristics, DR snapshots, or `site:` counts
+into facts; live verification and external-write approval gates still apply.
 
 ### Layer 3 — Tooling & data (`scripts/` + `references/integrations/`)
 - **Ahrefs**: `ahrefs_client.py` uses the API when a key is in project config; otherwise drives the logged-in Ahrefs web
@@ -136,7 +143,8 @@ points → artifacts to emit (into the workspace). The five:
   - If the user names/points to one, use it.
   - Else look for `./seo-workspace/<project>/`; if none, **ask** the user before creating.
 - Contents: `project.json` (domain(s), niche, Ahrefs workspace/API key ref, GSC property, GA4 property id, locale),
-  plus dated artifacts: audit reports, keyword maps (CSV), content briefs, monitoring history, outreach lists.
+  plus dated artifacts: audit reports, keyword maps (CSV), content briefs, source packets, review drafts, content-QA
+  reports, monitoring history, outreach lists.
 - `project.json` schema documented in a reference; secrets referenced by env-var name, never stored in plaintext.
 
 ### Routing (`SKILL.md`)

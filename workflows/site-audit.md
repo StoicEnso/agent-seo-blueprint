@@ -9,6 +9,7 @@ playbooks:
   - references/playbooks/research/match-and-exceed.md
   - references/playbooks/research/research-for-existing-sites.md
   - references/playbooks/maintenance/keyword-intent-evolution.md
+  - references/playbooks/maintenance/seo-operational-checklist.md
   - references/playbooks/authority/understanding-authority.md
   - references/playbooks/authority/linkbuilding-what-not-to-do.md
 scripts:
@@ -35,11 +36,11 @@ outputs:
 
 **Steps.**
 
-1. **Scope the audit.** List the URLs to inspect (priority pages from the user; or pull the top traffic pages via `ahrefs_client.py` Top Pages / `gsc_pull.py`). Decide how deep (single page, key templates, or whole site sample).
+1. **Scope the audit.** List the URLs to inspect (priority pages from the user; or pull the top traffic pages via `ahrefs_client.py` Top Pages / `gsc_pull.py`). Decide how deep (single page, key templates, or whole site sample). Load `references/playbooks/maintenance/seo-operational-checklist.md`, create a 37-row coverage ledger, and record which URLs/templates represent each applicable check. Do not infer whole-site coverage from the homepage.
 
 2. **Technical audit — speed & Core Web Vitals.** Load `references/playbooks/content/on-page-optimization.md` (page-speed section). Run `python3 scripts/pagespeed_run.py <url>` for each priority URL (browser-Lighthouse fallback in `references/integrations/pagespeed.md`). Flag slow loads (5–10s), poor CWV, and non-static pages that should be statically generated. Severity by impact on rankings/conversion.
 
-3. **Technical audit — indexation & duplication.** From `on-page-optimization.md` (canonicals) and `references/playbooks/content/content-what-not-to-do.md` (duplicate content, crawl budget): check for parameterized/near-duplicate URLs without canonicals, duplicate meta titles/descriptions across templated pages, and mass-published pages straining crawl budget. Use `gsc_pull.py` coverage/indexation signals where available and `serp_capture.py` (`site:` checks) otherwise.
+3. **Technical audit — indexation & duplication.** From `on-page-optimization.md` (canonicals) and `references/playbooks/content/content-what-not-to-do.md` (duplicate content, crawl budget): check for parameterized/near-duplicate URLs without canonicals, duplicate meta titles/descriptions across templated pages, and mass-published pages straining crawl budget. Use `gsc_pull.py` coverage/indexation signals where available. A `site:` query via `serp_capture.py` is directional discovery evidence only, never an authoritative indexed-page count.
 
 4. **On-page audit.** Per priority page, scrape it with `serp_capture.py` and check against `on-page-optimization.md`: meta title contains the main keyword AND matches search intent (no obscure titles that cause bounces); meta description uses variants; internal links present and pointing at related pages; H1/H2 structure sane. Record each gap as a finding.
 
@@ -49,7 +50,9 @@ outputs:
 
 7. **Authority sanity check.** Load `references/playbooks/authority/understanding-authority.md` and `linkbuilding-what-not-to-do.md`. Via `ahrefs_client.py`, eyeball the backlink profile: is page-level authority too thin to rank the target keyword? Any toxic/spammy referring domains worth disavowing? Note as findings (deep link work routes to `authority-and-links.md`).
 
-8. **Score, rank, and emit the report.** Assign each finding a severity (`critical | high | medium | low`), an area (technical / on-page / content / intent / opportunity / authority), the issue, and the recommended fix (with evidence). Assemble `{summary, score?, findings:[...]}` and run `python3 scripts/report.py audit --workspace <DIR> --title "Site audit: <domain>" --data <findings.json>`. `report.py` sorts findings by severity into a prioritized table → `audits/<date>_audit.md`. Save the raw payload too (`report.py note ... --subdir audits --name audit-findings`).
+8. **Close the operational coverage ledger.** For every row in `seo-operational-checklist.md`, record `pass | partial | fail | blocked | not_applicable` plus evidence. Route research, content, authority, local, and monitoring opportunities to their owning workflows. Write `audits/<date>_operational-seo-coverage.csv`; `not_applicable` requires a reason.
+
+9. **Score, rank, and emit the report.** Assign each finding a severity (`critical | high | medium | low`), an area (technical / on-page / content / intent / opportunity / authority), the issue, and the recommended fix (with evidence). Assemble `{summary, score?, findings:[...]}` and run `python3 scripts/report.py audit --workspace <DIR> --title "Site audit: <domain>" --data <findings.json>`. `report.py` sorts findings by severity into a prioritized table → `audits/<date>_audit.md`. Save the raw payload too (`report.py note ... --subdir audits --name audit-findings`).
 
 **Decision points.**
 - **Drop with a confirmed Google update** → treat as a content-quality/value finding (audit helpfulness) per `keyword-intent-evolution.md` / maintenance.
@@ -60,5 +63,6 @@ outputs:
 **Outputs.**
 - `audits/<date>_audit.md` — prioritized, severity-ranked fix list (Markdown table from `report.py`).
 - `audits/<date>_audit-findings.json` — raw findings for re-rendering or diffing against the next audit.
+- `audits/<date>_operational-seo-coverage.csv` — evidence/status for all 37 operational checks.
 
-**Done when.** Every priority URL has been checked across technical, on-page, content/intent, opportunity, and authority dimensions; all findings carry a severity + concrete fix; and the ranked report is written to the workspace. Hand high-ROI content fixes to `content-production.md`, link findings to `authority-and-links.md`, and set a re-audit cadence in `monitoring.md`.
+**Done when.** Every priority URL has been checked across technical, on-page, content/intent, opportunity, and authority dimensions; all 37 operational checks have evidence-backed statuses or explicit `not_applicable` reasons; all findings carry a severity + concrete fix; and the ranked report plus coverage ledger are written to the workspace. Hand high-ROI content fixes to `content-production.md`, link findings to `authority-and-links.md`, and set a re-audit cadence in `monitoring.md`.

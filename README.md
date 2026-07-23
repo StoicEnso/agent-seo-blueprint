@@ -8,8 +8,9 @@ into a per-project workspace.
 Think of it as two planes that reference each other:
 
 1. **Knowledge layer** — 36 distilled, original-wording playbooks covering the entire course (62 lessons, proven
-   coverage), plus a searchable course index so any agent can answer *"what does the course say about X?"* and pull the
-   right playbook.
+   coverage), operational article-production QA, directory/entity-submission, and 37-check SEO coverage playbooks,
+   plus a searchable course index so any agent can answer
+   *"what does the course say about X?"* and pull the right playbook.
 2. **Pipeline layer** — 5 job-oriented workflows that compose those playbooks, drive the data integrations, summon
    customer-persona subagents for ideation, and produce concrete deliverables.
 
@@ -23,7 +24,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-36-playbooks)
+- [The knowledge layer](#the-knowledge-layer-39-playbooks)
 - [The workflows](#the-workflows-5-pipelines)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -43,14 +44,16 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **36 distilled playbooks**, original wording, every one tagged to its source lesson(s); `coverage-map.md` proves all
-  62 lessons map to ≥1 playbook.
+- **39 playbooks**: 36 original course distillations plus operational article-production QA,
+  directory/entity-submission, and evidence-backed 37-check SEO coverage playbooks;
+  `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
 - **5 end-to-end workflows**: research & ideation, content production, site audit, authority/links, monitoring.
 - **5 data integrations**, each with an API path **and** a documented browser-fallback procedure (Ahrefs, GSC, GA4,
   live SERP, PageSpeed/Lighthouse).
 - **ICP persona subagents** — summon Opus subagents that role-play ideal customers to ideate content angles, surface the
   exact phrases people search, and pressure-test niches.
-- **Per-project workspace** — config + dated artifacts (audits, keyword maps, briefs, monitoring history, outreach).
+- **Per-project workspace** — config + dated artifacts (audits, keyword maps, briefs, source packets, drafts,
+  content-QA reports, monitoring history, outreach).
 - **Zero dependencies** — every script is Python 3 standard library only. **No `pip install`, no API key required** to
   start.
 
@@ -83,12 +86,12 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 distilled, original-wording playbooks
+  playbooks/                   # 36 course distillations + 3 operational playbooks
     research/        (9)        # keyword research, niches, intent, metrics, match-and-exceed…
-    content/         (10)       # programmatic SEO, free tools, content/landing pages, on-page…
-    authority/       (10)       # link stealing, HARO, affiliate, outreach, content rings…
+    content/         (11)       # programmatic SEO, free tools, content/landing pages, article QA…
+    authority/       (11)       # link stealing, HARO, directories, affiliate, outreach, content rings…
     foundations/     (3)        # SEO philosophy, SEO & AI, process overview
-    maintenance/     (4)        # Google updates, intent evolution, backlinks, measuring ROI
+    maintenance/     (5)        # Google updates, intent evolution, backlinks, ROI, operational coverage
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
@@ -107,13 +110,14 @@ scripts/                       # Python 3 stdlib only — no pip deps
   serp_capture.py   pagespeed_run.py
 assets/                        # fill-in templates emitted into the workspace
   audit-report.md  content-brief.md  keyword-map.csv
+  startup-backlink-candidates.csv  # 127 source mentions → 122 unverified research leads
   outreach-email.md  monitoring-snapshot.md
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```
 
 ---
 
-## The knowledge layer (36 playbooks)
+## The knowledge layer (39 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -123,16 +127,17 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 `research-for-existing-sites`
 
 **content/** — `content-fundamentals` · `content-types-overview` · `programmatic-seo` · `free-tools-strategy` ·
-`content-pages` · `landing-pages` · `articles` · `content-rings` · `on-page-optimization` · `content-what-not-to-do`
+`content-pages` · `landing-pages` · `articles` · `content-rings` · `on-page-optimization` · `content-what-not-to-do` ·
+`agent-article-production-qa`
 
 **authority/** — `understanding-authority` · `link-stealing` · `affiliate-programs` · `acquiring-domain-authority` ·
-`haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` · `other-link-building` ·
-`linkbuilding-what-not-to-do`
+`haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` · `directory-submissions` ·
+`other-link-building` · `linkbuilding-what-not-to-do`
 
 **foundations/** — `seo-philosophy` · `seo-and-ai-future` · `seo-process-overview`
 
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
-`measuring-seo-results`
+`measuring-seo-results` · `seo-operational-checklist`
 
 > **Flagship play:** proactive niche discovery — mining search data for a low-KD, buildable gap with a real LSI cluster
 > behind it, to build a product/startup around. See `research/finding-and-validating-niches.md` (the Ahrefs data-dump
@@ -147,7 +152,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | Workflow | What it does | Key outputs |
 |---|---|---|
 | **research-and-ideation** | niche find/validate → keyword research → competitor gaps → match-and-exceed → keyword→sitemap; can summon ICP personas | keyword map CSV, sitemap plan |
-| **content-production** | content-type selection → programmatic SEO / free-tool pages / content pages / landing / articles → on-page | content brief |
+| **content-production** | content-type selection → brief → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional source packet, review draft, QA report |
 | **site-audit** | technical + on-page + content + opportunity + authority audit | prioritized, severity-ranked fix list |
 | **authority-and-links** | pick tactics → ranked opportunity list → **drafted** outreach (never auto-sent) | opportunity list, outreach drafts |
 | **monitoring** | rank/traffic snapshots + Google-update response + ROI measurement; on-demand or scheduled | monitoring snapshots, history |

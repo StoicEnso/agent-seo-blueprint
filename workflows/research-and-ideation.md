@@ -12,6 +12,7 @@ playbooks:
   - references/playbooks/research/match-and-exceed.md
   - references/playbooks/research/research-for-existing-sites.md
   - references/playbooks/research/keyword-to-sitemap.md
+  - references/playbooks/maintenance/seo-operational-checklist.md
 scripts:
   - scripts/workspace.py
   - scripts/search_course.py
@@ -56,6 +57,8 @@ outputs:
 7. **Confirm winnability.** Load `references/playbooks/research/competitor-research.md`. Inspect the top results' **page authority (URL rating / referring domains to the exact URL)** — not domain authority. Low page authority among leaders = winnable. Mine each competitor's Organic Keywords for LSI variants and fold them in.
 
 8. **Build the triaged keyword map.** Consolidate all keywords (seeds, persona queries, competitor mines, gaps) into rows with `keyword, cluster, intent, volume, kd, cpc, current_rank, target_url, priority, notes`. The data file must be JSON shaped `{"rows": [ {…}, {…} ]}` (a bare list of row objects also works). Write the CSV: `python3 scripts/report.py keywords --workspace <DIR> --data <keywords.json>` → `keywords/<date>_keyword-map.csv`.
+
+   Use `references/playbooks/maintenance/seo-operational-checklist.md` to harden opportunity selection: KD/volume are filters, not verdicts; inspect page-level competition and SERP format. People Also Ask questions are research inputs, not an instruction to create one thin page per question.
 
 9. **Plan the sitemap.** Load `references/playbooks/research/keyword-to-sitemap.md`. Assign the short-tail commercial head term to the home page; group keyword directions into category/hub pages; route high-supply long-tail to a programmatic layer; wire internal links upward to the converting asset. Save the tree to `research/<date>_sitemap-plan.json` (note each page's target keyword(s), intent, and chosen format from step 5).
 

@@ -38,4 +38,10 @@ tools: [ahrefs, hunter]
 - Treating ABC boosting as safe — it's link buying with real banning risk (see [[linkbuilding-what-not-to-do]]).
 - Auto-sending the outreach legs (infographic, broken-link, skyscraper, guest-post pitches) — draft for user review.
 
-**Related.** [[link-stealing]] (broken-link & skyscraper are variants), [[manual-outreach]] (podcast missing-link asks), [[linkbuilding-what-not-to-do]] (ABC boosting / swap-overuse risk), [[understanding-authority]]. Course ref: 04-13.
+## Directory and entity profiles
+
+Treat directory submissions as a separate verification-led lane, not a bulk backlink tactic. Use [[directory-submissions]] for candidate qualification, submission packaging, approval gates, and live-listing evidence.
+
+Do not cite directory DR screenshots as proof of value; verify relevance, public indexability, eligibility, and the actual listing first.
+
+**Related.** [[link-stealing]] (broken-link & skyscraper are variants), [[manual-outreach]] (podcast missing-link asks), [[directory-submissions]], [[linkbuilding-what-not-to-do]] (ABC boosting / swap-overuse risk), [[understanding-authority]]. Course ref: 04-13.

@@ -1,6 +1,6 @@
 ---
 name: agent-seo-blueprint
-description: Comprehensive SEO engine — run keyword/niche research, programmatic-SEO and content planning, technical+on-page+content site audits, link-building/authority campaigns, and rank/traffic monitoring, all grounded in a distilled SEO methodology and driven by live data (Ahrefs, Google Search Console, GA4, live SERP, PageSpeed/Lighthouse). Use whenever the user wants to do SEO work or asks what the course says about a topic — finding/validating a niche, keyword research, building a content/sitemap plan, auditing a site's SEO, getting backlinks, programmatic SEO, free-tool pages, on-page optimization, surviving Google updates, measuring if SEO is paying off, or summoning customer personas to ideate content angles. Works on any site; pulls real data via API or browser fallback.
+description: Agentic SEO research, planning, audits, content QA, authority, AI-search, and monitoring workflows grounded in live data.
 ---
 
 # Agent SEO Blueprint
@@ -30,9 +30,9 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | The user wants to… | Open this workflow |
 |---|---|
 | Find/validate a niche, do keyword research, plan a sitemap, find competitor gaps | `workflows/research-and-ideation.md` |
-| Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, on-page | `workflows/content-production.md` |
+| Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, on-page, draft QA | `workflows/content-production.md` |
 | Audit a live site (technical + on-page + content) with a prioritized fix list | `workflows/site-audit.md` |
-| Get backlinks / build authority (link stealing, HARO, affiliate, outreach, content rings) | `workflows/authority-and-links.md` |
+| Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
 | Monitor rankings/traffic, respond to Google updates, measure ROI | `workflows/monitoring.md` |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
 | Ideate content angles / pressure-test a niche with customer personas | ICP personas (below) |
@@ -55,11 +55,14 @@ Distilled, original methodology grouped by area. Load the specific file a step n
 - **research/** — keyword-fundamentals, search-intent, match-and-exceed, seo-metrics, keyword-research-tools,
   finding-and-validating-niches, competitor-research, keyword-to-sitemap, research-for-existing-sites
 - **content/** — content-fundamentals, content-types-overview, programmatic-seo, free-tools-strategy, content-pages,
-  landing-pages, articles, content-rings, on-page-optimization, content-what-not-to-do
+  landing-pages, articles, content-rings, on-page-optimization, content-what-not-to-do,
+  agent-article-production-qa
 - **authority/** — understanding-authority, link-stealing, affiliate-programs, acquiring-domain-authority, haro,
-  manual-outreach, building-an-audience, content-rings-for-links, other-link-building, linkbuilding-what-not-to-do
+  manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, other-link-building,
+  linkbuilding-what-not-to-do
 - **foundations/** — seo-philosophy, seo-and-ai-future, seo-process-overview
-- **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks, measuring-seo-results
+- **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
+  measuring-seo-results, evidence-backed 37-check operational SEO coverage
 
 ## Data integrations (`references/integrations/` + `scripts/`)
 
@@ -89,13 +92,19 @@ Summon Opus subagents that role-play ideal customers to ideate and pressure-test
 ## Per-project workspace
 
 One folder per site: `project.json` (domains, niche, competitors, data-source config, monitoring settings) plus dated
-artifacts in `audits/ keywords/ briefs/ monitoring/ outreach/ research/`. Managed by `scripts/workspace.py`; artifacts
+artifacts in `audits/ keywords/ briefs/ drafts/ monitoring/ outreach/ research/`. Managed by `scripts/workspace.py`; artifacts
 written by `scripts/report.py` ⇄ templates in `assets/`.
 
 ## Guardrails
 
 - **Irreversible actions** (publishing content, sending outreach/email, submitting forms, disavow uploads): DRAFT only,
   then get explicit user confirmation before acting. Never auto-send.
+- **Article QA** uses evidence-backed claims, hard-fail checks, and at most two automated revision passes. A score never
+  overrides fabricated/unsupported claims, product-truth violations, intent mismatch, or the human publication gate.
+- **Directory submissions** are relevance-first entity/citation work: live-verify public indexability and eligibility,
+  treat DR screenshots as leads rather than facts, and require explicit approval before any account/listing write.
+- **Operational SEO checklists** are coverage ledgers, not ranking formulas: preserve conditional guidance, use GSC over
+  `site:` counts for indexation, and require URL/template-level evidence before marking a check complete.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Source material** in `_source/` is private paid-course content (gitignored). The playbooks are original distillations
   and are the only course-derived material safe to share.
