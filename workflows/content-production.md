@@ -5,6 +5,7 @@ playbooks:
   - references/playbooks/content/content-fundamentals.md
   - references/playbooks/content/content-types-overview.md
   - references/playbooks/content/programmatic-seo.md
+  - references/playbooks/content/programmatic-pattern-library.md
   - references/playbooks/content/free-tools-strategy.md
   - references/playbooks/content/content-pages.md
   - references/playbooks/content/landing-pages.md
@@ -56,7 +57,7 @@ outputs:
 3. **(Optional) Summon ICP personas for content angles.** When you need fresh angles, FAQ questions, or objections to address on the page, dispatch persona subagents per `agents/icp-persona.md`: pick 3–6 distinct personas, launch **all in parallel, `model="opus"`**, then merge with `agents/synthesizer.md`. Use their literal queries as H2s/FAQ entries and their objections as copy to defeat. Save to `research/<date>_content-angles.json`.
 
 4. **Load the format-specific method and draft the page plan.** Open the playbook for the chosen type and follow its method:
-   - **Programmatic SEO:** confirm the scalability gate (hundreds of pages), lock head keyword + leaf pattern *before* generating, plan data acquisition → shaping → hub/leaf templates → offer injection. Heed crawl-budget batching.
+   - **Programmatic SEO:** load `programmatic-pattern-library.md`; choose one of the 12 observed-demand patterns, score the opportunity, build the unique-data ledger, lock hub/leaf/canonical rules, and launch a bounded cohort. Layer dimensions only when combined demand, distinct intent, page-level data, deduplication, and a hard page cap are all proven.
    - **Free tool:** pick the angle (free counterpart / adjacent audience / link magnet); spec a tool that's *easier* than the top 3; plan killer title + meta variants; add How-it-works + FAQ so it isn't thin; plan the upsell.
    - **Content page:** choose the sub-pattern (comparison / success-story-review / niche hub / examples-how-to / integration); plan sections, screenshots, pricing/testimonial blocks; load niche/long-tail keywords here, off the homepage.
    - **Landing page:** one keyword per page, inform + link straight to checkout.

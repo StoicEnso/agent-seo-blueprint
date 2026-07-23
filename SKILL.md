@@ -32,8 +32,11 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Find/validate a niche, do keyword research, plan a sitemap, find competitor gaps | `workflows/research-and-ideation.md` |
 | Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, on-page, draft QA | `workflows/content-production.md` |
 | Audit a live site (technical + on-page + content) with a prioritized fix list | `workflows/site-audit.md` |
+| Run recurring technical SEO/schema/CWV/indexation maintenance | `workflows/technical-seo-maintenance.md` |
+| Audit AI-search/GEO readiness, including current commerce/entity data when applicable | `workflows/geo-audit.md` |
+| Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md` |
 | Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
-| Monitor rankings/traffic, respond to Google updates, measure ROI | `workflows/monitoring.md` |
+| Monitor rankings/traffic, GSC 4–20 opportunities, Google AI impressions, updates, and ROI | `workflows/monitoring.md` |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
 | Ideate content angles / pressure-test a niche with customer personas | ICP personas (below) |
 
@@ -54,15 +57,16 @@ Distilled, original methodology grouped by area. Load the specific file a step n
 
 - **research/** — keyword-fundamentals, search-intent, match-and-exceed, seo-metrics, keyword-research-tools,
   finding-and-validating-niches, competitor-research, keyword-to-sitemap, research-for-existing-sites
-- **content/** — content-fundamentals, content-types-overview, programmatic-seo, free-tools-strategy, content-pages,
-  landing-pages, articles, content-rings, on-page-optimization, content-what-not-to-do,
-  agent-article-production-qa
+- **content/** — content-fundamentals, content-types-overview, programmatic-seo, programmatic-pattern-library,
+  free-tools-strategy, content-pages, landing-pages, articles, content-rings, on-page-optimization,
+  content-what-not-to-do, agent-article-production-qa, E-E-A-T, and schema references
 - **authority/** — understanding-authority, link-stealing, affiliate-programs, acquiring-domain-authority, haro,
-  manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, other-link-building,
-  linkbuilding-what-not-to-do
+  manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, startup-backlink verification,
+  Wikipedia dead-link research, other-link-building, and linkbuilding-what-not-to-do
 - **foundations/** — seo-philosophy, seo-and-ai-future, seo-process-overview
 - **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
-  measuring-seo-results, evidence-backed 37-check operational SEO coverage
+  measuring-seo-results, evidence-backed operational SEO, technical maintenance, GSC 4–20 opportunity mining,
+  Google Generative AI visibility measurement, and AI-search commerce readiness
 
 ## Data integrations (`references/integrations/` + `scripts/`)
 
@@ -76,6 +80,7 @@ performed by you via Chrome MCP tools** when no API key/creds are present — th
 | GA4 | `scripts/ga4_pull.py` | API if creds, else browser | `references/integrations/ga4.md` |
 | Live SERP | `scripts/serp_capture.py` | browser only (Chrome MCP) | `references/integrations/serp.md` |
 | PageSpeed/Lighthouse | `scripts/pagespeed_run.py` | public API (key optional) | `references/integrations/pagespeed.md` |
+| DataForSEO | `scripts/dataforseo_client.py` | API if `DATAFORSEO_LOGIN` + `DATAFORSEO_PASSWORD` | `references/integrations/dataforseo.md` |
 
 Auth rule: the skill **never** enters passwords or completes OAuth itself — it directs the user to log in / authorize,
 then reads the logged-in session. API keys come from env vars named in the workspace `project.json` (never stored in plaintext).
@@ -105,6 +110,10 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   treat DR screenshots as leads rather than facts, and require explicit approval before any account/listing write.
 - **Operational SEO checklists** are coverage ledgers, not ranking formulas: preserve conditional guidance, use GSC over
   `site:` counts for indexation, and require URL/template-level evidence before marking a check complete.
+- **Google AI visibility** stays evidence-bound: its Search Console report is Google-only and impression-only. Never invent
+  AI clicks, queries, CTR, conversions, or cross-platform coverage; keep ordinary Search and AI snapshots separate.
+- **GEO myth-busting:** Google does not require `llms.txt`, special AI schema, artificial chunking, AI-only rewrites, or
+  manufactured mentions. Keep optional cross-platform documentation distinct from Google Search requirements.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Source material** in `_source/` is private paid-course content (gitignored). The playbooks are original distillations
   and are the only course-derived material safe to share.

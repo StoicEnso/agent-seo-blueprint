@@ -12,18 +12,22 @@ playbooks:
   - references/playbooks/authority/acquiring-domain-authority.md
   - references/playbooks/authority/other-link-building.md
   - references/playbooks/authority/directory-submissions.md
+  - references/playbooks/authority/startup-backlink-directory-submissions.md
+  - references/playbooks/authority/wikipedia-dead-link-building.md
   - references/playbooks/authority/linkbuilding-what-not-to-do.md
   - references/playbooks/research/match-and-exceed.md
 scripts:
   - scripts/workspace.py
   - scripts/ahrefs_client.py
+  - scripts/dataforseo_client.py
   - scripts/serp_capture.py
   - scripts/report.py
-integrations: [ahrefs, serp]
+integrations: [ahrefs, dataforseo, serp]
 outputs:
   - outreach/<date>_opportunities.json   # ranked backlink targets
   - outreach/<date>_drafts.json          # drafted (NOT sent) outreach messages
   - outreach/<date>_directory-submissions.csv  # verified directory/entity pipeline
+  - outreach/<date>_wikipedia_dead_links.json  # verified research candidates; no live edit
   - outreach/<date>_disavow.txt          # optional disavow file (user submits)
 ---
 
@@ -45,11 +49,12 @@ outputs:
 
 2. **Pick tactics for this project.** Choose from the menu based on fit (you can run several):
    - **Link stealing** (`link-stealing.md`) — find roundups/listicles linking a weaker competitor but not you; pitch "add me" or "swap the weak link." Needs you to be genuinely better.
-   - **Affiliate program** (`affiliate-programs.md`) — if there's a paid product: clean `?via=` links, generous commissions, recruit competitor affiliates (Ahrefs Backlinks filtered to the affiliate param). Quote conversion rate.
+   - **Affiliate program / competitor-affiliate mining** (`affiliate-programs.md`) — for a paid product with sustainable unit economics: fingerprint verified public referral routes, qualify the competitor's editorial affiliates, model a defensible offer, and draft `test/add`, `comparison`, or `switch` asks. Never invent terms or blindly outbid.
    - **HARO / Help a B2B Writer Out** (`haro.md`) — if someone can speak as an expert: draft credible, specific quotes (add a Loom touch) for high-DR editorial links.
    - **Manual outreach** (`manual-outreach.md`) — revisit-the-topic pitches, missing-link asks, free-access offers, and the case-study trade (target smaller tools with few case studies).
    - **Content rings** (`content-rings-for-links.md`) — link the new page from your own aged, genuinely-useful properties for a launch head start. (Build new ring properties via `content-production.md`'s content-ring path.)
-   - **Directories / entity profiles** (`directory-submissions.md`) — relevant public directories, product indexes, launch platforms, review profiles, and entity profiles. Verify live/indexable destinations and never sort solely by screenshot DR.
+   - **Directories / entity profiles** (`directory-submissions.md`) — relevant public directories, product indexes, launch platforms, review profiles, and entity profiles. Verify live/indexable destinations and never sort solely by screenshot DR. Use `startup-backlink-directory-submissions.md` to turn sourced startup lists into a classified verification queue.
+   - **Wikipedia dead citations** (`wikipedia-dead-link-building.md`) — verify the dead URL and archive, map the exact supported claim, and brief a materially better neutral resource. Research only by default; publishing, talk-page requests, editor contact, and edits are separately approval-gated.
    - **Audience / acquisition / other** (`building-an-audience.md`, `acquiring-domain-authority.md`, `other-link-building.md`) — longer-horizon plays.
 
    For directory/entity discovery, `assets/startup-backlink-candidates.csv` supplies 122 deduplicated research leads reconstructed from 127 source mentions. Every row starts `UNVERIFIED_SOURCE_LEAD`; source-reported DR is preserved only in the explicitly unverified field and must never be presented as current fact. Live-verify identity, eligibility, relevance, public indexability, cost, moderation, and link behavior before a candidate reaches the opportunity list.
@@ -79,4 +84,4 @@ outputs:
 - `outreach/<date>_directory-submissions.csv` — verified candidate/listing states and live evidence.
 - `outreach/<date>_disavow.txt` — optional disavow file for the user to submit.
 
-**Done when.** A ranked opportunity list and matching personalized drafts exist in the workspace, every chosen tactic passed the guardrail, and nothing has been sent/submitted without explicit user confirmation. Directory work also has verified route evidence and a tracked public listing URL or rejection reason. Feed sent-outreach + acquired-link counts into `monitoring.md` (leading indicators) and re-check competitor backlink pace there monthly.
+**Done when.** A ranked opportunity list and matching personalized drafts exist in the workspace, every chosen tactic passed the guardrail, and nothing has been sent/submitted without explicit user confirmation. Directory work also has verified route evidence and a tracked public listing URL or rejection reason. Wikipedia research either has ten verified candidates with dead/archive/COI evidence or an exhausted-search report; it never implies that an edit occurred. Feed approved sends + acquired-link counts into `monitoring.md` and re-check competitor backlink pace there monthly.

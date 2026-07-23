@@ -1,40 +1,84 @@
 ---
-title: affiliate-programs
+title: Affiliate Programs and Competitor-Affiliate Mining
 area: authority
 source_lessons: ["04-06"]
-tools: [ahrefs, hunter, rewardful, stripe, search-console]
+tools: [ahrefs, dataforseo, browser]
 ---
 
-# affiliate-programs
+# Affiliate Programs and Competitor-Affiliate Mining
 
-**What it is.** Using an affiliate program as a backlink engine: affiliates are financially motivated to publish links to you, so a well-structured program can generate hundreds of relevant, decent-DR links at low cost.
+## What it is
 
-**When to use.**
-- You have a paid product with a measurable conversion rate you can quote to affiliates.
-- Competitors are getting links from review/affiliate sites you'd like to win over.
-- You want a scalable, mostly-passive source of in-content backlinks (not just one-off outreach).
+A legitimate affiliate program can align incentives for publishers to evaluate, recommend, and link to a paid product. A competitor's public referral backlinks can also reveal publishers already willing to cover the category. Neither is permission to buy editorial claims, conceal sponsorships, or spam a public list.
 
-**Method.**
-1. Set up the program with a tool that produces clean, direct links rather than ugly redirects. The course's pick is Rewardful, which appends a simple `?via=<slug>` parameter to your own URL — so the affiliate link points straight at your domain and the backlink value lands on you (a redirect-through-the-affiliate-platform link does not pass that value).
-2. Use a platform that integrates with your billing for easy payouts. Rewardful integrates directly with Stripe and supports Wise/PayPal payouts; the cost is justified once you're paying out a few commissions a month.
-3. Set commissions generously — higher than competitors. Affiliates promote whoever pays best, so out-bidding rivals on commission directly increases how often you get recommended and linked.
-4. Mine competitor affiliates in Ahrefs to recruit: open Site Explorer for a competitor, go to Backlinks, and filter Target URL to "contains" the affiliate parameter (e.g. `?via=` for Rewardful; try other platforms' tags too). This surfaces every page running that competitor's affiliate links.
-5. For each affiliate, pull the contact via Hunter.io and draft an outreach email (for user review, never auto-sent): note you saw them promoting [competitor], state you're a stronger product, offer a higher commission, and quote your conversion rate so they can compute expected earnings (e.g. "~5% convert, ~$X each").
-6. For top-tier, high-DR sites already ranking #1, offer a bespoke VIP/elevated commission to become their top pick. The course example: emailing a DR ~94 roundup site a special high affiliate fee got the product promoted as the top recommendation, driving both sales and a powerful link.
-7. Protect your link profile from affiliate spam: affiliates may scatter your URL on junk low-DR sites. Periodically review new referring domains and disavow the bad ones in Google Search Console (upload a disavow file telling Google to ignore those links).
+## Eligibility and economics gate
 
-**Decision criteria / heuristics.**
-- A clean `?via=` style link that resolves to your domain is worth recruiting for; a redirect that bounces through the platform passes little/no link value — deprioritize.
-- Quote conversion rate, not just commission — affiliates care about expected dollars per click.
-- Reserve VIP rates for the few sites whose placement actually moves rankings (high-DR, exact-niche, currently ranking).
-- Disavow only links you genuinely don't endorse; don't over-prune legitimate ones.
+Use this only when the product is paid, conversion and retention are measurable, the product is strong enough to recommend honestly, and commission can be funded from real unit economics.
 
-**Example.** You target a competitor with ~700 affiliate links. In Ahrefs you Site Explorer them, set Target URL contains `?via=`, and export the affiliate pages. Hunter.io gives you emails. You draft (and the user reviews/sends) a pitch: "Saw you promote [competitor] — we convert ~5% and pay double their commission." Several switch. Separately, you offer a DR ~94 review site a VIP commission and they make you their top pick. Later, a junk site spams your `?via=` link; you add that domain to your Search Console disavow file.
+```text
+max_affiliate_payout = gross_profit_after_fulfilment - support_cost - desired_contribution_margin
+```
 
-**Pitfalls.**
-- Using an affiliate platform whose links redirect through their domain — you lose the backlink value.
-- Setting stingy commissions — you'll lose affiliates (and their links) to competitors who pay more.
-- Ignoring affiliate-driven spam links until they hurt your profile; review and disavow proactively.
-- Auto-sending recruitment emails — draft for user review first.
+Model one-time versus recurring payout, churn, refund risk, cookie window, minimum payout, and VIP tiers. A higher rate is useful only when sustainable. Never blindly outbid a competitor or promise earnings/conversion data that current evidence does not support.
 
-**Related.** [[link-stealing]] (same Ahrefs+Hunter motion, different target), [[manual-outreach]] (you can also be the affiliate's case study), [[understanding-authority]], [[linkbuilding-what-not-to-do]] (disavow workflow). Course ref: 04-06.
+## Program design
+
+1. Prefer reliable first-party tracking or a reputable platform whose links and redirects are understood.
+2. Publish current terms, attribution window, payout timing, disclosure requirements, prohibited traffic, and quality rules.
+3. Provide accurate product facts, demo access, assets, and a dependable evaluation path.
+4. Track referral traffic, trials/sales, retention, refunds, and payout-to-gross-profit—not links alone.
+5. Review suspicious referral spikes, coupon abuse, fake reviews, and thin templated promotion.
+
+A direct URL parameter such as `?via=partner` can be easy to read and track, but link equity depends on implementation and search-engine treatment. Never guarantee that a referral URL passes ranking authority.
+
+## Competitor-affiliate backlink mining
+
+A competitor's public referral links form a high-intent research pool, not a send list.
+
+1. **Choose a real affiliate-active competitor.** Verify a current public program or sample referral link. Do not infer a program from one unusual parameter.
+2. **Fingerprint public referral routes.** Record verified patterns such as `via`, `ref`, `refer`, `affiliate`, `aff`, `partner`, `/ref/`, partner subdomains, or platform redirects and retain the evidence URL.
+3. **Pull backlink rows.** Use Ahrefs or DataForSEO. Filter competitor target URLs, redirects, anchor/copy, and referring pages for verified patterns.
+4. **Deduplicate and qualify.** Keep one best page per referring domain. Retain relevant, public, indexable editorial reviews, comparisons, tutorials, roundups, and resources with a real audience. Reject coupon spam, scraped pages, PBNs, link farms, fake reviews, and irrelevant sites.
+5. **Verify incumbent terms.** Capture the public commission, payout model, cookie window, recurring/one-time structure, and verification date. Never invent private conversion rates or earnings.
+6. **Rank by expected value.** Use topical/audience fit, page traffic and ranking keywords, editorial quality, placement prominence, contactability, current competitor prominence, commercial intent, and link quality. DR or a provider rank is only one signal.
+7. **Design a sustainable offer.** Base standard/VIP terms on margin, LTV, conversion evidence, and product advantage—not a reflexive promise to pay more.
+8. **Draft one honest ask.** `test/add`, `comparison`, or `switch`. Reference the exact page and explain the defensible product advantage. Offer access or evidence so the publisher can evaluate independently.
+9. **Measure.** Track approvals/sends, replies, accepted tests, placements, referral traffic, trials/sales, conversion, retention, payout ratio, and acquired links.
+
+## Required prospect record
+
+```json
+{
+  "competitor": "example.com",
+  "competitor_referral_pattern": "via",
+  "evidence_url": "https://example.com/affiliate",
+  "competitor_program_terms": "...",
+  "competitor_program_terms_verified_at": "YYYY-MM-DD",
+  "referring_domain": "publisher.com",
+  "referring_page": "https://publisher.com/best-tools",
+  "competitor_target_url": "https://example.com/?via=partner",
+  "page_type": "comparison|review|tutorial|roundup|other",
+  "current_placement": "...",
+  "topical_fit": "high|medium|low",
+  "estimated_traffic": null,
+  "authority_metric": null,
+  "ask_type": "test/add|comparison|switch",
+  "suggested_offer": "...",
+  "offer_basis": "margin/LTV and verified public terms",
+  "vip_candidate": false,
+  "quality_flags": [],
+  "status": "DRAFT"
+}
+```
+
+## Outreach and external-action gate
+
+Draft only. Never auto-send or contact at unsafe volume. Any batch needs explicit user review/confirmation, truthful claims, proper affiliate disclosure, and per-prospect personalization. Do not disparage competitors or demand replacement as a condition of payment.
+
+## Link-quality and disavow guardrail
+
+Low authority alone is not evidence of harm. Review spammy/manipulative links, request removal where practical, and prepare a disavow file only for a credible manual-action or severe link-scheme risk. The user reviews and submits it; this workflow never uploads it automatically.
+
+## Done condition
+
+A qualified, deduplicated prospect list and personalized DRAFT asks exist; every program claim has dated public evidence; proposed economics are sustainable; spam/disclosure rules are explicit; and no outreach or program change occurred without confirmation.
