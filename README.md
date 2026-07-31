@@ -44,8 +44,8 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **48 playbooks**: 36 original course distillations plus 12 operational additions for article QA, schema/E-E-A-T,
-  programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, and AI-search evidence;
+- **49 playbooks**: 36 original course distillations plus 13 operational additions for article QA, schema/E-E-A-T,
+  programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, and platform-scoped AI-search evidence;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
 - **8 workflows**: five end-to-end core pipelines plus technical-maintenance, AI-search-readiness, and category-citation loops.
 - **7 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, and CWV thresholds.
@@ -85,11 +85,11 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 12 operational additions
+  playbooks/                   # 36 course distillations + 13 operational additions
     research/        (9)        # keyword research, niches, intent, metrics, match-and-exceed…
     content/         (14)       # programmatic SEO, schema/E-E-A-T, content/landing pages, article QA…
     authority/       (13)       # link stealing, affiliate, directories, Wikipedia research, outreach…
-    foundations/     (3)        # SEO philosophy, SEO & AI, process overview
+    foundations/     (4)        # SEO philosophy/process + platform-scoped AI and official Google guidance
     maintenance/     (9)        # updates, ROI, technical SEO, GSC opportunities, AI-search evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
@@ -117,7 +117,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (48 playbooks)
+## The knowledge layer (49 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -135,7 +135,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 `startup-backlink-directory-submissions` · `wikipedia-dead-link-building` · `other-link-building` ·
 `linkbuilding-what-not-to-do`
 
-**foundations/** — `seo-philosophy` · `seo-and-ai-future` · `seo-process-overview`
+**foundations/** — `seo-philosophy` · `seo-and-ai-future` · `google-generative-ai-search-official` · `seo-process-overview`
 
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
@@ -159,7 +159,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **authority-and-links** | pick tactics → ranked opportunity list → **drafted** outreach (never auto-sent) | opportunity list, outreach drafts |
 | **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI impressions + update response + ROI measurement | ordinary-search, opportunity, and AI-visibility snapshots |
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
-| **geo-audit** | AI-search citability/readiness audit, including current commerce/entity data when applicable | readiness report and raw findings |
+| **geo-audit** | Platform-scoped AI-search audit with an official Google AI Overviews/AI Mode eligibility, myth-busting, and Search Console lane | readiness report and raw findings |
 | **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific citations | category/citation baseline and loop plan |
 
 ---

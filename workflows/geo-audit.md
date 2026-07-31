@@ -1,8 +1,9 @@
 ---
 title: AI Search Readiness Audit (GEO filename for compatibility)
-goal: Assess whether a site is accessible, understandable, quotable, and corroborated enough to be a plausible source for AI-powered search experiences, then emit evidence-backed findings.
+goal: Assess platform-specific AI-search eligibility, usefulness, accessibility, corroboration, and measurement without presenting GEO heuristics as ranking formulas.
 playbooks:
   - references/playbooks/foundations/seo-and-ai-future.md
+  - references/playbooks/foundations/google-generative-ai-search-official.md
   - references/playbooks/content/eeat-framework.md
   - references/playbooks/content/on-page-optimization.md
   - references/playbooks/content/content-fundamentals.md
@@ -10,154 +11,230 @@ playbooks:
   - references/playbooks/maintenance/ai-search-commerce-readiness.md
 references:
   - references/playbooks/content/schema-types-reference.md
+  - references/playbooks/maintenance/google-generative-ai-visibility.md
 scripts:
   - scripts/workspace.py
   - scripts/serp_capture.py
   - scripts/report.py
-integrations: [serp]
+integrations: [serp, gsc]
 outputs:
-  - audits/<date>_geo-audit.md           # AI-search readiness verdict + findings (via report.py audit)
-  - audits/<date>_geo-findings.json      # raw findings payload
+  - audits/<date>_geo-audit.md
+  - audits/<date>_geo-findings.json
 ---
 
 # AI Search Readiness Audit
 
-**When to run this.** The user asks “do we show up in ChatGPT / Perplexity / AI Overviews?”, wants to know why a brand is not being cited by AI/search tools, asks whether current product/entity data and conversion paths are agent-ready, or the standard `site-audit.md` AI-search checklist flagged meaningful issues. This workflow checks whether the site is easy to access, understand, quote, corroborate, and—when applicable—act on without pretending to predict proprietary AI rankings.
+**When to run this.** Use when the user asks whether a site appears in ChatGPT, Perplexity, Claude, Google AI Overviews/AI Mode, or another named AI-search experience; asks why a brand is not cited; or wants current product/entity data and conversion paths assessed for agent use.
 
-All checks are inspection-based. A basic pass needs no SEO API keys — use `serp_capture.py` or browser fallback where the workflow needs SERP/page-source evidence. Direct platform checks may require a browser/account and should be reported as observed evidence, not universal truth. The workflow is read-only and does not change robots.txt, publish `/llms.txt`, or edit the site.
+This is a read-only, evidence-led audit. It does not change robots controls, publish `llms.txt`, alter Search Console inclusion, submit feeds, or edit the site. Direct platform checks may require an account/browser. Report observations with retrieval dates; never turn them into universal ranking laws.
 
-**Prerequisites.**
-- **Workspace** resolved (`python3 scripts/workspace.py status --path <DIR>`; ASK before creating if absent). The domain should be in `project.json`.
-- **From the user:** the domain + a short list of key topics, product lines, or prompts they care about in AI/search experiences.
-- **Data sources:** `serp_capture.py` / browser for page-source checks, robots.txt, `/llms.txt`, and brand/source searches. Load `references/playbooks/foundations/seo-and-ai-future.md` for strategic context.
+## Prerequisites
 
----
+- Resolve the project workspace with `python3 scripts/workspace.py status --path <DIR>`. Ask before creating one if absent.
+- Record the domain, priority pages, business goal, target topics/prompts, and market/country.
+- Record **platform scope** before auditing. Allowed labels:
+  - `google_ai_overviews`
+  - `google_ai_mode`
+  - `chatgpt`
+  - `perplexity`
+  - `claude`
+  - `other:<name>`
+- Load `google-generative-ai-search-official.md` whenever either Google label is in scope. Do not generalize that source to other providers.
 
-## Background: Why This Is a Distinct Audit
+## Evidence contract
 
-This is not a replacement for SEO. It is a focused evidence review of the pieces that make content easier for AI-search/retrieval systems to access, parse, quote, and corroborate:
+For every finding capture the URL/surface, retrieval date, observed evidence, affected platform, severity, business impact, and concrete fix. Distinguish:
 
-- **Access:** relevant crawlers/fetchers can reach the important pages and content is visible in initial HTML where practical.
-- **Extraction:** pages contain clear, self-contained answers, tables, definitions, and evidence that can be quoted.
-- **Corroboration:** the brand/entity is mentioned consistently across trusted third-party sources, not just on owned pages.
-- **Trust:** authorship, citations, schema, reputation, and policies make the content credible.
+- official provider documentation;
+- Search Console or analytics data;
+- live page/SERP/source observations;
+- third-party studies;
+- local audit heuristics.
 
-Avoid unsupported magic-number claims. Treat platform-specific citation studies as useful directional research, not permanent laws. Always inspect the current SERP/source set for the topic being audited.
+There is no public universal GEO score. Use a qualitative verdict (`strong | moderate | weak | blocked`). A numeric benchmark is allowed only when the user explicitly asks for a local heuristic and it is labelled as such.
 
-## Readiness Dimensions
+## Readiness dimensions
 
-Do **not** present this as a platform formula. There is no public universal numeric metric from Google/OpenAI/Perplexity for this. Use these dimensions as an internal rubric and keep the output qualitative by default.
-
-| Dimension | What it asks |
+| Dimension | Question |
 |---|---|
-| Citability | Can the page provide concise, self-contained, well-supported passages that are easy to quote? |
-| Structure | Is the content easy to parse: headings, lists, tables, definitions, FAQs where useful? |
-| Authority/entity | Is the brand/person/product corroborated by credible on-site and third-party evidence? |
-| Technical access | Can relevant crawlers/fetchers reach the content, and is key content visible in initial HTML where possible? |
-| Evidence formats | Are screenshots, demos, tables, charts, data, or video used where they improve trust/usefulness? |
-
-Report a qualitative verdict (`strong`, `moderate`, `weak`, `blocked`) plus evidence-backed findings. Avoid numeric ratings; if a user insists on an internal benchmark, label it as a local heuristic, not a search-engine metric.
-
----
-
-## Steps
-
-1. **Scope and baseline.** Identify the priority pages: homepage, product/service pages, and high-value informational pages. Record the target prompts/topics and whether the site is static/SSR, hybrid, or client-rendered SPA.
-
-2. **Citability audit.** For each priority page, assess whether the page can be quoted cleanly:
-   - Does the opening section directly answer the primary query?
-   - Are there concise, self-contained answer blocks that make sense without the rest of the page?
-   - Are definitions written clearly (`X is…`, `X refers to…`) where definitions matter?
-   - Does the content include specific examples, sourced statistics, screenshots, methodology, or named-source citations?
-   - Are conclusions placed near the start of sections rather than buried at the end?
-   - Flag findings where important pages bury the answer, lack evidence, or cannot stand alone when quoted.
-
-3. **Structure audit.** Inspect heading hierarchy and content format:
-   - H1→H2→H3 hierarchy is clean.
-   - H2/H3 headings match real user questions or topic entities.
-   - Paragraphs are readable and scannable.
-   - Tables/lists are used for comparisons, specs, pricing, steps, and pros/cons.
-   - FAQ/Q&A sections are used only when they genuinely help users.
-   - Flag findings where weak structure makes extraction or human scanning harder.
-
-4. **Authority and brand signal audit.** Search for corroborating third-party evidence:
-   - Brand/product mentions on reputable review/comparison pages, directories, partner pages, industry blogs, news, podcasts, YouTube, Reddit, Wikipedia/Wikidata where legitimately applicable.
-   - Consistent entity details across site, schema, social profiles, directories, docs, and third-party pages.
-   - On-page authority signals: named author/reviewer, publication/update date, credentials, external sources, case studies, testimonials.
-   - Backlink/mention quality per `authority-and-links.md` if link data is available.
-   - Flag findings where the brand has little corroboration, inconsistent entity signals, or missing on-page authorship/trust evidence. Do not require Wikipedia for brands that are not legitimately notable.
-
-5. **Technical access audit.** Check whether AI/search crawlers and lightweight fetchers can access the important content.
-
-   **Crawler policy (robots.txt):**
-   Fetch `<domain>/robots.txt`. Check directives for relevant AI/search crawlers, for example:
-
-   | User agent | Owner / use |
-   |---|---|
-   | OAI-SearchBot | OpenAI search features / ChatGPT search visibility |
-   | GPTBot | OpenAI model-training crawl control, separate from search visibility |
-   | ChatGPT-User | OpenAI user-triggered fetches; not the Search opt-out control |
-   | Claude-SearchBot | Anthropic search-result quality / search visibility |
-   | ClaudeBot | Anthropic model-training crawl control |
-   | Claude-User | Anthropic user-triggered fetches |
-   | PerplexityBot | Perplexity search-result visibility |
-   | Perplexity-User | Perplexity user-triggered fetches |
-
-   If a crawler/search bot is blocked, document the affected platform and tradeoff. User-triggered fetchers may follow different rules from automated crawlers, so use current provider docs and logs before making a platform-specific claim. Do not override the owner's licensing/privacy choice without approval.
-
-   **`/llms.txt` presence:**
-   Fetch `<domain>/llms.txt`. If absent, do not treat it as a defect by itself; optionally note it as a machine-readable guidance opportunity when the project cares about AI/retrieval documentation. It is emerging guidance, not a confirmed ranking factor. If present, verify: site title, short description, key page links with descriptions, and no stale/false claims.
-
-   **Licensing / usage signals:**
-   If content licensing matters, check whether the site publishes machine-readable AI usage/licensing terms. Treat this as policy clarity, not an SEO ranking lever.
-
-   **Initial HTML / SSR check:**
-   Compare rendered page to raw HTML source. Are primary content, key answers, pricing, product descriptions, author info, and schema present without relying entirely on client-side JavaScript? If important pages are JS-only and key content is absent from raw HTML, flag severity based on verified crawler/fetcher impact and business importance.
-
-   Flag findings for unwanted crawler blockers, unclear crawler/licensing posture, JS-only key content, or inaccurate/stale `/llms.txt` guidance.
-
-6. **Multi-modal evidence audit.** Inspect whether content includes evidence formats that improve user trust and quotability:
-   - Informational images/screenshots/diagrams where they add proof.
-   - Video, demos, or walkthroughs where useful.
-   - Tables, charts, or original data when claims are quantitative.
-   - Flag findings when important claims lack supporting evidence formats or when richer media would materially improve trust/usefulness.
-
-7. **Commerce and agentic-readiness audit (when applicable).** Load `references/playbooks/maintenance/ai-search-commerce-readiness.md` for retailers, marketplaces, paid products, bookings, or services whose facts change. Compare crawled pages, feeds/APIs actually used by the business, and live-site state for identifiers, variants, price, currency, availability, language, freshness, shipping/promotions, and policy consistency. Test the real checkout, booking, lead, or support path without completing a consequential action. Keep platform visibility, landing sessions, assisted conversions, transactions, revenue, and controlled causal evidence as separate evidence grades. Skip this dimension explicitly when the site has no transactional/current-data surface.
-
-8. **Prioritize and emit the report.** Assign a qualitative readiness verdict (`strong | moderate | weak | blocked`) and rank findings by severity (`critical | high | medium | low`) and business impact.
-
-   Assemble `{readiness_verdict, dimension_notes:{citability, structure, authority, technical_access, evidence_formats, commerce_agentic_readiness}, findings:[...]}` and run:
-   ```bash
-   python3 scripts/report.py audit \
-     --workspace <DIR> \
-     --title "GEO audit: <domain> <date>" \
-     --data <geo-findings.json>
-   ```
-   `report.py` sorts findings by severity into a prioritized table → `audits/<date>_geo-audit.md`.
+| Search eligibility | For Google, are priority pages indexed, snippet-eligible, crawlable, and included by the Search generative-AI control? |
+| Human usefulness | Does the page offer non-commodity, satisfying, first-hand/expert value? |
+| Clarity/citability | Can a human or retrieval system understand and quote well-supported passages without artificial chunking? |
+| Authority/entity | Is the entity represented consistently and corroborated by authentic evidence? |
+| Technical access | Can the scoped provider's search crawler/fetcher reach key content under the owner's policy? |
+| Evidence formats | Do images, video, tables, demos, or original data materially improve proof and usefulness? |
+| Measurement | What does the scoped platform actually expose, with what limitations? |
+| Commerce/agent usability | Where relevant, are current facts and high-value flows accurate and operable? |
 
 ---
 
-## Decision Points
+## Procedure
 
-- **Crawler/search bot blocked for a desired platform** → potential high/critical issue only if the owner wants that platform to access the content; confirm policy before recommending changes.
-- **SPA with JS-only key content** → high/critical only when important content is inaccessible to relevant fetchers or users; recommend SSR/static rendering for key content and schema where appropriate.
-- **Good rankings but weak observed AI citation** → inspect whether cited/top-ranking third-party sources mention the brand and whether owned pages contain quotable, sourced answer blocks.
-- **Blocked / very weak readiness** → prioritize technical access and citability.
-- **Weak readiness** → improve structure/content and build credible third-party corroboration where evidence shows a gap.
-- **Moderate readiness** → improve entity consistency, appropriate schema, optional `/llms.txt` guidance, and richer evidence where useful.
-- **Strong readiness** → monitor observed platform/source changes; maintain authority and freshness.
+### 1. Scope and baseline
 
-**Relationship to standard site-audit.** The AI-search block in `workflows/site-audit.md` is a rapid signal pass. This workflow is the deep-dive: it reviews each readiness dimension and produces a standalone deliverable.
+Identify the homepage, product/service pages, pricing/proof pages, and high-value informational pages. Record whether each is static/SSR, hybrid, or client-rendered. Capture the exact platform scope; do not run one blended “AI visibility” formula.
 
-**Routing findings:**
-- Authority/mention findings → `authority-and-links.md`.
-- Content structure fixes → `content-production.md`.
-- Technical access and SSR issues → engineering-fix bucket in `site-audit.md`.
-- Schema/entity gaps → `references/playbooks/content/schema-types-reference.md` + engineering/content brief.
-- Feed/live-state/conversion contradictions → `references/playbooks/maintenance/ai-search-commerce-readiness.md` + the owning product/engineering backlog.
+### 2. Run the Google lane when Google AI Overviews or AI Mode is in scope
 
-**Outputs.**
-- `audits/<date>_geo-audit.md` — AI-search readiness verdict, dimension notes, findings ranked by severity and impact.
-- `audits/<date>_geo-findings.json` — raw findings for future comparison.
+Load `google-generative-ai-search-official.md` and verify:
 
-**Done when.** All five core readiness dimensions—and the commerce/agentic dimension when applicable—have been reviewed for priority pages; every finding has severity, affected page(s), evidence, and concrete fix; visibility and business-outcome evidence remain separated; the readiness verdict is assigned; and the report is written to the workspace.
+1. **Indexed and snippet-eligible.** Priority URLs satisfy ordinary Google Search technical requirements and may show a snippet. If they fail, set the Google AI lane to `blocked` before prescribing GEO work.
+2. **Search generative-AI inclusion.** Record the Search Console control state as `included | excluded | inherited | blocked | not_checked`. Do not confuse this with `Google-Extended`, which is a model-training control.
+3. **Crawlability and rendering.** Googlebot can access the content; JavaScript follows normal JavaScript SEO; key content is not blocked.
+4. **Page experience and duplication.** Check mobile usability, latency, main-content clarity, canonicalization, and duplicate URLs as ordinary SEO foundations.
+5. **Local/ecommerce surfaces.** When relevant, inspect Merchant Center/feed accuracy and Google Business Profile completeness.
+6. **Content quality.** Look for unique point of view, first-hand experience, expert insight, original evidence, useful media, clear organization, and people-first satisfaction. AI-assisted content must still meet Search Essentials and spam policies.
+7. **RAG and fan-out response.** Cover genuinely useful subtopics in one strong page or coherent cluster, supported by user/SERP/business evidence. Do not create one thin page for every synthetic fan-out or exact long-tail variation.
+
+### 3. Enforce Google myth-busting guardrails
+
+The Google audit must explicitly confirm:
+
+- absence of `llms.txt` is **not** a Google defect, eligibility issue, or ranking recommendation;
+- tiny artificial “AI chunks” are not required;
+- AI-only rewriting and exhaustive exact-query variants are not required;
+- manufactured or inauthentic mentions are never recommended;
+- there is no special AI schema for Google Search; valid structured data remains tied to supported Search/rich-result purposes;
+- useful headings, concise passages, FAQs, tables, and media are recommended only when they help people and accurately express the content—not as extraction hacks.
+
+### 4. Measure Google with the official report
+
+Load `references/playbooks/maintenance/google-generative-ai-visibility.md`. Check the Search Console **Generative AI performance report** and record:
+
+- property and retrieval date;
+- report date range;
+- availability/access state;
+- impressions by the dimensions the live report exposes;
+- newest-data/aggregation/row-limit caveats.
+
+At the 2026-07-10 source version the report is impression-only. Do not invent AI clicks, queries, CTR, conversions, or AI Overview-versus-AI Mode attribution. If the report is absent, record `not_available` or `blocked`; absence is not proof of zero visibility.
+
+### 5. Audit human usefulness, clarity, and evidence
+
+For each priority page:
+
+- Does the opening orient the reader and answer the real question?
+- Are claims specific, supported, and attributable?
+- Does the page provide original examples, methodology, screenshots, data, or first-hand evidence?
+- Are headings, paragraphs, lists, and tables arranged for human comprehension?
+- Are author/entity details and update dates accurate where relevant?
+- Would a visitor leave satisfied rather than needing a generic summary rewritten elsewhere?
+
+Treat “citability” as a local clarity/evidence heuristic, not a Google requirement. Do not prescribe a fixed word count, fixed answer-block size, or artificial chunking pattern.
+
+### 6. Audit entity consistency and authentic corroboration
+
+Compare the canonical entity name, product/service description, authorship, organization/person schema, social profiles, directories, reviews, and earned coverage. Search the priority topics and inspect which sources are actually cited or ranked.
+
+Flag contradictory names, claims, pricing, or identity details. Recommend only legitimate third-party coverage, reviews, partnerships, references, and links. Never recommend fabricated mentions, paid spam placements, fake discussion, or undisclosed influence.
+
+### 7. Run provider-specific access checks for non-Google platforms
+
+Fetch `robots.txt` and check only providers in scope, using current official documentation:
+
+| Agent | Purpose to verify |
+|---|---|
+| `OAI-SearchBot` | OpenAI search discovery |
+| `GPTBot` | OpenAI model-training control, distinct from search |
+| `ChatGPT-User` | User-triggered fetches |
+| `Claude-SearchBot` | Anthropic search discovery |
+| `ClaudeBot` | Anthropic model-training control |
+| `Claude-User` | Anthropic user-triggered fetches |
+| `PerplexityBot` | Perplexity search discovery |
+| `Perplexity-User` | Perplexity user-triggered fetches |
+
+Provider behavior and names may change; verify before asserting. Respect the owner's licensing/privacy choice. If a desired platform crawler is blocked, report the tradeoff rather than changing policy.
+
+`llms.txt` may be inspected only as voluntary, provider-specific documentation. Its absence is not a generic defect and must never be scored against Google. If present, verify that it contains no stale or false claims.
+
+Compare raw HTML with the rendered page where relevant. Flag JS-only key content only when evidence shows a user or scoped fetcher cannot access it.
+
+### 8. Audit evidence formats and agent usability
+
+Inspect whether useful images, screenshots, video, demos, tables, charts, or original data strengthen understanding and proof.
+
+When browser-agent task completion matters, separately assess:
+
+- visual rendering/screenshots;
+- DOM structure and stable controls;
+- accessibility tree, names, labels, and errors;
+- completion of high-value flows without submitting a consequential action;
+- relevant emerging protocols such as UCP.
+
+Label this **agent usability**, not a proven Google AI ranking factor.
+
+### 9. Audit commerce/current-data consistency when applicable
+
+Load `ai-search-commerce-readiness.md` for retailers, marketplaces, paid products, bookings, or services whose facts change. Compare crawled pages, feeds/APIs actually used by the business, and live state for identifiers, variants, price, currency, availability, language, freshness, shipping/promotions, and policies. Keep visibility, sessions, assisted conversions, transactions, revenue, and causal evidence separate.
+
+### 10. Emit the report
+
+Use this optional-rich input shape. `report.py audit` remains backward compatible with ordinary site-audit findings:
+
+```json
+{
+  "summary": "...",
+  "readiness_verdict": "strong|moderate|weak|blocked",
+  "platform_scope": ["google_ai_overviews", "google_ai_mode"],
+  "source_versions": {"google_ai_optimization_guide": "2026-07-10"},
+  "google_eligibility": {
+    "indexed_and_snippet_eligible": "pass|fail|blocked|not_checked",
+    "search_console_ai_inclusion": "included|excluded|inherited|blocked|not_checked",
+    "crawlable": "pass|fail|blocked|not_checked",
+    "javascript_seo": "pass|fail|not_applicable|not_checked",
+    "merchant_or_local_surfaces": "pass|fail|not_applicable|not_checked"
+  },
+  "google_myth_checks": {
+    "llms_txt_not_treated_as_signal": "pass|fail",
+    "no_chunking_requirement_claim": "pass|fail",
+    "no_special_ai_schema_claim": "pass|fail",
+    "no_inauthentic_mentions": "pass|fail"
+  },
+  "google_ai_performance": {
+    "status": "available|not_available|blocked|not_checked",
+    "date_range": null,
+    "evidence": null,
+    "limitations": ["impressions_only", "no_query_dimension"]
+  },
+  "agentic_readiness": "assessed|not_applicable|not_checked",
+  "dimension_notes": {},
+  "findings": []
+}
+```
+
+Run:
+
+```bash
+python3 scripts/report.py audit \
+  --workspace <DIR> \
+  --title "GEO audit: <domain> <date>" \
+  --data <geo-findings.json>
+```
+
+Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparison.
+
+---
+
+## Decision points
+
+- **Google page not indexed/snippet-eligible** → Google AI lane is `blocked`; fix ordinary Search eligibility first.
+- **Google report unavailable** → record rollout/access ambiguity; do not call it zero visibility.
+- **Desired non-Google search crawler blocked** → report the platform-specific tradeoff and ask before any policy change.
+- **JS-only key content** → raise severity only when accessibility or scoped fetch evidence supports it.
+- **Good rankings but weak observed citation** → inspect content usefulness/evidence and authentic source coverage; do not prescribe hacks.
+- **Weak readiness** → prioritize foundations, non-commodity content, authentic corroboration, and measurable gaps.
+- **Moderate readiness** → improve entity consistency, valid structured data for normal Search purposes, richer evidence, and platform measurement. Do not prescribe `llms.txt` for Google.
+- **Strong readiness** → maintain freshness and monitor dated platform/source changes.
+
+## Routing
+
+- Authority/entity findings → `authority-and-links.md`.
+- Content fixes → `content-production.md`.
+- Indexing/rendering/technical issues → `site-audit.md` or `technical-seo-maintenance.md`.
+- Valid schema gaps → `schema-types-reference.md`.
+- Google AI reporting → `google-generative-ai-visibility.md`.
+- Feed/live-state contradictions → `ai-search-commerce-readiness.md` and the owning backlog.
+
+## Done when
+
+Platform scope is explicit; Google and non-Google claims are separated; Google eligibility, myth checks, and report availability are recorded when applicable; priority pages have evidence-backed findings; agent usability is separately labelled; every recommendation has a concrete fix and owner; the qualitative verdict is assigned; and both Markdown and raw JSON artifacts exist.

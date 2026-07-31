@@ -1,0 +1,39 @@
+{
+  "summary": "Fixture proving the Google-specific GEO reporting path.",
+  "readiness_verdict": "moderate",
+  "platform_scope": ["google_ai_overviews", "google_ai_mode"],
+  "source_versions": {
+    "google_ai_optimization_guide": "2026-07-10"
+  },
+  "google_eligibility": {
+    "indexed_and_snippet_eligible": "pass",
+    "search_console_ai_inclusion": "included",
+    "crawlable": "pass",
+    "javascript_seo": "pass",
+    "merchant_or_local_surfaces": "not_applicable"
+  },
+  "google_myth_checks": {
+    "llms_txt_not_treated_as_signal": "pass",
+    "no_chunking_requirement_claim": "pass",
+    "no_special_ai_schema_claim": "pass",
+    "no_inauthentic_mentions": "pass"
+  },
+  "google_ai_performance": {
+    "status": "not_available",
+    "date_range": null,
+    "evidence": "Report unavailable for fixture property.",
+    "limitations": ["impressions_only", "no_query_dimension"]
+  },
+  "agentic_readiness": "not_applicable",
+  "dimension_notes": {
+    "human_usefulness": "Original evidence exists; strengthen first-hand methodology."
+  },
+  "findings": [
+    {
+      "area": "content",
+      "severity": "medium",
+      "issue": "The page has useful claims but limited first-hand methodology.",
+      "fix": "Add the real process, evidence, and limitations."
+    }
+  ]
+}
