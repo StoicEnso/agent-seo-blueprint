@@ -1,25 +1,30 @@
 ---
 title: Monitoring
-goal: Track rank/traffic snapshots, respond to Google updates, and prove whether the SEO work paid off — on-demand or scheduled.
+goal: Track ordinary search, bounded Google AI visibility, current GSC opportunities, and business outcomes — on-demand or scheduled.
 playbooks:
   - references/playbooks/maintenance/measuring-seo-results.md
   - references/playbooks/maintenance/staying-ahead-with-backlinks.md
   - references/playbooks/maintenance/navigating-google-updates.md
   - references/playbooks/maintenance/keyword-intent-evolution.md
+  - references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md
   - references/playbooks/maintenance/seo-operational-checklist.md
+  - references/playbooks/maintenance/google-generative-ai-visibility.md
   - references/playbooks/foundations/seo-process-overview.md
 scripts:
   - scripts/workspace.py
   - scripts/gsc_pull.py
   - scripts/ga4_pull.py
   - scripts/ahrefs_client.py
+  - scripts/dataforseo_client.py
   - scripts/serp_capture.py
   - scripts/report.py
-integrations: [gsc, ga4, ahrefs, serp]
+integrations: [gsc, ga4, ahrefs, dataforseo, serp]
 outputs:
   - monitoring/<date>_snapshot.md          # rank/traffic snapshot (via report.py monitoring)
   - monitoring/<date>_leading-indicators.json  # the 6 action-task checklist
-  - monitoring/<date>_snapshot.json         # raw snapshot payload
+  - monitoring/<date>_snapshot.json         # raw ordinary-search snapshot payload
+  - monitoring/<date>_gsc-4-20-opportunities.json # current, verified quick-win/recovery rows
+  - monitoring/<date>_google-ai-visibility.json # optional Google AI impression snapshot
 ---
 
 # Monitoring
@@ -41,7 +46,11 @@ outputs:
 
 3. **Capture the rank/traffic snapshot (trailing indicators).** Pull from GSC (`gsc_pull.py`): clicks, impressions, average position, and per-keyword movement for the tracked keywords/pages. Pull from GA4 (`ga4_pull.py`): organic sessions, engagement, conversions. This is the trailing data — informative but lagging.
 
-4. **Track the six leading indicators (the work).** From `measuring-seo-results.md`, log the action-task checklist for the period: (1) content shipped, (2) new keywords/content targeted, (3) existing pages optimized, (4) link opportunities identified + contacted, (5) backlinks acquired, (6) competitor backlinks tracked. Save to `monitoring/<date>_leading-indicators.json`. These are checked weekly; the user fills them or the agent reads them from the workspace (briefs shipped, drafts sent in `outreach/`, etc.).
+   **Optional Google AI visibility layer.** When the property exposes Search Console's Generative AI performance report, load `references/playbooks/maintenance/google-generative-ai-visibility.md`. Capture impression-only views by canonical page, country, date, and device into `monitoring/<date>_google-ai-visibility.json`; record the inclusion-control state without changing it. Keep this dataset separate from ordinary Search clicks/CTR/position. Report absence as rollout/access ambiguity, not zero visibility.
+
+4. **Mine current GSC positions 4–20.** Load `references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md`. Use the latest final 28-day query+page rows, reject stale/irrelevant/intent-mismatched candidates, and inspect the live page/SERP before recommending a narrow change. Keep 90-day-only rows as recovery context unless current data confirms them. Save valid, rejected, and recovery-only rows to `monitoring/<date>_gsc-4-20-opportunities.json` and route implementation briefs to `content-production.md`.
+
+5. **Track the six leading indicators (the work).** From `measuring-seo-results.md`, log the action-task checklist for the period: (1) content shipped, (2) new keywords/content targeted, (3) existing pages optimized, (4) link opportunities identified + contacted, (5) backlinks acquired, (6) competitor backlinks tracked. Save to `monitoring/<date>_leading-indicators.json`. These are checked weekly; the user fills them or the agent reads them from the workspace (briefs shipped, drafts sent in `outreach/`, etc.).
 
 5. **Benchmark competitor backlink pace.** Load `references/playbooks/maintenance/staying-ahead-with-backlinks.md`. In Ahrefs (`ahrefs_client.py`), for you + the top 3–5 competitors run the filtered query: DR > ~25, one link per domain, "new" in the last 30 days. Count unique new referring domains (and high-DR wins separately). If you're below a competitor's pace, that's a leading indicator of future ranking loss → flag "increase outreach" and route to `authority-and-links.md`.
 
@@ -55,6 +64,8 @@ outputs:
 
 8. **Re-test operational regressions and opportunities.** Load `references/playbooks/maintenance/seo-operational-checklist.md` and re-check the prior audit's failed/partial rows that can change over time: traffic/ranking declines, page-two opportunities, high-impression/low-CTR pages, sitemap processing, robots/noindex, truthful freshness signals, broken links, CWV, schema validation, and branded/site SERP anomalies. Use GSC for indexation; treat `site:` checks as directional only. Append status changes and evidence to the current snapshot rather than rerunning all 37 checks blindly.
 
+9. **Interpret Google AI visibility without overclaiming.** When step 3 produced an AI snapshot, map visible canonical pages to journey roles (problem, use case, product, pricing, comparison, trust, case study, implementation). Flag gaps only when demand, business value, non-duplication, and live evidence justify a useful page. Correlate impressions separately with ordinary GSC, analytics, leads, and revenue; never infer AI clicks, CTR, or causality from impression-only data.
+
 **Decision points.**
 - **Cadence** (asked at setup): weekly inputs / monthly outputs / quarterly analysis is the recommended default — but the user chooses.
 - **On-demand vs scheduled** → run now (steps 3–7) vs register via `schedule`/`loop` (user-confirmed).
@@ -64,6 +75,8 @@ outputs:
 **Outputs.**
 - `monitoring/<date>_snapshot.md` — rank/traffic snapshot table (from `report.py`).
 - `monitoring/<date>_leading-indicators.json` — the six action-task checklist for the period.
-- `monitoring/<date>_snapshot.json` — raw payload for trend diffing.
+- `monitoring/<date>_snapshot.json` — raw ordinary-search payload for trend diffing.
+- `monitoring/<date>_gsc-4-20-opportunities.json` — current valid opportunities plus rejected/recovery-only rows.
+- `monitoring/<date>_google-ai-visibility.json` — optional impression-only Google AI snapshot with explicit limitations.
 
-**Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes.
+**Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions as clicks or revenue.

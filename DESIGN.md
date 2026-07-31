@@ -111,22 +111,29 @@ points → artifacts to emit (into the workspace). The five:
 3. **site-audit** — technical + on-page + content audit of a live site → prioritized, severity-ranked fix list.
 4. **authority-and-links** — link stealing, HARO, affiliate, manual outreach, content rings → opportunity lists +
    drafted outreach (never sent without confirmation).
-5. **monitoring** — rank/traffic snapshots, Google-update detection/response, "is it paying off" measurement; on-demand
-   plus optional scheduled (via the `schedule`/`loop` skills) with a recommended cadence chosen at setup.
+5. **monitoring** — ordinary rank/traffic snapshots, optional impression-only Google AI visibility snapshots,
+   Google-update detection/response, and "is it paying off" measurement; on-demand plus optional scheduled (via the
+   `schedule`/`loop` skills) with a recommended cadence chosen at setup.
 
-Operational additions compose into these five workflows rather than creating parallel pipelines: the 37-check SEO
-ledger routes evidence across audit/research/content/monitoring, while the startup backlink asset feeds the
-directory/entity verification path. Neither source-derived artifact turns heuristics, DR snapshots, or `site:` counts
-into facts; live verification and external-write approval gates still apply.
+Operational additions compose around these five core pipelines: `technical-seo-maintenance.md`, `geo-audit.md`, and
+`category-citation-loop.md` are bounded deep-dive runbooks that route findings back into the core workflows. The 37-check
+SEO ledger routes evidence across audit/research/content/monitoring, the startup backlink asset feeds the directory/entity
+verification path, and Google Generative AI impression evidence remains a separate monitoring layer with explicit
+metric/rollout limitations. None of these artifacts turns heuristics, DR snapshots, `site:` counts, or AI impressions
+into business facts; live verification and external-write approval gates still apply.
 
 ### Layer 3 — Tooling & data (`scripts/` + `references/integrations/`)
 - **Ahrefs**: `ahrefs_client.py` uses the API when a key is in project config; otherwise drives the logged-in Ahrefs web
   app via Chrome MCP and reads the UI. Reference doc covers both auth paths.
-- **Google Search Console / GA4**: API when credentials present, browser fallback otherwise. The backbone of audits and
-  "did it pay off" measurement.
+- **Google Search Console / GA4**: API when credentials present, browser fallback otherwise. Ordinary GSC Search
+  Analytics and the limited-rollout, browser/export-only Generative AI impression report use separate data contracts;
+  neither is allowed to imply cross-platform AI visibility or causality.
 - **Live SERP + page scraping**: `serp_capture.py` browser-reads Google results for match-and-exceed + intent analysis;
   on-page extractor pulls competitor page structure.
-- **PageSpeed/Lighthouse**: `pagespeed_run.py` (API or CLI) for Core Web Vitals in the audit.
+- **DataForSEO**: `dataforseo_client.py` provides credential-gated, structured keyword/SERP/backlink data for bulk work;
+  secrets stay in environment variables and the helper never prints them.
+- **PageSpeed/Lighthouse**: `pagespeed_run.py` (API or CLI) for Core Web Vitals in the audit; `cwv-thresholds.md` keeps
+  current field/lab thresholds and interpretation boundaries centralized.
 - Each integration ships a reference doc: what data it provides, how to authenticate, browser-fallback steps, rate
   limits, and which workflows/playbooks consume it.
 

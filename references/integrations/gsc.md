@@ -2,14 +2,15 @@
 
 ## What it provides
 First-party Google search performance for a property you own/verify:
-- **Totals:** clicks, impressions, CTR, average position (over a date range).
-- **Breakdowns:** per **query**, per **page**, per **date** (and country/device).
-- Used to spot per-keyword position switches, intent shifts, and Google-update impact.
+- **Search results:** clicks, impressions, CTR, average position, with query/page/date/country/device breakdowns.
+- **Generative AI report (limited rollout):** impressions from Google AI Overviews and AI Mode, grouped by canonical page, country, date, or device.
+- Used to spot per-keyword position switches, intent shifts, Google-update impact, and Google AI-search visibility changes.
 
 **Consumed by:**
 - `references/playbooks/maintenance/measuring-seo-results.md` — clicks/impressions/avg position + per-keyword movement at review time.
 - `references/playbooks/maintenance/navigating-google-updates.md` — detect drops aligned with update dates.
 - `references/playbooks/maintenance/keyword-intent-evolution.md` — watch a keyword's clicks/position change as intent shifts.
+- `references/playbooks/maintenance/google-generative-ai-visibility.md` — Google AI impression collection, inclusion-control audit, limitations, and response matrix.
 - Workflows: `monitoring.md`, `site-audit.md`.
 
 ## Auth — API path (documented; stub is dependency-free)
@@ -43,11 +44,37 @@ The user must already be logged into the Google account that owns the property. 
 
 If a login or consent screen appears, STOP and ask the user to sign in.
 
+## Generative AI performance report — browser path
+
+Official report: `https://search.google.com/search-console/performance/search-analytics/ai`
+
+1. Select the exact verified property and open the report URL.
+2. If the report is absent, record `not available`; Google is rolling it out to a subset of properties and may also withhold it when impressions are insufficient. Absence is not proof of zero AI visibility.
+3. Choose a date range and capture/export the chart total plus each available dimension: **Pages, Countries, Dates, Devices**.
+4. Preserve the property-level chart total separately from page rows; totals can differ because aggregation differs.
+5. Record whether newest values are preliminary and note that dates use Pacific Time.
+6. Store the raw export/snapshot and interpret it with `references/playbooks/maintenance/google-generative-ai-visibility.md`.
+
+### Evidence limits
+
+- The report currently contains **impressions only** for AI Overviews and AI Mode. Do not invent AI clicks, queries, position, CTR, leads, or revenue.
+- Do not divide ordinary Search clicks by Generative AI impressions and label the result `AI CTR`.
+- Do not claim the report measures ChatGPT, Claude, Perplexity, Grok, or Google Discover. Discover has a separate report.
+- Do not claim separate AI Overview versus AI Mode performance unless the live report exposes a documented feature filter.
+- The usual 1,000-row table limit and aggregation discrepancies apply.
+
+### Search generative AI inclusion control
+
+Audit `Settings → Search generative AI` (direct: `https://search.google.com/search-console/settings/search-gen-ai`) and record `included`, `excluded`, or `inherited`. This control governs eligibility for Google Search generative AI links/content. It is distinct from `Google-Extended` (training control) and `noindex` (Search exclusion). Changing it requires explicit owner approval; do not toggle it during a read-only audit.
+
+The standard Search Console API endpoint documented above is for Search Analytics. Do not assume the new Generative AI report/control has API parity until Google publishes it; use browser/export evidence meanwhile.
+
 ## Rate limits / gotchas
 - **Property type matters:** URL-prefix (`https://example.com/`) vs Domain (`sc-domain:example.com`) report differently — match what the user verified.
 - GSC data lags ~2-3 days and the per-query table is **sampled/limited** to ~1,000 rows in the UI (more via API). Average position is an average — a small move can hide big per-query swings.
 - API: standard Search Console API quotas (per-property + per-project QPS); page through `rowLimit`/`startRow` for large pulls.
 - Position is 1-indexed; "0" CTR rows with high impressions = ranking but not clicked (snippet/title problem).
+- Generative AI data has different metrics and dimensions from ordinary Search results; keep the snapshots separate and join only in a clearly labeled analysis layer.
 
 ## Output shape
 Produce this (API or browser) so it feeds `scripts/report.py monitoring` and the measuring playbook (`--print-shape` prints it):
@@ -63,3 +90,5 @@ Produce this (API or browser) so it feeds `scripts/report.py monitoring` and the
 }
 ```
 For `scripts/report.py monitoring`, map `metrics` → its `metrics` block and the top `rows` → its `keywords` list (`{keyword, position, change}` after diffing against the previous snapshot).
+
+For the Generative AI report, use the separate snapshot contract in `references/playbooks/maintenance/google-generative-ai-visibility.md`; do not force impression-only data into the ordinary query/rank schema.

@@ -2,44 +2,91 @@
 title: Programmatic SEO (pSEO)
 area: content
 source_lessons: ["03-03","03-04","03-05","03-06"]
-tools: [ahrefs, serp, openai, mongodb, screenshot-api, google-maps-api]
+tools: [ahrefs, serp, dataforseo, openai, mongodb, screenshot-api, google-maps-api]
 ---
 
 # Programmatic SEO (pSEO)
 
-**What it is.** Using code to generate hundreds or thousands of SEO pages from a structured dataset: acquire raw data, shape it into consumable content, and template it into a page tree that ranks for one head keyword plus a large family of long-tail keywords. Best for informational/curation content (idea galleries, directories, curated collections), not for handfuls of pages.
+**What it is.** Using code to generate many SEO pages from a structured dataset: identify a repeatable demand pattern, acquire and shape trustworthy data, then template pages that each satisfy a specific search intent. It is not permission to clone a page and swap one token.
 
 **When to use.**
-- A keyword family is genuinely scalable — hundreds of long-tail variants (cities, categories, names, types) all with search volume and low difficulty.
-- The content can be produced from data (user-generated content, an API, a scraper) rather than hand-written.
-- Skip pSEO when you only have 3-5 pages' worth of opportunity — just write those by hand.
+- A keyword family has a repeatable shape and enough validated long-tail demand to justify a page system.
+- The product can supply useful data, utility, examples, comparisons, or other page-level value at scale.
+- The page family has a credible conversion path and a sustainable update owner.
+- Skip pSEO when there are only a handful of valuable pages, the source data is weak, or every page would say essentially the same thing.
 
-**Method (the six steps).**
-1. **Identify the opportunity.** In Ahrefs, find a head keyword whose long-tail variants number in the hundreds/thousands with low keyword difficulty (Ahrefs will show the volume of matching keyword ideas). If it doesn't scale to hundreds of pages, it isn't a pSEO opportunity.
-2. **Design the page structure first.** Lock the head keyword for the hub page and the long-tail pattern for the leaf pages BEFORE generating anything — getting this wrong wastes real money in AI generation credits. Plan the tree: hub → category → (optional) sub-category/leaf.
-3. **Gather raw data.** Collect ugly source data at scale: user-generated content, a queryable API, or a scraper. This step is just acquisition; the data is not yet presentable.
-4. **Shape the data into content.** Transform ugly data into consumable content: have AI summarize/rewrite descriptions, auto-tag and categorize items, group items, count them. Run this on a schedule (cron) so new data flows in continuously.
-5. **Display / template it.** Build one hub template and one leaf template. Programmatically inject the keyword and dynamic numbers into title, H1/H2 and body; auto-generate meta titles (e.g. "{count} Best {keyword} Designs and Inspiration"); decide on screenshots/images. Pages get built from the database on deploy.
-6. **Inject your offer.** Because this is informational content, monetize by promoting your own product inside the pages — CTA buttons between items, a featured "position" that is actually your product, pop-ups. This turns free traffic into customers.
+## Method
 
-**Decision criteria / heuristics.**
-- Scalability gate: hundreds of pages possible → pSEO; only a few → write manually.
-- Build the page-structure/keyword plan before spending generation credits.
-- Depth beats breadth: every leaf page must give the user a reason to choose you over the raw source (e.g. over Google Maps itself). Shallow templated pages do not rank.
-- Stagger indexing — don't dump 1000 pages on Google at once (see content-what-not-to-do: crawl budget).
+1. **Identify the opportunity.** Validate the head term and long-tail family with live SERPs plus DataForSEO/Ahrefs. Count plausible pages after deduplication; do not confuse every combinatorial variation with real demand.
+2. **Choose a demand pattern.** Load `programmatic-pattern-library.md`. Classify the opportunity as one primary pattern: curation, comparison, use case, integration, template, converter, examples, directory, glossary, localization, location, or profile. Select from observed search behavior, not trend lists.
+3. **Design the page structure first.** Lock hub, category, and leaf URL/keyword rules before generation. Define canonical and cannibalization rules. Estimate crawl/indexation load and generation cost.
+4. **Create a unique-data ledger.** For every page family define the fields that make each leaf genuinely different: source, provenance, freshness, first-party element, user utility, and update cadence. At least one page-specific field is mandatory; high-risk families need several.
+5. **Gather raw data.** Acquire source data from first-party product usage, user contributions, APIs, vetted datasets, or controlled scraping. Keep source URLs/timestamps and respect rights/terms.
+6. **Shape the data into content.** Normalize, deduplicate, classify, summarize, and calculate. AI may transform records but must not invent missing facts. Add quality thresholds that prevent empty/thin leaves from publishing.
+7. **Build hub and leaf templates.** Inject data into titles, H1/H2s, body, visuals, answer blocks, internal links, schema, and conversion modules. Every page must resolve its query independently and offer value beyond the raw source.
+8. **Layer only after one pattern works.** Combining dimensions can create useful narrow queries, but it also creates combinatorial spam. Require live demand, distinct intent, enough unique data, and a hard page-count cap for each layered family.
+9. **Launch in cohorts.** Publish a small validation cohort first, inspect crawl/indexation/rank/engagement/conversion and quality failures, then expand. Do not dump thousands of unproven URLs into the index.
+10. **Inject the offer without breaking intent.** Place contextual CTAs, product modules, or tool actions where they help the searcher. Do not turn an informational page into a disguised checkout page.
+11. **Monitor and prune.** Track indexation, impressions, ranking, conversions, stale data, near-duplicates, and orphan pages. Refresh useful pages; consolidate, noindex, or retire pages that cannot earn their place.
 
-**Worked examples.**
+## Required pSEO brief fields
 
-*TattoosAI (successful, ~$4k/mo, fully autonomous).* Opportunity: huge low-difficulty volume for "tattoo ideas" variants (rose, flower, finger, name tattoos), ~2000 page options in Ahrefs. Structure: hub "tattoo ideas" → leaf "{keyword} tattoo ideas" (e.g. dragon, family, Greek). Data: a free/paid AI tattoo generator made USERS generate the raw content (hundreds of thousands of tattoos from their prompts). Shape: a daily cron pulls new generations, saves the prompt, AI extracts and tags categories (e.g. "black cat" → cat tattoo); a second cron groups and counts items; any new category passing ~100 items gets its own page with an AI-written description and headers. Display: auto-built category pages of generated tattoos. Offer: "design your own tattoo" CTAs between items linking to the paid generator. The whole machine ran on autopilot with no manual upkeep.
+Add these to every pSEO plan:
 
-*Landingfolio (successful, 1-2k visitors/day, runs untouched for years).* Opportunity: lots of search for landing-page inspiration by type (SaaS, product, mobile-app, marketing). Structure: hub "landing page inspiration" → leaf categories by industry, URL like /inspiration/landing-page/product. Data: a screenshot API capturing desktop + mobile of homepages (later also pricing pages, by appending /pricing); a Product Hunt scraper pulling the day's top 10 to review and add. Shape: tag each screenshot with keywords found in Ahrefs (manual pre-AI; would be AI now). Display: ONE template that swaps only the keyword + a live count; auto SEO title like "{count} Best Marketing Landing Page Designs and Inspiration"; categories pulled from MongoDB and pages built on deploy. Offer: a paid Figma/Webflow/Tailwind component library added later as upsell. This is curation — bundle the best of what's already out there. Bonus: scraping pricing pages opened a whole new ranking surface ("pricing page design") for free.
+- `primary_pattern`
+- `query_formula`
+- `dimensions[]`
+- `validated_keyword_examples[]`
+- `estimated_unique_pages_after_dedupe`
+- `hub_category_leaf_model`
+- `data_sources[]` with provenance/freshness
+- `unique_data_ledger[]`
+- `minimum_publish_threshold`
+- `canonical_and_cannibalization_plan`
+- `internal_link_graph`
+- `conversion_path`
+- `indexation_cohorts[]`
+- `update_cadence_and_owner`
+- `kill_or_consolidate_rules`
 
-*HeadshotPro "near me" (FAILED — instructive).* Opportunity: "headshots near me" + per-city variants (New York, Dallas, SF) across thousands of cities. Structure: hub "headshot photographers near me" listing countries → country page listing cities → city leaf "professional headshots in {city}". Data: Google Maps API returns photographers per city; scrape their sites + reviews (52 US cities, ~240 studios). Shape: AI-write a Yelp/TripAdvisor-style breakdown of the top 5 per city (reviews, address, summary). Offer: at position 2, pitch "get AI headshots now instead of waiting for an appointment." It never ranked and was taken down. Why: shallow content — it added nothing a user couldn't get by filtering Google Maps directly. The lesson: pSEO only works when each page adds real value beyond its data source.
+## Decision gates
 
-**Pitfalls.**
-- Shallow content: re-listing API/Maps data with no added value gives users (and Google) no reason to pick you — it won't rank.
-- Locking keywords/structure too late and burning generation credits on the wrong target.
-- Duplicate meta tags across hundreds of templated pages (penalized as duplicate content — vary titles/descriptions).
-- Mass-publishing all pages at once and blowing the crawl budget.
+- **Demand gate:** repeated query shape is visible in live keyword/SERP data.
+- **Value gate:** each leaf does something the raw data source or generic search results do not.
+- **Data gate:** unique data is trustworthy, attributable, maintainable, and present before publish.
+- **Intent gate:** the template format matches the exact SERP intent.
+- **Scale gate:** the useful page count is large enough to justify code, but capped below combinatorial nonsense.
+- **Quality gate:** leaves below the data/content threshold do not publish.
+- **Operations gate:** there is an owner and cadence for refresh, monitoring, and pruning.
 
-**Related.** [[content-fundamentals]], [[free-tools-strategy]], [[content-pages]], [[content-what-not-to-do]], [[on-page-optimization]] · course refs 03-03 (method), 03-04 (TattoosAI), 03-05 (Landingfolio), 03-06 (HeadshotPro failure).
+## Evidence-safe AI-search guidance
+
+Structured, answerable pages can improve extractability for answer engines, but search/citation performance must be measured rather than promised. Include:
+
+- a direct answer near the top when the query warrants it
+- explicit “who this is for” or selection guidance on decision pages
+- clean entity names, attributes, comparisons, and cited facts
+- first-party screenshots/data/examples where lawful
+- section-level standalone clarity
+- visible freshness and source provenance
+
+Do not repeat vendor traffic, revenue, or citation percentages as guarantees. Treat them as case-study leads to verify independently.
+
+## Worked lessons
+
+- **TattoosAI:** first-party/user-generated visual data can sustain many category leaves when taxonomy and page-depth thresholds are real.
+- **Landingfolio:** a curated screenshot dataset plus useful filters/counts can outperform raw listings and open adjacent page families.
+- **HeadshotPro near-me failure:** reformatting Google Maps data without enough new value produced shallow pages that did not rank. This remains the most important negative example.
+
+## Pitfalls
+
+- token-swapped pages with no unique data
+- combinatorial layering before validating one primary pattern
+- keyword/URL structure chosen after expensive generation
+- fabricated or stale facts
+- duplicate metadata, canonicals, or overlapping intent
+- mass publishing without crawl/indexation cohorts
+- no owner for refresh/pruning
+- projecting vendor case-study results onto a new site
+
+**Related.** [[programmatic-pattern-library]], [[content-fundamentals]], [[free-tools-strategy]], [[content-pages]], [[content-what-not-to-do]], [[on-page-optimization]] · course refs 03-03 through 03-06.
