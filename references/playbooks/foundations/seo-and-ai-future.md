@@ -1,33 +1,61 @@
 ---
-title: SEO in the Age of AI — Why It Matters More, Not Less
+title: SEO in the Age of AI — Foundations, With Platform-Specific Evidence
 area: foundations
 source_lessons: ["01-03"]
 ---
 
-# SEO in the Age of AI — Why It Matters More, Not Less
+# SEO in the Age of AI — Foundations, With Platform-Specific Evidence
 
-**What it is.** Danny's stance on the "is SEO dead now that everyone uses ChatGPT?" question: the opposite is true. SEO and what people call LLM/large-language-model optimization (sometimes "GEO" / AI search optimization) are effectively the same discipline. The work you do to rank in Google is the same work that makes AI models recommend you.
+**What it is.** The course's durable point is that AI search does not make SEO irrelevant: useful content, crawlability, authority, and trustworthy evidence still matter. The implementation must stay platform-specific, however. Google, ChatGPT, Perplexity, Claude, and other retrieval products have different crawlers, controls, indexes, reporting, and citation behavior.
 
 **When to use.**
-- Someone questions whether SEO is still worth the investment given AI assistants and AI search.
-- An agent is asked how to get a brand/product surfaced inside ChatGPT, Perplexity, or AI Overviews.
-- Prioritizing effort: deciding whether to treat "AI optimization" as a separate workstream (it isn't).
+- Someone asks whether SEO is still worth the investment given AI assistants and AI search.
+- An agent is asked how to improve visibility in ChatGPT, Perplexity, Claude, AI Overviews, or AI Mode.
+- A team is deciding whether to create a separate GEO workstream.
 
-**Core principles (apply these).**
-1. **LLMs are trained on the open web you're already targeting.** Models ingest millions of pages. The more your name, content, and links appear across the web, the more often the model "sees" you — and the more it treats you as the authority for your topic. Mentions and backlinks function like votes inside the training data.
-2. **AI search tools pull from search rankings in real time.** When an AI assistant answers a "best X" question, it often runs a live search (e.g. ChatGPT via its Bing/Microsoft partnership), reads the top-ranking blogs, and summarizes them. If you rank and get mentioned there, you get recommended. Ranking in traditional search directly feeds AI answers.
-3. **Therefore: do nothing special for AI — do excellent SEO.** Building authority, earning backlinks, getting mentioned across many sites, and creating genuinely valuable content is simultaneously SEO and AI optimization. There is no separate playbook to learn.
+## Durable principles
 
-**Decision criteria / heuristics.**
-- Asked "how do we show up in ChatGPT/AI search?" → the answer is the standard SEO loop: rank in the top results and earn lots of independent mentions/backlinks for your target topics.
-- More independent mentions across many domains beats a single big mention for both rankings and model recall.
-- If a tactic helps you rank and get cited by humans, assume it also helps AI models cite you.
+1. **Ordinary SEO remains the foundation.** Crawlable, indexable, useful, differentiated, trustworthy content and genuine authority support discoverability across search and retrieval systems.
+2. **Provider behavior must be verified, not assumed.** Some products use live web search, proprietary indexes, licensed sources, or a mixture. Use current provider documentation and observed evidence before claiming how a named surface retrieves or ranks sources.
+3. **Authentic corroboration beats manufactured mentions.** Earn legitimate coverage, references, reviews, links, and discussion because they help users and establish real reputation. Never create or buy inauthentic mentions to manipulate an AI response.
+4. **Measure each surface with the evidence it actually exposes.** Keep Google Search Console AI impressions, ordinary GSC metrics, analytics referrals, direct citation observations, leads, and revenue separate. Do not invent a universal GEO score.
 
-**Example.** Ask an AI assistant "what's the best AI headshot generator?" It searches the web, reads the blogs ranking for that query, and names the products mentioned most across them. A brand that did consistent link building and content creation shows up in those top blogs — so the AI recommends it. The "AI ranking" was won by ordinary SEO done well.
+## Google AI Overviews and AI Mode
 
-**Pitfalls.**
-- Treating "AI/GEO optimization" as a brand-new skill set to buy or learn separately — it's the same authority + content work.
-- Assuming AI traffic replaces the need to rank; AI answers are often built *from* what ranks, so rankings still matter.
-- Relying on a single channel. AI surfaces and Google can both shift — keep distribution diversified (see [[seo-philosophy]] and [[navigating-google-updates]]).
+When Google is in scope, load `google-generative-ai-search-official.md`. Google's official July 2026 guidance says its generative-AI Search features are rooted in core Search ranking and quality systems, using retrieval/grounding and query fan-out.
 
-**Related.** [[seo-philosophy]], [[seo-process-overview]], [[staying-ahead-with-backlinks]]. Course ref: 01-03 (Future of SEO and AI).
+For Google:
+
+- earn ordinary Search eligibility first: indexable, snippet-eligible, crawlable pages;
+- publish non-commodity, people-first content with first-hand or expert value;
+- use headings, sections, images, video, and structured data for their normal user/Search purposes;
+- maintain Merchant Center and Google Business Profile data where relevant;
+- measure with the Search Console Generative AI performance report when available;
+- do not treat `llms.txt`, tiny artificial chunks, AI-only rewrites, special AI schema, synthetic query-variant pages, or manufactured mentions as requirements.
+
+## Other AI-search platforms
+
+For ChatGPT, Perplexity, Claude, or another named surface:
+
+- inspect current provider crawler/fetcher documentation and the site's robots policy;
+- run a dated source/citation observation for the actual user prompts;
+- label the result as an observation, not a permanent ranking law;
+- distinguish model-training controls from search visibility and user-triggered fetches;
+- preserve the owner's licensing, privacy, and crawler-policy choices.
+
+## Decision criteria
+
+- Asked “how do we show up in AI search?” → identify the target platform(s) first, then run `workflows/geo-audit.md`.
+- A page fails ordinary crawl/index/snippet eligibility → fix that foundation before provider-specific optimization.
+- A recommendation relies on a hack or an unverified provider claim → downgrade it to a hypothesis or remove it.
+- A content opportunity maps to a real user need and business journey → build one strong page or coherent cluster, not a page factory for every synthetic fan-out variation.
+
+## Pitfalls
+
+- Treating all AI products as if they use Google rankings or the same crawler.
+- Presenting directional citation studies as durable platform rules.
+- Calling `llms.txt`, chunking, or special schema a Google AI requirement.
+- Conflating Google AI impressions with clicks, conversions, queries, or revenue.
+- Turning authentic authority building into spammy mention manufacturing.
+
+**Related.** `google-generative-ai-search-official.md`, `seo-philosophy.md`, `seo-process-overview.md`, `references/playbooks/maintenance/google-generative-ai-visibility.md`, and `workflows/geo-audit.md`. Course ref: 01-03 (Future of SEO and AI).

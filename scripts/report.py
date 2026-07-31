@@ -30,8 +30,33 @@ def load(data_path):
     return json.loads(Path(data_path).read_text(encoding="utf-8")) if data_path else {}
 
 
+def md(value):
+    """Render one value safely inside a Markdown table cell."""
+    if value is None:
+        return ""
+    if isinstance(value, (dict, list)):
+        value = json.dumps(value, ensure_ascii=False, sort_keys=True)
+    return str(value).replace("|", "/").replace("\n", " ")
+
+
+def append_mapping(lines, heading, mapping):
+    """Append an optional mapping as a compact two-column section."""
+    if not mapping:
+        return
+    lines += [f"## {heading}", "", "| Check | Status / evidence |", "|---|---|"]
+    for key, value in mapping.items():
+        lines.append(f"| {md(key)} | {md(value)} |")
+    lines.append("")
+
+
 def render_audit(ws, title, data):
-    """data: {summary, score?, findings:[{area,severity,issue,fix,evidence?}]}"""
+    """Render generic audits plus optional GEO context/eligibility sections.
+
+    Generic shape: {summary, score?, findings:[{area,severity,issue,fix,evidence?}]}
+    Optional GEO keys: readiness_verdict, platform_scope, source_versions,
+    google_eligibility, google_myth_checks, google_ai_performance,
+    agentic_readiness, and dimension_notes.
+    """
     findings = data.get("findings", [])
     order = {"critical": 0, "high": 1, "medium": 2, "low": 3}
     findings.sort(key=lambda f: order.get(str(f.get("severity", "low")).lower(), 9))
@@ -40,11 +65,26 @@ def render_audit(ws, title, data):
         lines += ["## Summary", data["summary"], ""]
     if data.get("score") is not None:
         lines += [f"**Overall score:** {data['score']}", ""]
+    if data.get("readiness_verdict"):
+        lines += [f"**Readiness verdict:** {md(data['readiness_verdict'])}", ""]
+
+    context = {}
+    if data.get("platform_scope"):
+        context["Platform scope"] = data["platform_scope"]
+    if data.get("agentic_readiness"):
+        context["Agentic readiness"] = data["agentic_readiness"]
+    append_mapping(lines, "Audit context", context)
+    append_mapping(lines, "Source versions", data.get("source_versions"))
+    append_mapping(lines, "Google eligibility", data.get("google_eligibility"))
+    append_mapping(lines, "Google myth checks", data.get("google_myth_checks"))
+    append_mapping(lines, "Google AI performance", data.get("google_ai_performance"))
+    append_mapping(lines, "Dimension notes", data.get("dimension_notes"))
+
     lines += ["## Findings (prioritized)", "", "| # | Severity | Area | Issue | Recommended fix |",
               "|---|---|---|---|---|"]
     for i, f in enumerate(findings, 1):
-        lines.append(f"| {i} | {f.get('severity','')} | {f.get('area','')} | "
-                     f"{f.get('issue','').replace('|','/')} | {f.get('fix','').replace('|','/')} |")
+        lines.append(f"| {i} | {md(f.get('severity',''))} | {md(f.get('area',''))} | "
+                     f"{md(f.get('issue',''))} | {md(f.get('fix',''))} |")
     p = out_path(ws, "audits", "audit", "md")
     p.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return p
