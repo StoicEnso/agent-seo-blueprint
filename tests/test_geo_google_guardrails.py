@@ -27,6 +27,9 @@ class GoogleGeoGuardrailsTest(unittest.TestCase):
         self.assertIn("google_ai_mode", workflow)
         self.assertIn("Generative AI performance report", workflow)
         self.assertIn("Google myth-busting guardrails", workflow)
+        self.assertIn("Do not generalize that source to other providers", workflow)
+        self.assertIn("the report is impression-only", workflow)
+        self.assertIn("Do not invent AI clicks, queries, CTR, conversions", workflow)
 
     def test_google_hacks_are_explicitly_rejected(self):
         combined = "\n".join(
@@ -41,6 +44,8 @@ class GoogleGeoGuardrailsTest(unittest.TestCase):
         ):
             self.assertIn(phrase, combined)
         self.assertNotIn("optional `/llms.txt` guidance", combined)
+        self.assertIn("scope: google ai overviews and ai mode only", combined)
+        self.assertIn("do not generalize it to chatgpt, perplexity, claude", combined)
 
     def test_geo_context_renders_without_breaking_findings(self):
         report = load_report_module()
