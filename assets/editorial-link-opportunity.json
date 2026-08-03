@@ -1,0 +1,63 @@
+{
+  "captured_at": "YYYY-MM-DD",
+  "workspace": "...",
+  "target_url": "https://publisher.example/page",
+  "target_domain": "publisher.example",
+  "contact": {
+    "name": "...",
+    "role": "author|editor|journalist|owner",
+    "source": "https://publisher.example/byline-or-contact",
+    "verified_at": "YYYY-MM-DD"
+  },
+  "intent_class": "competitor_listicle_gap|competitor_backlink_pattern|broken_resource|decayed_resource|journalist_source_request|statistics_or_research_need|missing_visual|article_video_asset|unlinked_brand_or_founder_mention|unlinked_owned_asset",
+  "observed_gap": "Exact recipient-side reason for a useful editorial change",
+  "retrieved_at": "YYYY-MM-DD",
+  "current_state": {
+    "linked_url": null,
+    "http_or_redirect_state": "...",
+    "citation_or_mention": "...",
+    "provider_scope": null,
+    "provider_observation_date": null
+  },
+  "evidence": [
+    {
+      "url": "https://...",
+      "checked_at": "YYYY-MM-DD",
+      "supports": "...",
+      "source_grade": "primary|official|editorial|third_party|local_observation"
+    }
+  ],
+  "required_asset": {
+    "type": "existing_page|replacement_page|statistics_page|research|visual|video|expert_quote|canonical_source|none",
+    "url_or_brief": "...",
+    "replacement_fit": "...",
+    "distinct_value": "...",
+    "rights_and_attribution": "...",
+    "freshness_owner": "...",
+    "invalidation_trigger": "..."
+  },
+  "commercial_state": {
+    "affiliate_or_sponsorship": "none|disclosed_affiliate|sponsored|unknown",
+    "payment_or_value_exchange": "none|...",
+    "link_required": false,
+    "required_rel": "none|sponsored|nofollow",
+    "disclosure_required": false
+  },
+  "qualification": {
+    "editorial_fit": 0,
+    "recipient_intent_strength": 0,
+    "evidence_quality": 0,
+    "asset_or_replacement_fit": 0,
+    "contactability_recency": 0,
+    "distinct_value": 0,
+    "business_relevance": 0,
+    "production_feasibility": 0,
+    "hard_fails": [],
+    "risk_flags": [],
+    "priority_basis": "..."
+  },
+  "draft_ask": "...",
+  "owner": "...",
+  "next_check": "YYYY-MM-DD",
+  "status": "DRAFT|HOLD|REJECTED|APPROVED|SENT|REPLIED|PLACED"
+}
