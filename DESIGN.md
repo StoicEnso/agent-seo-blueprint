@@ -84,7 +84,7 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── audit-report.md  content-brief.md  keyword-map.csv  outreach-email.md  monitoring-snapshot.md
 │   ├── directory-discovery-sources.csv # dated registry of third-party queue-building sources
 │   ├── directory-submission-tracker.csv # claimed-vs-verified lineage + submission states
-│   └── startup-backlink-candidates.csv # 127 source mentions → 122 unverified leads
+│   └── startup-backlink-candidates.csv # 146 source mentions → 141 unverified leads
 └── _source/                        # GITIGNORED: transcripts + link to iCloud archive (private authority)
     └── .gitignore                  # ignores everything here
 ```

@@ -111,7 +111,7 @@ scripts/                       # Python 3 stdlib only — no pip deps
 assets/                        # fill-in templates emitted into the workspace
   audit-report.md  content-brief.md  keyword-map.csv
   directory-discovery-sources.csv  directory-submission-tracker.csv
-  startup-backlink-candidates.csv  # 127 source mentions → 122 unverified research leads
+  startup-backlink-candidates.csv  # 146 source mentions → 141 unverified research leads
   outreach-email.md  monitoring-snapshot.md
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```

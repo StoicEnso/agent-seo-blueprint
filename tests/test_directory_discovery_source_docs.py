@@ -28,7 +28,7 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
             rows = list(reader)
             fields = set(reader.fieldnames or [])
 
-        self.assertEqual(len(rows), 122)
+        self.assertEqual(len(rows), 141)
         self.assertTrue(
             {
                 "source_url",
@@ -44,6 +44,48 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
         self.assertTrue(
             all(row["verification_status"] == "UNVERIFIED_SOURCE_LEAD" for row in rows)
         )
+
+        directory_finder_rows = [
+            row for row in rows if row["source_url"] == "https://directoryfinder.com/"
+        ]
+        self.assertEqual(len(directory_finder_rows), 19)
+        names = {row["candidate_name"] for row in directory_finder_rows}
+        self.assertTrue(
+            {
+                "G2",
+                "Capterra",
+                "Crunchbase",
+                "TopAI.tools",
+                "DevTool.io",
+                "API Finder",
+                "QuestionDB Hub",
+                "OpenClaw Directory",
+                "Trustpilot",
+                "Wellfound",
+            }.issubset(names)
+        )
+        self.assertTrue(
+            all(row["source_observed_at"] == "2026-08-07" for row in directory_finder_rows)
+        )
+        self.assertTrue(
+            all(row["source_entry_url"].startswith("https://directoryfinder.com/dir/") for row in directory_finder_rows)
+        )
+        self.assertTrue(
+            all("Relevance scope:" in row["notes"] for row in directory_finder_rows)
+        )
+        excluded = {
+            "Yelp",
+            "Tripadvisor",
+            "Philly Home Pros",
+            "Psychology Today",
+            "Zocdoc",
+            "CoinMarketCap",
+            "Awwwards",
+            "Best of the Web",
+            "Jasmine Directory",
+            "Blogarama",
+        }
+        self.assertTrue(names.isdisjoint(excluded))
 
     def test_submission_tracker_separates_claims_from_direct_observations(self):
         path = ROOT / "assets" / "directory-submission-tracker.csv"

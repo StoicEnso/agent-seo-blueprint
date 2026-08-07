@@ -10,9 +10,9 @@ Use this as the startup-specific discovery layer in front of `directory-submissi
 
 ## Source asset
 
-`assets/directory-discovery-sources.csv` records the discovery sources and dated source-level observations. `assets/startup-backlink-candidates.csv` preserves candidate-level provenance and mutable source claims. Its original intake contains 127 source mentions normalized to 122 candidate names; source-reported DR is historical, explicitly unverified input—not current fact.
+`assets/directory-discovery-sources.csv` records the discovery sources and dated source-level observations. `assets/startup-backlink-candidates.csv` preserves candidate-level provenance and mutable source claims. The original X intake contained 127 source mentions normalized to 122 candidate names. A 2026-08-07 Directory Finder fit screen added 19 non-duplicate startup, SaaS, AI, developer-tool, software-review, company-profile, or startup-employer leads, producing 141 candidate names from 146 source mentions. All rows remain unverified research inputs; source-reported metrics are not current facts.
 
-Directory Finder is registered as a structured discovery source because it exposes niche filters and third-party claims for DR, traffic, pricing, approval time, link type, and direct submission routes. As observed on 2026-08-07, its public sitemap exposed 68 listing pages. Do not bulk-promote those rows: filter by project fit first, then verify each selected destination on its own site.
+Directory Finder is registered as a structured discovery source because it exposes niche filters and third-party claims for DR, traffic, pricing, approval time, link type, and direct submission routes. As observed on 2026-08-07, its public sitemap exposed 68 listing pages. Only the 19 relevant, non-duplicate candidates passed intake; local, travel, health, awards, jobs, crypto, generic-web, and other poor-fit destinations were not imported. Do not bulk-promote the retained rows: apply the active project's eligibility scope first, then verify each selected destination on its own site.
 
 ## Source audit before candidate verification
 

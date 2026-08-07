@@ -39,7 +39,7 @@ For every imported claim:
 - never rank the queue by source-claimed DR alone; and
 - re-open the destination's own submission/claim route rather than trusting an aggregator's direct link.
 
-As observed on 2026-08-07, Directory Finder exposed 68 listing pages through its public sitemap and offered filters/claims for niche, DR, estimated traffic, price, approval time, link type, and submission route. Those fields are useful discovery metadata, but they remain third-party, mutable claims until checked against destination-owned pages and live public listings. The dated source record lives in `assets/directory-discovery-sources.csv`. This is not an endorsement of all 68 destinations.
+As observed on 2026-08-07, Directory Finder exposed 68 listing pages through its public sitemap and offered filters/claims for niche, DR, estimated traffic, price, approval time, link type, and submission route. Those fields are useful discovery metadata, but they remain third-party, mutable claims until checked against destination-owned pages and live public listings. The dated source record lives in `assets/directory-discovery-sources.csv`. Only 19 relevant, non-duplicate candidates were added to the research queue; local, travel, health, awards, jobs, crypto, generic-web, and other poor-fit entries were excluded at intake. This is not an endorsement of all 68 destinations.
 
 ## First-party verification gate
 
@@ -77,7 +77,7 @@ Reject the candidate when the only link is inside a private account, the listing
 
 These are discovery leads from a public X checklist. **No DR values are preserved in this curated table because they are unverified and mutable.** Five were already present in the maintained directory catalog; twelve are newly recorded candidates.
 
-The broader source intake is stored in `assets/startup-backlink-candidates.csv`: 127 source mentions normalized to 122 unique candidate names, with duplicate source row numbers and mention counts preserved. The asset is deliberately a research queue, not an approved directory list. Its `source_claimed_dr_unverified` values are source-reported snapshots only; never sort or recommend on them without current verification. Promote a row into the submission tracker only after completing the verification checklist below.
+The broader source intake is stored in `assets/startup-backlink-candidates.csv`: 146 source mentions normalized to 141 unique candidate names after the 19-row Directory Finder fit screen, with source lineage and mention counts preserved. The asset is deliberately a research queue, not an approved directory list. Its `source_claimed_dr_unverified` values are source-reported snapshots only; never sort or recommend on them without current verification. Promote a row into the submission tracker only after completing the verification checklist below.
 
 | Destination | Route type | Catalog status | What to verify before use |
 |---|---|---|---|
