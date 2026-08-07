@@ -4,6 +4,7 @@ area: authority
 source_lessons: []
 operational_addition: true
 source: "https://x.com/hridoyreh/status/2079831605863178416"
+additional_discovery_source: "https://directoryfinder.com/"
 ---
 
 # Directory & Entity Submissions
@@ -25,17 +26,47 @@ A directory link is worth pursuing only when the destination is relevant, public
 7. **Treat submission as an external write.** Prepare the package first; obtain explicit approval before publishing a listing or creating an account.
 8. **Verify after submission.** Save the public URL, status, date, evidence, link attribute if observable, and follow-up date.
 
+## Discovery-source intake
+
+Directory aggregators and crowd-sourced lists are useful queue builders, not evidence that a destination is suitable or that their metrics are current. Record the source in `assets/directory-discovery-sources.csv`, then preserve candidate-level provenance in `assets/startup-backlink-candidates.csv` or the project tracker.
+
+For every imported claim:
+
+- record the source name, source entry URL, and `source_observed_at` date;
+- store DR, traffic, price, approval time, and link-type claims only in fields ending `_unverified`;
+- deduplicate on the destination's canonical domain while retaining every source that mentioned it;
+- filter by the project's niche, geography, business type, and eligibility before spending time on verification;
+- never rank the queue by source-claimed DR alone; and
+- re-open the destination's own submission/claim route rather than trusting an aggregator's direct link.
+
+As observed on 2026-08-07, Directory Finder exposed 68 listing pages through its public sitemap and offered filters/claims for niche, DR, estimated traffic, price, approval time, link type, and submission route. Those fields are useful discovery metadata, but they remain third-party, mutable claims until checked against destination-owned pages and live public listings. The dated source record lives in `assets/directory-discovery-sources.csv`. This is not an endorsement of all 68 destinations.
+
+## First-party verification gate
+
+Promotion from `UNVERIFIED_SOURCE_LEAD` to `VERIFIED` requires destination-first evidence:
+
+1. **Identity and eligibility:** the destination's own site states that this business/product type may apply or claim a listing.
+2. **Submission route:** the current submit/claim URL is destination-owned or an explicitly documented provider route. Save the URL and verification date.
+3. **Cost and moderation:** use current destination pricing/terms and submission guidance, not an aggregator badge or old screenshot.
+4. **Public output:** inspect at least one public listing on the destination for indexability, canonical behavior, login walls, and listing quality.
+5. **Link behavior:** observe the actual rendered link on a comparable live listing. Do not infer `follow`/`nofollow` from a discovery source.
+6. **Evidence split:** keep third-party claims in `source_claimed_*_unverified`; store current observations in `cost`, `link_attribute`, `indexable`, `submission_url_verified_at`, `last_verified_at`, and `evidence`.
+
+If the destination's evidence conflicts with the discovery source, the destination wins and the discrepancy is recorded. If no destination-owned route or public listing can be verified, keep the row unverified or reject it.
+
 ## Verification checklist
 
 For every candidate, capture:
 
 - canonical domain and submission/claim URL
+- destination-owned evidence for the submission/claim route
 - route type: directory, product index, launch platform, review profile, public entity profile, or editorial suggestion
 - topical and geographic fit
 - public listing example from another company
 - indexability (`noindex`, robots, canonical, login wall)
 - outbound-link behavior (`follow`, `nofollow`, `ugc`, redirect, JavaScript-only, or unknown)
 - moderation/approval model and cost
+- source-claim versus first-party-evidence discrepancies
 - required assets and fields
 - duplicate/listing-conflict check
 - `last_verified_at` and evidence source
@@ -81,6 +112,8 @@ Score verified destinations from 0–3 on each factor:
 
 Do not use third-party DR as the primary sort. Prioritize destinations with a real audience and clean entity fit.
 
+For a paid directory, make a placement decision rather than a backlink decision. Require evidence of a relevant audience, plausible referral or assisted-conversion value, transparent pricing, durable public exposure, and owner approval. A `dofollow` claim does not justify payment; a `nofollow` link does not automatically make a genuinely useful listing worthless.
+
 ## Submission package
 
 Prepare once, then adapt per platform:
@@ -100,9 +133,9 @@ Never paste identical long descriptions everywhere. Preserve the same facts whil
 
 ## Tracker schema
 
-Use `assets/directory-submission-tracker.csv` or equivalent fields:
+Use `assets/directory-submission-tracker.csv` or equivalent fields. Keep discovery lineage and destination-verified observations separate:
 
-`destination,domain,route_type,fit,status,submission_url,public_listing_url,cost,link_attribute,indexable,last_verified_at,submitted_at,approved_at,follow_up_at,evidence,notes`
+`destination,domain,route_type,fit,status,discovery_source,source_entry_url,source_observed_at,source_claimed_dr_unverified,source_claimed_traffic_unverified,source_claimed_cost_unverified,source_claimed_approval_time_unverified,source_claimed_link_attribute_unverified,submission_url,submission_url_verified_at,public_listing_url,cost,link_attribute,indexable,last_verified_at,submitted_at,approved_at,follow_up_at,evidence,notes`
 
 Recommended statuses:
 

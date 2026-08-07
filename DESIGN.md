@@ -82,6 +82,8 @@ while keeping the paid source material private and the distilled methodology sha
 │   └── report.py                   #   render audit/keyword/brief artifacts from data
 ├── assets/                         # templates + source-lead research assets
 │   ├── audit-report.md  content-brief.md  keyword-map.csv  outreach-email.md  monitoring-snapshot.md
+│   ├── directory-discovery-sources.csv # dated registry of third-party queue-building sources
+│   ├── directory-submission-tracker.csv # claimed-vs-verified lineage + submission states
 │   └── startup-backlink-candidates.csv # 127 source mentions → 122 unverified leads
 └── _source/                        # GITIGNORED: transcripts + link to iCloud archive (private authority)
     └── .gitignore                  # ignores everything here
@@ -117,8 +119,8 @@ points → artifacts to emit (into the workspace). The five:
 
 Operational additions compose around these five core pipelines: `technical-seo-maintenance.md`, `geo-audit.md`, and
 `category-citation-loop.md` are bounded deep-dive runbooks that route findings back into the core workflows. The 37-check
-SEO ledger routes evidence across audit/research/content/monitoring, the startup backlink asset feeds the directory/entity
-verification path, and Google Generative AI impression evidence remains a separate monitoring layer with explicit
+SEO ledger routes evidence across audit/research/content/monitoring, the directory discovery-source registry and startup
+candidate asset feed a provenance-preserving, first-party-verified directory/entity path, and Google Generative AI impression evidence remains a separate monitoring layer with explicit
 metric/rollout limitations. None of these artifacts turns heuristics, DR snapshots, `site:` counts, or AI impressions
 into business facts; live verification and external-write approval gates still apply.
 
