@@ -112,14 +112,17 @@ points → artifacts to emit (into the workspace). The five:
 4. **authority-and-links** — link stealing, HARO, affiliate, manual outreach, content rings → opportunity lists +
    drafted outreach (never sent without confirmation).
 5. **monitoring** — ordinary rank/traffic snapshots, optional impression-only Google AI visibility snapshots,
+   optional separated Cloudflare readiness/synthetic-panel/operator-activity evidence,
    Google-update detection/response, and "is it paying off" measurement; on-demand plus optional scheduled (via the
    `schedule`/`loop` skills) with a recommended cadence chosen at setup.
 
 Operational additions compose around these five core pipelines: `technical-seo-maintenance.md`, `geo-audit.md`, and
 `category-citation-loop.md` are bounded deep-dive runbooks that route findings back into the core workflows. The 37-check
 SEO ledger routes evidence across audit/research/content/monitoring, the startup backlink asset feeds the directory/entity
-verification path, and Google Generative AI impression evidence remains a separate monitoring layer with explicit
-metric/rollout limitations. None of these artifacts turns heuristics, DR snapshots, `site:` counts, or AI impressions
+verification path, Google Generative AI impression evidence remains a separate monitoring layer with explicit
+metric/rollout limitations, and Cloudflare's readiness checks, synthetic AEO panel, and first-party operator activity
+remain distinct evidence lanes. None of these artifacts turns heuristics, DR snapshots, `site:` counts, AI impressions,
+or vendor panel scores
 into business facts; live verification and external-write approval gates still apply.
 
 ### Layer 3 — Tooling & data (`scripts/` + `references/integrations/`)
