@@ -66,7 +66,7 @@ Distilled, original methodology grouped by area. Load the specific file a step n
 - **foundations/** — seo-philosophy, seo-and-ai-future, seo-process-overview
 - **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
   measuring-seo-results, evidence-backed operational SEO, technical maintenance, GSC 4–20 opportunity mining,
-  Google Generative AI visibility measurement, and AI-search commerce readiness
+  Google Generative AI visibility measurement, AI-search commerce readiness, and Cloudflare Agent Readiness/AEO evidence
 
 ## Data integrations (`references/integrations/` + `scripts/`)
 
@@ -112,6 +112,9 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   `site:` counts for indexation, and require URL/template-level evidence before marking a check complete.
 - **Google AI visibility** stays evidence-bound: its Search Console report is Google-only and impression-only. Never invent
   AI clicks, queries, CTR, conversions, or cross-platform coverage; keep ordinary Search and AI snapshots separate.
+- **Cloudflare AI evidence** stays three-lane: vendor readiness checks, a precomputed synthetic AEO category panel, and
+  first-party operator traffic/errors. Never merge them into a universal score, user-query impressions, or causal proof;
+  verify early-access and pricing state from first-party evidence before asserting availability or cost.
 - **GEO myth-busting:** Google does not require `llms.txt`, special AI schema, artificial chunking, AI-only rewrites, or
   manufactured mentions. Keep optional cross-platform documentation distinct from Google Search requirements.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.

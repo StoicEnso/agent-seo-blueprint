@@ -9,6 +9,7 @@ playbooks:
   - references/playbooks/content/content-fundamentals.md
   - references/playbooks/authority/understanding-authority.md
   - references/playbooks/maintenance/ai-search-commerce-readiness.md
+  - references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md
 references:
   - references/playbooks/content/schema-types-reference.md
   - references/playbooks/maintenance/google-generative-ai-visibility.md
@@ -20,6 +21,7 @@ integrations: [serp, gsc]
 outputs:
   - audits/<date>_geo-audit.md
   - audits/<date>_geo-findings.json
+  - audits/<date>_cloudflare-agent-aeo.json # optional Cloudflare evidence, when available and in scope
 ---
 
 # AI Search Readiness Audit
@@ -109,7 +111,15 @@ Load `references/playbooks/maintenance/google-generative-ai-visibility.md`. Chec
 
 At the 2026-07-10 source version the report is impression-only. Do not invent AI clicks, queries, CTR, conversions, or AI Overview-versus-AI Mode attribution. If the report is absent, record `not_available` or `blocked`; absence is not proof of zero visibility.
 
-### 5. Audit human usefulness, clarity, and evidence
+### 5. Add the Cloudflare evidence lane when the site uses Cloudflare and it is in scope
+
+Load `references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md`. Record the dashboard access state before interpreting absence: the 2026-08-06 announcement made Agent Readiness available while AEO Visibility required early-access registration.
+
+Capture Agent Readiness diagnostics, AEO Visibility panel metrics, and AI Operator Activity as three separate evidence lanes. Label AEO metrics as a precomputed synthetic category/model snapshot—not user-query impressions, clicks, market share, or causal attribution. Label operator crawls/referrals/errors as first-party network evidence and reconcile referrals with analytics before making business claims. Save the raw capture to `audits/<date>_cloudflare-agent-aeo.json`.
+
+Do not call the product free without a current first-party pricing or entitlement check. Do not treat Cloudflare's readiness checks, Markdown support, crawler controls, or agent-protocol suggestions as Google ranking requirements. Any crawler-policy, authentication, security, or production change remains approval-gated.
+
+### 6. Audit human usefulness, clarity, and evidence
 
 For each priority page:
 
@@ -122,13 +132,13 @@ For each priority page:
 
 Treat “citability” as a local clarity/evidence heuristic, not a Google requirement. Do not prescribe a fixed word count, fixed answer-block size, or artificial chunking pattern.
 
-### 6. Audit entity consistency and authentic corroboration
+### 7. Audit entity consistency and authentic corroboration
 
 Compare the canonical entity name, product/service description, authorship, organization/person schema, social profiles, directories, reviews, and earned coverage. Search the priority topics and inspect which sources are actually cited or ranked.
 
 Flag contradictory names, claims, pricing, or identity details. Recommend only legitimate third-party coverage, reviews, partnerships, references, and links. Never recommend fabricated mentions, paid spam placements, fake discussion, or undisclosed influence.
 
-### 7. Run provider-specific access checks for non-Google platforms
+### 8. Run provider-specific access checks for non-Google platforms
 
 Fetch `robots.txt` and check only providers in scope, using current official documentation:
 
@@ -149,7 +159,7 @@ Provider behavior and names may change; verify before asserting. Respect the own
 
 Compare raw HTML with the rendered page where relevant. Flag JS-only key content only when evidence shows a user or scoped fetcher cannot access it.
 
-### 8. Audit evidence formats and agent usability
+### 9. Audit evidence formats and agent usability
 
 Inspect whether useful images, screenshots, video, demos, tables, charts, or original data strengthen understanding and proof.
 
@@ -163,11 +173,11 @@ When browser-agent task completion matters, separately assess:
 
 Label this **agent usability**, not a proven Google AI ranking factor.
 
-### 9. Audit commerce/current-data consistency when applicable
+### 10. Audit commerce/current-data consistency when applicable
 
 Load `ai-search-commerce-readiness.md` for retailers, marketplaces, paid products, bookings, or services whose facts change. Compare crawled pages, feeds/APIs actually used by the business, and live state for identifiers, variants, price, currency, availability, language, freshness, shipping/promotions, and policies. Keep visibility, sessions, assisted conversions, transactions, revenue, and causal evidence separate.
 
-### 10. Emit the report
+### 11. Emit the report
 
 Use this optional-rich input shape. `report.py audit` remains backward compatible with ordinary site-audit findings:
 
@@ -219,6 +229,8 @@ Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparis
 
 - **Google page not indexed/snippet-eligible** → Google AI lane is `blocked`; fix ordinary Search eligibility first.
 - **Google report unavailable** → record rollout/access ambiguity; do not call it zero visibility.
+- **Cloudflare AEO unavailable** → record early-access/account state; do not call it zero visibility or assume a price.
+- **Cloudflare panel moves** → compare category, models, and snapshot metadata before interpreting; never claim causality from the score alone.
 - **Desired non-Google search crawler blocked** → report the platform-specific tradeoff and ask before any policy change.
 - **JS-only key content** → raise severity only when accessibility or scoped fetch evidence supports it.
 - **Good rankings but weak observed citation** → inspect content usefulness/evidence and authentic source coverage; do not prescribe hacks.
@@ -233,8 +245,9 @@ Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparis
 - Indexing/rendering/technical issues → `site-audit.md` or `technical-seo-maintenance.md`.
 - Valid schema gaps → `schema-types-reference.md`.
 - Google AI reporting → `google-generative-ai-visibility.md`.
+- Cloudflare readiness/AEO/operator evidence → `cloudflare-agent-readiness-and-aeo.md`.
 - Feed/live-state contradictions → `ai-search-commerce-readiness.md` and the owning backlog.
 
 ## Done when
 
-Platform scope is explicit; Google and non-Google claims are separated; Google eligibility, myth checks, and report availability are recorded when applicable; priority pages have evidence-backed findings; agent usability is separately labelled; every recommendation has a concrete fix and owner; the qualitative verdict is assigned; and both Markdown and raw JSON artifacts exist.
+Platform scope is explicit; Google and non-Google claims are separated; Google eligibility, myth checks, and report availability are recorded when applicable; any Cloudflare readiness, synthetic AEO-panel, and first-party operator evidence is captured in separate lanes with access state and limitations; priority pages have evidence-backed findings; agent usability is separately labelled; every recommendation has a concrete fix and owner; the qualitative verdict is assigned; and both Markdown and raw JSON artifacts exist.

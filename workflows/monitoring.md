@@ -9,6 +9,7 @@ playbooks:
   - references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md
   - references/playbooks/maintenance/seo-operational-checklist.md
   - references/playbooks/maintenance/google-generative-ai-visibility.md
+  - references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md
   - references/playbooks/foundations/seo-process-overview.md
 scripts:
   - scripts/workspace.py
@@ -25,6 +26,7 @@ outputs:
   - monitoring/<date>_snapshot.json         # raw ordinary-search snapshot payload
   - monitoring/<date>_gsc-4-20-opportunities.json # current, verified quick-win/recovery rows
   - monitoring/<date>_google-ai-visibility.json # optional Google AI impression snapshot
+  - monitoring/<date>_cloudflare-agent-aeo.json # optional Cloudflare readiness, synthetic panel, and operator snapshot
 ---
 
 # Monitoring
@@ -48,6 +50,8 @@ outputs:
 
    **Optional Google AI visibility layer.** When the property exposes Search Console's Generative AI performance report, load `references/playbooks/maintenance/google-generative-ai-visibility.md`. Capture impression-only views by canonical page, country, date, and device into `monitoring/<date>_google-ai-visibility.json`; record the inclusion-control state without changing it. Keep this dataset separate from ordinary Search clicks/CTR/position. Report absence as rollout/access ambiguity, not zero visibility.
 
+   **Optional Cloudflare agent/AEO layer.** When the site uses Cloudflare and the dashboard evidence is in scope, load `references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md`. Save Agent Readiness checks, the precomputed synthetic AEO category/model panel, and first-party AI Operator Activity as separate sections in `monitoring/<date>_cloudflare-agent-aeo.json`. Preserve access state, snapshot/model/category metadata, and limitations. Do not blend its scores with GSC/GA4 or infer user-query impressions, clicks, revenue, or causality.
+
 4. **Mine current GSC positions 4–20.** Load `references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md`. Use the latest final 28-day query+page rows, reject stale/irrelevant/intent-mismatched candidates, and inspect the live page/SERP before recommending a narrow change. Keep 90-day-only rows as recovery context unless current data confirms them. Save valid, rejected, and recovery-only rows to `monitoring/<date>_gsc-4-20-opportunities.json` and route implementation briefs to `content-production.md`.
 
 5. **Track the six leading indicators (the work).** From `measuring-seo-results.md`, log the action-task checklist for the period: (1) content shipped, (2) new keywords/content targeted, (3) existing pages optimized, (4) link opportunities identified + contacted, (5) backlinks acquired, (6) competitor backlinks tracked. Save to `monitoring/<date>_leading-indicators.json`. These are checked weekly; the user fills them or the agent reads them from the workspace (briefs shipped, drafts sent in `outreach/`, etc.).
@@ -70,6 +74,7 @@ outputs:
 - **Cadence** (asked at setup): weekly inputs / monthly outputs / quarterly analysis is the recommended default — but the user chooses.
 - **On-demand vs scheduled** → run now (steps 3–7) vs register via `schedule`/`loop` (user-confirmed).
 - **Movement diagnosis:** settling vs update vs intent shift vs competitor links → routes to different responses (above). Diagnose before acting; don't gut a page over a one-week wobble.
+- **Cloudflare evidence available?** Keep readiness checks, synthetic AEO panel metrics, and first-party operator traffic separate; unavailable early access is not zero visibility.
 - **Judge inputs weekly, outcomes quarterly** — don't treat the weekly dashboard as the success verdict.
 
 **Outputs.**
@@ -78,5 +83,6 @@ outputs:
 - `monitoring/<date>_snapshot.json` — raw ordinary-search payload for trend diffing.
 - `monitoring/<date>_gsc-4-20-opportunities.json` — current valid opportunities plus rejected/recovery-only rows.
 - `monitoring/<date>_google-ai-visibility.json` — optional impression-only Google AI snapshot with explicit limitations.
+- `monitoring/<date>_cloudflare-agent-aeo.json` — optional Cloudflare snapshot with readiness, synthetic panel, and operator-activity lanes kept separate.
 
-**Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions as clicks or revenue.
+**Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions or vendor panel scores as clicks or revenue.

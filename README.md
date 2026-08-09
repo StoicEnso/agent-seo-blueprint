@@ -85,12 +85,12 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 13 operational additions
+  playbooks/                   # 36 course distillations + 14 operational additions
     research/        (9)        # keyword research, niches, intent, metrics, match-and-exceed…
     content/         (14)       # programmatic SEO, schema/E-E-A-T, content/landing pages, article QA…
     authority/       (13)       # link stealing, affiliate, directories, Wikipedia research, outreach…
     foundations/     (4)        # SEO philosophy/process + platform-scoped AI and official Google guidance
-    maintenance/     (9)        # updates, ROI, technical SEO, GSC opportunities, AI-search evidence
+    maintenance/     (10)       # updates, ROI, technical SEO, GSC opportunities, AI-search evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
@@ -118,7 +118,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (49 playbooks)
+## The knowledge layer (50 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -140,7 +140,8 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
-`gsc-position-4-20-opportunity-mining` · `google-generative-ai-visibility` · `ai-search-commerce-readiness`
+`gsc-position-4-20-opportunity-mining` · `google-generative-ai-visibility` · `ai-search-commerce-readiness` ·
+`cloudflare-agent-readiness-and-aeo`
 
 > **Flagship play:** proactive niche discovery — mining search data for a low-KD, buildable gap with a real LSI cluster
 > behind it, to build a product/startup around. See `research/finding-and-validating-niches.md` (the Ahrefs data-dump
@@ -158,9 +159,9 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **content-production** | content-type selection → brief → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional source packet, review draft, QA report |
 | **site-audit** | technical + on-page + content + opportunity + authority audit | prioritized, severity-ranked fix list |
 | **authority-and-links** | pick tactics → ranked opportunity list → **drafted** outreach (never auto-sent) | opportunity list, outreach drafts |
-| **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI impressions + update response + ROI measurement | ordinary-search, opportunity, and AI-visibility snapshots |
+| **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI impressions and Cloudflare agent/AEO evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
-| **geo-audit** | Platform-scoped AI-search audit with an official Google AI Overviews/AI Mode eligibility, myth-busting, and Search Console lane | readiness report and raw findings |
+| **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus an optional Cloudflare readiness, synthetic AEO-panel, and operator-activity lane | readiness report and raw findings |
 | **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific citations | category/citation baseline and loop plan |
 
 ---
@@ -264,6 +265,7 @@ Ask the agent things like:
 - *"Find link opportunities for mysite.com."* → `authority-and-links` → opportunity list + drafted outreach (you approve before sending).
 - *"Set up weekly rank/traffic monitoring."* → `monitoring` → snapshots + optional schedule.
 - *"Which pages appear in Google AI Overviews or AI Mode?"* → `monitoring` + `google-generative-ai-visibility` → impression-only page/country/date/device evidence with limitations.
+- *"What does Cloudflare show about agent access, AI citations, and operator traffic?"* → `geo-audit` or `monitoring` + `cloudflare-agent-readiness-and-aeo` → three separate evidence lanes with access state and limitations.
 - *"Which queries rank in positions 4–20 and are worth improving?"* → `monitoring` + `gsc-position-4-20-opportunity-mining`.
 - *"Audit whether my product data and checkout are ready for AI agents."* → `geo-audit` + `ai-search-commerce-readiness`.
 - *"Set up a recurring technical SEO maintenance pass."* → `technical-seo-maintenance`.
