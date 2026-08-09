@@ -3,6 +3,7 @@ title: Site Audit
 goal: Audit a live site across technical, on-page, and content dimensions, then emit a prioritized, severity-ranked fix list.
 playbooks:
   - references/playbooks/content/on-page-optimization.md
+  - references/playbooks/content/image-search-optimization.md
   - references/playbooks/content/content-what-not-to-do.md
   - references/playbooks/content/content-fundamentals.md
   - references/playbooks/content/content-types-overview.md
@@ -42,7 +43,7 @@ outputs:
 
 3. **Technical audit — indexation & duplication.** From `on-page-optimization.md` (canonicals) and `references/playbooks/content/content-what-not-to-do.md` (duplicate content, crawl budget): check for parameterized/near-duplicate URLs without canonicals, duplicate meta titles/descriptions across templated pages, and mass-published pages straining crawl budget. Use `gsc_pull.py` coverage/indexation signals where available. A `site:` query via `serp_capture.py` is directional discovery evidence only, never an authoritative indexed-page count.
 
-4. **On-page audit.** Per priority page, scrape it with `serp_capture.py` and check against `on-page-optimization.md`: meta title contains the main keyword AND matches search intent (no obscure titles that cause bounces); meta description uses variants; internal links present and pointing at related pages; H1/H2 structure sane. Record each gap as a finding.
+4. **On-page audit.** Per priority page, scrape it with `serp_capture.py` and check against `on-page-optimization.md`: meta title contains the main keyword AND matches search intent (no obscure titles that cause bounces); meta description uses variants; internal links present and pointing at related pages; H1/H2 structure sane. When the page or SERP is meaningfully visual, load `image-search-optimization.md` and sample priority images for HTML discovery, contextual/accessible alt behavior, stable URLs, responsive sizing, transfer cost/CWV impact, image-sitemap need, and truthful conditional metadata. Record each gap as a finding; do not infer image indexation or traffic from markup alone.
 
 5. **Content/intent audit.** Load `references/playbooks/content/content-fundamentals.md`, `content-types-overview.md`, and `references/playbooks/maintenance/keyword-intent-evolution.md`. For each key page, capture the live SERP for its target keyword (`serp_capture.py`) and check: does the page's **content type match the format Google now rewards**? An intent/format mismatch (e.g. a landing page where reviews now rank) is a high-severity finding with the fix "reformat to the now-preferred type." Also scan for thin content, keyword stuffing, AI-spam pages, and keyword cannibalization (two pages chasing one keyword) per `content-what-not-to-do.md`.
 

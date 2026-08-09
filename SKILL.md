@@ -60,7 +60,7 @@ Distilled, original methodology grouped by area. Load the specific file a step n
   finding-and-validating-niches, competitor-research, keyword-to-sitemap, research-for-existing-sites
 - **content/** — content-fundamentals, content-types-overview, programmatic-seo, programmatic-pattern-library,
   free-tools-strategy, content-pages, landing-pages, articles, content-rings, on-page-optimization,
-  content-what-not-to-do, agent-article-production-qa, E-E-A-T, and schema references
+  image-search-optimization, content-what-not-to-do, agent-article-production-qa, E-E-A-T, and schema references
 - **authority/** — understanding-authority, link-stealing, editorial-link-intent-and-assets, affiliate-programs, acquiring-domain-authority, haro,
   manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, startup-backlink verification,
   Wikipedia dead-link research, other-link-building, and linkbuilding-what-not-to-do

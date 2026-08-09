@@ -5,6 +5,7 @@ playbooks:
   - references/playbooks/maintenance/technical-seo-maintenance.md
   - references/playbooks/maintenance/measuring-seo-results.md
   - references/playbooks/content/on-page-optimization.md
+  - references/playbooks/content/image-search-optimization.md
   - references/playbooks/content/schema-types-reference.md
   - references/playbooks/content/content-what-not-to-do.md
 references:
@@ -67,7 +68,7 @@ outputs:
    - rendering: key content/schema visible in initial HTML where practical, hydration/JS-only risks, content parity mobile vs desktop;
    - titles/meta: missing, duplicated, misleading, or truncated past sensible SERP length;
    - structured data: appropriate schema for articles/products/FAQ/breadcrumb/org, valid JSON-LD, no stale rich-result assumptions;
-   - links/media: broken internal/outbound links, orphaned pages, oversized images, missing important alt text, layout-shift media;
+   - links/media: broken internal/outbound links, orphaned pages, oversized images, missing important alt text, layout-shift media; for image-led/visual-intent templates, apply `image-search-optimization.md` to discovery, stable URLs, responsive delivery, LCP handling, sitemap need, and conditional rights metadata;
    - trust/security basics: HTTPS/mixed content, exposed secrets/debug dumps, missing commercial trust pages where expected.
 
 6. **Turn findings into a small weekly fix backlog.** Prefer "fix 10 small things" over vague advice. Each finding needs:

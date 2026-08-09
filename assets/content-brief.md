@@ -110,6 +110,8 @@ matters more than an arbitrary source count.
 - [ ] Product claims match the truth contract; forbidden claims are absent
 - [ ] Every material factual claim has inspectable evidence
 - [ ] Meta description written and within length
-- [ ] Image alt text + descriptive filenames
+- [ ] Meaningful images have contextual alt text; decorative images use empty alt; filenames are stable and descriptive without stuffing
+- [ ] Visual-intent pages have crawlable `<img src>` fallbacks, responsive sizing, efficient bytes, reserved dimensions, and no lazy-loaded LCP image
+- [ ] Image schema/rights metadata is used only when truthful and applicable; no ImageObject or ranking promise by default
 - [ ] Mobile-friendly and fast (no layout shift, fast LCP)
 - [ ] Schema matches visible content and current platform support; no rich-result or AI-citation promise
