@@ -41,6 +41,22 @@ For every imported claim:
 
 As observed on 2026-08-07, Directory Finder exposed 68 listing pages through its public sitemap and offered filters/claims for niche, DR, estimated traffic, price, approval time, link type, and submission route. Those fields are useful discovery metadata, but they remain third-party, mutable claims until checked against destination-owned pages and live public listings. The dated source record lives in `assets/directory-discovery-sources.csv`. Only 19 relevant, non-duplicate candidates were added to the research queue; local, travel, health, awards, jobs, crypto, generic-web, and other poor-fit entries were excluded at intake. This is not an endorsement of all 68 destinations.
 
+## Conditional local-entity baseline
+
+A 2026-08-09 social checklist named 35 business profiles, general directories, maps, and content/community platforms as a universal “backlink starter pack.” The list is retained as a discovery source, not imported wholesale. A physical or service-area business may have a legitimate local-entity lane, but an online-only startup should not manufacture a location or create irrelevant profiles for links.
+
+| Surface | Dated first-party observation | Decision before use |
+|---|---|---|
+| Google Business Profile | Google's eligibility guidance says the business must have a customer-facing physical location or travel to customers: `https://support.google.com/business/answer/3038177` | Use only for a truthful eligible local/service-area business; one accurate profile, real-world name, precise address/service area, and minimal accurate categories. |
+| Bing Places / Bing for Business | `https://www.bingplaces.com/` redirected to `https://www.bing.com/forbusiness/` on 2026-08-09 | Treat the renamed/redirected surface as mutable. Re-open the live claim flow, confirm country and business eligibility, and inspect a public result before recommendation. |
+| Apple Business | Apple's current business product exposes Maps, Brands, actions, and discovery/insight features at `https://business.apple.com/` | Confirm current country, organization, verification, and place/brand requirements. Record the actual public Apple Maps/brand output rather than assuming a backlink. |
+| Yelp for Business | `https://business.yelp.com/` offered a free page claim/add route and described local-business discovery on 2026-08-09 | Confirm category/geographic fit, an existing-page conflict, public indexability, and current link behavior. Never solicit or fabricate reviews. |
+| OpenStreetMap | `https://www.openstreetmap.org/fixthemap` documents factual map repair/community editing | Not a marketing directory or backlink tactic. Add or correct only verifiable real-world map data under OpenStreetMap's norms; never insert promotional text or fictitious locations. |
+
+Other names from the checklist—such as BBB, Nextdoor, Foursquare, Yellow Pages, Manta, Hotfrog, Chamber of Commerce, MapQuest, Alignable, MerchantCircle, Brownbook, Cylex, EZlocal, ShowMeLocal, CitySquares, Superpages, and Yellowbook—remain research leads until destination-owned eligibility, claim route, geography, moderation/cost, public output, and link behavior are live-verified. Their presence in a social list is not enough to add them to a project plan.
+
+Crunchbase, About.me, Medium, Substack, Pinterest, YouTube, Vimeo, GitHub, Product Hunt, Reddit, and Quora are not interchangeable directory submissions. Route them to the appropriate company-profile, launch, audience, community, developer, or native-content workflow only when the project has a genuine use case. Do not create thin repositories, empty profiles, duplicate posts, or self-promotional community contributions for a backlink.
+
 ## First-party verification gate
 
 Promotion from `UNVERIFIED_SOURCE_LEAD` to `VERIFIED` requires destination-first evidence:

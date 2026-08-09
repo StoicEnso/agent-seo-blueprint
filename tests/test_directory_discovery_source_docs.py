@@ -21,6 +21,22 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
         self.assertIn("third-party claims", row["notes"])
         self.assertIn("do not bulk-endorse", row["notes"])
 
+    def test_social_starter_pack_is_registered_but_not_bulk_endorsed(self):
+        path = ROOT / "assets" / "directory-discovery-sources.csv"
+        with path.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+
+        row = next(
+            item
+            for item in rows
+            if item["source_url"]
+            == "https://x.com/2whazzuup/status/2086169566108069962"
+        )
+        self.assertEqual(row["verification_status"], "DISCOVERY_SOURCE_ONLY")
+        self.assertEqual(row["last_observed_at"], "2026-08-09")
+        self.assertEqual(row["observed_candidate_count"], "35")
+        self.assertIn("not bulk-imported", row["notes"])
+
     def test_candidate_queue_preserves_unverified_source_lineage(self):
         path = ROOT / "assets" / "startup-backlink-candidates.csv"
         with path.open(newline="", encoding="utf-8") as handle:
@@ -136,6 +152,10 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
         self.assertIn("## First-party verification gate", directory)
         self.assertIn("destination-owned", directory)
         self.assertIn("This is not an endorsement of all 68 destinations", directory)
+        self.assertIn("## Conditional local-entity baseline", directory)
+        self.assertIn("online-only startup should not manufacture a location", directory)
+        self.assertIn("Not a marketing directory or backlink tactic", directory)
+        self.assertIn("not interchangeable directory submissions", directory)
         self.assertIn("A `dofollow` claim does not justify payment", directory)
         self.assertIn("## Source audit before candidate verification", startup)
         self.assertIn("do not bulk-promote", startup.lower())
