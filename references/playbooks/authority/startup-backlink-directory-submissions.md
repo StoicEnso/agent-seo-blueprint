@@ -10,16 +10,29 @@ Use this as the startup-specific discovery layer in front of `directory-submissi
 
 ## Source asset
 
-`assets/startup-backlink-candidates.csv` preserves 127 source mentions as 122 deduplicated candidate names. Source-reported DR is historical, explicitly unverified input—not current fact.
+`assets/directory-discovery-sources.csv` records the discovery sources and dated source-level observations. `assets/startup-backlink-candidates.csv` preserves candidate-level provenance and mutable source claims. The original X intake contained 127 source mentions normalized to 122 candidate names. A 2026-08-07 Directory Finder fit screen added 19 non-duplicate startup, SaaS, AI, developer-tool, software-review, company-profile, or startup-employer leads, producing 141 candidate names from 146 source mentions. All rows remain unverified research inputs; source-reported metrics are not current facts.
+
+Directory Finder is registered as a structured discovery source because it exposes niche filters and third-party claims for DR, traffic, pricing, approval time, link type, and direct submission routes. As observed on 2026-08-07, its public sitemap exposed 68 listing pages. Only the 19 relevant, non-duplicate candidates passed intake; local, travel, health, awards, jobs, crypto, generic-web, and other poor-fit destinations were not imported. Do not bulk-promote the retained rows: apply the active project's eligibility scope first, then verify each selected destination on its own site.
+
+## Source audit before candidate verification
+
+1. Record `source_name`, `source_url`, source type, coverage, claimed fields, and observation date in the source registry.
+2. For each selected source entry, preserve `source_entry_url` and only map mutable claims into `source_claimed_*_unverified` fields.
+3. Normalize the destination name/domain and deduplicate across sources without discarding provenance.
+4. Reject obvious category mismatches before live verification; broad directories-of-directories are not project shortlists.
+5. Check that the source exposes enough provenance to revisit the entry. A screenshot, copied DR table, or anonymous list with no destination route is a weaker lead.
+6. Do not crawl or import an entire changing source merely to inflate the queue. Start with the niche/region/product filters that match the project.
 
 ## Verification pipeline
 
 1. Resolve the current domain and confirm it is the same entity named by the source.
-2. Classify the route: directory, product index, launch platform, review profile, public entity profile, community, marketplace, editorial/PR, or asset contribution.
-3. Verify eligibility, topical fit, moderation/cost, truthful account requirements, a public listing example, indexability, and observed outbound-link behavior.
-4. Reject private-only profiles, fake-persona routes, irrelevant listings, thin repositories, review manipulation, pay-to-link packages, and surfaces whose only value is a claimed authority metric.
-5. Score relevance, real audience usefulness, evidence quality, effort, risk, and likely durable visibility—not DR alone.
-6. Draft platform-specific copy and hold it for explicit approval under `directory-submissions.md`.
+2. Open the destination's own submit/claim page and record `submission_url_verified_at`; never treat an aggregator's direct link as current by default.
+3. Classify the route: directory, product index, launch platform, review profile, public entity profile, community, marketplace, editorial/PR, or asset contribution.
+4. Verify eligibility, topical fit, moderation/cost, truthful account requirements, a public listing example, indexability, and observed outbound-link behavior using destination-owned pages and live listings.
+5. Compare direct evidence with each `source_claimed_*_unverified` value and log discrepancies.
+6. Reject private-only profiles, fake-persona routes, irrelevant listings, thin repositories, review manipulation, pay-to-link packages, and surfaces whose only value is a claimed authority metric.
+7. Score relevance, real audience usefulness, evidence quality, effort, risk, and likely durable visibility—not DR alone.
+8. Draft platform-specific copy and hold it for explicit approval under `directory-submissions.md`.
 
 Community/editorial surfaces such as Hacker News, Indie Hackers, YourStory, Medium, or Wikipedia are not ordinary directory submissions. They require genuine contribution, editorial merit, or the owning authority workflow.
 
@@ -31,4 +44,4 @@ Every state change needs dated evidence. Creating accounts, posting, submitting,
 
 ## Done condition
 
-The selected candidate batch is classified and live-verified, with rejection reasons and evidence. No row is called a backlink win until a public listing URL and observed link/indexability evidence exist.
+The selected candidate batch is source-audited, deduplicated, classified, and live-verified with first-party route evidence, discrepancy notes, and rejection reasons. No row is called a backlink win until a public listing URL and observed link/indexability evidence exist.

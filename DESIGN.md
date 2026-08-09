@@ -82,7 +82,9 @@ while keeping the paid source material private and the distilled methodology sha
 │   └── report.py                   #   render audit/keyword/brief artifacts from data
 ├── assets/                         # templates + source-lead research assets
 │   ├── audit-report.md  content-brief.md  keyword-map.csv  outreach-email.md  monitoring-snapshot.md
-│   └── startup-backlink-candidates.csv # 127 source mentions → 122 unverified leads
+│   ├── directory-discovery-sources.csv # dated registry of third-party queue-building sources
+│   ├── directory-submission-tracker.csv # claimed-vs-verified lineage + submission states
+│   └── startup-backlink-candidates.csv # 146 source mentions → 141 unverified leads
 └── _source/                        # GITIGNORED: transcripts + link to iCloud archive (private authority)
     └── .gitignore                  # ignores everything here
 ```
@@ -118,12 +120,12 @@ points → artifacts to emit (into the workspace). The five:
 
 Operational additions compose around these five core pipelines: `technical-seo-maintenance.md`, `geo-audit.md`, and
 `category-citation-loop.md` are bounded deep-dive runbooks that route findings back into the core workflows. The 37-check
-SEO ledger routes evidence across audit/research/content/monitoring, the startup backlink asset feeds the directory/entity
-verification path, Google Generative AI impression evidence remains a separate monitoring layer with explicit
-metric/rollout limitations, and Cloudflare's readiness checks, synthetic AEO panel, and first-party operator activity
-remain distinct evidence lanes. None of these artifacts turns heuristics, DR snapshots, `site:` counts, AI impressions,
-or vendor panel scores
-into business facts; live verification and external-write approval gates still apply.
+SEO ledger routes evidence across audit/research/content/monitoring, the directory discovery-source registry and startup
+candidate asset feed a provenance-preserving, first-party-verified directory/entity path, Google Generative AI impression
+evidence remains a separate monitoring layer with explicit metric/rollout limitations, and Cloudflare's readiness checks,
+synthetic AEO panel, and first-party operator activity remain distinct evidence lanes. None of these artifacts turns
+heuristics, DR snapshots, `site:` counts, AI impressions, or vendor panel scores into business facts; live verification
+and external-write approval gates still apply.
 
 ### Layer 3 — Tooling & data (`scripts/` + `references/integrations/`)
 - **Ahrefs**: `ahrefs_client.py` uses the API when a key is in project config; otherwise drives the logged-in Ahrefs web
