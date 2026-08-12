@@ -12,6 +12,7 @@ playbooks:
   - references/playbooks/content/articles.md
   - references/playbooks/content/content-rings.md
   - references/playbooks/content/on-page-optimization.md
+  - references/playbooks/content/image-search-optimization.md
   - references/playbooks/content/content-what-not-to-do.md
   - references/playbooks/content/agent-article-production-qa.md
   - references/playbooks/research/match-and-exceed.md
@@ -65,7 +66,7 @@ outputs:
 
    Apply the relevant content checks from `references/playbooks/maintenance/seo-operational-checklist.md`: titles are intent-first (50–60 characters is guidance, not a hard pass/fail), authorship/E-E-A-T signals must be real, schema must match visible content, `dateModified` changes only after material edits, and FAQ/PAA sections belong on the most appropriate page unless a standalone page has distinct demand and enough value.
 
-5. **Apply on-page optimization to the brief.** Load `references/playbooks/content/on-page-optimization.md`. Specify: meta title (main keyword, intent-matched, natural) and description (synonyms/variants); internal links to/from related pages; a page-speed plan (prefer static generation); and canonicals for any parameterized/duplicate URLs.
+5. **Apply on-page optimization to the brief.** Load `references/playbooks/content/on-page-optimization.md`. Specify: meta title (main keyword, intent-matched, natural) and description (synonyms/variants); internal links to/from related pages; a page-speed plan (prefer static generation); and canonicals for any parameterized/duplicate URLs. When the live SERP has meaningful visual intent or the page relies on original/product/diagram imagery, also load `references/playbooks/content/image-search-optimization.md` and add an evidence-backed image plan: image purpose, landing-page context, stable descriptive filename, accessible alt behavior, responsive delivery/performance, discovery route, and only the structured metadata that fits the real page and rights use case.
 
 6. **Run the what-not-to-do guardrail.** Load `references/playbooks/content/content-what-not-to-do.md` as a pre-brief checklist: no AI content spam, respect crawl budget (batch large publishes), no keyword stuffing, no duplicate/cannibalizing pages, no thin content. Flag any risk in the brief.
 

@@ -85,9 +85,9 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 14 operational additions
+  playbooks/                   # 36 course distillations + 15 operational additions
     research/        (9)        # keyword research, niches, intent, metrics, match-and-exceed…
-    content/         (14)       # programmatic SEO, schema/E-E-A-T, content/landing pages, article QA…
+    content/         (15)       # programmatic SEO, schema/E-E-A-T, image search, content/landing pages, article QA…
     authority/       (13)       # link stealing, affiliate, directories, Wikipedia research, outreach…
     foundations/     (4)        # SEO philosophy/process + platform-scoped AI and official Google guidance
     maintenance/     (10)       # updates, ROI, technical SEO, GSC opportunities, AI-search evidence
@@ -118,7 +118,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (50 playbooks)
+## The knowledge layer (51 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -129,7 +129,8 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 
 **content/** — `content-fundamentals` · `content-types-overview` · `programmatic-seo` · `free-tools-strategy` ·
 `content-pages` · `landing-pages` · `articles` · `content-rings` · `on-page-optimization` · `content-what-not-to-do` ·
-`agent-article-production-qa` · `programmatic-pattern-library` · `eeat-framework` · `schema-types-reference`
+`image-search-optimization` · `agent-article-production-qa` · `programmatic-pattern-library` · `eeat-framework` ·
+`schema-types-reference`
 
 **authority/** — `understanding-authority` · `link-stealing` · `affiliate-programs` · `acquiring-domain-authority` ·
 `haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` · `directory-submissions` ·

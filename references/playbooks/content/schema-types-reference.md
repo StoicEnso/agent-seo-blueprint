@@ -45,7 +45,7 @@ Start from the current Google Search structured-data docs for rich-result eligib
 | EmployerAggregateRating | Employer ratings | For hiring organizations with aggregate employer ratings. |
 | Event | Live or virtual events | Include start/end date, location/virtual location, organizer, offers where relevant. |
 | FAQPage | Frequently asked questions | Visibility is restricted; see “Restricted / low-visibility” below. |
-| Image metadata / ImageObject | Image ownership/licensing metadata | Useful for Google Images where image rights matter. |
+| Image metadata / ImageObject | Image ownership/licensing metadata | Conditional: useful where creator, credit, copyright, or licensing facts matter. It is not required for every image or a ranking guarantee; see `image-search-optimization.md`. |
 | JobPosting | Job listing pages | Requires strict freshness and removal when expired. |
 | LocalBusiness | Physical/local businesses | Include NAP, opening hours, geo where truthful. |
 | MathSolver | Math problem solver pages | Specific educational tool pages only. |
