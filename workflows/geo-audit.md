@@ -10,6 +10,7 @@ playbooks:
   - references/playbooks/authority/understanding-authority.md
   - references/playbooks/maintenance/ai-search-commerce-readiness.md
   - references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md
+  - references/playbooks/maintenance/cross-platform-ai-citation-loop.md
 references:
   - references/playbooks/content/schema-types-reference.md
   - references/playbooks/maintenance/google-generative-ai-visibility.md
@@ -22,6 +23,7 @@ outputs:
   - audits/<date>_geo-audit.md
   - audits/<date>_geo-findings.json
   - audits/<date>_cloudflare-agent-aeo.json # optional Cloudflare evidence, when available and in scope
+  - audits/<date>_provider-citation-observations.json # optional non-Google citation baseline
 ---
 
 # AI Search Readiness Audit
@@ -111,13 +113,22 @@ Load `references/playbooks/maintenance/google-generative-ai-visibility.md`. Chec
 
 At the 2026-07-10 source version the report is impression-only. Do not invent AI clicks, queries, CTR, conversions, or AI Overview-versus-AI Mode attribution. If the report is absent, record `not_available` or `blocked`; absence is not proof of zero visibility.
 
-### 5. Add the Cloudflare evidence lane when the site uses Cloudflare and it is in scope
+### 5. Add optional Cloudflare and provider citation lanes when they are in scope
 
-Load `references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md`. Record the dashboard access state before interpreting absence: the 2026-08-06 announcement made Agent Readiness available while AEO Visibility required early-access registration.
+**Cloudflare evidence.** When the site uses Cloudflare and its dashboard evidence is in scope, load `references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md`. Record the dashboard access state before interpreting absence: the 2026-08-06 announcement made Agent Readiness available while AEO Visibility required early-access registration.
 
 Capture Agent Readiness diagnostics, AEO Visibility panel metrics, and AI Operator Activity as three separate evidence lanes. Label AEO metrics as a precomputed synthetic category/model snapshot—not user-query impressions, clicks, market share, or causal attribution. Label operator crawls/referrals/errors as first-party network evidence and reconcile referrals with analytics before making business claims. Save the raw capture to `audits/<date>_cloudflare-agent-aeo.json`.
 
 Do not call the product free without a current first-party pricing or entitlement check. Do not treat Cloudflare's readiness checks, Markdown support, crawler controls, or agent-protocol suggestions as Google ranking requirements. Any crawler-policy, authentication, security, or production change remains approval-gated.
+
+**Provider-specific citations.** When the user wants mention/citation evidence for ChatGPT, Perplexity, Claude, Microsoft Copilot, or another named provider, load `references/playbooks/maintenance/cross-platform-ai-citation-loop.md` and:
+
+- freeze a small, versioned buyer-question set instead of ad hoc prompts;
+- save the exact provider, surface, locale, language, account state, and retrieval date for each run;
+- record mention presence, cited URLs/domains, source types, page-role gaps, and the minimum answer excerpt needed to interpret the citation;
+- write the raw observation set to `audits/<date>_provider-citation-observations.json`, or state why no provider citation baseline was collected.
+
+Keep each provider in its own dataset. These observations are not interchangeable with ordinary Search data, the Google Search Console Generative AI performance report, or Cloudflare's synthetic AEO panel. Do not invent clicks, queries, CTR, conversions, attribution, or a universal GEO score/formula from citation observations.
 
 ### 6. Audit human usefulness, clarity, and evidence
 
@@ -241,6 +252,7 @@ Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparis
 ## Routing
 
 - Authority/entity findings → `authority-and-links.md`.
+- Provider-specific citation/framing gaps → `category-citation-loop.md` when the issue is coverage/positioning rather than access alone.
 - Content fixes → `content-production.md`.
 - Indexing/rendering/technical issues → `site-audit.md` or `technical-seo-maintenance.md`.
 - Valid schema gaps → `schema-types-reference.md`.
@@ -250,4 +262,4 @@ Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparis
 
 ## Done when
 
-Platform scope is explicit; Google and non-Google claims are separated; Google eligibility, myth checks, and report availability are recorded when applicable; any Cloudflare readiness, synthetic AEO-panel, and first-party operator evidence is captured in separate lanes with access state and limitations; priority pages have evidence-backed findings; agent usability is separately labelled; every recommendation has a concrete fix and owner; the qualitative verdict is assigned; and both Markdown and raw JSON artifacts exist.
+Platform scope is explicit; Google and non-Google claims are separated; Google eligibility, myth checks, and report availability are recorded when applicable; any Cloudflare readiness, synthetic AEO-panel, and first-party operator evidence is captured in separate lanes with access state and limitations; provider-specific citation baselines are captured when citation diagnosis is in scope; priority pages have evidence-backed findings; agent usability is separately labelled; every recommendation has a concrete fix and owner; the qualitative verdict is assigned; and both Markdown and raw JSON artifacts exist.
