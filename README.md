@@ -11,8 +11,9 @@ Think of it as two planes that reference each other:
    coverage), operational article-production QA, directory/entity-submission, and 37-check SEO coverage playbooks,
    plus a searchable course index so any agent can answer
    *"what does the course say about X?"* and pull the right playbook.
-2. **Pipeline layer** — 5 job-oriented workflows that compose those playbooks, drive the data integrations, summon
-   customer-persona subagents for ideation, and produce concrete deliverables.
+2. **Pipeline layer** — 8 workflows total: 5 core pipelines plus 3 operational deep dives that compose those
+   playbooks, drive the data integrations, summon customer-persona subagents for ideation, and produce concrete
+   deliverables.
 
 > **Self-contained:** clones and runs with **no API keys and no `pip install`** — data access and full-text search are
 > optional add-ons. Independent reimplementation; not affiliated with, sponsored by, or endorsed by any course author.
@@ -24,8 +25,8 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-39-playbooks)
-- [The workflows](#the-workflows-5-pipelines)
+- [The knowledge layer](#the-knowledge-layer-54-playbooks)
+- [The workflows](#the-workflows-8-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
 - [Scripts reference](#scripts-reference)
@@ -44,8 +45,8 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **49 playbooks**: 36 original course distillations plus 13 operational additions for article QA, schema/E-E-A-T,
-  programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, and platform-scoped AI-search evidence;
+- **54 playbooks**: 36 original course distillations plus 18 operational additions for article QA, schema/E-E-A-T,
+  programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, Google-only AI visibility, and cross-platform citation evidence;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
 - **8 workflows**: five end-to-end core pipelines plus technical-maintenance, AI-search-readiness, and category-citation loops.
 - **7 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, and CWV thresholds.
@@ -85,12 +86,12 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 15 operational additions
+  playbooks/                   # 36 course distillations + 18 operational additions
     research/        (9)        # keyword research, niches, intent, metrics, match-and-exceed…
-    content/         (15)       # programmatic SEO, schema/E-E-A-T, image search, content/landing pages, article QA…
-    authority/       (13)       # link stealing, affiliate, directories, Wikipedia research, outreach…
+    content/         (16)       # programmatic SEO, schema/E-E-A-T, image search, distribution, articles…
+    authority/       (14)       # editorial intent, directories, Wikipedia research, affiliate, outreach…
     foundations/     (4)        # SEO philosophy/process + platform-scoped AI and official Google guidance
-    maintenance/     (10)       # updates, ROI, technical SEO, GSC opportunities, AI-search evidence
+    maintenance/     (11)       # updates, ROI, technical SEO, Google/Cloudflare/cross-platform AI evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
@@ -118,7 +119,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (51 playbooks)
+## The knowledge layer (54 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -127,22 +128,22 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 `keyword-research-tools` · `finding-and-validating-niches` · `competitor-research` · `keyword-to-sitemap` ·
 `research-for-existing-sites`
 
-**content/** — `content-fundamentals` · `content-types-overview` · `programmatic-seo` · `free-tools-strategy` ·
-`content-pages` · `landing-pages` · `articles` · `content-rings` · `on-page-optimization` · `content-what-not-to-do` ·
-`image-search-optimization` · `agent-article-production-qa` · `programmatic-pattern-library` · `eeat-framework` ·
-`schema-types-reference`
+**content/** — `content-fundamentals` · `content-types-overview` · `cross-platform-commercial-intent-distribution` ·
+`programmatic-seo` · `free-tools-strategy` · `content-pages` · `landing-pages` · `articles` · `content-rings` ·
+`on-page-optimization` · `content-what-not-to-do` · `image-search-optimization` · `agent-article-production-qa` ·
+`programmatic-pattern-library` · `eeat-framework` · `schema-types-reference`
 
-**authority/** — `understanding-authority` · `link-stealing` · `affiliate-programs` · `acquiring-domain-authority` ·
-`haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` · `directory-submissions` ·
-`startup-backlink-directory-submissions` · `wikipedia-dead-link-building` · `other-link-building` ·
-`linkbuilding-what-not-to-do`
+**authority/** — `understanding-authority` · `link-stealing` · `editorial-link-intent-and-assets` · `affiliate-programs` ·
+`acquiring-domain-authority` · `haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` ·
+`directory-submissions` · `startup-backlink-directory-submissions` · `wikipedia-dead-link-building` ·
+`other-link-building` · `linkbuilding-what-not-to-do`
 
 **foundations/** — `seo-philosophy` · `seo-and-ai-future` · `google-generative-ai-search-official` · `seo-process-overview`
 
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
 `gsc-position-4-20-opportunity-mining` · `google-generative-ai-visibility` · `ai-search-commerce-readiness` ·
-`cloudflare-agent-readiness-and-aeo`
+`cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop`
 
 > **Flagship play:** proactive niche discovery — mining search data for a low-KD, buildable gap with a real LSI cluster
 > behind it, to build a product/startup around. See `research/finding-and-validating-niches.md` (the Ahrefs data-dump
@@ -157,13 +158,13 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | Workflow | What it does | Key outputs |
 |---|---|---|
 | **research-and-ideation** | niche find/validate → keyword research → competitor gaps → match-and-exceed → keyword→sitemap; can summon ICP personas | keyword map CSV, sitemap plan |
-| **content-production** | content-type selection → brief → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional source packet, review draft, QA report |
+| **content-production** | content-type selection → brief → optional cross-platform commercial-intent map → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional distribution map, source packet, review draft, QA report |
 | **site-audit** | technical + on-page + content + opportunity + authority audit | prioritized, severity-ranked fix list |
 | **authority-and-links** | pick tactics → ranked opportunity list → **drafted** outreach (never auto-sent) | opportunity list, outreach drafts |
-| **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI impressions and Cloudflare agent/AEO evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
+| **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI, Cloudflare agent/AEO, and provider citation evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
-| **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus an optional Cloudflare readiness, synthetic AEO-panel, and operator-activity lane | readiness report and raw findings |
-| **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific citations | category/citation baseline and loop plan |
+| **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare and provider-specific citation lanes | readiness report and raw findings |
+| **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific buyer-question citations | category/citation baseline and loop plan |
 
 ---
 
@@ -267,6 +268,7 @@ Ask the agent things like:
 - *"Set up weekly rank/traffic monitoring."* → `monitoring` → snapshots + optional schedule.
 - *"Which pages appear in Google AI Overviews or AI Mode?"* → `monitoring` + `google-generative-ai-visibility` → impression-only page/country/date/device evidence with limitations.
 - *"What does Cloudflare show about agent access, AI citations, and operator traffic?"* → `geo-audit` or `monitoring` + `cloudflare-agent-readiness-and-aeo` → three separate evidence lanes with access state and limitations.
+- *"Show me how ChatGPT/Copilot/Perplexity/Claude cite us for buyer questions."* → `geo-audit` or `category-citation-loop` + `cross-platform-ai-citation-loop` → provider-specific observation sets with separated metrics.
 - *"Which queries rank in positions 4–20 and are worth improving?"* → `monitoring` + `gsc-position-4-20-opportunity-mining`.
 - *"Audit whether my product data and checkout are ready for AI agents."* → `geo-audit` + `ai-search-commerce-readiness`.
 - *"Set up a recurring technical SEO maintenance pass."* → `technical-seo-maintenance`.
@@ -291,6 +293,8 @@ extra setup. What's *not* shipped is the paid-course **transcripts** — they ar
 
 - **Irreversible actions** (publishing content, sending outreach/email, submitting forms, disavow uploads) are **drafted
   only** and require explicit user confirmation. Nothing is auto-sent or auto-published.
+- **AI-search evidence** stays provider-specific: Google AI impressions remain separate from cross-platform citation observations, and neither dataset implies clicks, CTR, conversions, revenue, or a universal GEO score.
+- **Cross-platform citation tactics** must stay truthful: no fabricated mentions, spam, fake discussion, or undisclosed influence. The vendor-authored 14.7K Copilot-citation field claim is treated only as unverified input, never as a benchmark or causal proof.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Auth** is always performed by you (login/OAuth); the skill reads the authorized session and never handles passwords.
 

@@ -69,7 +69,10 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── content-production.md
 │   ├── site-audit.md
 │   ├── authority-and-links.md
-│   └── monitoring.md
+│   ├── monitoring.md
+│   ├── technical-seo-maintenance.md
+│   ├── geo-audit.md
+│   └── category-citation-loop.md
 ├── agents/                         # ICP persona subagents (Opus)
 │   ├── icp-persona.md              #   persona role-play template (launcher prompt)
 │   ├── synthesizer.md              #   merges N persona outputs into ranked insights
@@ -114,18 +117,19 @@ points → artifacts to emit (into the workspace). The five:
 4. **authority-and-links** — link stealing, HARO, affiliate, manual outreach, content rings → opportunity lists +
    drafted outreach (never sent without confirmation).
 5. **monitoring** — ordinary rank/traffic snapshots, optional impression-only Google AI visibility snapshots,
-   optional separated Cloudflare readiness/synthetic-panel/operator-activity evidence,
-   Google-update detection/response, and "is it paying off" measurement; on-demand plus optional scheduled (via the
-   `schedule`/`loop` skills) with a recommended cadence chosen at setup.
+   optional separated Cloudflare readiness/synthetic-panel/operator-activity evidence, optional provider-specific
+   citation observations, Google-update detection/response, and "is it paying off" measurement; on-demand plus optional
+   scheduled (via the `schedule`/`loop` skills) with a recommended cadence chosen at setup.
 
 Operational additions compose around these five core pipelines: `technical-seo-maintenance.md`, `geo-audit.md`, and
 `category-citation-loop.md` are bounded deep-dive runbooks that route findings back into the core workflows. The 37-check
 SEO ledger routes evidence across audit/research/content/monitoring, the directory discovery-source registry and startup
 candidate asset feed a provenance-preserving, first-party-verified directory/entity path, Google Generative AI impression
-evidence remains a separate monitoring layer with explicit metric/rollout limitations, and Cloudflare's readiness checks,
-synthetic AEO panel, and first-party operator activity remain distinct evidence lanes. None of these artifacts turns
-heuristics, DR snapshots, `site:` counts, AI impressions, or vendor panel scores into business facts; live verification
-and external-write approval gates still apply.
+evidence remains a separate monitoring layer with explicit metric/rollout limitations, Cloudflare's readiness checks,
+synthetic AEO panel, and first-party operator activity remain distinct evidence lanes, and cross-platform citation
+observations stay provider-specific rather than becoming a shared score. None of these artifacts turns heuristics, DR
+snapshots, `site:` counts, AI impressions, vendor panel scores, or citation observations into business facts; live
+verification and external-write approval gates still apply.
 
 ### Layer 3 — Tooling & data (`scripts/` + `references/integrations/`)
 - **Ahrefs**: `ahrefs_client.py` uses the API when a key is in project config; otherwise drives the logged-in Ahrefs web
@@ -189,7 +193,7 @@ Built following `skill-creator` conventions (SKILL.md frontmatter, progressive d
 
 - `search_course.py "keyword finding"` returns the correct lessons (e.g., Research 09–12) **and** the linked playbook.
 - `coverage-map.md` shows all 62 lessons → ≥1 playbook (0 uncovered).
-- Each of the 5 workflows runs end-to-end on a sample project and writes the expected artifacts to the workspace.
+- Each of the 8 workflow runbooks (the 5 core workflows plus 3 operational deep dives) runs end-to-end on a sample project and writes the expected artifacts to the workspace.
 - Ahrefs/GSC/GA4/SERP/PageSpeed each work via browser fallback with no API key, and via API when a key is present.
 - ICP persona summon produces N persona outputs + a synthesized, ranked insight set.
 - `_source/` is gitignored; no transcript text appears in any shippable file.

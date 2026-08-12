@@ -4,6 +4,7 @@ goal: Take a validated keyword (or sitemap entry) and produce an intent-matched 
 playbooks:
   - references/playbooks/content/content-fundamentals.md
   - references/playbooks/content/content-types-overview.md
+  - references/playbooks/content/cross-platform-commercial-intent-distribution.md
   - references/playbooks/content/programmatic-seo.md
   - references/playbooks/content/programmatic-pattern-library.md
   - references/playbooks/content/free-tools-strategy.md
@@ -28,6 +29,7 @@ integrations: [serp, ahrefs]
 outputs:
   - briefs/<date>_<keyword-slug>-brief.json   # one content brief per page
   - research/<date>_content-angles.json        # if personas summoned
+  - research/<date>_<keyword-slug>-distribution-map.json # if a cross-platform search-surface test is justified
   - research/<date>_<keyword-slug>-source-packet.json  # if drafting an article
   - drafts/<date>_<keyword-slug>.md                    # if drafting an article
   - audits/<date>_<keyword-slug>-content-qa.json       # if drafting an article
@@ -55,6 +57,8 @@ outputs:
    - Off-site backlink/traffic engine → **content ring** (`content-rings.md`; the link-building side lives in `authority-and-links.md`).
    Default to the operator's strengths; don't force a format the SERP doesn't reward.
 
+   **Optional cross-platform commercial-intent branch.** When the user wants a distribution test—or the live search journey repeatedly exposes a native video, discussion, or editorial surface for a valuable query—load `references/playbooks/content/cross-platform-commercial-intent-distribution.md`. Capture dated evidence, keep the owned page as the evidence hub, and select one primary plus at most two supporting surfaces. Save `research/<date>_<keyword-slug>-distribution-map.json`. This is not permission to mass-copy content, seed affiliate links, evade moderation, or publish: every native asset must add distinct value and all external writes remain approval-gated.
+
 3. **(Optional) Summon ICP personas for content angles.** When you need fresh angles, FAQ questions, or objections to address on the page, dispatch persona subagents per `agents/icp-persona.md`: pick 3–6 distinct personas, launch **all in parallel, `model="opus"`**, then merge with `agents/synthesizer.md`. Use their literal queries as H2s/FAQ entries and their objections as copy to defeat. Save to `research/<date>_content-angles.json`.
 
 4. **Load the format-specific method and draft the page plan.** Open the playbook for the chosen type and follow its method:
@@ -63,6 +67,8 @@ outputs:
    - **Content page:** choose the sub-pattern (comparison / success-story-review / niche hub / examples-how-to / integration); plan sections, screenshots, pricing/testimonial blocks; load niche/long-tail keywords here, off the homepage.
    - **Landing page:** one keyword per page, inform + link straight to checkout.
    - **Article:** confirm you'll invest in genuine human writing; if not, pick a different format.
+
+   If the brief is being routed from `geo-audit.md` or `category-citation-loop.md`, also load `references/playbooks/maintenance/cross-platform-ai-citation-loop.md`. Carry forward the exact buyer-question version, scoped provider, observed source/page-role gap (`problem`, `use_case`, `comparison`, `pricing`, `trust`, `case_study`, `implementation`), and required first-party evidence. Build pages for buyers, not an AI quota: do not mint one page per synthetic fan-out or create unsupported comparison claims just to chase citations.
 
    Apply the relevant content checks from `references/playbooks/maintenance/seo-operational-checklist.md`: titles are intent-first (50–60 characters is guidance, not a hard pass/fail), authorship/E-E-A-T signals must be real, schema must match visible content, `dateModified` changes only after material edits, and FAQ/PAA sections belong on the most appropriate page unless a standalone page has distinct demand and enough value.
 
@@ -86,6 +92,8 @@ outputs:
 - **Format selection** is driven by the live SERP + the intent→format map, NOT by preference. If the SERP shows articles, do not brief a landing page.
 - **Programmatic vs hand-built:** hundreds of scalable long-tail variants → programmatic; only 3–5 pages of opportunity → write/build them individually.
 - **Article go/no-go:** only if genuine quality writing is committed; otherwise pick a developer-friendly format.
+- **Citation-loop brief?** Only create it when a fixed buyer question, observed provider gap, and distinct page value justify the page.
+- **Cross-platform distribution map?** Only when live surface evidence and a measurable buyer journey justify it; never from a platform quota or a creator revenue anecdote.
 - **Summon personas?** Only when angles/FAQ/objections are thin.
 - **Build/publish?** Out of scope here. Producing the brief is the deliverable; any build or publish step requires explicit user confirmation.
 - **Draft requested?** Briefing alone stops at step 7. Article drafting uses step 8 and still stops at a review-ready artifact.
@@ -94,8 +102,9 @@ outputs:
 **Outputs.**
 - `briefs/<date>_<keyword-slug>-brief.json` — one intent-matched, on-page-optimized brief per page, ready to hand to a builder.
 - `research/<date>_content-angles.json` — synthesized persona angles/FAQs (if run).
+- `research/<date>_<keyword-slug>-distribution-map.json` — dated search-surface evidence, selected native roles, journey, disclosure, and separated metrics (if justified).
 - `research/<date>_<keyword-slug>-source-packet.json` — claim-to-source evidence packet (if an article draft is requested).
 - `drafts/<date>_<keyword-slug>.md` — evidence-grounded review draft (if requested).
 - `audits/<date>_<keyword-slug>-content-qa.json` — weighted QA, hard-fail results, revisions, and remaining defects (if requested).
 
-**Done when.** Every targeted keyword has a brief whose format matches the live SERP, includes an outline + metadata + internal-link + upsell plan, and passes the what-not-to-do checklist. If an article draft was requested, the source packet, draft, and QA report are inspectable; the draft scores at least 85/100; no hard fail remains; and no more than two automated revisions were used. Hand review-ready artifacts to the user/builder for the confirmation-gated build; route "ranks but needs links" pages to `authority-and-links.md` and add new pages to `monitoring.md`.
+**Done when.** Every targeted keyword has a brief whose format matches the live SERP, includes an outline + metadata + internal-link + upsell plan, and passes the what-not-to-do checklist. Citation-loop-driven briefs also preserve the triggering question version, provider scope, and evidence plan. Any cross-platform distribution branch also has dated surface evidence, no more than three selected surfaces, distinct native value, a disclosure plan, an owned evidence hub, and separate search/native/referral/conversion/revenue metrics. If an article draft was requested, the source packet, draft, and QA report are inspectable; the draft scores at least 85/100; no hard fail remains; and no more than two automated revisions were used. Hand review-ready artifacts to the user/builder for the confirmation-gated build; route "ranks but needs links" pages to `authority-and-links.md` and add new pages to `monitoring.md`.

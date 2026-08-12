@@ -16,6 +16,7 @@ playbooks:
   - references/playbooks/authority/wikipedia-dead-link-building.md
   - references/playbooks/authority/linkbuilding-what-not-to-do.md
   - references/playbooks/research/match-and-exceed.md
+  - references/playbooks/maintenance/cross-platform-ai-citation-loop.md
 scripts:
   - scripts/workspace.py
   - scripts/ahrefs_client.py
@@ -57,13 +58,15 @@ outputs:
    - **Wikipedia dead citations** (`wikipedia-dead-link-building.md`) — verify the dead URL and archive, map the exact supported claim, and brief a materially better neutral resource. Research only by default; publishing, talk-page requests, editor contact, and edits are separately approval-gated.
    - **Audience / acquisition / other** (`building-an-audience.md`, `acquiring-domain-authority.md`, `other-link-building.md`) — longer-horizon plays.
 
+   When authority work is routed from `geo-audit.md`, `category-citation-loop.md`, or `cross-platform-ai-citation-loop.md`, map which independent domains are actually cited for the fixed buyer-question set and prioritize editorially appropriate omissions over raw DR volume. Keep provider observations separated by platform/surface; a Copilot or ChatGPT citation gap does not prove a Google deficiency.
+
    For directory/entity discovery, register aggregators/checklists in `assets/directory-discovery-sources.csv`, then preserve candidate-level lineage in `assets/startup-backlink-candidates.csv`. Its original intake supplies 122 deduplicated research leads reconstructed from 127 source mentions. Every row starts `UNVERIFIED_SOURCE_LEAD`; source-reported DR, traffic, price, approval time, link type, and submission routes must never be presented as current fact. Live-verify identity, eligibility, relevance, a destination-owned submission route, public indexability, current cost/moderation, and actual link behavior before a candidate reaches the opportunity list.
 
 3. **Run the guardrail before building any list.** Load `references/playbooks/authority/linkbuilding-what-not-to-do.md`. Refuse: bought cheap link packages, uniform exact-match anchor spam, forum/Reddit/comment URL spam, PBNs/link farms, off-topic or niche-mismatched links. If a chosen tactic drifts into these, drop it — penalties here can be permanent.
 
 4. **Build the ranked opportunity list.** For each tactic, gather concrete targets via `ahrefs_client.py` + `serp_capture.py`: the linking page URL, referring-domain DR, dofollow?, outbound-link count (dilution), topical relevance, the tactic that fits, the contact handle/source, and a priority score. Directory/entity candidates also require source lineage, `route_type`, a destination-owned `submission_url` with `submission_url_verified_at`, `public_indexable`, `link_attribute` observed from a live listing, and `last_verified_at`; reject private-account-only or unrelated profiles. Save with `python3 scripts/report.py note --workspace <DIR> --subdir outreach --name opportunities --data <json>` → `outreach/<date>_opportunities.json`.
 
-5. **DRAFT outreach (do not send).** For each high-priority target, draft a short, personal, value-first message per the relevant playbook (e.g. link-stealing: "saw you link [competitor], here's a stronger tool"; affiliate: commission + conversion rate; HARO: credibility hook + concrete answer; case-study trade: offer to write it). Keep each message specific to the recipient. Save all drafts to `outreach/<date>_drafts.json` with `{target_url, contact, tactic, subject, body, status:"DRAFT"}`.
+5. **DRAFT outreach (do not send).** For each high-priority target, draft a short, personal, value-first message per the relevant playbook (e.g. link-stealing: "saw you link [competitor], here's a stronger tool"; affiliate: commission + conversion rate; HARO: credibility hook + concrete answer; case-study trade: offer to write it). When the goal is citation coverage, offer checked facts, screenshots, criteria, methodology, and honest limitations — never fake discussion, hide sponsorship, or promise ranking/citation outcomes. Keep each message specific to the recipient. Save all drafts to `outreach/<date>_drafts.json` with `{target_url, contact, tactic, subject, body, status:"DRAFT"}`.
 
 6. **Optional — disavow cleanup.** If `site-audit` or an affiliate-spam review surfaced toxic referring domains, build a disavow file per `linkbuilding-what-not-to-do.md` / `affiliate-programs.md` and write `outreach/<date>_disavow.txt`. Hand it to the user to upload in Search Console — do NOT submit it.
 
@@ -74,6 +77,7 @@ outputs:
 - **Expert available?** Yes → HARO. No → skip it.
 - **Add-alongside vs swap** (link stealing): neutral roundup → add; clearly inferior/dead listed tool → swap.
 - **VIP affiliate rate:** reserve for the few high-DR, exact-niche sites that actually move rankings.
+- **Citation-gap outreach?** Only pitch genuine omissions with verifiable evidence; never use fabricated mentions, spam, or undisclosed influence.
 - **Any tactic touching the what-not-to-do list** → drop it (asymmetric, possibly permanent downside).
 - **Directory/profile route?** Treat aggregators as discovery only. Verify relevance, a destination-owned submission route, a public indexable listing, current moderation/cost, and actual link behavior; reject private profile links and directory spam.
 - **Paid directory?** Require audience/economic fit and explicit owner approval. Do not buy a placement merely because a source claims high DR or a followed link.
