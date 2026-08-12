@@ -36,6 +36,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Audit AI-search/GEO readiness, including current commerce/entity data when applicable | `workflows/geo-audit.md` |
 | Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md` |
 | Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
+| Find existing editorial link intent (listicle/citation gaps, broken or decayed resources, statistics needs, missing visuals/video, uncited owned assets) | Load `references/playbooks/authority/editorial-link-intent-and-assets.md`, then run `workflows/authority-and-links.md` |
 | Monitor rankings/traffic, GSC 4–20 opportunities, Google AI impressions, updates, and ROI | `workflows/monitoring.md` |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
 | Ideate content angles / pressure-test a niche with customer personas | ICP personas (below) |
@@ -60,7 +61,7 @@ Distilled, original methodology grouped by area. Load the specific file a step n
 - **content/** — content-fundamentals, content-types-overview, programmatic-seo, programmatic-pattern-library,
   free-tools-strategy, content-pages, landing-pages, articles, content-rings, on-page-optimization,
   content-what-not-to-do, agent-article-production-qa, E-E-A-T, and schema references
-- **authority/** — understanding-authority, link-stealing, affiliate-programs, acquiring-domain-authority, haro,
+- **authority/** — understanding-authority, link-stealing, editorial-link-intent-and-assets, affiliate-programs, acquiring-domain-authority, haro,
   manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, startup-backlink verification,
   Wikipedia dead-link research, other-link-building, and linkbuilding-what-not-to-do
 - **foundations/** — seo-philosophy, seo-and-ai-future, seo-process-overview
@@ -106,6 +107,7 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   then get explicit user confirmation before acting. Never auto-send.
 - **Article QA** uses evidence-backed claims, hard-fail checks, and at most two automated revision passes. A score never
   overrides fabricated/unsupported claims, product-truth violations, intent mismatch, or the human publication gate.
+- **Editorial link intent** never licenses credit-based reciprocal-link networks, automated exchange articles, or followed-link quid pro quo. Paid placements require truthful disclosure and appropriately qualified links such as `sponsored`/`nofollow`; provider citation observations are targeting evidence, not link value, traffic, conversion, or causality.
 - **Directory submissions** are relevance-first entity/citation work: live-verify public indexability and eligibility,
   treat DR screenshots as leads rather than facts, and require explicit approval before any account/listing write.
 - **Operational SEO checklists** are coverage ledgers, not ranking formulas: preserve conditional guidance, use GSC over
