@@ -11,7 +11,8 @@ Think of it as two planes that reference each other:
    coverage), operational article-production QA, directory/entity-submission, and 37-check SEO coverage playbooks,
    plus a searchable course index so any agent can answer
    *"what does the course say about X?"* and pull the right playbook.
-2. **Pipeline layer** — 8 workflows total: 5 core pipelines plus 3 operational deep dives that compose those
+2. **Pipeline layer** — 10 workflows total: 5 core pipelines, 3 operational deep dives, and 2 end-to-end planning
+   workflows that compose those
    playbooks, drive the data integrations, summon customer-persona subagents for ideation, and produce concrete
    deliverables.
 
@@ -25,8 +26,8 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-54-playbooks)
-- [The workflows](#the-workflows-8-runbooks)
+- [The knowledge layer](#the-knowledge-layer-59-playbooks)
+- [The workflows](#the-workflows-10-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
 - [Scripts reference](#scripts-reference)
@@ -45,10 +46,12 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **54 playbooks**: 36 original course distillations plus 18 operational additions for article QA, schema/E-E-A-T,
-  programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, Google-only AI visibility, and cross-platform citation evidence;
+- **59 playbooks**: 36 original course distillations plus 23 operational additions for article QA, schema/E-E-A-T,
+  programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, Google-only AI visibility,
+  cross-platform citation evidence, deterministic planning, SERP-regime grading, and adversarial rollout design;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
-- **8 workflows**: five end-to-end core pipelines plus technical-maintenance, AI-search-readiness, and category-citation loops.
+- **10 workflows**: five core pipelines, three operational deep dives, and two end-to-end planning workflows for a full
+  SEO master plan and a BOFU→MOFU→TOFU rollout.
 - **7 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, and CWV thresholds.
 - **ICP persona subagents** — summon Opus subagents that role-play ideal customers to ideate content angles, surface the
   exact phrases people search, and pressure-test niches.
@@ -86,21 +89,22 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 18 operational additions
-    research/        (9)        # keyword research, niches, intent, metrics, match-and-exceed…
-    content/         (16)       # programmatic SEO, schema/E-E-A-T, image search, distribution, articles…
+  playbooks/                   # 36 course distillations + 23 operational additions
+    research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
+    content/         (17)       # programmatic SEO, schema/E-E-A-T, image search, funnel rollout, articles…
     authority/       (14)       # editorial intent, directories, Wikipedia research, affiliate, outreach…
-    foundations/     (4)        # SEO philosophy/process + platform-scoped AI and official Google guidance
-    maintenance/     (11)       # updates, ROI, technical SEO, Google/Cloudflare/cross-platform AI evidence
+    foundations/     (5)        # SEO philosophy/process + official AI guidance + adversarial orchestration
+    maintenance/     (12)       # updates, ROI, technical SEO, SERP features, and platform-scoped AI evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
   integrations/                # 7 source/threshold references, including DataForSEO and CWV
   coverage-map.md              # proof: every lesson → its playbook(s)
-workflows/                     # 5 core pipelines + 3 operational deep dives
+workflows/                     # 5 core pipelines + 3 operational deep dives + 2 planning workflows
   research-and-ideation.md  content-production.md  site-audit.md
   authority-and-links.md    monitoring.md         technical-seo-maintenance.md
   geo-audit.md              category-citation-loop.md
+  full-master-plan.md       full-funnel-rollout.md
 agents/
   icp-persona.md               # launcher template for ONE persona subagent
   synthesizer.md               # merges N persona outputs into ranked insights
@@ -109,6 +113,7 @@ scripts/                       # Python 3 stdlib only — no pip deps
   search_course.py  workspace.py  report.py            # core
   ahrefs_client.py  gsc_pull.py  ga4_pull.py           # data (API or browser fallback)
   dataforseo_client.py  serp_capture.py  pagespeed_run.py
+  forecast.py  master_plan_workflow.mjs  master_plan_cascade.mjs  funnel_rollout_cascade.mjs
 assets/                        # fill-in templates emitted into the workspace
   audit-report.md  content-brief.md  keyword-map.csv
   directory-discovery-sources.csv  directory-submission-tracker.csv
@@ -119,31 +124,32 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (54 playbooks)
+## The knowledge layer (59 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
 
 **research/** — `keyword-fundamentals` · `search-intent` · `match-and-exceed` · `seo-metrics` ·
 `keyword-research-tools` · `finding-and-validating-niches` · `competitor-research` · `keyword-to-sitemap` ·
-`research-for-existing-sites`
+`research-for-existing-sites` · `number-reconciliation` · `winnability-and-serp-regimes`
 
 **content/** — `content-fundamentals` · `content-types-overview` · `cross-platform-commercial-intent-distribution` ·
 `programmatic-seo` · `free-tools-strategy` · `content-pages` · `landing-pages` · `articles` · `content-rings` ·
 `on-page-optimization` · `content-what-not-to-do` · `image-search-optimization` · `agent-article-production-qa` ·
-`programmatic-pattern-library` · `eeat-framework` · `schema-types-reference`
+`programmatic-pattern-library` · `full-funnel-rollout` · `eeat-framework` · `schema-types-reference`
 
 **authority/** — `understanding-authority` · `link-stealing` · `editorial-link-intent-and-assets` · `affiliate-programs` ·
 `acquiring-domain-authority` · `haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` ·
 `directory-submissions` · `startup-backlink-directory-submissions` · `wikipedia-dead-link-building` ·
 `other-link-building` · `linkbuilding-what-not-to-do`
 
-**foundations/** — `seo-philosophy` · `seo-and-ai-future` · `google-generative-ai-search-official` · `seo-process-overview`
+**foundations/** — `seo-philosophy` · `seo-and-ai-future` · `google-generative-ai-search-official` ·
+`seo-process-overview` · `adversarial-agent-orchestration`
 
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
 `gsc-position-4-20-opportunity-mining` · `google-generative-ai-visibility` · `ai-search-commerce-readiness` ·
-`cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop`
+`cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop` · `ai-overviews-and-serp-features`
 
 > **Flagship play:** proactive niche discovery — mining search data for a low-KD, buildable gap with a real LSI cluster
 > behind it, to build a product/startup around. See `research/finding-and-validating-niches.md` (the Ahrefs data-dump
@@ -151,7 +157,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 
 ---
 
-## The workflows (8 runbooks)
+## The workflows (10 runbooks)
 
 Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `outputs`) and concrete numbered steps.
 
@@ -165,6 +171,8 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
 | **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare and provider-specific citation lanes | readiness report and raw findings |
 | **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific buyer-question citations | category/citation baseline and loop plan |
+| **full-master-plan** | build an evidence-grounded end-to-end SEO plan; use the adversarial cascade for exhaustive work | master plan, executive summary, source data, reconciled forecast |
+| **full-funnel-rollout** | extend an existing plan into gated BOFU→MOFU→TOFU delivery waves | rollout plan, funnel map, entry/exit/kill gates |
 
 ---
 
@@ -226,6 +234,7 @@ python3 scripts/pagespeed_run.py https://example.com           # public API, no 
 python3 scripts/ahrefs_client.py overview --domain example.com # needs AHREFS_API_KEY, else browser fallback
 python3 scripts/serp_capture.py "ai headshot generator"        # prints the Chrome capture procedure
 python3 scripts/dataforseo_client.py --help                     # bulk structured SEO data when credentials exist
+python3 scripts/forecast.py --help                              # deterministic click-curve + AIO-haircut forecast
 ```
 
 ---

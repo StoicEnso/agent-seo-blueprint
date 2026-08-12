@@ -29,6 +29,8 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 
 | The user wants to… | Open this workflow |
 |---|---|
+| Produce a complete SEO master plan from live data, with an optional exhaustive adversarial pass | `workflows/full-master-plan.md` |
+| Extend an existing plan into a gated BOFU→MOFU→TOFU rollout | `workflows/full-funnel-rollout.md` |
 | Find/validate a niche, do keyword research, plan a sitemap, find competitor gaps | `workflows/research-and-ideation.md` |
 | Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, cross-platform commercial-intent distribution, on-page, draft QA | `workflows/content-production.md` |
 | Audit a live site (technical + on-page + content) with a prioritized fix list | `workflows/site-audit.md` |
@@ -57,19 +59,21 @@ The full course is mirrored and searchable.
 Distilled, original methodology grouped by area. Load the specific file a step needs.
 
 - **research/** — keyword-fundamentals, search-intent, match-and-exceed, seo-metrics, keyword-research-tools,
-  finding-and-validating-niches, competitor-research, keyword-to-sitemap, research-for-existing-sites
+  finding-and-validating-niches, competitor-research, keyword-to-sitemap, research-for-existing-sites,
+  number-reconciliation, winnability-and-serp-regimes
 - **content/** — content-fundamentals, content-types-overview, cross-platform-commercial-intent-distribution,
   programmatic-seo, programmatic-pattern-library, free-tools-strategy, content-pages, landing-pages, articles,
   content-rings, on-page-optimization, image-search-optimization, content-what-not-to-do, agent-article-production-qa,
-  E-E-A-T, and schema references
+  full-funnel-rollout, E-E-A-T, and schema references
 - **authority/** — understanding-authority, link-stealing, editorial-link-intent-and-assets, affiliate-programs, acquiring-domain-authority, haro,
   manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, startup-backlink verification,
   Wikipedia dead-link research, other-link-building, and linkbuilding-what-not-to-do
-- **foundations/** — seo-philosophy, seo-and-ai-future, google-generative-ai-search-official, seo-process-overview
+- **foundations/** — seo-philosophy, seo-and-ai-future, google-generative-ai-search-official, seo-process-overview,
+  adversarial-agent-orchestration
 - **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
   measuring-seo-results, evidence-backed operational SEO, technical maintenance, GSC 4–20 opportunity mining,
   Google Generative AI visibility measurement, cross-platform AI citation loops, AI-search commerce readiness, and
-  Cloudflare Agent Readiness/AEO evidence
+  Cloudflare Agent Readiness/AEO evidence, and AI Overviews/SERP-feature interpretation
 
 ## Data integrations (`references/integrations/` + `scripts/`)
 
@@ -87,6 +91,17 @@ performed by you via Chrome MCP tools** when no API key/creds are present — th
 
 Auth rule: the skill **never** enters passwords or completes OAuth itself — it directs the user to log in / authorize,
 then reads the logged-in session. API keys come from env vars named in the workspace `project.json` (never stored in plaintext).
+
+## Planning pipelines and deterministic tools (`scripts/`)
+
+- `scripts/master_plan_workflow.mjs` — standard multi-agent pipeline for a complete master plan from saved live data.
+- `scripts/master_plan_cascade.mjs` — exhaustive diverge/judge/synthesize/red-team variant with one reproducible
+  `recompute.py` and cluster-level SERP-regime grading.
+- `scripts/funnel_rollout_cascade.mjs` — adversarial BOFU→MOFU→TOFU rollout for an existing canonical plan.
+- `scripts/forecast.py` — deterministic 3/6/12/18-month click-curve forecast with one explicit AI Overview haircut.
+
+The planning pipelines read saved data from disk. Pull external Ahrefs/SERP data first in one rate-safe sequence; do not
+fan parallel agents out against a rate-limited source.
 
 ## ICP persona subagents (`agents/`)
 
