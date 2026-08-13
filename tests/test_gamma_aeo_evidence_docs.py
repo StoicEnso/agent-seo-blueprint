@@ -33,7 +33,7 @@ class GammaAeoEvidenceDocsTest(unittest.TestCase):
             "field_hypothesis",
             "consecutive_runs_seen",
             "dropped_on",
-            "do not assume a three-month citation half-life", 
+            "do not assume a three-month citation half-life",
         ):
             self.assertIn(phrase, text)
 
