@@ -121,6 +121,12 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   verify early-access and pricing state from first-party evidence before asserting availability or cost.
 - **Cross-platform citation loops** are observation ledgers, not attribution systems: keep provider datasets separate,
   never invent impressions/clicks, and never turn mutable answer-engine mentions into a universal GEO score.
+- **AI discovery attribution** may combine referrals with optional self-reported discovery only as separate evidence lanes:
+  preserve question wording, denominator, non-response, and raw answers; never turn survey share into hidden clicks,
+  view-through conversions, incremental lift, or a channel multiplier.
+- **Agent-native readiness** means a useful, safe product interface—not a ranking hack. APIs/connectors/MCP servers need a
+  real user job, consent, truthful schemas, and confirmation before consequential actions. Reject prompt injection,
+  hidden model incentives, schema/package “bribes,” fake community content, and engineered comparisons.
 - **GEO myth-busting:** Google does not require `llms.txt`, special AI schema, artificial chunking, AI-only rewrites, or
   manufactured mentions. Keep optional cross-platform documentation distinct from Google Search requirements.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.

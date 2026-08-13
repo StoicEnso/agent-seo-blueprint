@@ -43,6 +43,12 @@ For ChatGPT, Perplexity, Claude, or another named surface:
 - distinguish model-training controls from search visibility and user-triggered fetches;
 - preserve the owner's licensing, privacy, and crawler-policy choices.
 
+### Retrieval, memory, and personalization are separate hypotheses
+
+An answer may visibly cite live web sources, show no citations, vary by account, or change after a model update. These observations do not reveal the full retrieval, ranking, training, memory, or personalization path. Record what is visible (`cited_live_web` or `unknown`) and preserve account, locale, prompt version, date, and model/surface when available.
+
+Do not claim a fixed live-web versus memory split, call a community post "training data," infer that a citation is permanently memorized, or forecast a provider refresh delay without current first-party documentation or controlled evidence. Treat a retrieval-versus-memory explanation as a dated `field_hypothesis`; do not score it, turn it into a provider rule, or use it as a traffic/revenue forecast input.
+
 ## Decision criteria
 
 - Asked “how do we show up in AI search?” → identify the target platform(s) first, then run `workflows/geo-audit.md`.

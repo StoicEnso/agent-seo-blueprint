@@ -48,6 +48,7 @@ Think of it as two planes that reference each other:
 - **54 playbooks**: 36 original course distillations plus 18 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, Google-only AI visibility, and cross-platform citation evidence;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
+- **AI-search evidence stays separated** — provider citations, ordinary search, optional self-reported discovery, and business outcomes are distinct evidence lanes. Agent-native interfaces must serve a real user job with consent and safe confirmation boundaries; connectors, schema, and community content are never recommendation-manipulation shortcuts.
 - **8 workflows**: five end-to-end core pipelines plus technical-maintenance, AI-search-readiness, and category-citation loops.
 - **7 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, and CWV thresholds.
 - **ICP persona subagents** — summon Opus subagents that role-play ideal customers to ideate content angles, surface the
