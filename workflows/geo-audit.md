@@ -9,6 +9,7 @@ playbooks:
   - references/playbooks/content/content-fundamentals.md
   - references/playbooks/authority/understanding-authority.md
   - references/playbooks/maintenance/ai-search-commerce-readiness.md
+  - references/playbooks/maintenance/agent-readable-web-delivery.md
   - references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md
   - references/playbooks/maintenance/cross-platform-ai-citation-loop.md
 references:
@@ -24,6 +25,7 @@ outputs:
   - audits/<date>_geo-findings.json
   - audits/<date>_cloudflare-agent-aeo.json # optional Cloudflare evidence, when available and in scope
   - audits/<date>_provider-citation-observations.json # optional non-Google citation baseline
+  - monitoring/<date>_agent-request-evidence.json # optional privacy-safe origin/CDN request evidence
 ---
 
 # AI Search Readiness Audit
@@ -155,7 +157,7 @@ Flag contradictory names, claims, pricing, or identity details. Recommend only l
 
 ### 8. Run provider-specific access checks for non-Google platforms
 
-Fetch `robots.txt` and check only providers in scope, using current official documentation:
+Load `agent-readable-web-delivery.md`. Fetch `robots.txt` and check only providers in scope, using current official documentation:
 
 | Agent | Purpose to verify |
 |---|---|
@@ -170,9 +172,11 @@ Fetch `robots.txt` and check only providers in scope, using current official doc
 
 Provider behavior and names may change; verify before asserting. Respect the owner's licensing/privacy choice. If a desired platform crawler is blocked, report the tradeoff rather than changing policy.
 
-`llms.txt` may be inspected only as voluntary, provider-specific documentation. Its absence is not a generic defect and must never be scored against Google. If present, verify that it contains no stale or false claims.
+When origin/CDN logs are available, preserve a separate privacy-safe request lane. Verify provider-published IP ranges when possible because user-agent text can be spoofed. Separate documented search, training, and user-triggered roles. Strip secrets, cookies, authorization data, request bodies, and sensitive query strings; use normalized paths and aggregate counts. A request proves neither parsing, indexing, training, citation, nor a business outcome. Save `monitoring/<date>_agent-request-evidence.json` when this lane is used.
 
-Compare raw HTML with the rendered page where relevant. Flag JS-only key content only when evidence shows a user or scoped fetcher cannot access it.
+`llms.txt` is an informal voluntary map, not a ranking or eligibility requirement. Its absence is not a generic defect and must never be scored against Google. If present, verify that it is current, concise, permission-safe, and useful to a real client. Do not claim that a provider uses it for search, answers, indexing, or training without current first-party evidence.
+
+Compare raw HTML with the rendered page where relevant. HTML remains a first-class representation. Where a real retrieval job justifies Markdown, test an explicit alternate URL and parity with HTML. If `Accept: text/markdown` negotiation is implemented, require correct content types, `Vary: Accept`, HTML fallback, cache tests, and no user-agent sniffing. Flag JS-only key content only when evidence shows a user or scoped fetcher cannot access it.
 
 ### 9. Audit evidence formats and agent usability
 

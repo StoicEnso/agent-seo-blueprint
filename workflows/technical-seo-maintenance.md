@@ -3,6 +3,8 @@ title: Technical SEO Maintenance
 goal: Turn technical SEO into a recurring operating habit: detect plumbing issues early, write prioritized fixes, and suggest a cron cadence when none exists.
 playbooks:
   - references/playbooks/maintenance/technical-seo-maintenance.md
+  - references/playbooks/maintenance/agent-readable-web-delivery.md
+  - references/playbooks/maintenance/contextual-internal-link-architecture.md
   - references/playbooks/maintenance/measuring-seo-results.md
   - references/playbooks/content/on-page-optimization.md
   - references/playbooks/content/image-search-optimization.md
@@ -22,6 +24,8 @@ integrations: [pagespeed, gsc, serp]
 outputs:
   - audits/<date>_technical-seo-audit.md
   - audits/<date>_technical-seo-audit-findings.json
+  - audits/<date>_internal-link-architecture.json # optional edge-level contextual-link audit
+  - monitoring/<date>_agent-request-evidence.json # optional privacy-safe server/CDN request evidence
   - monitoring/<date>_technical-seo-cron-check.md
 ---
 
@@ -68,7 +72,8 @@ outputs:
    - rendering: key content/schema visible in initial HTML where practical, hydration/JS-only risks, content parity mobile vs desktop;
    - titles/meta: missing, duplicated, misleading, or truncated past sensible SERP length;
    - structured data: appropriate schema for articles/products/FAQ/breadcrumb/org, valid JSON-LD, no stale rich-result assumptions;
-   - links/media: broken internal/outbound links, orphaned pages, oversized images, missing important alt text, layout-shift media; for image-led/visual-intent templates, apply `image-search-optimization.md` to discovery, stable URLs, responsive delivery, LCP handling, sitemap need, and conditional rights metadata;
+   - links/media: broken internal/outbound links, orphaned pages, oversized images, missing important alt text, layout-shift media; when internal architecture is material, apply `contextual-internal-link-architecture.md`, separate contextual edges from navigation/footer/template candidates, reconcile crawl-observed orphans against sitemap/GSC/inventory, and save `audits/<date>_internal-link-architecture.json`; for image-led/visual-intent templates, apply `image-search-optimization.md` to discovery, stable URLs, responsive delivery, LCP handling, sitemap need, and conditional rights metadata;
+   - agent-readable delivery when in scope: load `agent-readable-web-delivery.md`; test ordinary HTML first, then any explicit Markdown alternative, `llms.txt`, or `Accept` negotiation; require parity, `Vary: Accept` when negotiated, and a real consumer rather than treating these files as ranking signals; if origin/CDN logs are available, save only privacy-safe aggregates to `monitoring/<date>_agent-request-evidence.json`, separate documented search/training/user-triggered roles, and do not trust user-agent text as verified identity;
    - trust/security basics: HTTPS/mixed content, exposed secrets/debug dumps, missing commercial trust pages where expected.
 
 6. **Turn findings into a small weekly fix backlog.** Prefer "fix 10 small things" over vague advice. Each finding needs:

@@ -25,7 +25,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-54-playbooks)
+- [The knowledge layer](#the-knowledge-layer-56-playbooks)
 - [The workflows](#the-workflows-8-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -45,10 +45,14 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **54 playbooks**: 36 original course distillations plus 18 operational additions for article QA, schema/E-E-A-T,
-  programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, Google-only AI visibility, and cross-platform citation evidence;
+- **56 playbooks**: 36 original course distillations plus 20 operational additions for article QA, schema/E-E-A-T,
+  programmatic patterns, authority acquisition, contextual internal-link audits, agent-readable delivery and privacy-safe
+  request evidence, technical maintenance, GSC opportunity mining, Google-only AI visibility, and cross-platform citation evidence;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
-- **AI-search evidence stays separated** — provider citations, ordinary search, optional self-reported discovery, and business outcomes are distinct evidence lanes. Agent-native interfaces must serve a real user job with consent and safe confirmation boundaries; connectors, schema, and community content are never recommendation-manipulation shortcuts.
+- **AI-search evidence stays separated** — provider citations, ordinary search, optional self-reported discovery, privacy-safe
+  request logs, and business outcomes are distinct evidence lanes. HTML stays first-class; optional Markdown, content
+  negotiation, and `llms.txt` need a real user job and do not become ranking or citation claims. Agent-native interfaces
+  must use consent and safe confirmation boundaries; connectors, schema, and community content are never recommendation-manipulation shortcuts.
 - **8 workflows**: five end-to-end core pipelines plus technical-maintenance, AI-search-readiness, and category-citation loops.
 - **7 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, and CWV thresholds.
 - **ICP persona subagents** — summon Opus subagents that role-play ideal customers to ideate content angles, surface the
@@ -87,12 +91,12 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 18 operational additions
+  playbooks/                   # 36 course distillations + 20 operational additions
     research/        (9)        # keyword research, niches, intent, metrics, match-and-exceed…
     content/         (16)       # programmatic SEO, schema/E-E-A-T, image search, distribution, articles…
     authority/       (14)       # editorial intent, directories, Wikipedia research, affiliate, outreach…
     foundations/     (4)        # SEO philosophy/process + platform-scoped AI and official Google guidance
-    maintenance/     (11)       # updates, ROI, technical SEO, Google/Cloudflare/cross-platform AI evidence
+    maintenance/     (13)       # updates, ROI, technical/internal-link SEO, agent delivery, AI evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
@@ -120,7 +124,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (54 playbooks)
+## The knowledge layer (56 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -144,7 +148,8 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
 `gsc-position-4-20-opportunity-mining` · `google-generative-ai-visibility` · `ai-search-commerce-readiness` ·
-`cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop`
+`cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop` · `agent-readable-web-delivery` ·
+`contextual-internal-link-architecture`
 
 > **Flagship play:** proactive niche discovery — mining search data for a low-KD, buildable gap with a real LSI cluster
 > behind it, to build a product/startup around. See `research/finding-and-validating-niches.md` (the Ahrefs data-dump
@@ -160,11 +165,11 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 |---|---|---|
 | **research-and-ideation** | niche find/validate → keyword research → competitor gaps → match-and-exceed → keyword→sitemap; can summon ICP personas | keyword map CSV, sitemap plan |
 | **content-production** | content-type selection → brief → optional cross-platform commercial-intent map → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional distribution map, source packet, review draft, QA report |
-| **site-audit** | technical + on-page + content + opportunity + authority audit | prioritized, severity-ranked fix list |
+| **site-audit** | technical + on-page + content + opportunity + authority audit; optional contextual-link/orphan evidence | prioritized, severity-ranked fix list; optional internal-link architecture ledger |
 | **authority-and-links** | pick tactics → ranked opportunity list → **drafted** outreach (never auto-sent) | opportunity list, outreach drafts |
-| **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI, Cloudflare agent/AEO, and provider citation evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
-| **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
-| **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare and provider-specific citation lanes | readiness report and raw findings |
+| **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI, Cloudflare agent/AEO, provider citation, privacy-safe request-log, and internal-link evidence + update response + ROI measurement | ordinary-search, opportunity, request, architecture, and separated AI-evidence snapshots |
+| **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, hygiene, optional agent delivery, and contextual-link review | evidence ledger and prioritized maintenance report |
+| **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare, provider citation, agent-readable delivery, and privacy-safe request lanes | readiness report and raw findings |
 | **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific buyer-question citations | category/citation baseline and loop plan |
 
 ---
@@ -296,6 +301,11 @@ extra setup. What's *not* shipped is the paid-course **transcripts** — they ar
   only** and require explicit user confirmation. Nothing is auto-sent or auto-published.
 - **AI-search evidence** stays provider-specific: Google AI impressions remain separate from cross-platform citation observations, and neither dataset implies clicks, CTR, conversions, revenue, or a universal GEO score.
 - **Cross-platform citation tactics** must stay truthful: no fabricated mentions, spam, fake discussion, or undisclosed influence. The vendor-authored 14.7K Copilot-citation field claim is treated only as unverified input, never as a benchmark or causal proof.
+- **Agent-readable delivery is optional infrastructure**: preserve HTML, require a real consumer for Markdown,
+  negotiation, or `llms.txt`, use `Vary: Accept` when negotiating, and keep sanitized request evidence separate from
+  indexing, training, citations, and business outcomes. User-agent text alone does not verify provider identity.
+- **Internal-link field thresholds are not ranking laws**: separate contextual from template/navigation edges, verify
+  orphan candidates against site inventories, use natural accessible anchors, and never automate a fixed four-link rule.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Auth** is always performed by you (login/OAuth); the skill reads the authorized session and never handles passwords.
 
