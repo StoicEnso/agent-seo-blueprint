@@ -116,4 +116,3 @@ The visual opportunity is evidenced or marked not applicable; priority images ar
 - `references/playbooks/content/on-page-optimization.md`
 - `references/playbooks/content/schema-types-reference.md`
 - `references/playbooks/maintenance/seo-operational-checklist.md`
-

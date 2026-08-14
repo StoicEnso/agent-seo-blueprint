@@ -55,19 +55,19 @@ class CrossPlatformCitationLoopDocsTest(unittest.TestCase):
 
     def test_readme_counts_match_repo(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertEqual(len(PLAYBOOKS), 54)
-        self.assertEqual(len(WORKFLOWS), 8)
-        self.assertIn("## The knowledge layer (54 playbooks)", readme)
-        self.assertIn("#the-knowledge-layer-54-playbooks", readme)
-        self.assertIn("**54 playbooks**", readme)
-        self.assertIn("36 original course distillations plus 18 operational additions", readme)
-        self.assertIn("36 course distillations + 18 operational additions", readme)
-        self.assertIn("content/         (16)", readme)
+        self.assertEqual(len(PLAYBOOKS), 59)
+        self.assertEqual(len(WORKFLOWS), 10)
+        self.assertIn("## The knowledge layer (59 playbooks)", readme)
+        self.assertIn("#the-knowledge-layer-59-playbooks", readme)
+        self.assertIn("**59 playbooks**", readme)
+        self.assertIn("36 original course distillations plus 23 operational additions", readme)
+        self.assertIn("36 course distillations + 23 operational additions", readme)
+        self.assertIn("content/         (17)", readme)
         self.assertIn("cross-platform-commercial-intent-distribution", readme)
         self.assertIn("authority/       (14)", readme)
-        self.assertIn("maintenance/     (11)", readme)
-        self.assertIn("## The workflows (8 runbooks)", readme)
-        self.assertIn("**8 workflows**", readme)
+        self.assertIn("maintenance/     (12)", readme)
+        self.assertIn("## The workflows (10 runbooks)", readme)
+        self.assertIn("**10 workflows**", readme)
 
 
 if __name__ == "__main__":

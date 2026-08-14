@@ -72,7 +72,9 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── monitoring.md
 │   ├── technical-seo-maintenance.md
 │   ├── geo-audit.md
-│   └── category-citation-loop.md
+│   ├── category-citation-loop.md
+│   ├── full-master-plan.md
+│   └── full-funnel-rollout.md
 ├── agents/                         # ICP persona subagents (Opus)
 │   ├── icp-persona.md              #   persona role-play template (launcher prompt)
 │   ├── synthesizer.md              #   merges N persona outputs into ranked insights
@@ -81,6 +83,8 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── search_course.py            #   query index + transcripts → lessons + playbooks
 │   ├── ahrefs_client.py            #   API client + browser-fallback reader
 │   ├── gsc_pull.py  ga4_pull.py  serp_capture.py  pagespeed_run.py
+│   ├── forecast.py  master_plan_workflow.mjs  master_plan_cascade.mjs
+│   ├── funnel_rollout_cascade.mjs
 │   ├── workspace.py                #   find/create per-project workspace + project.json
 │   └── report.py                   #   render audit/keyword/brief artifacts from data
 ├── assets/                         # templates + source-lead research assets
@@ -130,6 +134,12 @@ synthetic AEO panel, and first-party operator activity remain distinct evidence 
 observations stay provider-specific rather than becoming a shared score. None of these artifacts turns heuristics, DR
 snapshots, `site:` counts, AI impressions, vendor panel scores, or citation observations into business facts; live
 verification and external-write approval gates still apply.
+
+Two planning workflows compose the same evidence and methods at broader scope. `full-master-plan.md` creates a complete
+plan from saved live data. `full-funnel-rollout.md` extends a canonical plan into BOFU→MOFU→TOFU waves with entry, exit,
+and kill gates. The standard and adversarial planning scripts operate only on saved data. They keep external collection
+sequential and rate-safe, reconcile headline numbers through one deterministic source, and keep upper-funnel reach or
+citation pools separate from convertible traffic.
 
 ### Layer 3 — Tooling & data (`scripts/` + `references/integrations/`)
 - **Ahrefs**: `ahrefs_client.py` uses the API when a key is in project config; otherwise drives the logged-in Ahrefs web
@@ -193,7 +203,8 @@ Built following `skill-creator` conventions (SKILL.md frontmatter, progressive d
 
 - `search_course.py "keyword finding"` returns the correct lessons (e.g., Research 09–12) **and** the linked playbook.
 - `coverage-map.md` shows all 62 lessons → ≥1 playbook (0 uncovered).
-- Each of the 8 workflow runbooks (the 5 core workflows plus 3 operational deep dives) runs end-to-end on a sample project and writes the expected artifacts to the workspace.
+- Each of the 10 workflow runbooks (5 core workflows, 3 operational deep dives, and 2 planning workflows) runs
+  end-to-end on a sample project and writes the expected artifacts to the workspace.
 - Ahrefs/GSC/GA4/SERP/PageSpeed each work via browser fallback with no API key, and via API when a key is present.
 - ICP persona summon produces N persona outputs + a synthesized, ranked insight set.
 - `_source/` is gitignored; no transcript text appears in any shippable file.
