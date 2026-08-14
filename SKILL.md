@@ -33,6 +33,8 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, cross-platform commercial-intent distribution, on-page, draft QA | `workflows/content-production.md` |
 | Audit a live site (technical + on-page + content) with a prioritized fix list | `workflows/site-audit.md` |
 | Run recurring technical SEO/schema/CWV/indexation maintenance | `workflows/technical-seo-maintenance.md` |
+| Audit agent-readable delivery, optional Markdown/`llms.txt`, content negotiation, or privacy-safe bot logs | `references/playbooks/maintenance/agent-readable-web-delivery.md`, then `workflows/technical-seo-maintenance.md` or `workflows/geo-audit.md` |
+| Audit contextual internal links, true orphans, anchor usefulness, or destination concentration | `references/playbooks/maintenance/contextual-internal-link-architecture.md`, then `workflows/site-audit.md` |
 | Audit AI-search/GEO readiness, including current commerce/entity data when applicable | `workflows/geo-audit.md` |
 | Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md` |
 | Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
@@ -68,8 +70,8 @@ Distilled, original methodology grouped by area. Load the specific file a step n
 - **foundations/** — seo-philosophy, seo-and-ai-future, google-generative-ai-search-official, seo-process-overview
 - **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
   measuring-seo-results, evidence-backed operational SEO, technical maintenance, GSC 4–20 opportunity mining,
-  Google Generative AI visibility measurement, cross-platform AI citation loops, AI-search commerce readiness, and
-  Cloudflare Agent Readiness/AEO evidence
+  contextual internal-link architecture, agent-readable web delivery/log evidence, Google Generative AI visibility
+  measurement, cross-platform AI citation loops, AI-search commerce readiness, and Cloudflare Agent Readiness/AEO evidence
 
 ## Data integrations (`references/integrations/` + `scripts/`)
 
@@ -121,8 +123,21 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   verify early-access and pricing state from first-party evidence before asserting availability or cost.
 - **Cross-platform citation loops** are observation ledgers, not attribution systems: keep provider datasets separate,
   never invent impressions/clicks, and never turn mutable answer-engine mentions into a universal GEO score.
+- **AI discovery attribution** may combine referrals with optional self-reported discovery only as separate evidence lanes:
+  preserve question wording, denominator, non-response, and raw answers; never turn survey share into hidden clicks,
+  view-through conversions, incremental lift, or a channel multiplier.
+- **Agent-native readiness** means a useful, safe product interface—not a ranking hack. APIs/connectors/MCP servers need a
+  real user job, consent, truthful schemas, and confirmation before consequential actions. Reject prompt injection,
+  hidden model incentives, schema/package “bribes,” fake community content, and engineered comparisons.
 - **GEO myth-busting:** Google does not require `llms.txt`, special AI schema, artificial chunking, AI-only rewrites, or
   manufactured mentions. Keep optional cross-platform documentation distinct from Google Search requirements.
+- **Agent-readable delivery is optional infrastructure:** HTML stays first-class; Markdown alternatives, content
+  negotiation, and `llms.txt` need a real consumer, parity, and cache/access tests. Server-log requests stay separate
+  from answers, citations, training, and business outcomes. User-agent text alone does not verify bot identity, and
+  sensitive query/auth/user data must not enter reports.
+- **Internal-link thresholds are not ranking laws:** separate contextual from template/navigation edges, reconcile
+  crawl-observed orphans against site inventories, use natural accessible anchors, and never turn “four links” or
+  another field-study number into an automatic fix or guarantee.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Source material** in `_source/` is private paid-course content (gitignored). The playbooks are original distillations
   and are the only course-derived material safe to share.

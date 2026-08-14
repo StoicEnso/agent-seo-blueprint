@@ -49,7 +49,7 @@ outputs:
 1. **Set strategy & map the landscape.** Load `understanding-authority.md`. Identify the top-ranking competitor for the money keyword (`serp_capture.py`), then Site-Explorer it in Ahrefs (`ahrefs_client.py`) → Backlinks. Note high-DR, dofollow, low-dilution, topically-relevant referring domains — this is the raw target pool. Weight by quality (DR is logarithmic; few outbound links = more value passed), not count.
 
 2. **Pick tactics for this project.** Choose from the menu based on fit (you can run several):
-   - **Link stealing** (`link-stealing.md`) — find roundups/listicles linking a weaker competitor but not you; pitch "add me" or "swap the weak link." Needs you to be genuinely better.
+   - **Link stealing / listicle-gap outreach** (`link-stealing.md`) — find live category roundups with a real editorial omission; prefer an add-alongside ask when the product adds distinct reader value, and reserve replacement for broken, discontinued, obsolete, or criterion-mismatched listings. Record criteria, disclosure/affiliate state, current link attributes, contact evidence, and checked date. Never auto-send or repeat a source's backlink count as an expected result.
    - **Affiliate program / competitor-affiliate mining** (`affiliate-programs.md`) — for a paid product with sustainable unit economics: fingerprint verified public referral routes, qualify the competitor's editorial affiliates, model a defensible offer, and draft `test/add`, `comparison`, or `switch` asks. Never invent terms or blindly outbid.
    - **HARO / Help a B2B Writer Out** (`haro.md`) — if someone can speak as an expert: draft credible, specific quotes (add a Loom touch) for high-DR editorial links.
    - **Manual outreach** (`manual-outreach.md`) — revisit-the-topic pitches, missing-link asks, free-access offers, and the case-study trade (target smaller tools with few case studies).
@@ -76,6 +76,7 @@ outputs:
 - **Paid product?** Yes → affiliate program is high-leverage. No → lean on link-stealing, HARO, manual outreach, content rings.
 - **Expert available?** Yes → HARO. No → skip it.
 - **Add-alongside vs swap** (link stealing): neutral roundup → add; clearly inferior/dead listed tool → swap.
+- **Listicle follow-up:** one unanswered reminder is the default maximum unless the owner approves a different recipient-appropriate cadence. Any paid/affiliate inclusion must be disclosed and appropriately qualified; do not buy undisclosed followed placement.
 - **VIP affiliate rate:** reserve for the few high-DR, exact-niche sites that actually move rankings.
 - **Citation-gap outreach?** Only pitch genuine omissions with verifiable evidence; never use fabricated mentions, spam, or undisclosed influence.
 - **Any tactic touching the what-not-to-do list** → drop it (asymmetric, possibly permanent downside).

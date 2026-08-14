@@ -17,8 +17,8 @@ tools: [ahrefs]
 **Method.**
 1. **Pick the main keyword for the home page.** Choose a short-tail term that's commercial/transactional, high-volume, low-KD, and that *contains* the broader category (e.g. `AI tattoo generator` also earns `AI tattoo`). Putting the broad term inside the chosen keyword means ranking for both.
 2. **Decide home-page intent and asset.** Map the searcher's intent (a "generator" searcher wants to generate) to the right asset — usually a free tool on the home page. Apply [[match-and-exceed]]: build a better tool than the incumbents (more features, more on-page text — most tool pages are thin, and added text helps Google and dwell time).
-3. **Identify category pages from the keyword groups.** Each distinct keyword direction becomes a category/hub page. For a tattoo site: `tattoo ideas` (a hub linking to every `<X> tattoo idea`), `tattoo styles` (new school, traditional, polka, etc., grouped by style), and `tattoo artists / near me` (a directory built from Google Maps scraping of studios by city).
-4. **Plan the long-tail layer with programmatic SEO.** Take the high-supply long-tail keywords (e.g. `dragon tattoo idea`, `flower tattoo idea`, `shoulder tattoo idea`, location variants) and generate one page each programmatically. Each page shows relevant generated examples and is templated from the keyword pattern.
+3. **Identify category pages from the keyword groups.** Each distinct keyword direction can become a category/hub page only when it has a distinct user job and enough value for a separate URL. For a tattoo site: `tattoo ideas` (a hub linking to every justified `<X> tattoo idea`), `tattoo styles` (new school, traditional, polka, etc., grouped by style), and `tattoo artists / near me` (a directory built from verified location data). For SaaS modifier clusters, apply the alternative/comparison/integration/constraint/pricing/use-case/problem/feature/audience gates in `content-types-overview.md`; consolidate token-swapped variants that share the same intent, evidence, and destination.
+4. **Plan the long-tail layer with programmatic SEO.** Take high-supply long-tail keywords only when each instance can provide distinct task value and page-level data (e.g. relevant generated examples, inventory, or verified location records). A keyword variation alone is not enough. Define deduplication, canonical, noindex/removal, and cohort-release rules before generating pages.
 5. **Wire internal links upward.** Every category and programmatic page links back to the home-page tool and upsells it ("need a design? use our tool / try for free"). The content layer feeds traffic to the converting core.
 6. **Plan monetization.** Ship the core tool free, watch which features users love, then paywall the most-wanted features. Capture the data the programmatic pages need from real usage (e.g. saving each generated `<X> tattoo` to later spin up its programmatic page).
 7. **Draw the sitemap tree** (home → category hubs → programmatic long-tail pages) and confirm every validated keyword has a home before development starts.
@@ -26,7 +26,7 @@ tools: [ahrefs]
 **Decision criteria / heuristics.**
 - Home page = one short-tail, commercial-intent main keyword that contains the broad category term.
 - One category/hub page per distinct keyword group/direction.
-- Long-tail, high-supply keywords → programmatic SEO pages (one per pattern instance).
+- Long-tail, high-supply keywords → programmatic SEO pages only when each pattern instance has distinct demand and data-backed user value.
 - Every sub-page links up to the home-page tool and upsells it.
 - Add real text to tool pages — thin tool pages under-rank; text aids Google and dwell time.
 - Free tool now, paywall the loved features later (validate willingness to pay from usage).
@@ -39,5 +39,6 @@ tools: [ahrefs]
 - Shipping a thin tool page with no supporting text (under-ranks).
 - Building programmatic pages with no internal links back to the converting tool.
 - Designing the structure before validation — build the sitemap from real, validated keywords only.
+- Treating every SaaS modifier, audience label, integration name, or query fan-out as a separate page without distinct value; this creates cannibalization, scaled-content, and doorway risk.
 
 **Related.** [[finding-and-validating-niches]], [[competitor-research]], [[match-and-exceed]], [[search-intent]], [[keyword-fundamentals]], [[research-for-existing-sites]]. Course refs: 02-12 (keyword ideas to sitemap). Programmatic SEO is detailed in chapter 03 (see 03-03).

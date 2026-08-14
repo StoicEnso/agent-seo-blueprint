@@ -9,6 +9,7 @@ playbooks:
   - references/playbooks/content/content-fundamentals.md
   - references/playbooks/authority/understanding-authority.md
   - references/playbooks/maintenance/ai-search-commerce-readiness.md
+  - references/playbooks/maintenance/agent-readable-web-delivery.md
   - references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md
   - references/playbooks/maintenance/cross-platform-ai-citation-loop.md
 references:
@@ -24,6 +25,7 @@ outputs:
   - audits/<date>_geo-findings.json
   - audits/<date>_cloudflare-agent-aeo.json # optional Cloudflare evidence, when available and in scope
   - audits/<date>_provider-citation-observations.json # optional non-Google citation baseline
+  - monitoring/<date>_agent-request-evidence.json # optional privacy-safe origin/CDN request evidence
 ---
 
 # AI Search Readiness Audit
@@ -44,6 +46,7 @@ This is a read-only, evidence-led audit. It does not change robots controls, pub
   - `claude`
   - `other:<name>`
 - Load `google-generative-ai-search-official.md` whenever either Google label is in scope. Do not generalize that source to other providers.
+- Rank the scoped providers for this project from audience, referral, self-report, observed question coverage, product fit, measurable conversion value, cost, and policy risk. Do not import another company's provider ranking.
 
 ## Evidence contract
 
@@ -126,9 +129,12 @@ Do not call the product free without a current first-party pricing or entitlemen
 - freeze a small, versioned buyer-question set instead of ad hoc prompts;
 - save the exact provider, surface, locale, language, account state, and retrieval date for each run;
 - record mention presence, cited URLs/domains, source types, page-role gaps, and the minimum answer excerpt needed to interpret the citation;
+- record retrieval observability and citation persistence fields without guessing model memory, training data, indexing delays, or a universal citation half-life;
 - write the raw observation set to `audits/<date>_provider-citation-observations.json`, or state why no provider citation baseline was collected.
 
 Keep each provider in its own dataset. These observations are not interchangeable with ordinary Search data, the Google Search Console Generative AI performance report, or Cloudflare's synthetic AEO panel. Do not invent clicks, queries, CTR, conversions, attribution, or a universal GEO score/formula from citation observations.
+
+**Optional self-reported discovery.** If signup or lead-form evidence is in scope, audit the current “How did you hear about us?” field or recommend a bounded test. Preserve exact wording, answer options, raw responses, response denominator, non-response, form location, locale, and dates. Keep it separate from click attribution and revenue. Never convert self-reported answer share into hidden traffic, view-through conversions, incremental lift, or a causal channel multiplier.
 
 ### 6. Audit human usefulness, clarity, and evidence
 
@@ -151,7 +157,7 @@ Flag contradictory names, claims, pricing, or identity details. Recommend only l
 
 ### 8. Run provider-specific access checks for non-Google platforms
 
-Fetch `robots.txt` and check only providers in scope, using current official documentation:
+Load `agent-readable-web-delivery.md`. Fetch `robots.txt` and check only providers in scope, using current official documentation:
 
 | Agent | Purpose to verify |
 |---|---|
@@ -166,9 +172,11 @@ Fetch `robots.txt` and check only providers in scope, using current official doc
 
 Provider behavior and names may change; verify before asserting. Respect the owner's licensing/privacy choice. If a desired platform crawler is blocked, report the tradeoff rather than changing policy.
 
-`llms.txt` may be inspected only as voluntary, provider-specific documentation. Its absence is not a generic defect and must never be scored against Google. If present, verify that it contains no stale or false claims.
+When origin/CDN logs are available, preserve a separate privacy-safe request lane. Verify provider-published IP ranges when possible because user-agent text can be spoofed. Separate documented search, training, and user-triggered roles. Strip secrets, cookies, authorization data, request bodies, and sensitive query strings; use normalized paths and aggregate counts. A request proves neither parsing, indexing, training, citation, nor a business outcome. Save `monitoring/<date>_agent-request-evidence.json` when this lane is used.
 
-Compare raw HTML with the rendered page where relevant. Flag JS-only key content only when evidence shows a user or scoped fetcher cannot access it.
+`llms.txt` is an informal voluntary map, not a ranking or eligibility requirement. Its absence is not a generic defect and must never be scored against Google. If present, verify that it is current, concise, permission-safe, and useful to a real client. Do not claim that a provider uses it for search, answers, indexing, or training without current first-party evidence.
+
+Compare raw HTML with the rendered page where relevant. HTML remains a first-class representation. Where a real retrieval job justifies Markdown, test an explicit alternate URL and parity with HTML. If `Accept: text/markdown` negotiation is implemented, require correct content types, `Vary: Accept`, HTML fallback, cache tests, and no user-agent sniffing. Flag JS-only key content only when evidence shows a user or scoped fetcher cannot access it.
 
 ### 9. Audit evidence formats and agent usability
 
@@ -181,6 +189,8 @@ When browser-agent task completion matters, separately assess:
 - accessibility tree, names, labels, and errors;
 - completion of high-value flows without submitting a consequential action;
 - relevant emerging protocols such as UCP.
+
+When an API, connector, MCP server, feed, or other agent-facing product interface is relevant, load `ai-search-commerce-readiness.md`. Test a real user job, authentication/consent, error handling, and confirmation before consequential actions. Separate existing-user usage or retention from new-user acquisition. Reject hidden model incentives, prompt injection, schema bribes, or metadata intended to manipulate recommendations or purchases.
 
 Label this **agent usability**, not a proven Google AI ranking factor.
 
@@ -248,6 +258,7 @@ Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparis
 - **Weak readiness** → prioritize foundations, non-commodity content, authentic corroboration, and measurable gaps.
 - **Moderate readiness** → improve entity consistency, valid structured data for normal Search purposes, richer evidence, and platform measurement. Do not prescribe `llms.txt` for Google.
 - **Strong readiness** → maintain freshness and monitor dated platform/source changes.
+- **Agent-native interface proposed** → require a real user job, safe task-completion test, and separate acquisition/retention evidence; do not build it only to influence a provider answer.
 
 ## Routing
 
@@ -262,4 +273,4 @@ Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparis
 
 ## Done when
 
-Platform scope is explicit; Google and non-Google claims are separated; Google eligibility, myth checks, and report availability are recorded when applicable; any Cloudflare readiness, synthetic AEO-panel, and first-party operator evidence is captured in separate lanes with access state and limitations; provider-specific citation baselines are captured when citation diagnosis is in scope; priority pages have evidence-backed findings; agent usability is separately labelled; every recommendation has a concrete fix and owner; the qualitative verdict is assigned; and both Markdown and raw JSON artifacts exist.
+Platform scope and project-specific provider priority are explicit; Google and non-Google claims are separated; Google eligibility, myth checks, and report availability are recorded when applicable; any Cloudflare readiness, synthetic AEO-panel, and first-party operator evidence is captured in separate lanes with access state and limitations; provider-specific citation baselines are captured when citation diagnosis is in scope; any self-reported discovery evidence remains separate from attribution; priority pages have evidence-backed findings; agent usability and agent-native product readiness are separately labelled; every recommendation has a concrete fix and owner; the qualitative verdict is assigned; and both Markdown and raw JSON artifacts exist.

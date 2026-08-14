@@ -18,7 +18,7 @@ Use when the user wants to own a defensible category phrase and become easier to
 
 ## Procedure
 
-1. **Capture a platform-specific baseline.** Load `cross-platform-ai-citation-loop.md` and run `geo-audit.md` for a bounded prompt set. Freeze exact buyer-question versions per provider/surface, then record dates, platform/account/location where relevant, mentioned brands, cited domains, source types, and owned-page citations. Keep Google AI impression data separate from answer-engine citation observations, and do not merge different platforms into one universal score.
+1. **Choose scope from project evidence, then capture a platform-specific baseline.** Load `cross-platform-ai-citation-loop.md` and run `geo-audit.md` for a bounded prompt set. Select one primary provider and at most two supporting providers from the project's audience, referrals, optional self-report, buyer-question coverage, product fit, conversion value, cost, and policy risk—not another company's channel ranking. Freeze exact buyer-question versions per provider/surface, then record dates, platform/account/location where relevant, mentioned brands, cited domains, source types, retrieval observability, persistence fields, and owned-page citations. Keep Google AI impression data, provider observations, self-reported discovery, referrals, and conversions separate, and do not merge them into one universal score.
 2. **Choose one primary phrase.** Score candidates on buyer intent, specificity, product-truth fit, live SERP/answer evidence, conversion relevance, and the ability to publish genuinely useful material. Add 2–4 supporting phrases and a do-not-use list for overbroad or untrue claims.
 3. **Build an owned evidence cluster, not a quota.** Consider category definition, use-case, comparison, alternatives, pricing, implementation, trust/case-study, and a useful tool/resource. Match page roles to the observed buyer-question gaps. Create only pages with distinct demand, intent, evidence, and non-duplicative value.
 4. **Make comparison claims defensible.** Include real alternatives and tradeoffs, explain evaluation criteria, state who each option is for, cite material claims, and preserve limitations. Never rank the product first for every use case by construction.
@@ -30,6 +30,7 @@ Use when the user wants to own a defensible category phrase and become easier to
 
 - Owned pages must help a buyer even if the brand were removed.
 - Do not manufacture third-party mentions, citations, proof, or category demand.
+- Do not seed fake community discussion, engineer a misleading comparison, or hide instructions/rewards in schema, metadata, package files, or an agent-facing interface.
 - Do not turn answer-engine observations into a universal GEO score or formula.
 - Do not fabricate community discussion, hidden sponsorship, or undisclosed influence to force citations.
 - Do not create one page for every query-fan-out phrase or duplicate comparison permutation.

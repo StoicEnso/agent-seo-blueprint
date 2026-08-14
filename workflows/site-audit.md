@@ -11,6 +11,7 @@ playbooks:
   - references/playbooks/research/research-for-existing-sites.md
   - references/playbooks/maintenance/keyword-intent-evolution.md
   - references/playbooks/maintenance/seo-operational-checklist.md
+  - references/playbooks/maintenance/contextual-internal-link-architecture.md
   - references/playbooks/authority/understanding-authority.md
   - references/playbooks/authority/linkbuilding-what-not-to-do.md
 scripts:
@@ -24,6 +25,7 @@ integrations: [pagespeed, gsc, serp, ahrefs]
 outputs:
   - audits/<date>_audit.md            # severity-ranked fix list (via report.py audit)
   - audits/<date>_audit-findings.json # raw findings payload
+  - audits/<date>_internal-link-architecture.json # optional edge-level contextual-link evidence
 ---
 
 # Site Audit
@@ -43,7 +45,7 @@ outputs:
 
 3. **Technical audit — indexation & duplication.** From `on-page-optimization.md` (canonicals) and `references/playbooks/content/content-what-not-to-do.md` (duplicate content, crawl budget): check for parameterized/near-duplicate URLs without canonicals, duplicate meta titles/descriptions across templated pages, and mass-published pages straining crawl budget. Use `gsc_pull.py` coverage/indexation signals where available. A `site:` query via `serp_capture.py` is directional discovery evidence only, never an authoritative indexed-page count.
 
-4. **On-page audit.** Per priority page, scrape it with `serp_capture.py` and check against `on-page-optimization.md`: meta title contains the main keyword AND matches search intent (no obscure titles that cause bounces); meta description uses variants; internal links present and pointing at related pages; H1/H2 structure sane. When the page or SERP is meaningfully visual, load `image-search-optimization.md` and sample priority images for HTML discovery, contextual/accessible alt behavior, stable URLs, responsive sizing, transfer cost/CWV impact, image-sitemap need, and truthful conditional metadata. Record each gap as a finding; do not infer image indexation or traffic from markup alone.
+4. **On-page and internal-architecture audit.** Per priority page, scrape it with `serp_capture.py` and check against `on-page-optimization.md`: meta title contains the main keyword AND matches search intent (no obscure titles that cause bounces); meta description uses variants; internal links present and pointing at related pages; H1/H2 structure sane. When internal-linking weakness is in scope, load `contextual-internal-link-architecture.md`, preserve source→destination edges, separate contextual links from navigation/footer/template candidates, reconcile crawl-observed orphans against sitemap/GSC/inventory, review destination concentration by page role, and save `audits/<date>_internal-link-architecture.json`. Do not enforce four contextual links or mechanically vary anchors; those are not universal ranking rules. When the page or SERP is meaningfully visual, load `image-search-optimization.md` and sample priority images for HTML discovery, contextual/accessible alt behavior, stable URLs, responsive sizing, transfer cost/CWV impact, image-sitemap need, and truthful conditional metadata. Record each gap as a finding; do not infer image indexation or traffic from markup alone.
 
 5. **Content/intent audit.** Load `references/playbooks/content/content-fundamentals.md`, `content-types-overview.md`, and `references/playbooks/maintenance/keyword-intent-evolution.md`. For each key page, capture the live SERP for its target keyword (`serp_capture.py`) and check: does the page's **content type match the format Google now rewards**? An intent/format mismatch (e.g. a landing page where reviews now rank) is a high-severity finding with the fix "reformat to the now-preferred type." Also scan for thin content, keyword stuffing, AI-spam pages, and keyword cannibalization (two pages chasing one keyword) per `content-what-not-to-do.md`.
 
