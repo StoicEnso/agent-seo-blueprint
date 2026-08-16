@@ -7,7 +7,7 @@ tools: [gsc, ga4]
 
 # Measuring If Your Work Pays Off (Leading Indicators)
 
-**What it is.** A measurement system built on **leading indicators (actions you control)** instead of **trailing indicators (results that arrive months later)**. Rankings and traffic are trailing — by the time they move, it's too late to fix the cause. So you monitor the *work* (the inputs) on a checklist cadence, guaranteeing you put in the effort that produces results down the line and never get blindsided by a drop six months from now.
+**What it is.** A measurement system that tracks **leading indicators (actions you control)** alongside **trailing indicators (results that often arrive later)**. Rankings and traffic can lag the work, so the checklist shows whether the planned inputs happened while periodic outcome reviews test whether those inputs helped. It does not guarantee growth or prevent every surprise.
 
 **When to use.**
 - Setting up an ongoing SEO maintenance routine for any project.
@@ -31,8 +31,8 @@ tools: [gsc, ga4]
 **Decision criteria / heuristics.**
 - Monitor inputs weekly; review outputs (rankings/traffic) monthly and especially quarterly — don't obsess over output day to day (it's trailing and noisy).
 - If the six action tasks are consistently done and rankings still aren't moving after a quarter, *then* dig into the trailing data for a diagnosis (intent, updates, link gap).
-- Out-shipping competitors on the action tasks month after month is, by itself, a near-guarantee of out-growing them over time.
-- A surprise position drop six months out almost always traces back to skipped input work — the checklist exists to prevent exactly that.
+- Out-shipping competitors on useful, high-quality actions is a positive leading signal, not a guarantee. Search demand, intent, product quality, technical state, competition, and external changes can still prevent growth.
+- A later position drop can sometimes trace back to skipped input work, but it can also come from intent, demand, technical, competitor, or search-system changes. Use the checklist as evidence, not as a single-cause explanation.
 
 **Example.** A founder keeps a weekly Google-Sheet dashboard with the six tasks as checkboxes: 4 content pages shipped, 3 existing pages optimized, 10 outreach emails sent, 5 new backlinks landed, competitor backlink counts logged, top-20 keyword positions noted. Monthly they review the trend; quarterly they open GSC and GA4 to see if impressions, average position, and organic sessions rose — and tie any movement back to the months they did (or skipped) the work.
 

@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-59-playbooks)
+- [The knowledge layer](#the-knowledge-layer-62-playbooks)
 - [The workflows](#the-workflows-10-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,9 +46,10 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **59 playbooks**: 36 original course distillations plus 23 operational additions for article QA, schema/E-E-A-T,
+- **62 playbooks**: 36 original course distillations plus 26 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, Google-only AI visibility,
-  cross-platform citation evidence, deterministic planning, SERP-regime grading, and adversarial rollout design;
+  cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led press releases,
+  deterministic planning, SERP-regime grading, and adversarial rollout design;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
 - **10 workflows**: five core pipelines, three operational deep dives, and two end-to-end planning workflows for a full
   SEO master plan and a BOFU→MOFU→TOFU rollout.
@@ -89,11 +90,11 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 23 operational additions
+  playbooks/                   # 36 course distillations + 26 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
-    content/         (17)       # programmatic SEO, schema/E-E-A-T, image search, funnel rollout, articles…
-    authority/       (14)       # editorial intent, directories, Wikipedia research, affiliate, outreach…
-    foundations/     (5)        # SEO philosophy/process + official AI guidance + adversarial orchestration
+    content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
+    authority/       (15)       # editorial intent, press releases, directories, Wikipedia, affiliate, outreach…
+    foundations/     (6)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
     maintenance/     (12)       # updates, ROI, technical SEO, SERP features, and platform-scoped AI evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
@@ -118,13 +119,15 @@ assets/                        # fill-in templates emitted into the workspace
   audit-report.md  content-brief.md  keyword-map.csv
   directory-discovery-sources.csv  directory-submission-tracker.csv
   startup-backlink-candidates.csv  # 146 source mentions → 141 unverified research leads
+  topic-architecture-map.csv  internal-link-ledger.csv
+  press-release-distribution-registry.csv
   outreach-email.md  monitoring-snapshot.md
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```
 
 ---
 
-## The knowledge layer (59 playbooks)
+## The knowledge layer (62 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -136,15 +139,16 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 **content/** — `content-fundamentals` · `content-types-overview` · `cross-platform-commercial-intent-distribution` ·
 `programmatic-seo` · `free-tools-strategy` · `content-pages` · `landing-pages` · `articles` · `content-rings` ·
 `on-page-optimization` · `content-what-not-to-do` · `image-search-optimization` · `agent-article-production-qa` ·
-`programmatic-pattern-library` · `full-funnel-rollout` · `eeat-framework` · `schema-types-reference`
+`programmatic-pattern-library` · `topic-architecture-and-internal-link-ledger` · `full-funnel-rollout` ·
+`eeat-framework` · `schema-types-reference`
 
 **authority/** — `understanding-authority` · `link-stealing` · `editorial-link-intent-and-assets` · `affiliate-programs` ·
 `acquiring-domain-authority` · `haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` ·
 `directory-submissions` · `startup-backlink-directory-submissions` · `wikipedia-dead-link-building` ·
-`other-link-building` · `linkbuilding-what-not-to-do`
+`press-release-distribution` · `other-link-building` · `linkbuilding-what-not-to-do`
 
 **foundations/** — `seo-philosophy` · `seo-and-ai-future` · `google-generative-ai-search-official` ·
-`seo-process-overview` · `adversarial-agent-orchestration`
+`seo-process-overview` · `adversarial-agent-orchestration` · `mechanic-first-growth-experiments`
 
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
@@ -163,10 +167,10 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 
 | Workflow | What it does | Key outputs |
 |---|---|---|
-| **research-and-ideation** | niche find/validate → keyword research → competitor gaps → match-and-exceed → keyword→sitemap; can summon ICP personas | keyword map CSV, sitemap plan |
-| **content-production** | content-type selection → brief → optional cross-platform commercial-intent map → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional distribution map, source packet, review draft, QA report |
+| **research-and-ideation** | niche find/validate → keyword research → competitor gaps → match-and-exceed → keyword→sitemap/topic architecture; can evaluate observed tactics and summon ICP personas | keyword map, sitemap, optional topic/link ledgers |
+| **content-production** | content-type selection → brief/topic architecture → optional cross-platform commercial-intent map → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional topic/link ledgers, distribution map, source packet, review draft, QA report |
 | **site-audit** | technical + on-page + content + opportunity + authority audit | prioritized, severity-ranked fix list |
-| **authority-and-links** | pick tactics → ranked opportunity list → **drafted** outreach (never auto-sent) | opportunity list, outreach drafts |
+| **authority-and-links** | pick tactics, including bounded press-release distribution → ranked opportunity list → **drafted** outreach/releases (never auto-sent) | opportunity list, outreach drafts, optional press-release plan |
 | **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI, Cloudflare agent/AEO, and provider citation evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
 | **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare and provider-specific citation lanes | readiness report and raw findings |
@@ -304,6 +308,9 @@ extra setup. What's *not* shipped is the paid-course **transcripts** — they ar
   only** and require explicit user confirmation. Nothing is auto-sent or auto-published.
 - **AI-search evidence** stays provider-specific: Google AI impressions remain separate from cross-platform citation observations, and neither dataset implies clicks, CTR, conversions, revenue, or a universal GEO score.
 - **Cross-platform citation tactics** must stay truthful: no fabricated mentions, spam, fake discussion, or undisclosed influence. The vendor-authored 14.7K Copilot-citation field claim is treated only as unverified input, never as a benchmark or causal proof.
+- **Topic architecture** maps distinct user jobs and contextual links; it never fabricates a topical-authority score or creates thin pages to inflate depth.
+- **Press-release distribution** is for real news with current first-party terms, rights-safe copy, an owned evidence hub, and explicit submission approval. It never promises followed links, fast indexing, Google News, ranking, traffic, citations, or sales.
+- **Creator tactics** are observations. The agent extracts the proposed mechanism, records alternative explanations, and pre-registers one bounded reversible test before adoption.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Auth** is always performed by you (login/OAuth); the skill reads the authorized session and never handles passwords.
 

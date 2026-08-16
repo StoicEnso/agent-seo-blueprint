@@ -57,6 +57,7 @@ while keeping the paid source material private and the distilled methodology sha
 │   │   ├── research/               #   niches, keywords, intent, match-and-exceed, metrics, tools...
 │   │   ├── content/                #   content types, programmatic SEO, free tools, pages, on-page...
 │   │   ├── authority/              #   link stealing, HARO, verified directories, affiliate, outreach, content rings...
+│   │   ├── foundations/            #   philosophy, process, AI guidance, mechanism-first/adversarial experiments...
 │   │   └── maintenance/            #   volatility, updates, intent, measurement, operational coverage...
 │   ├── course-index/               # mirrored, searchable course
 │   │   ├── course-index.json       #   62 lessons: title, summary, takeaways, →playbook, →transcript
@@ -91,7 +92,9 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── audit-report.md  content-brief.md  keyword-map.csv  outreach-email.md  monitoring-snapshot.md
 │   ├── directory-discovery-sources.csv # dated registry of third-party queue-building sources
 │   ├── directory-submission-tracker.csv # claimed-vs-verified lineage + submission states
-│   └── startup-backlink-candidates.csv # 146 source mentions → 141 unverified leads
+│   ├── startup-backlink-candidates.csv # 146 source mentions → 141 unverified leads
+│   ├── topic-architecture-map.csv  internal-link-ledger.csv
+│   └── press-release-distribution-registry.csv # creator claims vs destination-owned evidence
 └── _source/                        # GITIGNORED: transcripts + link to iCloud archive (private authority)
     └── .gitignore                  # ignores everything here
 ```
@@ -131,7 +134,10 @@ SEO ledger routes evidence across audit/research/content/monitoring, the directo
 candidate asset feed a provenance-preserving, first-party-verified directory/entity path, Google Generative AI impression
 evidence remains a separate monitoring layer with explicit metric/rollout limitations, Cloudflare's readiness checks,
 synthetic AEO panel, and first-party operator activity remain distinct evidence lanes, and cross-platform citation
-observations stay provider-specific rather than becoming a shared score. None of these artifacts turns heuristics, DR
+observations stay provider-specific rather than becoming a shared score. Mechanic-first experiments prevent cheap builds
+from becoming unbounded features, topic architecture requires distinct user jobs plus contextual-link reasons, and
+press-release distribution separates creator claims from current destination evidence and Google link-spam policy. None
+of these artifacts turns heuristics, DR
 snapshots, `site:` counts, AI impressions, vendor panel scores, or citation observations into business facts; live
 verification and external-write approval gates still apply.
 

@@ -13,6 +13,7 @@ playbooks:
   - references/playbooks/content/articles.md
   - references/playbooks/content/content-rings.md
   - references/playbooks/content/on-page-optimization.md
+  - references/playbooks/content/topic-architecture-and-internal-link-ledger.md
   - references/playbooks/content/image-search-optimization.md
   - references/playbooks/content/content-what-not-to-do.md
   - references/playbooks/content/agent-article-production-qa.md
@@ -33,6 +34,8 @@ outputs:
   - research/<date>_<keyword-slug>-source-packet.json  # if drafting an article
   - drafts/<date>_<keyword-slug>.md                    # if drafting an article
   - audits/<date>_<keyword-slug>-content-qa.json       # if drafting an article
+  - research/<date>_topic-architecture.csv             # when producing a multi-page topic cluster
+  - research/<date>_internal-link-ledger.csv            # contextual links with reader reasons
 ---
 
 # Content Production
@@ -72,7 +75,9 @@ outputs:
 
    Apply the relevant content checks from `references/playbooks/maintenance/seo-operational-checklist.md`: titles are intent-first (50–60 characters is guidance, not a hard pass/fail), authorship/E-E-A-T signals must be real, schema must match visible content, `dateModified` changes only after material edits, and FAQ/PAA sections belong on the most appropriate page unless a standalone page has distinct demand and enough value.
 
-5. **Apply on-page optimization to the brief.** Load `references/playbooks/content/on-page-optimization.md`. Specify: meta title (main keyword, intent-matched, natural) and description (synonyms/variants); internal links to/from related pages; a page-speed plan (prefer static generation); and canonicals for any parameterized/duplicate URLs. When the live SERP has meaningful visual intent or the page relies on original/product/diagram imagery, also load `references/playbooks/content/image-search-optimization.md` and add an evidence-backed image plan: image purpose, landing-page context, stable descriptive filename, accessible alt behavior, responsive delivery/performance, discovery route, and only the structured metadata that fits the real page and rights use case.
+   **Multi-page topic branch.** When the request covers a pillar plus supporting pages, load `references/playbooks/content/topic-architecture-and-internal-link-ledger.md`. Resolve overlap before drafting, assign each URL one distinct role and user job, identify the relevant money/service page, and maintain the two workspace CSVs copied from `assets/topic-architecture-map.csv` and `assets/internal-link-ledger.csv`. A support page needs distinct value and evidence; adding a page merely to increase “topical depth” is a hard fail. Navigation/footer links do not replace contextual ledger rows.
+
+5. **Apply on-page optimization to the brief.** Load `references/playbooks/content/on-page-optimization.md`. Specify: meta title (main keyword, intent-matched, natural) and description (synonyms/variants); contextual internal links to/from related pages, each with a reader reason and planned ledger row when the topic branch is active; a page-speed plan (prefer static generation); and canonicals for any parameterized/duplicate URLs. When the live SERP has meaningful visual intent or the page relies on original/product/diagram imagery, also load `references/playbooks/content/image-search-optimization.md` and add an evidence-backed image plan: image purpose, landing-page context, stable descriptive filename, accessible alt behavior, responsive delivery/performance, discovery route, and only the structured metadata that fits the real page and rights use case.
 
 6. **Run the what-not-to-do guardrail.** Load `references/playbooks/content/content-what-not-to-do.md` as a pre-brief checklist: no AI content spam, respect crawl budget (batch large publishes), no keyword stuffing, no duplicate/cannibalizing pages, no thin content. Flag any risk in the brief.
 
@@ -106,5 +111,6 @@ outputs:
 - `research/<date>_<keyword-slug>-source-packet.json` — claim-to-source evidence packet (if an article draft is requested).
 - `drafts/<date>_<keyword-slug>.md` — evidence-grounded review draft (if requested).
 - `audits/<date>_<keyword-slug>-content-qa.json` — weighted QA, hard-fail results, revisions, and remaining defects (if requested).
+- `research/<date>_topic-architecture.csv` and `research/<date>_internal-link-ledger.csv` — required when the job advances a multi-page topic cluster.
 
-**Done when.** Every targeted keyword has a brief whose format matches the live SERP, includes an outline + metadata + internal-link + upsell plan, and passes the what-not-to-do checklist. Citation-loop-driven briefs also preserve the triggering question version, provider scope, and evidence plan. Any cross-platform distribution branch also has dated surface evidence, no more than three selected surfaces, distinct native value, a disclosure plan, an owned evidence hub, and separate search/native/referral/conversion/revenue metrics. If an article draft was requested, the source packet, draft, and QA report are inspectable; the draft scores at least 85/100; no hard fail remains; and no more than two automated revisions were used. Hand review-ready artifacts to the user/builder for the confirmation-gated build; route "ranks but needs links" pages to `authority-and-links.md` and add new pages to `monitoring.md`.
+**Done when.** Every targeted keyword has a brief whose format matches the live SERP, includes an outline + metadata + internal-link + upsell plan, and passes the what-not-to-do checklist. A multi-page topic job also has distinct-role architecture and an inspectable contextual-link ledger, with no page-count inflation or fabricated authority score. Citation-loop-driven briefs also preserve the triggering question version, provider scope, and evidence plan. Any cross-platform distribution branch also has dated surface evidence, no more than three selected surfaces, distinct native value, a disclosure plan, an owned evidence hub, and separate search/native/referral/conversion/revenue metrics. If an article draft was requested, the source packet, draft, and QA report are inspectable; the draft scores at least 85/100; no hard fail remains; and no more than two automated revisions were used. Hand review-ready artifacts to the user/builder for the confirmation-gated build; route "ranks but needs links" pages to `authority-and-links.md` and add new pages to `monitoring.md`.
