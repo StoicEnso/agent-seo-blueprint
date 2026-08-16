@@ -25,11 +25,63 @@ class CreatorTacticIntakeDocsTests(unittest.TestCase):
             "Manufactured consensus",
             "three-way exchanges designed to conceal coordination",
             "residential-proxy account setups intended to misrepresent geography",
+            "https://x.com/gregisenberg/status/2088272956203966970",
             "https://x.com/jammer3k/status/2088618901902901633",
             "not an SEO experiment",
             "adopt | revise | reject | inconclusive",
         ):
             self.assertIn(phrase, text)
+
+    def test_tiny_loop_wedge_is_evidence_gated_and_routed(self):
+        playbook = (
+            ROOT
+            / "references"
+            / "playbooks"
+            / "foundations"
+            / "mechanic-first-growth-experiments.md"
+        ).read_text(encoding="utf-8")
+        research = (ROOT / "workflows" / "research-and-ideation.md").read_text(
+            encoding="utf-8"
+        )
+        skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+
+        for phrase in (
+            "source-authored framing",
+            "explicit approval",
+            "prepare, do not commit",
+            "consented context",
+            "observable closure receipt",
+            "independent search or user-demand evidence",
+            "do not manufacture a programmatic page set",
+        ):
+            self.assertIn(phrase, playbook)
+
+        self.assertIn("tiny-loop-opportunity-map.csv", research)
+        self.assertIn("tiny-loop-opportunity-map.csv", skill)
+        self.assertIn("tiny-loop-opportunity-map.csv", readme)
+        self.assertIn("A creator's opportunity forecast is not demand validation", research)
+
+        with (ROOT / "assets" / "tiny-loop-opportunity-map.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            fields = set(csv.DictReader(handle).fieldnames or [])
+        self.assertTrue(
+            {
+                "audience",
+                "trigger",
+                "evidence_of_frequency",
+                "search_demand_evidence",
+                "consented_context_sources",
+                "data_minimization_rule",
+                "approval_boundary",
+                "closure_receipt",
+                "safe_failure_or_expiry",
+                "primary_metric",
+                "guardrails",
+                "verdict",
+            }.issubset(fields)
+        )
 
     def test_topic_architecture_rejects_depth_inflation_and_has_templates(self):
         text = (

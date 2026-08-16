@@ -120,7 +120,7 @@ assets/                        # fill-in templates emitted into the workspace
   directory-discovery-sources.csv  directory-submission-tracker.csv
   startup-backlink-candidates.csv  # 146 source mentions → 141 unverified research leads
   topic-architecture-map.csv  internal-link-ledger.csv
-  press-release-distribution-registry.csv
+  press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
   outreach-email.md  monitoring-snapshot.md
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```
@@ -311,6 +311,7 @@ extra setup. What's *not* shipped is the paid-course **transcripts** — they ar
 - **Topic architecture** maps distinct user jobs and contextual links; it never fabricates a topical-authority score or creates thin pages to inflate depth.
 - **Press-release distribution** is for real news with current first-party terms, rights-safe copy, an owned evidence hub, and explicit submission approval. It never promises followed links, fast indexing, Google News, ranking, traffic, citations, or sales.
 - **Creator tactics** are observations. The agent extracts the proposed mechanism, records alternative explanations, and pre-registers one bounded reversible test before adoption.
+- **Tiny-loop opportunities** start with one recurring avoided task, not a broad life assistant. The agent may prepare a reviewable action from consented minimal context, but consequential action stays user-approved. Search demand and first-party user evidence must validate the wedge separately from the creator's forecast.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Auth** is always performed by you (login/OAuth); the skill reads the authorized session and never handles passwords.
 

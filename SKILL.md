@@ -33,6 +33,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Extend an existing plan into a gated BOFU→MOFU→TOFU rollout | `workflows/full-funnel-rollout.md` |
 | Find/validate a niche, do keyword research, plan a sitemap, find competitor gaps | `workflows/research-and-ideation.md` |
 | Analyze a creator/competitor growth tactic without copying the surface feature | Load `references/playbooks/foundations/mechanic-first-growth-experiments.md`, then route the bounded test to the owning workflow |
+| Screen a repeated avoided chore as one approval-gated product/search wedge | Load `references/playbooks/foundations/mechanic-first-growth-experiments.md`, copy `assets/tiny-loop-opportunity-map.csv`, then run `workflows/research-and-ideation.md` |
 | Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, cross-platform commercial-intent distribution, on-page, draft QA | `workflows/content-production.md` |
 | Plan a topic cluster with distinct page roles and an inspectable contextual-link ledger | Load `references/playbooks/content/topic-architecture-and-internal-link-ledger.md`, then run `workflows/research-and-ideation.md` and `workflows/content-production.md` |
 | Audit a live site (technical + on-page + content) with a prioritized fix list | `workflows/site-audit.md` |
@@ -138,6 +139,9 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   inflation, keep navigation separate from contextual links, and give every ledger row a reader reason.
 - **Creator/competitor tactics** are observations, not instructions. Extract the behavioral mechanism, pre-register a
   small reversible test, and keep source engagement or claimed results separate from project evidence.
+- **Tiny-loop agent opportunities** need one audience, one repeatable trigger, consented minimal context, a reviewable
+  prepared action, explicit approval before consequential action, an observable closure receipt, safe expiry/deletion,
+  and independent demand evidence. The safe default is prepare, not commit.
 - **Operational SEO checklists** are coverage ledgers, not ranking formulas: preserve conditional guidance, use GSC over
   `site:` counts for indexation, and require URL/template-level evidence before marking a check complete.
 - **Google AI visibility** stays evidence-bound: its Search Console report is Google-only and impression-only. Never invent

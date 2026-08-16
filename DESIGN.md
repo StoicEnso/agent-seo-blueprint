@@ -94,7 +94,8 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── directory-submission-tracker.csv # claimed-vs-verified lineage + submission states
 │   ├── startup-backlink-candidates.csv # 146 source mentions → 141 unverified leads
 │   ├── topic-architecture-map.csv  internal-link-ledger.csv
-│   └── press-release-distribution-registry.csv # creator claims vs destination-owned evidence
+│   ├── press-release-distribution-registry.csv # creator claims vs destination-owned evidence
+│   └── tiny-loop-opportunity-map.csv # consent, approval, closure, demand, and experiment gate
 └── _source/                        # GITIGNORED: transcripts + link to iCloud archive (private authority)
     └── .gitignore                  # ignores everything here
 ```
