@@ -20,6 +20,8 @@ Turn a validated topic into a small, useful page system with one clear conversio
 
 The source author reports a field study of 510 websites across 41 commercial searches, 40.4 million ranked keywords, and a 25,538-page crawl. It reports an association between deeper topic coverage and better positions, plus weak article-to-product linking on sampled sites. These are **self-reported observational findings**, not independently replicated causal proof. Do not turn them into a universal “topical authority score,” a guaranteed ranking lift, or a claim that backlinks no longer matter.
 
+The source video separately claims the project was “closing in on 49,000 AI mentions over three months.” It does not define an AI mention, identify the measured platforms, provide a baseline or control, separate branded from non-branded mentions, or isolate this playbook from other changes. Treat it as an unverified source-authored outcome, not evidence that topic architecture caused rankings, citations, traffic, or sales.
+
 ## Hard rules
 
 1. **Start with a real user journey and money page.** A cluster without a useful destination is content inventory, not architecture.
@@ -30,6 +32,7 @@ The source author reports a field study of 510 websites across 41 commercial sea
 6. **Authorship and research must be real.** Create an author page only when it helps readers verify a real creator. Create a statistics page only from original, transparent, reproducible work.
 7. **No authority dilution fiction.** A second topic is not automatically harmful or free. Validate demand, fit, quality capacity, and maintenance cost for each topic.
 8. **Measure the project, not the source anecdote.** Track crawlability, journeys, page/query outcomes, qualified traffic, and conversion evidence.
+9. **AI drafts need evidence review.** An agent may propose money pages, clusters, links, author surfaces, or study requirements. It must not invent authors, credentials, statistics, source quality, product fit, or publication approval.
 
 ## Procedure
 

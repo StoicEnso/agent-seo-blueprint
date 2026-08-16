@@ -94,6 +94,9 @@ class CreatorTacticIntakeDocsTests(unittest.TestCase):
         for phrase in (
             "self-reported observational findings",
             "not independently replicated causal proof",
+            "49,000 AI mentions over three months",
+            "not evidence that topic architecture caused rankings, citations, traffic, or sales",
+            "AI drafts need evidence review",
             "universal “topical authority score,”",
             "No thin support pages",
             "Navigation and footer links",
