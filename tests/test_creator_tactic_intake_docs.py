@@ -24,6 +24,9 @@ class CreatorTacticIntakeDocsTests(unittest.TestCase):
             "REJECTED_OR_PROHIBITED",
             "Manufactured consensus",
             "three-way exchanges designed to conceal coordination",
+            "residential-proxy account setups intended to misrepresent geography",
+            "https://x.com/jammer3k/status/2088618901902901633",
+            "not an SEO experiment",
             "adopt | revise | reject | inconclusive",
         ):
             self.assertIn(phrase, text)

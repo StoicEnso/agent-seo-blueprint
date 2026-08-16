@@ -5,7 +5,8 @@ operational_addition: true
 sources:
   - "https://x.com/hnshah/status/2088663964116983856"
   - "https://x.com/connorshowler/status/2088653427387584570"
-source_type: creator-authored product thesis and unverified SEO-claim list
+  - "https://x.com/jammer3k/status/2088618901902901633"
+source_type: creator-authored product thesis, unverified SEO-claim list, and prohibited platform-evasion recipe
 ---
 
 # Mechanic-First Growth Experiments
@@ -25,7 +26,7 @@ The source argues that cheaper software increases the value of judgment: teams c
 5. **Pre-register the decision.** Record the primary metric, guardrails, minimum sample or time window, success threshold, failure threshold, and kill condition before launch.
 6. **Keep external actions approval-gated.** Account creation, publishing, outreach, submissions, paid placement, and production changes need the normal user confirmation.
 7. **Keep the learning when the test fails.** A stopped experiment can still improve the mechanism library; do not hide negative or null results.
-8. **Refuse manipulation.** Manufactured consensus, negative SEO, parasite pages built mainly to exploit another site's signals, three-way exchanges designed to conceal coordination, click or traffic manipulation, fake personas, and policy evasion are not experiments to run.
+8. **Refuse manipulation.** Manufactured consensus, negative SEO, parasite pages built mainly to exploit another site's signals, three-way exchanges designed to conceal coordination, click or traffic manipulation, fake personas, device or location spoofing and residential-proxy account setups intended to misrepresent geography, and policy evasion are not experiments to run.
 
 ## Method
 
@@ -63,6 +64,8 @@ Assign one evidence grade:
 - `REJECTED_OR_PROHIBITED` — contradicted, too vague to test, or dependent on manipulation or policy evasion.
 
 A creator list that says backlinks matter, sandboxes exist, exact-match domains win, Google cannot read content, consensus can be manufactured, or exchanges are undetectable contains several different claims. Do not accept the list as a package. Split each claim, define its observable meaning, check primary evidence, and drop claims that cannot support an ethical bounded test. Allegations about a company or ranking system are not reusable operating guidance without reliable evidence.
+
+A device-setup recipe designed to make a platform treat an operator as if they were in another country is a platform-evasion recipe, not an SEO experiment. Do not turn it into an app, automation, or operating playbook.
 
 ### 3. Decompose the mechanism
 
