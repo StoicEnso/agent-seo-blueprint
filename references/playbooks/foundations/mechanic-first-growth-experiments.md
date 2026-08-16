@@ -2,8 +2,10 @@
 title: Mechanic-First Growth Experiments
 area: foundations
 operational_addition: true
-source: "https://x.com/hnshah/status/2088663964116983856"
-source_type: creator-authored product thesis
+sources:
+  - "https://x.com/hnshah/status/2088663964116983856"
+  - "https://x.com/connorshowler/status/2088653427387584570"
+source_type: creator-authored product thesis and unverified SEO-claim list
 ---
 
 # Mechanic-First Growth Experiments
@@ -23,6 +25,7 @@ The source argues that cheaper software increases the value of judgment: teams c
 5. **Pre-register the decision.** Record the primary metric, guardrails, minimum sample or time window, success threshold, failure threshold, and kill condition before launch.
 6. **Keep external actions approval-gated.** Account creation, publishing, outreach, submissions, paid placement, and production changes need the normal user confirmation.
 7. **Keep the learning when the test fails.** A stopped experiment can still improve the mechanism library; do not hide negative or null results.
+8. **Refuse manipulation.** Manufactured consensus, negative SEO, parasite pages built mainly to exploit another site's signals, three-way exchanges designed to conceal coordination, click or traffic manipulation, fake personas, and policy evasion are not experiments to run.
 
 ## Method
 
@@ -48,6 +51,18 @@ Record:
 - constraints that differ between the source and this project.
 
 Views, likes, bookmarks, rankings, links, or a creator's audience-growth number are context. They are not proof of causality.
+
+### 2A. Grade claims before they enter the backlog
+
+Assign one evidence grade:
+
+- `PRIMARY_SUPPORTED` — a current first-party policy, product surface, public dataset, or project-owned measurement supports the narrow claim;
+- `DIRECTLY_OBSERVED` — the project saw the state at a dated URL or in its own data, without a causal conclusion;
+- `THIRD_PARTY_STUDY` — method and data are available but are not project-owned or independently replicated;
+- `HYPOTHESIS` — plausible but not yet supported well enough to recommend; or
+- `REJECTED_OR_PROHIBITED` — contradicted, too vague to test, or dependent on manipulation or policy evasion.
+
+A creator list that says backlinks matter, sandboxes exist, exact-match domains win, Google cannot read content, consensus can be manufactured, or exchanges are undetectable contains several different claims. Do not accept the list as a package. Split each claim, define its observable meaning, check primary evidence, and drop claims that cannot support an ethical bounded test. Allegations about a company or ranking system are not reusable operating guidance without reliable evidence.
 
 ### 3. Decompose the mechanism
 

@@ -7,6 +7,8 @@ sources:
   - "https://x.com/borjafat/status/2088271101604295096"
 official_guidance:
   - "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+  - "https://developers.google.com/search/docs/appearance/sitelinks"
+  - "https://developers.google.com/search/docs/appearance/structured-data/article"
   - "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
 ---
 
@@ -106,7 +108,7 @@ Do not count menu/footer links as contextual ledger rows unless the audit explic
 
 ### 6. Add trust and evidence surfaces conditionally
 
-**Author page:** include real first-hand work, relevant credentials where required, studies/datasets, topic-grouped articles, and consistent external profiles. A bio is not a ranking button.
+**Author page:** include real first-hand work, relevant credentials where required, studies/datasets, topic-grouped articles, and consistent external profiles. Match visible bylines to accurate `Article` author markup when that schema is used. Google recommends author names and identifying author URLs to help it understand articles; this is not a ranking guarantee. A bio is not a ranking button.
 
 **Study/statistics page:** pre-register what will be counted, inclusion/exclusion rules, dates, method, full or appropriately shareable data, limitations, corrections, and update history. Track citations/links and qualified usage separately from rankings.
 

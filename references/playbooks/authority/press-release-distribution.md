@@ -18,17 +18,18 @@ Google explicitly lists optimized-anchor links in press releases distributed on 
 
 ## Source-claim assessment: openPR
 
-The creator post claimed one free release, up to five followed links, and indexing “in minutes.” Live checks on 2026-08-16 found a narrower and more conditional route:
+The creator post claimed one free release, up to five followed links, and indexing “in minutes.” Live checks on 2026-08-16 found a real free route, but the link and indexing claims are more conditional:
 
-- openPR's submission and FAQ pages state **one free press release per 30 days**;
-- its current FAQ states **up to three links**, not five;
+- openPR's current submission page states **one free press release per 30 days**;
+- that page also states **no more than five in-text backlinks**, so the five-link limit is supported as a submission rule;
+- another destination-owned page observed in the same review stated a three-link limit, so openPR's own pages were inconsistent and the effective limit must be checked in the live form before use;
 - it says releases do **not** go live immediately and are published on working days;
 - paid credits are available for extra releases, and the service page listed paid correction/deletion;
 - the service page prohibits duplicate/spam releases and content or images without rights;
-- one sampled public release returned a public 200 page and included an outbound link; browser inspection of that sample observed `index,follow,noarchive` and no `rel` attribute on the sampled outbound anchor; and
+- browser inspection of 15 fresh public releases found public `index,follow,noarchive` pages but no publisher-destination hyperlink in those samples; raw URLs were sometimes visible as text; and
 - openPR's own SEO and Google News statements are platform marketing claims. They do not guarantee indexation, Google News inclusion, referral traffic, rankings, or link value.
 
-The sampled page proves only that this page state existed at that time. Link attributes, robots directives, costs, terms, moderation, and templates are mutable and must be rechecked for each planned release.
+The sample proves only the state of those pages at that time. It does not prove that an allowed backlink becomes clickable, followed, permanent, indexed, or valuable. Link rendering, attributes, robots directives, costs, terms, moderation, and templates are mutable and must be rechecked for each planned release.
 
 ## Hard rules
 
@@ -138,7 +139,7 @@ Publication, index presence, a followed link, ranking change, media pickup, and 
 
 ## openPR decision as of 2026-08-16
 
-`VERIFIED_CANDIDATE`, not approved for submission. It has a destination-owned free route and public output. The social claims about five links and minute-level indexing are rejected. Recheck official terms, a fresh public sample, link attributes, correction cost, and topic eligibility before each use. Use only for genuine news with an owned evidence page and approved copy.
+`VERIFIED_CANDIDATE`, not approved for submission. It has a destination-owned free route and a current submission page that allows no more than five in-text backlinks. The claim that those links are reliably followed, plus the minute-level indexing claim, remains unproven. Recheck the live form, current first-party terms, a fresh public sample, actual link rendering and `rel`, correction cost, and topic eligibility before each use. Use only for genuine news with an owned evidence page and approved copy.
 
 ## Done condition
 

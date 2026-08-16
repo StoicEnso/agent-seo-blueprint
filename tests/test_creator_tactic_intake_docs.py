@@ -21,6 +21,9 @@ class CreatorTacticIntakeDocsTests(unittest.TestCase):
             "Run the smallest reversible test",
             "Pre-register the decision",
             "Views, likes, bookmarks, rankings, links",
+            "REJECTED_OR_PROHIBITED",
+            "Manufactured consensus",
+            "three-way exchanges designed to conceal coordination",
             "adopt | revise | reject | inconclusive",
         ):
             self.assertIn(phrase, text)
@@ -72,10 +75,12 @@ class CreatorTacticIntakeDocsTests(unittest.TestCase):
             / "press-release-distribution.md"
         ).read_text(encoding="utf-8")
         for phrase in (
-            "**up to three links**, not five",
+            "**one free press release per 30 days**",
+            "**no more than five in-text backlinks**",
+            "own pages were inconsistent",
             "do **not** go live immediately",
-            "one sampled public release",
-            "sampled page proves only",
+            "15 fresh public releases",
+            "does not prove that an allowed backlink becomes clickable",
             "No ranking or indexing promises",
             "optimized-anchor links in press releases",
             "External writes need approval",
@@ -92,7 +97,12 @@ class CreatorTacticIntakeDocsTests(unittest.TestCase):
         self.assertEqual(row["platform"], "openPR")
         self.assertEqual(row["verification_status"], "VERIFIED_CANDIDATE")
         self.assertIn("up to five followed links", row["source_claims_unverified"])
-        self.assertIn("up to three links", row["official_observations"])
+        self.assertIn("no more than five in-text backlinks", row["official_observations"])
+        self.assertIn("another destination-owned page said three links", row["official_observations"])
+        self.assertEqual(
+            row["sample_link_attribute_observed"],
+            "no_publisher_destination_hyperlink_observed_in_15_fresh_samples",
+        )
         self.assertIn("No claim of guaranteed indexation", row["notes"])
 
     def test_new_playbooks_are_routed_and_guarded(self):
