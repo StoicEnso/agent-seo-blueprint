@@ -121,7 +121,7 @@ Capture Agent Readiness diagnostics, AEO Visibility panel metrics, and AI Operat
 
 Do not call the product free without a current first-party pricing or entitlement check. Do not treat Cloudflare's readiness checks, Markdown support, crawler controls, or agent-protocol suggestions as Google ranking requirements. Any crawler-policy, authentication, security, or production change remains approval-gated.
 
-**Provider-specific citations.** When the user wants mention/citation evidence for ChatGPT, Perplexity, Claude, Microsoft Copilot, or another named provider, load `references/playbooks/maintenance/cross-platform-ai-citation-loop.md` and:
+**Provider-specific citations.** When the user wants mention/citation evidence for ChatGPT, Perplexity, Claude, Microsoft Copilot, or another named provider, load `references/playbooks/maintenance/cross-platform-ai-citation-loop.md`. Route repeatable panel validation, deterministic metrics, public social discovery, or a human approval queue to `workflows/ai-answer-visibility-loop.md`, then:
 
 - freeze a small, versioned buyer-question set instead of ad hoc prompts;
 - save the exact provider, surface, locale, language, account state, and retrieval date for each run;
@@ -253,6 +253,7 @@ Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparis
 
 - Authority/entity findings → `authority-and-links.md`.
 - Provider-specific citation/framing gaps → `category-citation-loop.md` when the issue is coverage/positioning rather than access alone.
+- Repeatable answer panels, separated metrics, public social evidence, and approval queues → `ai-answer-visibility-loop.md`.
 - Content fixes → `content-production.md`.
 - Indexing/rendering/technical issues → `site-audit.md` or `technical-seo-maintenance.md`.
 - Valid schema gaps → `schema-types-reference.md`.

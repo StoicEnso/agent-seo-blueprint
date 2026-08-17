@@ -62,7 +62,7 @@ while keeping the paid source material private and the distilled methodology sha
 │   │   ├── course-index.json       #   62 lessons: title, summary, takeaways, →playbook, →transcript
 │   │   └── course-index.md         #   human-readable mirror (chapter/lesson outline + links)
 │   ├── integrations/               # LAYER 3 docs: what each source gives + how to auth
-│   │   ├── ahrefs.md  gsc.md  ga4.md  serp.md  pagespeed.md
+│   │   ├── ahrefs.md  gsc.md  ga4.md  serp.md  pagespeed.md  social-fetch.md
 │   └── coverage-map.md             # all 62 lessons → playbook(s) that cover them (full-coverage proof)
 ├── workflows/                      # LAYER 2: job-oriented runbooks (compose playbooks + tools)
 │   ├── research-and-ideation.md
@@ -73,6 +73,7 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── technical-seo-maintenance.md
 │   ├── geo-audit.md
 │   ├── category-citation-loop.md
+│   ├── ai-answer-visibility-loop.md
 │   ├── full-master-plan.md
 │   └── full-funnel-rollout.md
 ├── agents/                         # ICP persona subagents (Opus)
@@ -85,10 +86,13 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── gsc_pull.py  ga4_pull.py  serp_capture.py  pagespeed_run.py
 │   ├── forecast.py  master_plan_workflow.mjs  master_plan_cascade.mjs
 │   ├── funnel_rollout_cascade.mjs
+│   ├── prompt_panel.py  social_fetch.py  geo_metrics.py
+│   ├── rank_social_opportunities.py  approval_queue.py
 │   ├── workspace.py                #   find/create per-project workspace + project.json
 │   └── report.py                   #   render audit/keyword/brief artifacts from data
 ├── assets/                         # templates + source-lead research assets
 │   ├── audit-report.md  content-brief.md  keyword-map.csv  outreach-email.md  monitoring-snapshot.md
+│   ├── ai-answer-panel.csv  ai-answer-run.json
 │   ├── directory-discovery-sources.csv # dated registry of third-party queue-building sources
 │   ├── directory-submission-tracker.csv # claimed-vs-verified lineage + submission states
 │   └── startup-backlink-candidates.csv # 146 source mentions → 141 unverified leads
@@ -125,8 +129,8 @@ points → artifacts to emit (into the workspace). The five:
    citation observations, Google-update detection/response, and "is it paying off" measurement; on-demand plus optional
    scheduled (via the `schedule`/`loop` skills) with a recommended cadence chosen at setup.
 
-Operational additions compose around these five core pipelines: `technical-seo-maintenance.md`, `geo-audit.md`, and
-`category-citation-loop.md` are bounded deep-dive runbooks that route findings back into the core workflows. The 37-check
+Operational additions compose around these five core pipelines: `technical-seo-maintenance.md`, `geo-audit.md`,
+`category-citation-loop.md`, and `ai-answer-visibility-loop.md` are bounded deep-dive runbooks that route findings back into the core workflows. The 37-check
 SEO ledger routes evidence across audit/research/content/monitoring, the directory discovery-source registry and startup
 candidate asset feed a provenance-preserving, first-party-verified directory/entity path, Google Generative AI impression
 evidence remains a separate monitoring layer with explicit metric/rollout limitations, Cloudflare's readiness checks,
@@ -153,6 +157,10 @@ citation pools separate from convertible traffic.
   secrets stay in environment variables and the helper never prints them.
 - **PageSpeed/Lighthouse**: `pagespeed_run.py` (API or CLI) for Core Web Vitals in the audit; `cwv-thresholds.md` keeps
   current field/lab thresholds and interpretation boundaries centralized.
+- **Public social evidence**: `social_fetch.py` provides a cached, read-only Reddit RSS/Atom path with a bounded public
+  JSON fallback for thread reads. The scoring and approval scripts rank research leads but cannot authorise or execute a post.
+- **AI answer panels**: `prompt_panel.py` validates stable buyer-question versions; `geo_metrics.py` keeps provider
+  observations and sample sizes separate and refuses incomplete evidence contracts.
 - Each integration ships a reference doc: what data it provides, how to authenticate, browser-fallback steps, rate
   limits, and which workflows/playbooks consume it.
 
