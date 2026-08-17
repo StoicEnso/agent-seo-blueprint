@@ -37,6 +37,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, cross-platform commercial-intent distribution, on-page, draft QA | `workflows/content-production.md` |
 | Plan a topic cluster with distinct page roles and an inspectable contextual-link ledger | Load `references/playbooks/content/topic-architecture-and-internal-link-ledger.md`, then run `workflows/research-and-ideation.md` and `workflows/content-production.md` |
 | Audit a live site (technical + on-page + content) with a prioritized fix list | `workflows/site-audit.md` |
+| Audit Google Business Profile and local SEO readiness without changing the listing | Load `references/playbooks/maintenance/local-business-profile-audit.md`, copy `assets/local-business-profile-audit.csv`, then route website fixes to `workflows/site-audit.md` and measurement to `workflows/monitoring.md` |
 | Run recurring technical SEO/schema/CWV/indexation maintenance | `workflows/technical-seo-maintenance.md` |
 | Audit AI-search/GEO readiness, including current commerce/entity data when applicable | `workflows/geo-audit.md` |
 | Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md` |
@@ -76,7 +77,8 @@ Distilled, original methodology grouped by area. Load the specific file a step n
 - **foundations/** — seo-philosophy, seo-and-ai-future, google-generative-ai-search-official, seo-process-overview,
   adversarial-agent-orchestration, and mechanic-first-growth-experiments
 - **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
-  measuring-seo-results, evidence-backed operational SEO, technical maintenance, GSC 4–20 opportunity mining,
+  measuring-seo-results, evidence-backed operational SEO, technical maintenance, local Business Profile audits,
+  GSC 4–20 opportunity mining,
   Google Generative AI visibility measurement, cross-platform AI citation loops, AI-search commerce readiness, and
   Cloudflare Agent Readiness/AEO evidence, and AI Overviews/SERP-feature interpretation
 
@@ -127,6 +129,12 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
 
 - **Irreversible actions** (publishing content, sending outreach/email, submitting forms, disavow uploads): DRAFT only,
   then get explicit user confirmation before acting. Never auto-send.
+- **Local Business Profile work** is read-only by default. Categories, hours, service areas, attributes, services,
+  review replies, posts, photos, and profile details must remain truthful and policy-compliant; draft proposed changes
+  and get explicit approval before editing. Treat competitor review cadence, keyword-rich review/reply language,
+  service-description wording, posting frequency, and local rank movement as observations or hypotheses—not guaranteed
+  ranking levers. Never incentivize reviews, coach customers to insert keywords/locations, fabricate local presence, or
+  spoof device/location signals.
 - **Article QA** uses evidence-backed claims, hard-fail checks, and at most two automated revision passes. A score never
   overrides fabricated/unsupported claims, product-truth violations, intent mismatch, or the human publication gate.
 - **Editorial link intent** never licenses credit-based reciprocal-link networks, automated exchange articles, or followed-link quid pro quo. Paid placements require truthful disclosure and appropriately qualified links such as `sponsored`/`nofollow`; provider citation observations are targeting evidence, not link value, traffic, conversion, or causality.

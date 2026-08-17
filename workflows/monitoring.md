@@ -8,6 +8,7 @@ playbooks:
   - references/playbooks/maintenance/keyword-intent-evolution.md
   - references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md
   - references/playbooks/maintenance/seo-operational-checklist.md
+  - references/playbooks/maintenance/local-business-profile-audit.md
   - references/playbooks/maintenance/google-generative-ai-visibility.md
   - references/playbooks/maintenance/cloudflare-agent-readiness-and-aeo.md
   - references/playbooks/maintenance/cross-platform-ai-citation-loop.md
@@ -29,6 +30,7 @@ outputs:
   - monitoring/<date>_google-ai-visibility.json # optional Google AI impression snapshot
   - monitoring/<date>_cloudflare-agent-aeo.json # optional Cloudflare readiness, synthetic panel, and operator snapshot
   - monitoring/<date>_ai-citation-observations.json # optional non-Google provider citation snapshot
+  - monitoring/<date>_local-business-profile.json # optional local-profile visibility and business-outcome snapshot
 ---
 
 # Monitoring
@@ -76,6 +78,8 @@ outputs:
 
 11. **Interpret cross-platform citation observations without overclaiming.** When step 3 produced a provider citation snapshot, compare brand mention presence, owned versus third-party cited domains, newly cited or dropped URLs, and page-role coverage by provider. Correlate those observations separately with referrals, sessions, leads, assisted conversions, transactions, and revenue; never convert citation observations into impressions, clicks, CTR, conversions, or causal proof.
 
+12. **Measure approved local-profile work separately.** When a prior audit used `references/playbooks/maintenance/local-business-profile-audit.md`, preserve the original baseline and pre-registered 4–8 week window. Save available profile views/impressions, calls, messages, direction requests, bookings, and website clicks alongside dated query observations with the same location/device context. Save leads, conversions, and revenue as separate business outcomes. Record profile changes, review activity, seasonality, promotions, website changes, competitor movement, and Google updates as confounders. One before/after movement is not causal proof.
+
 **Decision points.**
 - **Cadence** (asked at setup): weekly inputs / monthly outputs / quarterly analysis is the recommended default — but the user chooses.
 - **On-demand vs scheduled** → run now (steps 3–7) vs register via `schedule`/`loop` (user-confirmed).
@@ -92,5 +96,6 @@ outputs:
 - `monitoring/<date>_google-ai-visibility.json` — optional impression-only Google AI snapshot with explicit limitations.
 - `monitoring/<date>_cloudflare-agent-aeo.json` — optional Cloudflare snapshot with readiness, synthetic panel, and operator-activity lanes kept separate.
 - `monitoring/<date>_ai-citation-observations.json` — optional provider-specific citation observation snapshot with explicit metric limitations.
+- `monitoring/<date>_local-business-profile.json` — optional local-profile snapshot that keeps visibility, profile interactions, leads, conversions, and revenue separate.
 
-**Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, or citation observations as clicks or revenue.
+**Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. If local-profile work was in scope, its profile visibility, interaction, and business-outcome metrics remain separate and the recorded limitations rule out causal overclaiming. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, citation observations, or local rank observations as clicks or revenue.

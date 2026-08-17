@@ -163,6 +163,70 @@ class CreatorTacticIntakeDocsTests(unittest.TestCase):
         )
         self.assertIn("No claim of guaranteed indexation", row["notes"])
 
+    def test_local_business_profile_intake_is_evidence_gated(self):
+        text = (
+            ROOT
+            / "references"
+            / "playbooks"
+            / "maintenance"
+            / "local-business-profile-audit.md"
+        ).read_text(encoding="utf-8")
+        for phrase in (
+            "https://x.com/bloggersarvesh/status/2088983373859725755",
+            "relevance, distance, and prominence",
+            "`$100k/month` in `90 days` framing is unverified",
+            "does **not** publish a review-velocity formula",
+            "No ranking or revenue guarantees",
+            "Do not incentivize reviews",
+            "Do not script the reviewer's keywords",
+            "Posting frequency is a hypothesis",
+            "Reject the obsolete claim that all posts expire after seven days",
+            "no public change occurred without approval",
+            "visibility from leads, conversions, and revenue",
+        ):
+            self.assertIn(phrase, text)
+
+        with (ROOT / "assets" / "local-business-profile-audit.csv").open(
+            newline="", encoding="utf-8"
+        ) as handle:
+            fields = set(csv.DictReader(handle).fieldnames or [])
+        self.assertTrue(
+            {
+                "location_context",
+                "observed_at",
+                "source_claim",
+                "evidence_grade",
+                "official_evidence_or_project_observation",
+                "hypothesis_or_unknown",
+                "truth_basis",
+                "policy_risk",
+                "approval_state",
+                "visibility_metric",
+                "business_outcome_metric",
+            }.issubset(fields)
+        )
+
+    def test_local_business_profile_playbook_is_routed_and_read_only(self):
+        skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        audit = (ROOT / "workflows" / "site-audit.md").read_text(encoding="utf-8")
+        monitoring = (ROOT / "workflows" / "monitoring.md").read_text(
+            encoding="utf-8"
+        )
+        checklist = (
+            ROOT
+            / "references"
+            / "playbooks"
+            / "maintenance"
+            / "seo-operational-checklist.md"
+        ).read_text(encoding="utf-8")
+
+        for text in (skill, readme, audit, monitoring, checklist):
+            self.assertIn("local-business-profile-audit", text)
+        self.assertIn("read-only by default", skill)
+        self.assertIn("require explicit approval", audit)
+        self.assertIn("One before/after movement is not causal proof", monitoring)
+
     def test_new_playbooks_are_routed_and_guarded(self):
         skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
         research = (ROOT / "workflows" / "research-and-ideation.md").read_text(

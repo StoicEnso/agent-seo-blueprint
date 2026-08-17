@@ -8,7 +8,7 @@ into a per-project workspace.
 Think of it as two planes that reference each other:
 
 1. **Knowledge layer** — 36 distilled, original-wording playbooks covering the entire course (62 lessons, proven
-   coverage), operational article-production QA, directory/entity-submission, and 37-check SEO coverage playbooks,
+   coverage), operational article-production QA, directory/entity-submission, local Business Profile audits, and 37-check SEO coverage playbooks,
    plus a searchable course index so any agent can answer
    *"what does the course say about X?"* and pull the right playbook.
 2. **Pipeline layer** — 10 workflows total: 5 core pipelines, 3 operational deep dives, and 2 end-to-end planning
@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-62-playbooks)
+- [The knowledge layer](#the-knowledge-layer-63-playbooks)
 - [The workflows](#the-workflows-10-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **62 playbooks**: 36 original course distillations plus 26 operational additions for article QA, schema/E-E-A-T,
+- **63 playbooks**: 36 original course distillations plus 27 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led press releases,
   deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,12 +90,12 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 26 operational additions
+  playbooks/                   # 36 course distillations + 27 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (15)       # editorial intent, press releases, directories, Wikipedia, affiliate, outreach…
     foundations/     (6)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
-    maintenance/     (12)       # updates, ROI, technical SEO, SERP features, and platform-scoped AI evidence
+    maintenance/     (13)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
@@ -121,13 +121,14 @@ assets/                        # fill-in templates emitted into the workspace
   startup-backlink-candidates.csv  # 146 source mentions → 141 unverified research leads
   topic-architecture-map.csv  internal-link-ledger.csv
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
+  local-business-profile-audit.csv
   outreach-email.md  monitoring-snapshot.md
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```
 
 ---
 
-## The knowledge layer (62 playbooks)
+## The knowledge layer (63 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -152,6 +153,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
+`local-business-profile-audit` ·
 `gsc-position-4-20-opportunity-mining` · `google-generative-ai-visibility` · `ai-search-commerce-readiness` ·
 `cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop` · `ai-overviews-and-serp-features`
 
@@ -169,7 +171,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 |---|---|---|
 | **research-and-ideation** | niche find/validate → keyword research → competitor gaps → match-and-exceed → keyword→sitemap/topic architecture; can evaluate observed tactics and summon ICP personas | keyword map, sitemap, optional topic/link ledgers |
 | **content-production** | content-type selection → brief/topic architecture → optional cross-platform commercial-intent map → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional topic/link ledgers, distribution map, source packet, review draft, QA report |
-| **site-audit** | technical + on-page + content + opportunity + authority audit | prioritized, severity-ranked fix list |
+| **site-audit** | technical + on-page + content + opportunity + authority audit; optional read-only local Business Profile pass | prioritized, severity-ranked fix list; optional local-profile ledger |
 | **authority-and-links** | pick tactics, including bounded press-release distribution → ranked opportunity list → **drafted** outreach/releases (never auto-sent) | opportunity list, outreach drafts, optional press-release plan |
 | **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI, Cloudflare agent/AEO, and provider citation evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
