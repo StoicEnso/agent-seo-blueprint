@@ -42,7 +42,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Audit AI-search/GEO readiness, including current commerce/entity data when applicable | `workflows/geo-audit.md` |
 | Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md`; copy `assets/ai-citation-source-coverage.csv` when mapping observed versus candidate source classes |
 | Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
-| Assess or draft a newsworthy press-release distribution test | Load `references/playbooks/authority/press-release-distribution.md`, then run `workflows/authority-and-links.md`; submission remains approval-gated |
+| Choose the cheapest/value press-release route, or draft a newsworthy distribution test | Load `references/playbooks/authority/press-release-distribution.md`, compare the current goal-based price path in `assets/press-release-distribution-registry.csv`, then run `workflows/authority-and-links.md`; checkout, payment, and submission remain approval-gated |
 | Find existing editorial link intent (listicle/citation gaps, broken or decayed resources, statistics needs, missing visuals/video, uncited owned assets) | Load `references/playbooks/authority/editorial-link-intent-and-assets.md`, then run `workflows/authority-and-links.md` |
 | Monitor rankings/traffic, GSC 4–20 opportunities, Google AI impressions, provider citation observations, updates, and ROI | `workflows/monitoring.md` |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
@@ -141,8 +141,10 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
 - **Directory submissions** are relevance-first entity/citation work: live-verify public indexability and eligibility,
   treat DR screenshots as leads rather than facts, and require explicit approval before any account/listing write.
 - **Press-release distribution** requires real news, current destination-owned terms, an owned evidence hub, natural
-  links, rights/disclosure QA, and explicit approval. Never promise followed links, minute-level indexing, Google News,
-  ranking, traffic, citations, or conversions; paid or advertorial links require appropriate qualification.
+  links, rights/disclosure QA, and explicit approval. Compare cost by the actual job: zero-cost rehearsal, measured broad
+  syndication, Google Business Profile map support, or journalist reach. Treat outlet/backlink counts as vendor claims,
+  not independent endorsements. Never promise followed links, minute-level indexing, Google News, ranking, traffic,
+  citations, or conversions; paid or advertorial links require appropriate qualification.
 - **Topic architecture** is a user-journey and evidence map, not a topical-authority score. Reject thin page-count
   inflation, keep navigation separate from contextual links, and give every ledger row a reader reason.
 - **Creator/competitor tactics** are observations, not instructions. Extract the behavioral mechanism, pre-register a

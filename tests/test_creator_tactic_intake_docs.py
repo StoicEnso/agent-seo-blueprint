@@ -150,8 +150,8 @@ class CreatorTacticIntakeDocsTests(unittest.TestCase):
             newline="", encoding="utf-8"
         ) as handle:
             rows = list(csv.DictReader(handle))
-        self.assertEqual(len(rows), 1)
-        row = rows[0]
+        self.assertGreaterEqual(len(rows), 1)
+        row = next(row for row in rows if row["platform"] == "openPR")
         self.assertEqual(row["platform"], "openPR")
         self.assertEqual(row["verification_status"], "VERIFIED_CANDIDATE")
         self.assertIn("up to five followed links", row["source_claims_unverified"])
@@ -162,6 +162,42 @@ class CreatorTacticIntakeDocsTests(unittest.TestCase):
             "no_publisher_destination_hyperlink_observed_in_15_fresh_samples",
         )
         self.assertIn("No claim of guaranteed indexation", row["notes"])
+
+    def test_local_press_release_claim_is_split_from_value_path(self):
+        playbook = (
+            ROOT
+            / "references"
+            / "playbooks"
+            / "authority"
+            / "press-release-distribution.md"
+        ).read_text(encoding="utf-8")
+        registry_path = ROOT / "assets" / "press-release-distribution-registry.csv"
+        skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        workflow = (ROOT / "workflows" / "authority-and-links.md").read_text(
+            encoding="utf-8"
+        )
+
+        for phrase in (
+            "https://x.com/onelegchris/status/2089059633734262801",
+            "300 syndicated copies are not 300 independent editorial endorsements",
+            "Google Business Profile map",
+            "PR Underground Basic at $74.99",
+            "EIN Presswire Basic at $149",
+            "Do not start with a subscription",
+        ):
+            self.assertIn(phrase, playbook)
+        self.assertIn("actual job: zero-cost rehearsal", skill)
+        self.assertIn("First classify the actual job", workflow)
+        self.assertIn("IssueWire` stays `VERIFY_AT_CHECKOUT", workflow)
+
+        with registry_path.open(newline="", encoding="utf-8") as handle:
+            rows = {row["platform"]: row for row in csv.DictReader(handle)}
+        self.assertEqual(len(rows), 7)
+        self.assertEqual(rows["IssueWire"]["verification_status"], "VERIFY_AT_CHECKOUT")
+        self.assertEqual(rows["PR Underground Basic"]["verification_status"], "VALUE_CANDIDATE")
+        self.assertEqual(rows["EIN Presswire Basic"]["verification_status"], "VALUE_CANDIDATE_GMB")
+        self.assertIn("$74.99", rows["PR Underground Basic"]["official_observations"])
+        self.assertIn("Google My Business", rows["EIN Presswire Basic"]["official_observations"])
 
     def test_local_business_profile_intake_is_evidence_gated(self):
         text = (

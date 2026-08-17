@@ -3,6 +3,8 @@ title: Evidence-Led Press Release Distribution
 area: authority
 operational_addition: true
 source: "https://x.com/jespernissenseo/status/2088631252937048489"
+supporting_sources:
+  - "https://x.com/onelegchris/status/2089059633734262801"
 official_guardrails:
   - "https://developers.google.com/search/docs/essentials/spam-policies#link-spam"
   - "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
@@ -30,6 +32,39 @@ The creator post claimed one free release, up to five followed links, and indexi
 - openPR's own SEO and Google News statements are platform marketing claims. They do not guarantee indexation, Google News inclusion, referral traffic, rankings, or link value.
 
 The sample proves only the state of those pages at that time. It does not prove that an allowed backlink becomes clickable, followed, permanent, indexed, or valuable. Link rendering, attributes, robots directives, costs, terms, moderation, and templates are mutable and must be rechecked for each planned release.
+
+## Source-claim assessment: “300-site local SEO” release
+
+The second creator post claimed that one press release creates roughly 300 backlinks and 300 referring domains, that an embedded Google Business Profile map causes every pickup to link to the profile, and that this alone moves a local business past 90% of competitors. Its 26.5-second silent video repeats those claims as slides, but does not identify the vendor, package, outlet list, public release, link report, anchor/`rel` state, comparison set, rankings, leads, or a control.
+
+Treat the post as a provider-discovery lead, not proof:
+
+- 300 syndicated copies are not 300 independent editorial endorsements;
+- a vendor placement count is not a verified count of live, indexable referring domains;
+- repeated copies can be canonicalized, removed, blocked, unlinked, `nofollow`, `sponsored`, or low-value;
+- an embedded map in the source release does not prove every recipient republishes it or links to the Google Business Profile;
+- total competitor referring-domain counts do not prove that adding syndicated domains improves local-pack rankings; and
+- one release cannot establish that the business moved past 90% of competitors, or that any movement came from the release.
+
+If the map is material to the test, verify it in the exact checkout/package and one comparable live pickup before purchase. Record the final public map/link state separately from the vendor's package description.
+
+## Cost/value route as of 2026-08-17
+
+Current first-party pricing created a clearer decision path. Prices, inclusions, outlet counts, and checkout state are mutable, so recheck the exact package immediately before approval.
+
+| Goal | Candidate | Observed first-party offer | Decision |
+|---|---|---|---|
+| No-cost process test | openPR | one free release per 30 days | Cheapest. Use only to test drafting, moderation, publication, and measurement. It is not evidence of 300-site syndication or valuable links. |
+| Lowest published single-release price | IssueWire | landing page showed first PR free and $21 for one release; FAQ also named $21 and $45 tiers, while the comparison cards rendered inconsistent `$0` values | `VERIFY_AT_CHECKOUT`. Do not recommend or pay until the selected package, outlet count, map support, refund, and final total are visible together. |
+| Low-cost hosted/syndicated release | PRLog | free hosted option; $29 Basic; $49 Premium with a page claim of 200+ industry/news sites; $99 Premium2 with a page claim of 500+ | Useful low-cost candidate when a public release page is enough. Treat network counts as vendor claims and sample live pickups first. |
+| Best low-cost broad-syndication test | PR Underground Basic | $74.99 for one release; page claims 300+ news sites, one-business-day publishing, and a PDF placement report | Best value for a **single measured 300-site distribution test** when a map embed is not required. The outlet count is a vendor distribution promise, not 300 valuable backlinks. |
+| Best lower-cost match for the Google Business Profile map requirement | EIN Presswire Basic | $149 for one release; pricing page lists an embedded Google My Business listing, three keyword-anchor links, AP News placement, and relevance-based USA TODAY Network/radio-TV distribution | Best evidenced fit for the specific map requirement. Buy only after the checkout confirms the map feature and a sampled pickup preserves it. Do not infer 300 independent links. |
+| Direct journalist/PR Newswire reach | eReleases Buzz Builder | $399; Cision PR Newswire distribution plus direct-to-journalist targeting features | Better fit when the goal is real editorial pickup, not the cheapest syndication/backlink count. |
+| Done-for-you recurring local-SEO distribution | Press Advantage Foundation | $349/month for two releases; page claims 596+ placements per release and Google Business Profile map embeds | Defer for the first pilot. It costs more, requires a recurring plan, and its backlink/AI/ranking statements are vendor marketing claims that need independent measurement. |
+
+### Recommendation rule
+
+Use **openPR** for a zero-cost process rehearsal. Use **PR Underground Basic at $74.99** for the cheapest broadly syndicated one-release test with a placement report. If the Google Business Profile map is essential, use **EIN Presswire Basic at $149** as the better first-party-evidenced value option. Use **eReleases at $399** only when journalist reach is the actual job. Do not start with a subscription, buy in bulk, or select a package from outlet-count claims alone.
 
 ## Hard rules
 
