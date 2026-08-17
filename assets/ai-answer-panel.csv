@@ -1,0 +1,11 @@
+prompt_id,prompt_version,prompt_text,intent,funnel_stage,segment,locale,priority,business_value,evidence_source,active,created_at,retired_at,change_reason
+q01,1,"What is the best [category] for [segment] who need [job]?",commercial,bofu,[segment],en-GB,high,"Describe the purchase or conversion value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,
+q02,1,"Which [category] tools are best for [use case]?",commercial,bofu,[segment],en-GB,high,"Describe the purchase or conversion value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,
+q03,1,"What are the best alternatives to [competitor] for [job]?",competitor,bofu,[segment],en-GB,high,"Describe the purchase or conversion value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,
+q04,1,"Compare [brand] and [competitor] for [use case].",competitor,bofu,[segment],en-GB,high,"Describe the purchase or conversion value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,
+q05,1,"How can I solve [problem] without [constraint]?",problem,mofu,[segment],en-GB,medium,"Describe the assisted-conversion value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,
+q06,1,"What should I look for when choosing [category]?",problem,mofu,[segment],en-GB,medium,"Describe the evaluation value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,
+q07,1,"Is [brand] suitable for [specific use case]?",branded,bofu,[segment],en-GB,high,"Describe the conversion or retention value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,
+q08,1,"How much does [category] cost for [segment]?",commercial,bofu,[segment],en-GB,high,"Describe the pricing-page value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,
+q09,1,"Can [category] produce [required outcome]?",problem,mofu,[segment],en-GB,medium,"Describe the product-education value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,
+q10,1,"Which [category] has [required capability] and [proof requirement]?",commercial,bofu,[segment],en-GB,high,"Describe the purchase or conversion value","Sales/support/GSC/customer research",true,YYYY-MM-DD,,

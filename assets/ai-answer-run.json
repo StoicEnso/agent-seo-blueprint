@@ -1,0 +1,42 @@
+{
+  "run_id": "provider-date-question-version-sample",
+  "prompt_id": "q01",
+  "prompt_version": 1,
+  "prompt_text": "Exact buyer question",
+  "provider": "named_provider",
+  "model": "model_name_or_unknown",
+  "surface": "web_or_api_surface",
+  "locale": "en-US",
+  "language": "en",
+  "account_state": "logged_out_or_named_account_state",
+  "personalization_state": "unknown",
+  "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "status": "ok",
+  "raw_answer": "Exact answer text or durable raw-answer locator when platform terms require it",
+  "raw_evidence_path": "monitoring/answers/provider/date/evidence-file",
+  "mentions": [
+    {
+      "entity_id": "canonical-entity-id",
+      "entity_name": "Canonical Entity Name",
+      "position": 1,
+      "sentiment": "positive|neutral|negative|mixed|unknown",
+      "evidence_excerpt": "Minimum excerpt needed to verify the parse"
+    }
+  ],
+  "citations": [
+    {
+      "url": "https://example.com/page",
+      "domain": "example.com",
+      "source_type": "owned|editorial|community|directory|other",
+      "owned": false,
+      "page_role": "problem|use_case|comparison|pricing|trust|case_study|implementation|other"
+    }
+  ],
+  "parser_version": "parser-name-version",
+  "parse_review_state": "reviewed|needs_review|unreviewed",
+  "limitations": [
+    "mutable_answer",
+    "no_impression_or_click_count",
+    "no_causality"
+  ]
+}
