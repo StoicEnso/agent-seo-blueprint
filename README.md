@@ -11,7 +11,7 @@ Think of it as two planes that reference each other:
    coverage), operational article-production QA, directory/entity-submission, local Business Profile audits, and 37-check SEO coverage playbooks,
    plus a searchable course index so any agent can answer
    *"what does the course say about X?"* and pull the right playbook.
-2. **Pipeline layer** — 10 workflows total: 5 core pipelines, 3 operational deep dives, and 2 end-to-end planning
+2. **Pipeline layer** — 11 workflows total: 5 core pipelines, 4 operational deep dives, and 2 end-to-end planning
    workflows that compose those
    playbooks, drive the data integrations, summon customer-persona subagents for ideation, and produce concrete
    deliverables.
@@ -27,7 +27,7 @@ Think of it as two planes that reference each other:
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
 - [The knowledge layer](#the-knowledge-layer-63-playbooks)
-- [The workflows](#the-workflows-10-runbooks)
+- [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
 - [Scripts reference](#scripts-reference)
@@ -51,9 +51,9 @@ Think of it as two planes that reference each other:
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led press releases,
   deterministic planning, SERP-regime grading, and adversarial rollout design;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
-- **10 workflows**: five core pipelines, three operational deep dives, and two end-to-end planning workflows for a full
+- **11 workflows**: five core pipelines, four operational deep dives, and two end-to-end planning workflows for a full
   SEO master plan and a BOFU→MOFU→TOFU rollout.
-- **7 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, and CWV thresholds.
+- **8 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, CWV thresholds, and public social research.
 - **ICP persona subagents** — summon Opus subagents that role-play ideal customers to ideate content angles, surface the
   exact phrases people search, and pressure-test niches.
 - **Per-project workspace** — config + dated artifacts (audits, keyword maps, briefs, source packets, drafts,
@@ -99,12 +99,13 @@ references/
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
-  integrations/                # 7 source/threshold references, including DataForSEO and CWV
+  integrations/                # 8 source/threshold references, including DataForSEO, CWV, and public social research
   coverage-map.md              # proof: every lesson → its playbook(s)
-workflows/                     # 5 core pipelines + 3 operational deep dives + 2 planning workflows
+workflows/                     # 5 core pipelines + 4 operational deep dives + 2 planning workflows
   research-and-ideation.md  content-production.md  site-audit.md
   authority-and-links.md    monitoring.md         technical-seo-maintenance.md
   geo-audit.md              category-citation-loop.md
+  ai-answer-visibility-loop.md
   full-master-plan.md       full-funnel-rollout.md
 agents/
   icp-persona.md               # launcher template for ONE persona subagent
@@ -115,6 +116,7 @@ scripts/                       # Python 3 stdlib only — no pip deps
   ahrefs_client.py  gsc_pull.py  ga4_pull.py           # data (API or browser fallback)
   dataforseo_client.py  serp_capture.py  pagespeed_run.py
   forecast.py  master_plan_workflow.mjs  master_plan_cascade.mjs  funnel_rollout_cascade.mjs
+  prompt_panel.py  social_fetch.py  geo_metrics.py  rank_social_opportunities.py  approval_queue.py
 assets/                        # fill-in templates emitted into the workspace
   audit-report.md  content-brief.md  keyword-map.csv
   directory-discovery-sources.csv  directory-submission-tracker.csv
@@ -163,7 +165,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 
 ---
 
-## The workflows (10 runbooks)
+## The workflows (11 runbooks)
 
 Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `outputs`) and concrete numbered steps.
 
@@ -177,6 +179,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
 | **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare and provider-specific citation lanes | readiness report and raw findings |
 | **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific buyer-question citations | category/citation baseline and loop plan |
+| **ai-answer-visibility-loop** | freeze buyer questions, measure provider-separated answer visibility, collect public social evidence, and build a human approval queue | answer metrics, social candidates, non-executing approval queue |
 | **full-master-plan** | build an evidence-grounded end-to-end SEO plan; use the adversarial cascade for exhaustive work | master plan, executive summary, source data, reconciled forecast |
 | **full-funnel-rollout** | extend an existing plan into gated BOFU→MOFU→TOFU delivery waves | rollout plan, funnel map, entry/exit/kill gates |
 
@@ -196,6 +199,7 @@ present), rate limits/ToS notes, and the **JSON output shape** that plugs into `
 | Live SERP | `scripts/serp_capture.py` | browser only (Chrome) | match-and-exceed, intent, content-type research |
 | PageSpeed / Lighthouse | `scripts/pagespeed_run.py` | public API (key optional) | Core Web Vitals for audits |
 | DataForSEO | `scripts/dataforseo_client.py` | API if `DATAFORSEO_LOGIN` + `DATAFORSEO_PASSWORD` | bulk keywords, SERPs, backlinks, and structured research |
+| Public social research | `scripts/social_fetch.py` | Reddit RSS/Atom in v0.1 | public thread/search evidence; read-only, cached, no authentication |
 
 The skill **never** enters passwords or completes OAuth itself — it directs you to log in / authorize, then reads the
 session. Secrets are referenced by env-var name in the workspace `project.json`, never stored in plaintext.
@@ -241,6 +245,9 @@ python3 scripts/ahrefs_client.py overview --domain example.com # needs AHREFS_AP
 python3 scripts/serp_capture.py "ai headshot generator"        # prints the Chrome capture procedure
 python3 scripts/dataforseo_client.py --help                     # bulk structured SEO data when credentials exist
 python3 scripts/forecast.py --help                              # deterministic click-curve + AIO-haircut forecast
+python3 scripts/prompt_panel.py panel.csv --json                # validate a versioned buyer-question panel
+python3 scripts/social_fetch.py fetch <reddit-thread-url>       # normalized public Reddit evidence
+python3 scripts/geo_metrics.py answer-runs.jsonl --brand acme   # provider-separated answer metrics
 ```
 
 ---
@@ -284,6 +291,7 @@ Ask the agent things like:
 - *"Which pages appear in Google AI Overviews or AI Mode?"* → `monitoring` + `google-generative-ai-visibility` → impression-only page/country/date/device evidence with limitations.
 - *"What does Cloudflare show about agent access, AI citations, and operator traffic?"* → `geo-audit` or `monitoring` + `cloudflare-agent-readiness-and-aeo` → three separate evidence lanes with access state and limitations.
 - *"Show me how ChatGPT/Copilot/Perplexity/Claude cite us for buyer questions."* → `geo-audit` or `category-citation-loop` + `cross-platform-ai-citation-loop` → provider-specific observation sets with separated metrics.
+- *"Track AI answers and find relevant Reddit discussions without posting."* → `ai-answer-visibility-loop` → a versioned question panel, public social evidence, separated metrics, ranked research candidates, and a non-executing approval queue.
 - *"Which queries rank in positions 4–20 and are worth improving?"* → `monitoring` + `gsc-position-4-20-opportunity-mining`.
 - *"Audit whether my product data and checkout are ready for AI agents."* → `geo-audit` + `ai-search-commerce-readiness`.
 - *"Set up a recurring technical SEO maintenance pass."* → `technical-seo-maintenance`.

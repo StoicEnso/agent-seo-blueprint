@@ -80,7 +80,7 @@ class CrossPlatformCitationLoopDocsTest(unittest.TestCase):
     def test_readme_counts_match_repo(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertEqual(len(PLAYBOOKS), 63)
-        self.assertEqual(len(WORKFLOWS), 10)
+        self.assertEqual(len(WORKFLOWS), 11)
         self.assertIn("## The knowledge layer (63 playbooks)", readme)
         self.assertIn("#the-knowledge-layer-63-playbooks", readme)
         self.assertIn("**63 playbooks**", readme)
@@ -91,8 +91,9 @@ class CrossPlatformCitationLoopDocsTest(unittest.TestCase):
         self.assertIn("authority/       (15)", readme)
         self.assertIn("foundations/     (6)", readme)
         self.assertIn("maintenance/     (13)", readme)
-        self.assertIn("## The workflows (10 runbooks)", readme)
-        self.assertIn("**10 workflows**", readme)
+        self.assertIn("## The workflows (11 runbooks)", readme)
+        self.assertIn("**11 workflows**", readme)
+        self.assertIn("ai-answer-visibility-loop", readme)
 
 
 if __name__ == "__main__":
