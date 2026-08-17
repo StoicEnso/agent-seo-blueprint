@@ -40,7 +40,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Audit Google Business Profile and local SEO readiness without changing the listing | Load `references/playbooks/maintenance/local-business-profile-audit.md`, copy `assets/local-business-profile-audit.csv`, then route website fixes to `workflows/site-audit.md` and measurement to `workflows/monitoring.md` |
 | Run recurring technical SEO/schema/CWV/indexation maintenance | `workflows/technical-seo-maintenance.md` |
 | Audit AI-search/GEO readiness, including current commerce/entity data when applicable | `workflows/geo-audit.md` |
-| Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md` |
+| Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md`; copy `assets/ai-citation-source-coverage.csv` when mapping observed versus candidate source classes |
 | Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
 | Assess or draft a newsworthy press-release distribution test | Load `references/playbooks/authority/press-release-distribution.md`, then run `workflows/authority-and-links.md`; submission remains approval-gated |
 | Find existing editorial link intent (listicle/citation gaps, broken or decayed resources, statistics needs, missing visuals/video, uncited owned assets) | Load `references/playbooks/authority/editorial-link-intent-and-assets.md`, then run `workflows/authority-and-links.md` |
@@ -158,7 +158,7 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   first-party operator traffic/errors. Never merge them into a universal score, user-query impressions, or causal proof;
   verify early-access and pricing state from first-party evidence before asserting availability or cost.
 - **Cross-platform citation loops** are observation ledgers, not attribution systems: keep provider datasets separate,
-  never invent impressions/clicks, and never turn mutable answer-engine mentions into a universal GEO score.
+  never invent impressions/clicks, and never turn mutable answer-engine mentions or fixed source counts into a universal GEO score, recommendation rank, or causal formula.
 - **GEO myth-busting:** Google does not require `llms.txt`, special AI schema, artificial chunking, AI-only rewrites, or
   manufactured mentions. Keep optional cross-platform documentation distinct from Google Search requirements.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.

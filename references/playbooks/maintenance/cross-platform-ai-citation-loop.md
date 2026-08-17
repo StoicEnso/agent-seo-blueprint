@@ -3,7 +3,9 @@ title: Cross-Platform Buyer-Question Citation Loop
 area: maintenance
 operational_addition: true
 source_scope: Dated answer-engine observations plus ordinary SEO and first-party business evidence; no universal AI-ranking formula
-field_input: https://x.com/i/article/2083164906480656384
+field_inputs:
+  - https://x.com/i/article/2083164906480656384
+  - https://x.com/mal_shaik/status/2089120487481982981
 ---
 
 # Cross-Platform Buyer-Question Citation Loop
@@ -75,6 +77,35 @@ Classify each useful gap:
 
 Use ordinary Search evidence too. A current, intent-matched page in GSC positions 4–20 may be a narrower improvement candidate, but its Search position does not prove or guarantee answer-engine citation.
 
+### 3A. Map corroboration surfaces without turning them into quotas
+
+When the baseline shows that a provider cites several source classes, copy `assets/ai-citation-source-coverage.csv` to `research/<date>_ai-citation-source-coverage.csv`. Use one row per observed or qualified source, not one row per desired placement.
+
+Useful source classes include:
+
+- `owned_comparison`, `owned_use_case`, `owned_pricing`, and other distinct buyer-help pages;
+- independent editorial comparisons, directories, review sites, and partner resources;
+- authentic community discussions that already exist because people used the product;
+- public repositories, documentation, datasets, or tools that provide verifiable product proof; and
+- other sources actually cited on the scoped provider/surface.
+
+For every row record the exact question, provider/surface, date, URL, source role, whether the brand is present, whether the URL was actually cited, evidence grade, proof locator, limitations, and the proposed action. Distinguish **observed cited sources** from **candidate sources**. A candidate directory, Reddit thread, repository, or comparison page is not citation evidence until the scoped observation shows it.
+
+Source breadth is a coverage hypothesis, not a citation formula. Do not set quotas for comparison pages, directories, repository stars, reviews, or community mentions. Do not create thin comparison permutations, submit to irrelevant directories, manufacture Reddit threads or votes, solicit fake reviews, or use open-source popularity as a substitute for product truth.
+
+#### Dated Cal.com field example
+
+A 2026-08-16 creator post attributed Cal.com's alleged answer-engine visibility to `47` comparison posts, `23` niche-directory listings, more than `45,000` GitHub stars, and `200+` Reddit mentions, then called Cal.com the “#1 ChatGPT recommended scheduling tool.” Treat this as a source-coverage hypothesis, not a verified causal explanation.
+
+A bounded check on 2026-08-17 found:
+
+- the public GitHub repository reported 47,731 stars, supporting only the narrow “45,000+” count;
+- the English sitemap exposed 35 blog URLs matching a broad comparison/alternative URL pattern, which confirms a material owned comparison footprint but does not validate the claimed total of 47;
+- the `23` directory placements and `200+` Reddit mentions were not reproduced from a complete, dated inventory; and
+- the attached “Visibility Rank #1” screenshot lacked the provider, prompt set, locale, account state, methodology, and retrieval date needed to prove a universal ChatGPT rank.
+
+Official OpenAI crawler documentation supports a narrower access check: `OAI-SearchBot` controls eligibility for ChatGPT search results, separately from `GPTBot` training controls. It does not publish a rule that a fixed mix of comparisons, directories, stars, or Reddit mentions produces recommendation. Google likewise says its AI Search features use ordinary Search eligibility and people-first SEO foundations, with no additional technical requirements. Keep those provider contracts separate.
+
 ## 4. Build pages for buyers, not an AI quota
 
 When a justified page is missing, route it to `workflows/content-production.md`. Useful page roles may include use-case, comparison, alternatives, pricing, implementation, trust/case study, or a well-sourced statistics/original-research resource.
@@ -122,6 +153,8 @@ Keep those measures separate. A changed answer after publishing or outreach is t
 
 A July 2026 vendor-authored field article described a 90-day program and claimed 14.7K Microsoft Copilot citations. The operational ideas above—fixed buyer questions, useful comparison/use-case pages, coherent internal linking, authentic third-party source work, and repeat testing—are used as hypotheses and workflow inputs. The 14.7K claim is not independently verified here and must not be repeated as a benchmark, expected result, or causal proof.
 
+A separate August 2026 creator post described Cal.com's comparison pages, directory listings, GitHub stars, and Reddit mentions as an engineered-visibility recipe. That source-mix explanation is also a hypothesis, not an independently established benchmark, expected result, ranking formula, or causal proof.
+
 ## Done when
 
-The exact buyer-question set is versioned; each platform has a separate dated baseline; cited URLs and source types are recorded; every recommended page or authority action maps to a real observed gap; content and outreach remain approval-gated; the retest cadence is chosen; and the report clearly separates mentions/citations from traffic, conversions, and causality.
+The exact buyer-question set is versioned; each platform has a separate dated baseline; cited URLs and source types are recorded; any source-coverage map separates observed citations from candidates; every recommended page or authority action maps to a real observed gap; content and outreach remain approval-gated; the retest cadence is chosen; and the report clearly separates mentions/citations from traffic, conversions, and causality.

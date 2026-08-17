@@ -18,8 +18,32 @@ class CrossPlatformCitationLoopDocsTest(unittest.TestCase):
         for phrase in (
             "never auto-send, buy manipulative placement, fabricate community discussion, hide sponsorship, or manufacture citations",
             "it is not a promise that a content template, backlink, or query position will cause citation.",
+            "source breadth is a coverage hypothesis, not a citation formula.",
+            "does not validate the claimed total of 47",
+            "lacked the provider, prompt set, locale, account state, methodology, and retrieval date",
         ):
             self.assertIn(phrase, playbook_lower)
+
+    def test_source_coverage_template_is_bounded_and_wired(self):
+        template = (ROOT / "assets" / "ai-citation-source-coverage.csv").read_text(encoding="utf-8")
+        geo = (ROOT / "workflows" / "geo-audit.md").read_text(encoding="utf-8")
+        category = (ROOT / "workflows" / "category-citation-loop.md").read_text(encoding="utf-8")
+        skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        for field in (
+            "platform",
+            "surface",
+            "exact_question",
+            "source_class",
+            "cited_on_scoped_surface",
+            "evidence_grade",
+            "approval_state",
+            "limitations",
+        ):
+            self.assertIn(field, template.splitlines()[0])
+        for text in (geo, category, skill):
+            self.assertIn("assets/ai-citation-source-coverage.csv", text)
+        self.assertIn("Source counts are not quotas or causal weights", geo)
+        self.assertIn("fixed counts of comparison pages, directories, repository stars, reviews, or community mentions", category)
 
     def test_relevant_workflows_reference_cross_platform_loop(self):
         expected = {
