@@ -8,7 +8,7 @@ into a per-project workspace.
 Think of it as two planes that reference each other:
 
 1. **Knowledge layer** — 36 distilled, original-wording playbooks covering the entire course (62 lessons, proven
-   coverage), operational article-production QA, directory/entity-submission, local Business Profile audits, and 37-check SEO coverage playbooks,
+   coverage), operational article-production QA, directory/entity-submission, hosted-publishing experiments, local Business Profile audits, and 37-check SEO coverage playbooks,
    plus a searchable course index so any agent can answer
    *"what does the course say about X?"* and pull the right playbook.
 2. **Pipeline layer** — 11 workflows total: 5 core pipelines, 4 operational deep dives, and 2 end-to-end planning
@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-63-playbooks)
+- [The knowledge layer](#the-knowledge-layer-64-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,9 +46,9 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **63 playbooks**: 36 original course distillations plus 27 operational additions for article QA, schema/E-E-A-T,
+- **64 playbooks**: 36 original course distillations plus 28 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, Google-only AI visibility,
-  cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led press releases,
+  cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   deterministic planning, SERP-regime grading, and adversarial rollout design;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
 - **11 workflows**: five core pipelines, four operational deep dives, and two end-to-end planning workflows for a full
@@ -90,10 +90,10 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 27 operational additions
+  playbooks/                   # 36 course distillations + 28 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
-    authority/       (15)       # editorial intent, press releases, directories, Wikipedia, affiliate, outreach…
+    authority/       (16)       # editorial intent, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
     foundations/     (6)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
     maintenance/     (13)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
   course-index/
@@ -120,7 +120,8 @@ scripts/                       # Python 3 stdlib only — no pip deps
 assets/                        # fill-in templates emitted into the workspace
   audit-report.md  content-brief.md  keyword-map.csv
   directory-discovery-sources.csv  directory-submission-tracker.csv
-  startup-backlink-candidates.csv  # 146 source mentions → 141 unverified research leads
+  startup-backlink-candidates.csv  # 146 directory mentions + one hosted-publishing intake → 142 research leads
+  hosted-publishing-experiment.csv  # per-site fit, approval, rendered-link, index, referral, and outcome evidence
   topic-architecture-map.csv  internal-link-ledger.csv
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
   local-business-profile-audit.csv
@@ -130,7 +131,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (63 playbooks)
+## The knowledge layer (64 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -147,8 +148,8 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 
 **authority/** — `understanding-authority` · `link-stealing` · `editorial-link-intent-and-assets` · `affiliate-programs` ·
 `acquiring-domain-authority` · `haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` ·
-`directory-submissions` · `startup-backlink-directory-submissions` · `wikipedia-dead-link-building` ·
-`press-release-distribution` · `other-link-building` · `linkbuilding-what-not-to-do`
+`directory-submissions` · `startup-backlink-directory-submissions` · `hosted-publishing-experiments` ·
+`wikipedia-dead-link-building` · `press-release-distribution` · `other-link-building` · `linkbuilding-what-not-to-do`
 
 **foundations/** — `seo-philosophy` · `seo-and-ai-future` · `google-generative-ai-search-official` ·
 `seo-process-overview` · `adversarial-agent-orchestration` · `mechanic-first-growth-experiments`
@@ -174,7 +175,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **research-and-ideation** | niche find/validate → keyword research → competitor gaps → match-and-exceed → keyword→sitemap/topic architecture; can evaluate observed tactics and summon ICP personas | keyword map, sitemap, optional topic/link ledgers |
 | **content-production** | content-type selection → brief/topic architecture → optional cross-platform commercial-intent map → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional topic/link ledgers, distribution map, source packet, review draft, QA report |
 | **site-audit** | technical + on-page + content + opportunity + authority audit; optional read-only local Business Profile pass | prioritized, severity-ranked fix list; optional local-profile ledger |
-| **authority-and-links** | pick tactics, including bounded press-release distribution → ranked opportunity list → **drafted** outreach/releases (never auto-sent) | opportunity list, outreach drafts, optional press-release plan |
+| **authority-and-links** | pick tactics, including one-site hosted-publishing pilots and bounded press-release distribution → ranked opportunity list → **drafted** outreach/releases (never auto-sent) | opportunity list, outreach drafts, optional hosted-publishing/press-release plans |
 | **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI, Cloudflare agent/AEO, and provider citation evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
 | **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare and provider-specific citation lanes | readiness report and raw findings |
@@ -287,6 +288,7 @@ Ask the agent things like:
 - *"Do a keyword-gap analysis for mysite.com vs competitorA.com, competitorB.com."* → Ahrefs Content Gap → triaged keyword map.
 - *"Audit mysite.com's SEO."* → `site-audit` → prioritized, severity-ranked fix list.
 - *"Find link opportunities for mysite.com."* → `authority-and-links` → opportunity list + drafted outreach (you approve before sending).
+- *"Can Telegra.ph give all my sites dofollow links?"* → `hosted-publishing-experiments` + `authority-and-links` → evidence-led fit rows and one held pilot; no dofollow/indexing promise and no automatic page creation.
 - *"Set up weekly rank/traffic monitoring."* → `monitoring` → snapshots + optional schedule.
 - *"Which pages appear in Google AI Overviews or AI Mode?"* → `monitoring` + `google-generative-ai-visibility` → impression-only page/country/date/device evidence with limitations.
 - *"What does Cloudflare show about agent access, AI citations, and operator traffic?"* → `geo-audit` or `monitoring` + `cloudflare-agent-readiness-and-aeo` → three separate evidence lanes with access state and limitations.
@@ -319,6 +321,7 @@ extra setup. What's *not* shipped is the paid-course **transcripts** — they ar
 - **AI-search evidence** stays provider-specific: Google AI impressions remain separate from cross-platform citation observations, and neither dataset implies clicks, CTR, conversions, revenue, or a universal GEO score.
 - **Cross-platform citation tactics** must stay truthful: no fabricated mentions, spam, fake discussion, or undisclosed influence. The vendor-authored 14.7K Copilot-citation field claim is treated only as unverified input, never as a benchmark or causal proof.
 - **Topic architecture** maps distinct user jobs and contextual links; it never fabricates a topical-authority score or creates thin pages to inflate depth.
+- **Hosted-publishing/API experiments** use one original, useful, site-specific pilot. Telegra.ph submission is technically possible through its official API, but inspected external links were `nofollow`; `index, follow` is crawl eligibility, not guaranteed indexing. Verify rendered public HTML and business outcomes. Reject unlimited, duplicated, spun, doorway, or exact-match-anchor batches, and require exact-write approval.
 - **Press-release distribution** is for real news with current first-party terms, rights-safe copy, an owned evidence hub, and explicit submission approval. It compares the actual job—zero-cost rehearsal, measured broad syndication, Google Business Profile map support, or journalist reach—rather than buying on headline outlet/backlink counts. It never promises followed links, fast indexing, Google News, ranking, traffic, citations, or sales.
 - **Creator tactics** are observations. The agent extracts the proposed mechanism, records alternative explanations, and pre-registers one bounded reversible test before adoption.
 - **Tiny-loop opportunities** start with one recurring avoided task, not a broad life assistant. The agent may prepare a reviewable action from consented minimal context, but consequential action stays user-approved. Search demand and first-party user evidence must validate the wedge separately from the creator's forecast.
