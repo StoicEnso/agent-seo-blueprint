@@ -13,6 +13,7 @@ playbooks:
   - references/playbooks/authority/other-link-building.md
   - references/playbooks/authority/directory-submissions.md
   - references/playbooks/authority/startup-backlink-directory-submissions.md
+  - references/playbooks/authority/press-release-distribution.md
   - references/playbooks/authority/wikipedia-dead-link-building.md
   - references/playbooks/authority/linkbuilding-what-not-to-do.md
   - references/playbooks/research/match-and-exceed.md
@@ -29,6 +30,7 @@ outputs:
   - outreach/<date>_drafts.json          # drafted (NOT sent) outreach messages
   - outreach/<date>_directory-submissions.csv  # verified directory/entity pipeline
   - outreach/<date>_wikipedia_dead_links.json  # verified research candidates; no live edit
+  - outreach/<date>_press-release-plan.json    # candidate evidence + DRAFT release; never auto-submitted
   - outreach/<date>_disavow.txt          # optional disavow file (user submits)
 ---
 
@@ -55,6 +57,7 @@ outputs:
    - **Manual outreach** (`manual-outreach.md`) — revisit-the-topic pitches, missing-link asks, free-access offers, and the case-study trade (target smaller tools with few case studies).
    - **Content rings** (`content-rings-for-links.md`) — link the new page from your own aged, genuinely-useful properties for a launch head start. (Build new ring properties via `content-production.md`'s content-ring path.)
    - **Directories / entity profiles** (`directory-submissions.md`) — relevant public directories, product indexes, launch platforms, review profiles, and entity profiles. Start with niche-filtered discovery sources, preserve source claims as unverified lineage, then verify the destination-owned submit route and a live public listing. Never sort solely by screenshot DR. Use `startup-backlink-directory-submissions.md` to turn sourced startup lists into a classified verification queue.
+   - **Press-release distribution** (`press-release-distribution.md`) — only for a real, timely company event with an owned evidence hub. First classify the actual job with `assets/press-release-distribution-registry.csv`: `openPR` for a no-cost process rehearsal; `PR Underground Basic` for a measured broad-syndication test; `EIN Presswire Basic` when the Google Business Profile map is essential; `eReleases Buzz Builder` for journalist reach. `IssueWire` stays `VERIFY_AT_CHECKOUT`; do not buy from its inconsistent public pricing cards. Recheck the exact checkout before approval. Verify destination-owned terms, a fresh public sample, link qualification, moderation, rights, disclosure, correction cost, and publication timing. Draft and hold the exact release; never repeat creator claims about followed links, outlet/backlink counts, minute-level indexing, Google News, ranking, traffic, or citations as guarantees.
    - **Wikipedia dead citations** (`wikipedia-dead-link-building.md`) — verify the dead URL and archive, map the exact supported claim, and brief a materially better neutral resource. Research only by default; publishing, talk-page requests, editor contact, and edits are separately approval-gated.
    - **Audience / acquisition / other** (`building-an-audience.md`, `acquiring-domain-authority.md`, `other-link-building.md`) — longer-horizon plays.
 
@@ -62,11 +65,13 @@ outputs:
 
    For directory/entity discovery, register aggregators/checklists in `assets/directory-discovery-sources.csv`, then preserve candidate-level lineage in `assets/startup-backlink-candidates.csv`. Its original intake supplies 122 deduplicated research leads reconstructed from 127 source mentions. Every row starts `UNVERIFIED_SOURCE_LEAD`; source-reported DR, traffic, price, approval time, link type, and submission routes must never be presented as current fact. Live-verify identity, eligibility, relevance, a destination-owned submission route, public indexability, current cost/moderation, and actual link behavior before a candidate reaches the opportunity list.
 
-3. **Run the guardrail before building any list.** Load `references/playbooks/authority/linkbuilding-what-not-to-do.md`. Refuse: bought cheap link packages, uniform exact-match anchor spam, forum/Reddit/comment URL spam, PBNs/link farms, off-topic or niche-mismatched links. If a chosen tactic drifts into these, drop it — penalties here can be permanent.
+3. **Run the guardrail before building any list.** Load `references/playbooks/authority/linkbuilding-what-not-to-do.md`. Refuse: bought cheap link packages, uniform exact-match anchor spam, forum/Reddit/comment URL spam, PBNs/link farms, off-topic or niche-mismatched links. For press releases, also refuse low-value releases made mainly to create links, optimized-anchor distributed links, duplicate mass syndication, fake news/quotes, or unqualified paid advertorial links. If a chosen tactic drifts into these, drop it — penalties here can be permanent.
 
 4. **Build the ranked opportunity list.** For each tactic, gather concrete targets via `ahrefs_client.py` + `serp_capture.py`: the linking page URL, referring-domain DR, dofollow?, outbound-link count (dilution), topical relevance, the tactic that fits, the contact handle/source, and a priority score. Affiliate prospects also require `competitor`, `competitor_referral_pattern`, `evidence_url`, `competitor_program_terms_verified_at`, `page_type`, `current_placement`, `ask_type`, `suggested_offer`, `offer_basis`, `vip_candidate`, and `quality_flags`. Directory/entity candidates also require source lineage, `route_type`, a destination-owned `submission_url` with `submission_url_verified_at`, `public_indexable`, `link_attribute` observed from a live listing, and `last_verified_at`; reject private-account-only or unrelated profiles. Save with `python3 scripts/report.py note --workspace <DIR> --subdir outreach --name opportunities --data <json>` → `outreach/<date>_opportunities.json`.
 
 5. **DRAFT outreach (do not send).** For each high-priority target, draft a short, personal, value-first message per the relevant playbook (e.g. link-stealing: "saw you link [competitor], here's a stronger tool"; affiliate: reference the exact competing placement, verified commission structure, defensible product advantage, and only real conversion evidence; HARO: credibility hook + concrete answer; case-study trade: offer to write it). When the goal is citation coverage, offer checked facts, screenshots, criteria, methodology, and honest limitations — never fake discussion, hide sponsorship, or promise ranking/citation outcomes. Keep each message specific to the recipient. Save all drafts to `outreach/<date>_drafts.json` with `{target_url, contact, tactic, subject, body, status:"DRAFT"}`.
+
+   **Press-release branch.** Write `outreach/<date>_press-release-plan.json` with the news contract, current destination evidence, sampled public-page evidence, rights/source ledger, exact DRAFT copy, links/anchors, required link qualification, disclosures, correction/deletion terms, costs, approval state, and post-publication verification fields. Registration, payment, submission, publication, correction, and deletion remain external actions and require explicit approval of the exact batch.
 
 6. **Optional — disavow cleanup.** If `site-audit` or an affiliate-spam review surfaced toxic referring domains, build a disavow file per `linkbuilding-what-not-to-do.md` / `affiliate-programs.md` and write `outreach/<date>_disavow.txt`. Hand it to the user to upload in Search Console — do NOT submit it.
 
@@ -81,6 +86,7 @@ outputs:
 - **Any tactic touching the what-not-to-do list** → drop it (asymmetric, possibly permanent downside).
 - **Directory/profile route?** Treat aggregators as discovery only. Verify relevance, a destination-owned submission route, a public indexable listing, current moderation/cost, and actual link behavior; reject private profile links and directory spam.
 - **Paid directory?** Require audience/economic fit and explicit owner approval. Do not buy a placement merely because a source claims high DR or a followed link.
+- **Press release?** Require genuine timely news, an owned evidence page, current first-party route/terms evidence, a rights-safe DRAFT, and separate PR/referral/business measurement. A public page or followed sampled link is not permission to use press releases for ranking manipulation.
 - **Send/submit anything?** Only on explicit user confirmation. Default is draft-and-hold.
 
 **Outputs.**
@@ -88,5 +94,6 @@ outputs:
 - `outreach/<date>_drafts.json` — personalized outreach drafts, `status:"DRAFT"`, never sent by the agent.
 - `outreach/<date>_directory-submissions.csv` — verified candidate/listing states and live evidence.
 - `outreach/<date>_disavow.txt` — optional disavow file for the user to submit.
+- `outreach/<date>_press-release-plan.json` — optional evidence packet and exact DRAFT release; no submission authority.
 
-**Done when.** A ranked opportunity list and matching personalized drafts exist in the workspace, every chosen tactic passed the guardrail, and nothing has been sent/submitted without explicit user confirmation. Directory work also has verified route evidence and a tracked public listing URL or rejection reason. Wikipedia research either has ten verified candidates with dead/archive/COI evidence or an exhausted-search report; it never implies that an edit occurred. Feed approved sends + acquired-link counts into `monitoring.md` and re-check competitor backlink pace there monthly.
+**Done when.** A ranked opportunity list and matching personalized drafts exist in the workspace, every chosen tactic passed the guardrail, and nothing has been sent/submitted without explicit user confirmation. Directory work also has verified route evidence and a tracked public listing URL or rejection reason. A press-release plan also has real-news, destination, rights, disclosure, link, correction-cost, and post-publication evidence fields, with creator claims kept separate from current observations. Wikipedia research either has ten verified candidates with dead/archive/COI evidence or an exhausted-search report; it never implies that an edit occurred. Feed approved sends + acquired-link counts into `monitoring.md` and re-check competitor backlink pace there monthly.

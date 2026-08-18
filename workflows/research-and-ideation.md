@@ -12,6 +12,8 @@ playbooks:
   - references/playbooks/research/match-and-exceed.md
   - references/playbooks/research/research-for-existing-sites.md
   - references/playbooks/research/keyword-to-sitemap.md
+  - references/playbooks/content/topic-architecture-and-internal-link-ledger.md
+  - references/playbooks/foundations/mechanic-first-growth-experiments.md
   - references/playbooks/maintenance/seo-operational-checklist.md
 scripts:
   - scripts/workspace.py
@@ -25,6 +27,9 @@ outputs:
   - research/<date>_persona-insights.json   # if personas summoned
   - keywords/<date>_keyword-map.csv
   - research/<date>_sitemap-plan.json
+  - research/<date>_topic-architecture.csv      # when a validated cluster proceeds to page planning
+  - research/<date>_internal-link-ledger.csv    # planned contextual links; not a navigation count
+  - research/<date>_tiny-loop-opportunity-map.csv # optional single-loop product/search wedge screen
 ---
 
 # Research & Ideation
@@ -38,7 +43,9 @@ outputs:
 
 **Steps.**
 
-1. **Orient and route.** Load `seo-process-overview.md`. Decide the entry: *new niche* (no product) → step 2; *existing site* → skip to step 6. Optionally run `python3 scripts/search_course.py "<topic>"` to surface the exact lessons + playbooks for the user's question.
+1. **Orient and route.** Load `seo-process-overview.md`. Decide the entry: *new niche* (no product) → step 2; *existing site* → skip to step 6. Optionally run `python3 scripts/search_course.py "<topic>"` to surface the exact lessons + playbooks for the user's question. If the input is a creator/competitor tactic rather than a keyword opportunity, load `references/playbooks/foundations/mechanic-first-growth-experiments.md`: separate the visible tactic from its proposed behavior mechanism, record alternative explanations, and pre-register one small reversible test before adding it to the plan.
+
+   For a proposed “tiny avoided loop,” copy `assets/tiny-loop-opportunity-map.csv` to `research/<date>_tiny-loop-opportunity-map.csv`. Screen one named audience and one loop. Require evidence of recurrence, consented context access, a reviewable prepared output, explicit approval before consequential action, an observable closure receipt, a safe expiry/deletion path, and separate search-demand or first-party user evidence. A creator's opportunity forecast is not demand validation.
 
 2. **Find candidate niches (new build).** Load `references/playbooks/research/finding-and-validating-niches.md` for the data-dump hunt method. Run the filtered Ahrefs Keyword Explorer dump via `scripts/ahrefs_client.py` (or the browser fallback): KD ≤ 20, volume > 100, target country, plus a buildable include-word (`generator`/`maker`/`free`/`tool`, optionally `AI`). Skim for buildable gems; write candidates to `research/<date>_niche-candidates.json` via `python3 scripts/report.py note --workspace <DIR> --subdir research --name niche-candidates --data <json>`.
 
@@ -60,12 +67,15 @@ outputs:
 
    Use `references/playbooks/maintenance/seo-operational-checklist.md` to harden opportunity selection: KD/volume are filters, not verdicts; inspect page-level competition and SERP format. People Also Ask questions are research inputs, not an instruction to create one thin page per question.
 
-9. **Plan the sitemap.** Load `references/playbooks/research/keyword-to-sitemap.md`. Assign the short-tail commercial head term to the home page; group keyword directions into category/hub pages; route high-supply long-tail to a programmatic layer; wire internal links upward to the converting asset. Save the tree to `research/<date>_sitemap-plan.json` (note each page's target keyword(s), intent, and chosen format from step 5).
+9. **Plan the sitemap and topic architecture.** Load `references/playbooks/research/keyword-to-sitemap.md`. Assign the short-tail commercial head term to the home page; group keyword directions into category/hub pages; route high-supply long-tail to a programmatic layer; wire internal links upward to the converting asset. Save the tree to `research/<date>_sitemap-plan.json` (note each page's target keyword(s), intent, and chosen format from step 5).
+
+   When a validated cluster will proceed to production, also load `references/playbooks/content/topic-architecture-and-internal-link-ledger.md`. Start from the money/service page, keep one URL per distinct answer or format, reject pages that only manufacture topic depth, and copy the two empty templates from `assets/topic-architecture-map.csv` and `assets/internal-link-ledger.csv` into the workspace as `research/<date>_topic-architecture.csv` and `research/<date>_internal-link-ledger.csv`. Every planned contextual link needs a reader reason; footer/navigation coverage is recorded separately and never substitutes for this ledger.
 
 **Decision points.**
 - **New niche vs existing site** → step 2 vs step 6.
 - **Green light** (low KD + buildable + paying demand + beatable SERP + large cluster) → proceed to sitemap. **Red flags** (empty cluster, or KD 50–80 with high-DA incumbents) → drop the candidate or mine sub-niches.
 - **Summon personas?** Only when angles/seeds are thin or you want divergent ideas — skip for a well-understood niche to save time.
+- **Tiny-loop wedge:** proceed only when the loop recurs, the user can inspect the prepared action, consequential action stays approval-gated, failure is safe, closure is observable, and demand survives a separate evidence check. Reject a broad “life assistant” or a loop that depends on silent monitoring or autonomous commitment.
 - **Exceed call** (match-and-exceed): weak incumbents → proceed; strong well-linked incumbents → deprioritize until authority is built (hand off to `authority-and-links.md`).
 
 **Outputs.**
@@ -73,5 +83,8 @@ outputs:
 - `research/<date>_persona-insights.json` — synthesized persona angles/seeds (if run).
 - `keywords/<date>_keyword-map.csv` — the triaged keyword cluster with intent, KD, volume, priority.
 - `research/<date>_sitemap-plan.json` — page tree mapping every validated keyword to a page + format.
+- `research/<date>_topic-architecture.csv` — optional distinct-role page map for a validated cluster.
+- `research/<date>_internal-link-ledger.csv` — optional planned contextual links with natural anchors and reader reasons.
+- `research/<date>_tiny-loop-opportunity-map.csv` — optional evidence and safety screen for one avoided-loop wedge.
 
-**Done when.** At least one niche/keyword cluster has passed the full gauntlet (or all are correctly rejected), the keyword map CSV exists, and every validated keyword has a home in the sitemap plan with an intent-matched format chosen. Hand the sitemap plan + keyword map to `content-production.md`; hand any "needs authority first" keywords to `authority-and-links.md`.
+**Done when.** At least one niche/keyword cluster has passed the full gauntlet (or all are correctly rejected), the keyword map CSV exists, and every validated keyword has a home in the sitemap plan with an intent-matched format chosen. Any cluster advanced to production also has distinct page roles and contextual-link rows without thin depth inflation. A tiny-loop input also has an explicit approval boundary and independent demand evidence before it enters the build backlog. Hand the sitemap plan + keyword map to `content-production.md`; hand any "needs authority first" keywords to `authority-and-links.md`.

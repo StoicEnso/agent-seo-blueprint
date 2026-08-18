@@ -11,6 +11,7 @@ playbooks:
   - references/playbooks/research/research-for-existing-sites.md
   - references/playbooks/maintenance/keyword-intent-evolution.md
   - references/playbooks/maintenance/seo-operational-checklist.md
+  - references/playbooks/maintenance/local-business-profile-audit.md
   - references/playbooks/authority/understanding-authority.md
   - references/playbooks/authority/linkbuilding-what-not-to-do.md
 scripts:
@@ -24,6 +25,7 @@ integrations: [pagespeed, gsc, serp, ahrefs]
 outputs:
   - audits/<date>_audit.md            # severity-ranked fix list (via report.py audit)
   - audits/<date>_audit-findings.json # raw findings payload
+  - audits/<date>_local-business-profile-audit.csv # optional, for eligible local businesses
 ---
 
 # Site Audit
@@ -51,7 +53,7 @@ outputs:
 
 7. **Authority sanity check.** Load `references/playbooks/authority/understanding-authority.md` and `linkbuilding-what-not-to-do.md`. Via `ahrefs_client.py`, eyeball the backlink profile: is page-level authority too thin to rank the target keyword? Any toxic/spammy referring domains worth disavowing? Note as findings (deep link work routes to `authority-and-links.md`).
 
-8. **Close the operational coverage ledger.** For every row in `seo-operational-checklist.md`, record `pass | partial | fail | blocked | not_applicable` plus evidence. Route research, content, authority, local, and monitoring opportunities to their owning workflows. Write `audits/<date>_operational-seo-coverage.csv`; `not_applicable` requires a reason.
+8. **Close the operational coverage ledger.** For every row in `seo-operational-checklist.md`, record `pass | partial | fail | blocked | not_applicable` plus evidence. For an eligible local business with a Google Business Profile in scope, load `references/playbooks/maintenance/local-business-profile-audit.md` and copy `assets/local-business-profile-audit.csv` to the audit workspace. Keep the profile pass read-only: draft factual changes and require explicit approval before any listing edit, post, upload, or public reply. Route research, content, authority, local, and monitoring opportunities to their owning workflows. Write `audits/<date>_operational-seo-coverage.csv`; `not_applicable` requires a reason.
 
 9. **Score, rank, and emit the report.** Assign each finding a severity (`critical | high | medium | low`), an area (technical / on-page / content / intent / opportunity / authority), the issue, and the recommended fix (with evidence). Assemble `{summary, score?, findings:[...]}` and run `python3 scripts/report.py audit --workspace <DIR> --title "Site audit: <domain>" --data <findings.json>`. `report.py` sorts findings by severity into a prioritized table → `audits/<date>_audit.md`. Save the raw payload too (`report.py note ... --subdir audits --name audit-findings`).
 
@@ -65,5 +67,6 @@ outputs:
 - `audits/<date>_audit.md` — prioritized, severity-ranked fix list (Markdown table from `report.py`).
 - `audits/<date>_audit-findings.json` — raw findings for re-rendering or diffing against the next audit.
 - `audits/<date>_operational-seo-coverage.csv` — evidence/status for all 37 operational checks.
+- `audits/<date>_local-business-profile-audit.csv` — optional dated profile, competitor-observation, truth-basis, approval, and measurement ledger for eligible local businesses.
 
-**Done when.** Every priority URL has been checked across technical, on-page, content/intent, opportunity, and authority dimensions; all 37 operational checks have evidence-backed statuses or explicit `not_applicable` reasons; all findings carry a severity + concrete fix; and the ranked report plus coverage ledger are written to the workspace. Hand high-ROI content fixes to `content-production.md`, link findings to `authority-and-links.md`, and set a re-audit cadence in `monitoring.md`.
+**Done when.** Every priority URL has been checked across technical, on-page, content/intent, opportunity, and authority dimensions; all 37 operational checks have evidence-backed statuses or explicit `not_applicable` reasons; all findings carry a severity + concrete fix; and the ranked report plus coverage ledger are written to the workspace. When local profile work was in scope, the separate audit CSV distinguishes first-party guidance, direct observations, and hypotheses, and no profile write occurred without approval. Hand high-ROI content fixes to `content-production.md`, link findings to `authority-and-links.md`, and set a re-audit cadence in `monitoring.md`.

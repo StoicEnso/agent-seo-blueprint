@@ -18,7 +18,7 @@ Use when the user wants to own a defensible category phrase and become easier to
 
 ## Procedure
 
-1. **Capture a platform-specific baseline.** Load `cross-platform-ai-citation-loop.md` and run `geo-audit.md` for a bounded prompt set. When the work also needs repeatable panel validation, deterministic metrics, public social listening, opportunity ranking, or a human approval queue, route the evidence run through `ai-answer-visibility-loop.md`. Freeze exact buyer-question versions per provider/surface, then record dates, platform/account/location where relevant, mentioned brands, cited domains, source types, and owned-page citations. Keep Google AI impression data separate from answer-engine citation observations, and do not merge different platforms into one universal score.
+1. **Capture a platform-specific baseline.** Load `cross-platform-ai-citation-loop.md` and run `geo-audit.md` for a bounded prompt set. When the work also needs repeatable panel validation, deterministic metrics, public social listening, opportunity ranking, or a human approval queue, route the evidence run through `ai-answer-visibility-loop.md`. Freeze exact buyer-question versions per provider/surface, then record dates, platform/account/location where relevant, mentioned brands, cited domains, source types, and owned-page citations. When source breadth matters, copy `assets/ai-citation-source-coverage.csv` and separate observed cited sources from candidates. Keep Google AI impression data separate from answer-engine citation observations, and do not merge different platforms into one universal score.
 2. **Choose one primary phrase.** Score candidates on buyer intent, specificity, product-truth fit, live SERP/answer evidence, conversion relevance, and the ability to publish genuinely useful material. Add 2–4 supporting phrases and a do-not-use list for overbroad or untrue claims.
 3. **Build an owned evidence cluster, not a quota.** Consider category definition, use-case, comparison, alternatives, pricing, implementation, trust/case-study, and a useful tool/resource. Match page roles to the observed buyer-question gaps. Create only pages with distinct demand, intent, evidence, and non-duplicative value.
 4. **Make comparison claims defensible.** Include real alternatives and tradeoffs, explain evaluation criteria, state who each option is for, cite material claims, and preserve limitations. Never rank the product first for every use case by construction.
@@ -33,6 +33,7 @@ Use when the user wants to own a defensible category phrase and become easier to
 - Do not turn answer-engine observations into a universal GEO score or formula.
 - Do not fabricate community discussion, hidden sponsorship, or undisclosed influence to force citations.
 - Do not create one page for every query-fan-out phrase or duplicate comparison permutation.
+- Do not use fixed counts of comparison pages, directories, repository stars, reviews, or community mentions as an answer-engine recipe or quota.
 - AI/search outputs are mutable observations, not rankings guaranteed by a template.
 - Visibility screenshots do not prove clicks, conversions, or revenue.
 - Google-specific Generative AI impressions stay in the separate `google-generative-ai-visibility.md` contract.

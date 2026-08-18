@@ -126,9 +126,11 @@ Do not call the product free without a current first-party pricing or entitlemen
 - freeze a small, versioned buyer-question set instead of ad hoc prompts;
 - save the exact provider, surface, locale, language, account state, and retrieval date for each run;
 - record mention presence, cited URLs/domains, source types, page-role gaps, and the minimum answer excerpt needed to interpret the citation;
+- when source breadth is part of the diagnosis, copy `assets/ai-citation-source-coverage.csv` and separate observed cited sources from candidate comparison, editorial, directory, community, repository, review, or partner surfaces;
 - write the raw observation set to `audits/<date>_provider-citation-observations.json`, or state why no provider citation baseline was collected.
 
 Keep each provider in its own dataset. These observations are not interchangeable with ordinary Search data, the Google Search Console Generative AI performance report, or Cloudflare's synthetic AEO panel. Do not invent clicks, queries, CTR, conversions, attribution, or a universal GEO score/formula from citation observations.
+Source counts are not quotas or causal weights. Never infer that a fixed number of comparison pages, directory listings, repository stars, reviews, or community mentions creates a recommendation rank.
 
 ### 6. Audit human usefulness, clarity, and evidence
 
