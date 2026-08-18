@@ -43,6 +43,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Track buyer-question answers, citations, and public social opportunities with an approval queue | `workflows/ai-answer-visibility-loop.md` |
 | Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md`; copy `assets/ai-citation-source-coverage.csv` when mapping observed versus candidate source classes |
 | Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
+| Test Telegra.ph or another hosted-publishing/API backlink claim | Load `references/playbooks/authority/hosted-publishing-experiments.md`, copy `assets/hosted-publishing-experiment.csv`, then run `workflows/authority-and-links.md`; draft and verify one site-specific pilot before any expansion, and never treat API access, `index, follow`, or a domain metric as proof of a dofollow link |
 | Choose the cheapest/value press-release route, or draft a newsworthy distribution test | Load `references/playbooks/authority/press-release-distribution.md`, compare the current goal-based price path in `assets/press-release-distribution-registry.csv`, then run `workflows/authority-and-links.md`; checkout, payment, and submission remain approval-gated |
 | Find existing editorial link intent (listicle/citation gaps, broken or decayed resources, statistics needs, missing visuals/video, uncited owned assets) | Load `references/playbooks/authority/editorial-link-intent-and-assets.md`, then run `workflows/authority-and-links.md` |
 | Monitor rankings/traffic, GSC 4–20 opportunities, Google AI impressions, provider citation observations, updates, and ROI | `workflows/monitoring.md` |
@@ -74,7 +75,7 @@ Distilled, original methodology grouped by area. Load the specific file a step n
   full-funnel-rollout, E-E-A-T, and schema references
 - **authority/** — understanding-authority, link-stealing, editorial-link-intent-and-assets, affiliate-programs, acquiring-domain-authority, haro,
   manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, startup-backlink verification,
-  press-release distribution, Wikipedia dead-link research, other-link-building, and linkbuilding-what-not-to-do
+  hosted-publishing experiments, press-release distribution, Wikipedia dead-link research, other-link-building, and linkbuilding-what-not-to-do
 - **foundations/** — seo-philosophy, seo-and-ai-future, google-generative-ai-search-official, seo-process-overview,
   adversarial-agent-orchestration, and mechanic-first-growth-experiments
 - **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
@@ -146,6 +147,11 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
 - **Editorial link intent** never licenses credit-based reciprocal-link networks, automated exchange articles, or followed-link quid pro quo. Paid placements require truthful disclosure and appropriately qualified links such as `sponsored`/`nofollow`; provider citation observations are targeting evidence, not link value, traffic, conversion, or causality.
 - **Directory submissions** are relevance-first entity/citation work: live-verify public indexability and eligibility,
   treat DR screenshots as leads rather than facts, and require explicit approval before any account/listing write.
+- **Hosted-publishing/API tactics** start with one useful, original, site-specific pilot. Telegra.ph API submission is
+  technically possible, but current inspected external links were `nofollow`; `index, follow` is crawl eligibility, not
+  guaranteed indexing. Verify the actual public page, canonical, robots directive, rendered `href`/`rel`, referrals,
+  and outcomes. Reject duplicated, spun, thin, doorway, exact-match-anchor, or unlimited cross-site publishing. Account
+  and page writes require explicit approval for the exact article and destination.
 - **Press-release distribution** requires real news, current destination-owned terms, an owned evidence hub, natural
   links, rights/disclosure QA, and explicit approval. Compare cost by the actual job: zero-cost rehearsal, measured broad
   syndication, Google Business Profile map support, or journalist reach. Treat outlet/backlink counts as vendor claims,

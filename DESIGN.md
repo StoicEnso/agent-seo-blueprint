@@ -56,7 +56,7 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── playbooks/                  # LAYER 1: distilled, original, 1-for-1 methodology
 │   │   ├── research/               #   niches, keywords, intent, match-and-exceed, metrics, tools...
 │   │   ├── content/                #   content types, programmatic SEO, free tools, pages, on-page...
-│   │   ├── authority/              #   link stealing, HARO, verified directories, affiliate, outreach, content rings...
+│   │   ├── authority/              #   link stealing, hosted publishing, HARO, verified directories, affiliate, outreach...
 │   │   ├── foundations/            #   philosophy, process, AI guidance, mechanism-first/adversarial experiments...
 │   │   └── maintenance/            #   volatility, updates, intent, measurement, operational coverage...
 │   ├── course-index/               # mirrored, searchable course
@@ -96,7 +96,8 @@ while keeping the paid source material private and the distilled methodology sha
 │   ├── ai-answer-panel.csv  ai-answer-run.json
 │   ├── directory-discovery-sources.csv # dated registry of third-party queue-building sources
 │   ├── directory-submission-tracker.csv # claimed-vs-verified lineage + submission states
-│   ├── startup-backlink-candidates.csv # 146 source mentions → 141 unverified leads
+│   ├── startup-backlink-candidates.csv # directory leads + one hosted-publishing intake
+│   ├── hosted-publishing-experiment.csv # site fit → exact approval → rendered-link/index/outcome evidence
 │   ├── topic-architecture-map.csv  internal-link-ledger.csv
 │   ├── press-release-distribution-registry.csv # creator claims vs destination-owned evidence
 │   └── tiny-loop-opportunity-map.csv # consent, approval, closure, demand, and experiment gate
@@ -126,8 +127,8 @@ points → artifacts to emit (into the workspace). The five:
    articles, content rings, and on-page optimization; emits content briefs and, when explicitly requested, an
    evidence packet, review draft, and bounded content-QA report.
 3. **site-audit** — technical + on-page + content audit of a live site → prioritized, severity-ranked fix list.
-4. **authority-and-links** — link stealing, HARO, affiliate, manual outreach, content rings → opportunity lists +
-   drafted outreach (never sent without confirmation).
+4. **authority-and-links** — link stealing, HARO, affiliate, manual outreach, content rings, and one-site hosted-publishing
+   pilots → opportunity lists + drafted outreach/pages (never sent or published without confirmation).
 5. **monitoring** — ordinary rank/traffic snapshots, optional impression-only Google AI visibility snapshots,
    optional separated Cloudflare readiness/synthetic-panel/operator-activity evidence, optional provider-specific
    citation observations, Google-update detection/response, and "is it paying off" measurement; on-demand plus optional
@@ -141,8 +142,9 @@ evidence remains a separate monitoring layer with explicit metric/rollout limita
 synthetic AEO panel, and first-party operator activity remain distinct evidence lanes, and cross-platform citation
 observations stay provider-specific rather than becoming a shared score. Mechanic-first experiments prevent cheap builds
 from becoming unbounded features, topic architecture requires distinct user jobs plus contextual-link reasons, and
-press-release distribution separates creator claims from current destination evidence and Google link-spam policy. None
-of these artifacts turns heuristics, DR
+hosted-publishing experiments separate API capability, crawl eligibility, rendered link qualification, index observations,
+and business outcomes; press-release distribution separates creator claims from current destination evidence and Google
+link-spam policy. None of these artifacts turns heuristics, DA/DR
 snapshots, `site:` counts, AI impressions, vendor panel scores, or citation observations into business facts; live
 verification and external-write approval gates still apply.
 

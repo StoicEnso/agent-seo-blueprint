@@ -20,10 +20,11 @@ tools: [ahrefs, search-console]
 3. **Don't spam your URL across forums/Quora/Reddit and comment sections.** Mass self-linking is detected and gets the domain demoted. Only contribute where you add genuine value, and link sparingly.
 4. **Avoid link farms and private blog networks (PBNs)** — operators who own hundreds of interlinked blogs and inject your link across all of them for an instant backlink dump. Google increasingly identifies these; they're a reliable way to get banned. (This is the line your own [[content-rings-for-links]] must never cross.)
 5. **Don't build links on irrelevant, off-topic sites.** A backlink from a site with nothing to do with your niche is an obvious mismatch. Relatedly, don't repurpose a domain into a different niche than its history: the course example of an ex-travel-agency domain (14 years as travel) rebuilt as a fitness blog got de-ranked because Google still expected travel content — see also [[acquiring-domain-authority]].
+6. **Don't turn easy hosted-publishing APIs into a page farm.** “Unlimited,” high-authority, or automated page creation does not justify spun copies, doorway pages, fake authors, exact-match-anchor batches, or one near-identical article per owned site. Inspect the actual public page and rendered `rel`; a domain metric, `index, follow`, or successful API response does not prove a followed link or indexation. See [[hosted-publishing-experiments]].
 
 **Method — cleanup (disavow).**
-6. Periodically review new referring domains in Ahrefs and Google Search Console.
-7. For links you didn't earn and don't endorse (affiliate spam, junk farms), build a disavow file and submit it via Google's disavow tool in Search Console. This tells Google to ignore those links — you're declaring you don't vouch for them — protecting your profile from third-party spam.
+7. Periodically review new referring domains in Ahrefs and Google Search Console.
+8. For links you didn't earn and don't endorse (affiliate spam, junk farms), build a disavow file and submit it via Google's disavow tool in Search Console. This tells Google to ignore those links — you're declaring you don't vouch for them — protecting your profile from third-party spam.
 
 **Decision criteria / heuristics.**
 - If a tactic is bought, automated at scale, or uses uniform keyword anchors, treat it as high-risk and default to not doing it.
