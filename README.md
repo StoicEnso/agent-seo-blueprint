@@ -124,7 +124,7 @@ assets/                        # fill-in templates emitted into the workspace
   hosted-publishing-experiment.csv  # per-site fit, approval, rendered-link, index, referral, and outcome evidence
   topic-architecture-map.csv  internal-link-ledger.csv
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
-  statistics-page-brief.csv  local-business-profile-audit.csv
+  statistics-page-brief.csv  search-led-expert-answer-map.csv  local-business-profile-audit.csv
   outreach-email.md  monitoring-snapshot.md
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```

@@ -4,6 +4,7 @@ area: content
 operational_addition: true
 source_scope: Field hypothesis adapted from a vendor-authored affiliate-marketing video; validate every surface and metric independently
 field_input: https://x.com/floriandarroman/status/2083886530737881548
+additional_field_input: https://x.com/robhoffman_/status/2089832083233423615
 ---
 
 # Cross-Platform Commercial-Intent Distribution
@@ -75,6 +76,19 @@ A video can complement the owned page and may become discoverable in YouTube, or
 ### Native social post or short video
 
 Adapt the same buyer problem into a genuinely native proof unit: one insight, demonstration, before/after, framework, or answer. Do not clone another creator’s script or duplicate the same file across every platform without adaptation. Social reach is a distribution hypothesis, not SEO proof.
+
+### Search-led founder or expert answer series
+
+Use this branch when verified customer questions can support a bounded series of useful native answers.
+
+1. Build the question bank from dated evidence such as Search Console, site search, support, sales, customer interviews, or read-only public research. Record the exact question, locale, source, and capture date. Search volume alone does not prove social resonance.
+2. Check the owned site first. Map every question to an existing or planned canonical answer and record any cannibalization risk. The native asset should complement the owned evidence hub, not replace it by default.
+3. Pilot **3–10 questions**. A creator suggestion to make 10–30 videos is an example, not a quota or success condition. Expand only after the first cohort produces useful, platform-specific evidence.
+4. Create a claim packet for each answer: direct answer, first-party proof or source, limitations, product-truth boundary, and the real founder/expert who can speak to it. Do not invent expertise or turn a company spokesperson into an independent reviewer.
+5. Choose one primary surface and at most two supporting adaptations. Rewrite the hook, format, length, captions, proof display, and call to action for each surface. Do not post one unchanged asset everywhere.
+6. Live-check the exact query before using LinkedIn Pulse, YouTube, Reddit, X, or another host as a search surface. A third-party domain ranking once is dated evidence, not permission to exploit host authority or a promise that the new asset will rank.
+7. Keep ordinary-search visibility, native reach, referrals, named-provider answer mentions/citations, leads, and conversions separate. Use `UNVERIFIED` when a provider, prompt version, citation, or outcome was not observed.
+8. Copy `assets/search-led-expert-answer-map.csv` into the project workspace. Publication on every external surface remains separately approval-gated.
 
 ### Independent editorial/community surface
 
@@ -157,6 +171,8 @@ Suggested artifact: `research/<date>_<query-slug>-distribution-map.json`.
 
 A 2026 creator video claimed $328,000 from an affiliate website and recommended shifting commercial-intent distribution from blogging toward social/video/community platforms. The revenue, exit, passive-income, sponsorship, and third-party earnings claims were self-presented and were not independently verified for this playbook. The useful hypothesis is narrower: search demand can be served by multiple surfaces, and a searchable native asset can create an additional discovery path when live evidence supports it.
 
+A separate 2026 creator video claimed that SEO, answer-engine optimization, and social had “totally converged,” that LinkedIn Pulse is among the easiest ways to rank for difficult terms, and that one search-led content unit can perform across social and answer engines. The source supplied no query set, comparison cohort, account history, publication sample, attribution window, or provider-specific citation evidence. The useful, narrower method is to derive a bounded expert-answer pilot from verified customer questions, live-check each candidate surface, adapt natively, and measure every surface separately. Do not attribute the claim to a Google update without direct update evidence.
+
 For UK-facing work, commercial intent and affiliate relationships must be made clear; ASA/CAP guidance is the current primary reference. Platform and search-engine rules must be checked at execution time.
 
 ## Rejected tactics
@@ -168,8 +184,10 @@ For UK-facing work, commercial intent and affiliate relationships must be made c
 - automated comment-to-DM capture without consent and platform compliance;
 - publishing the same shallow asset everywhere;
 - treating social views, answer-engine mentions, or rankings as revenue;
-- quoting the source’s revenue/ROI claims as expected performance.
+- quoting the source’s revenue/ROI claims as expected performance;
+- claiming that a Google update caused SEO, AEO, and social to converge without direct evidence;
+- treating a 10–30-video suggestion as a quota or one creator’s LinkedIn example as a universal ranking shortcut.
 
 ## Done when
 
-The query and locale are fixed; live surface evidence is dated; one primary and at most two supporting surfaces are selected; every asset has distinct native value, a claim boundary, and a disclosure plan; the owned evidence hub remains clear; the journey and metrics stay separated; publication remains approval-gated; and no copied, deceptive, spammy, or ban-evasion tactic survives the plan.
+The query and locale are fixed; live surface evidence is dated; one primary and at most two supporting surfaces are selected; every asset has distinct native value, a claim boundary, and a disclosure plan; the owned evidence hub remains clear; the journey and metrics stay separated; publication remains approval-gated; and no copied, deceptive, spammy, or ban-evasion tactic survives the plan. A search-led answer series also has a source-backed question bank, a 3–10-question pilot, an owned-page and cannibalization check, a real expert/proof packet, and one row per question and surface in `assets/search-led-expert-answer-map.csv`.
