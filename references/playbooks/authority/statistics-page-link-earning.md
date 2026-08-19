@@ -19,7 +19,7 @@ Do not use it when the only plan is to copy other pages, fabricate a survey, swa
 
 This playbook was prompted by Borja’s 18 August 2026 X post and 20-second video: `https://x.com/borjafat/status/2089742971679691089`.
 
-The source claims that statistics pages can rank quickly on small sites and attract journalist links, based on an analysis of 80 searches. The source did not publish the 80-query dataset, sampling method, competing-domain criteria, or outcome window. Treat the claim as a creator hypothesis. Validate the mechanism on the target SERP and measure the target site’s own results.
+The linked full article reports a one-day snapshot of **80 live US Google searches across ten niches** and **423 page-one sites**, scored by referring-domain counts. It reports that sites below 1,000 referring domains held 24.4% of page-one statistics results, 21.4% of trends results, 12.0% of news results, and 10.0% of report results; no small site reached the top three for report queries. The article does not publish the full 80-query dataset or site-level scoring table, and the snapshot shows who ranked that day—not how quickly they got there. Treat the figures as directional creator evidence, not a causal benchmark. The author also states that link earning was not measured: **“The link part is a bet, not a measurement.”** Validate the mechanism on the target SERP and measure the target site’s own results.
 
 The reusable mechanism is stronger than the claim:
 

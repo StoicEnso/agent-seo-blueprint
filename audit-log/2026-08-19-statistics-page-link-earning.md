@@ -8,7 +8,7 @@
 
 | Source | Observation | Evidence grade |
 |---|---|---|
-| Borja X post | Claims current-year statistics pages can rank quickly and earn journalist links, based on 80 searches. The underlying query set and method were not published. | Unverified creator claim |
+| Borja X post plus linked full article | Reports a one-day snapshot of 80 live US searches across ten niches and 423 page-one sites, scored by referring-domain counts: 24.4% small-site share for statistics, 21.4% for trends, 12.0% for news, and 10.0% for reports. The raw query list and site-level table were not published. The author explicitly says link earning was not measured. | Directional creator evidence; not causal or raw-data proof |
 | Attached 20.46-second video | Shows a current-year statistics query, stable `/statistics/` section, visible update date, Article schema, one original number, year in title rather than URL, reciprocal contextual links, and quarterly checks. | Direct capture of creator method; not outcome proof |
 | Existing Agent SEO controls | Require live SERP checks, claim/source separation, truthful schema, reader-reason internal links, explicit approval for publication/outreach, and separate business measurement. | Existing repository contract |
 
