@@ -180,7 +180,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
 | **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare and provider-specific citation lanes | readiness report and raw findings |
 | **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific buyer-question citations | category/citation baseline and loop plan |
-| **ai-answer-visibility-loop** | freeze buyer questions, measure provider-separated answer visibility, collect public social evidence, and build a human approval queue | answer metrics, social candidates, non-executing approval queue |
+| **ai-answer-visibility-loop** | freeze buyer questions, measure provider-separated answer visibility, collect public social evidence, and review evidence-led community reply drafts | answer metrics, social candidates, non-executing approval queue and reply-review packet |
 | **full-master-plan** | build an evidence-grounded end-to-end SEO plan; use the adversarial cascade for exhaustive work | master plan, executive summary, source data, reconciled forecast |
 | **full-funnel-rollout** | extend an existing plan into gated BOFU→MOFU→TOFU delivery waves | rollout plan, funnel map, entry/exit/kill gates |
 
@@ -293,7 +293,7 @@ Ask the agent things like:
 - *"Which pages appear in Google AI Overviews or AI Mode?"* → `monitoring` + `google-generative-ai-visibility` → impression-only page/country/date/device evidence with limitations.
 - *"What does Cloudflare show about agent access, AI citations, and operator traffic?"* → `geo-audit` or `monitoring` + `cloudflare-agent-readiness-and-aeo` → three separate evidence lanes with access state and limitations.
 - *"Show me how ChatGPT/Copilot/Perplexity/Claude cite us for buyer questions."* → `geo-audit` or `category-citation-loop` + `cross-platform-ai-citation-loop` → provider-specific observation sets with separated metrics.
-- *"Track AI answers and find relevant Reddit discussions without posting."* → `ai-answer-visibility-loop` → a versioned question panel, public social evidence, separated metrics, ranked research candidates, and a non-executing approval queue.
+- *"Track AI answers and find relevant Reddit discussions without posting."* → `ai-answer-visibility-loop` → a versioned question panel, public social evidence, separated metrics, ranked research candidates, and a non-executing approval queue. Optional reply packets require verifiable authority, a useful answer, mechanism detail, respectful correction, value-led follow-up, clear affiliation, and exact approval before posting.
 - *"Which queries rank in positions 4–20 and are worth improving?"* → `monitoring` + `gsc-position-4-20-opportunity-mining`.
 - *"Audit whether my product data and checkout are ready for AI agents."* → `geo-audit` + `ai-search-commerce-readiness`.
 - *"Set up a recurring technical SEO maintenance pass."* → `technical-seo-maintenance`.

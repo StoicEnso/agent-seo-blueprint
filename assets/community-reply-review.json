@@ -1,0 +1,40 @@
+{
+  "schema_version": "community-reply-review-0.1",
+  "candidate_id": "",
+  "source_url": "",
+  "platform": "reddit",
+  "community": "",
+  "community_rules_url": "",
+  "rules_state": "not_checked",
+  "reply_pattern": "evidence_led_community_reply",
+  "speaker_identity": "",
+  "affiliation_disclosure": "",
+  "authority_basis": [
+    {
+      "claim": "",
+      "evidence_path": ""
+    }
+  ],
+  "useful_answer": "",
+  "mechanism_to_explain": "",
+  "advice_correction": {
+    "claim": "",
+    "evidence_path": "",
+    "tone": "respectful"
+  },
+  "follow_up_value_plan": "",
+  "product_mention_justification": "",
+  "product_truth_state": "not_checked",
+  "claim_evidence_path": "",
+  "final_draft": "",
+  "approval_state": "research_only",
+  "approved_by": "",
+  "approved_at": "",
+  "execution_state": "not_executed",
+  "executed_at": "",
+  "verification_path": "",
+  "limitations": [
+    "A useful reply structure does not prove community acceptance or causal engagement lift.",
+    "No post, comment, vote, or account action is authorised by this packet."
+  ]
+}

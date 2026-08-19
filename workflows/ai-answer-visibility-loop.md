@@ -23,6 +23,7 @@ outputs:
   - monitoring/answers/<provider>/<date>/*.jsonl
   - monitoring/<date>_ai-answer-metrics.json
   - outreach/<date>_approval-queue.csv
+  - outreach/<date>_community-reply-review.json
 ---
 
 # AI Answer Visibility and Social Opportunity Loop
@@ -34,6 +35,7 @@ This is an intelligence and drafting workflow. It is not an automated engagement
 ## Non-negotiable boundaries
 
 - Do not create or operate disposable accounts, fake personas, fake discussions, hidden sponsorships, or vote manipulation.
+- Do not optimize for avoiding bans, manufacturing a thread, increasing profile views, or gaming a community algorithm.
 - Do not post, comment, submit, buy a placement, or publish without explicit human approval for the exact action and final text.
 - Do not claim personal experience that the approved speaker did not have.
 - Do not use paid data providers unless the user has approved the provider and spend.
@@ -164,6 +166,28 @@ For each useful opportunity choose one lane:
 
 Prefer owned evidence over paid placement. Do not frame community posting as a citation hack.
 
+### Evidence-led community reply pattern (draft only)
+
+A relevant Reddit discussion may justify an affiliated reply draft. It does not justify posting. Use this sequence only
+after the community rules, speaker identity, product truth, and claim evidence pass review:
+
+1. **Relevant authority** — state why this speaker can answer, using a specific, verifiable basis. Do not use status,
+   credentials, customer counts, or personal experience that the speaker cannot prove.
+2. **Useful answer first** — answer the question before mentioning a product. The reply must still help if the product
+   name is removed.
+3. **Explain the mechanism** — show why the recommendation works, when it fails, and what the reader should check.
+4. **Correct bad advice carefully** — identify the mistaken mechanism and replace it with evidence. Do not shame users,
+   attack competitors, or create conflict for engagement.
+5. **Continue only with new value** — a follow-up can answer a real question, add evidence, or correct an error. Never
+   split one answer into multiple comments, seed replies, or prolong a thread to influence ranking.
+6. **Disclose the product relationship** — mention the product only when directly relevant and allowed. Use a clear
+   affiliation disclosure in the same comment. A profile visit is incidental, not an objective.
+
+Copy `assets/community-reply-review.json` into the workspace and complete every evidence and rules field. A strong
+draft structure is not evidence that Reddit users welcome promotion, that an account avoided enforcement, or that the
+format caused engagement. The research prompt that motivated this checklist was a single public X observation
+(`https://x.com/illyism/status/2090023224658522555`); treat its account-history and causality claims as unverified.
+
 ## 9. Build the approval queue
 
 Create the queue from ranked candidates:
@@ -174,6 +198,10 @@ python3 scripts/approval_queue.py opportunities.csv \
 ```
 
 The queue is candidate → research → rules checked → draft → truth review → owner approval → executed → verified → measured. The script may create research rows. It cannot advance rows to approved or executed.
+
+For a community draft, complete `authority_basis`, `mechanism_to_explain`, `advice_correction`,
+`follow_up_value_plan`, and `product_mention_justification`. Empty fields are a review blocker, not permission to infer
+the missing facts.
 
 The exact final draft, destination, identity, affiliation disclosure, product claims, and action type must be visible at approval time.
 

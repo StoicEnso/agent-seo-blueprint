@@ -93,7 +93,7 @@ while keeping the paid source material private and the distilled methodology sha
 │   └── report.py                   #   render audit/keyword/brief artifacts from data
 ├── assets/                         # templates + source-lead research assets
 │   ├── audit-report.md  content-brief.md  keyword-map.csv  outreach-email.md  monitoring-snapshot.md
-│   ├── ai-answer-panel.csv  ai-answer-run.json
+│   ├── ai-answer-panel.csv  ai-answer-run.json  community-reply-review.json
 │   ├── directory-discovery-sources.csv # dated registry of third-party queue-building sources
 │   ├── directory-submission-tracker.csv # claimed-vs-verified lineage + submission states
 │   ├── startup-backlink-candidates.csv # directory leads + one hosted-publishing intake
@@ -168,6 +168,8 @@ citation pools separate from convertible traffic.
   current field/lab thresholds and interpretation boundaries centralized.
 - **Public social evidence**: `social_fetch.py` provides a cached, read-only Reddit RSS/Atom path with a bounded public
   JSON fallback for thread reads. The scoring and approval scripts rank research leads but cannot authorise or execute a post.
+  The optional reply-review packet requires verifiable authority, a useful answer, mechanism detail, respectful correction,
+  value-led follow-up, affiliation disclosure, and exact approval; it rejects ban avoidance and thread/profile gaming as goals.
 - **AI answer panels**: `prompt_panel.py` validates stable buyer-question versions; `geo_metrics.py` keeps provider
   observations and sample sizes separate and refuses incomplete evidence contracts.
 - Each integration ships a reference doc: what data it provides, how to authenticate, browser-fallback steps, rate
