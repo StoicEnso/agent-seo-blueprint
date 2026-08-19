@@ -19,8 +19,11 @@ class StatisticsPageLinkEarningDocsTest(unittest.TestCase):
     def test_creator_claim_is_kept_as_a_hypothesis(self):
         text = PLAYBOOK.read_text(encoding="utf-8")
         for phrase in (
-            "80-query dataset",
-            "creator hypothesis",
+            "80 live US Google searches across ten niches",
+            "423 page-one sites",
+            "24.4%",
+            "full 80-query dataset",
+            "The link part is a bet, not a measurement.",
             "not a “rank without backlinks” guarantee",
             "A weak domain ranking in one observed result is a lead",
             "Sequence is not causation",
