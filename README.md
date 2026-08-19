@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-64-playbooks)
+- [The knowledge layer](#the-knowledge-layer-65-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,8 +46,8 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **64 playbooks**: 36 original course distillations plus 28 operational additions for article QA, schema/E-E-A-T,
-  programmatic patterns, authority acquisition, technical maintenance, GSC opportunity mining, Google-only AI visibility,
+- **65 playbooks**: 36 original course distillations plus 29 operational additions for article QA, schema/E-E-A-T,
+  programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   deterministic planning, SERP-regime grading, and adversarial rollout design;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
@@ -90,10 +90,10 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 28 operational additions
+  playbooks/                   # 36 course distillations + 29 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
-    authority/       (16)       # editorial intent, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
+    authority/       (17)       # editorial intent, statistics pages, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
     foundations/     (6)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
     maintenance/     (13)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
   course-index/
@@ -124,14 +124,14 @@ assets/                        # fill-in templates emitted into the workspace
   hosted-publishing-experiment.csv  # per-site fit, approval, rendered-link, index, referral, and outcome evidence
   topic-architecture-map.csv  internal-link-ledger.csv
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
-  local-business-profile-audit.csv
+  statistics-page-brief.csv  local-business-profile-audit.csv
   outreach-email.md  monitoring-snapshot.md
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```
 
 ---
 
-## The knowledge layer (64 playbooks)
+## The knowledge layer (65 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -146,7 +146,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 `programmatic-pattern-library` · `topic-architecture-and-internal-link-ledger` · `full-funnel-rollout` ·
 `eeat-framework` · `schema-types-reference`
 
-**authority/** — `understanding-authority` · `link-stealing` · `editorial-link-intent-and-assets` · `affiliate-programs` ·
+**authority/** — `understanding-authority` · `link-stealing` · `editorial-link-intent-and-assets` · `statistics-page-link-earning` · `affiliate-programs` ·
 `acquiring-domain-authority` · `haro` · `manual-outreach` · `building-an-audience` · `content-rings-for-links` ·
 `directory-submissions` · `startup-backlink-directory-submissions` · `hosted-publishing-experiments` ·
 `wikipedia-dead-link-building` · `press-release-distribution` · `other-link-building` · `linkbuilding-what-not-to-do`

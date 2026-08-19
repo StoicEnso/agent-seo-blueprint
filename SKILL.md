@@ -35,6 +35,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Analyze a creator/competitor growth tactic without copying the surface feature | Load `references/playbooks/foundations/mechanic-first-growth-experiments.md`, then route the bounded test to the owning workflow |
 | Screen a repeated avoided chore as one approval-gated product/search wedge | Load `references/playbooks/foundations/mechanic-first-growth-experiments.md`, copy `assets/tiny-loop-opportunity-map.csv`, then run `workflows/research-and-ideation.md` |
 | Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, cross-platform commercial-intent distribution, on-page, draft QA | `workflows/content-production.md` |
+| Build a current-year statistics page that can earn editorial links and support a relevant money page | Load `references/playbooks/authority/statistics-page-link-earning.md`, copy `assets/statistics-page-brief.csv`, then run `workflows/content-production.md` and `workflows/authority-and-links.md`; keep the URL yearless, require auditable data and methodology, and hold publication and outreach for explicit approval |
 | Plan a topic cluster with distinct page roles and an inspectable contextual-link ledger | Load `references/playbooks/content/topic-architecture-and-internal-link-ledger.md`, then run `workflows/research-and-ideation.md` and `workflows/content-production.md` |
 | Audit a live site (technical + on-page + content) with a prioritized fix list | `workflows/site-audit.md` |
 | Audit Google Business Profile and local SEO readiness without changing the listing | Load `references/playbooks/maintenance/local-business-profile-audit.md`, copy `assets/local-business-profile-audit.csv`, then route website fixes to `workflows/site-audit.md` and measurement to `workflows/monitoring.md` |
@@ -73,7 +74,7 @@ Distilled, original methodology grouped by area. Load the specific file a step n
   content-rings, on-page-optimization, topic-architecture-and-internal-link-ledger, image-search-optimization,
   content-what-not-to-do, agent-article-production-qa,
   full-funnel-rollout, E-E-A-T, and schema references
-- **authority/** — understanding-authority, link-stealing, editorial-link-intent-and-assets, affiliate-programs, acquiring-domain-authority, haro,
+- **authority/** — understanding-authority, link-stealing, editorial-link-intent-and-assets, statistics-page-link-earning, affiliate-programs, acquiring-domain-authority, haro,
   manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, startup-backlink verification,
   hosted-publishing experiments, press-release distribution, Wikipedia dead-link research, other-link-building, and linkbuilding-what-not-to-do
 - **foundations/** — seo-philosophy, seo-and-ai-future, google-generative-ai-search-official, seo-process-overview,
@@ -144,6 +145,7 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   spoof device/location signals.
 - **Article QA** uses evidence-backed claims, hard-fail checks, and at most two automated revision passes. A score never
   overrides fabricated/unsupported claims, product-truth violations, intent mismatch, or the human publication gate.
+- **Statistics-page link earning** is an evidence experiment, not a ranking shortcut. Require a live SERP fit check, at least one auditable original statistic or reproducible calculation, a source and methodology ledger, a stable yearless URL, honest `datePublished`/`dateModified`, and contextual links with a reader reason. Never fabricate survey results, mass-produce thin year pages, force a footer link, or promise rankings, journalist citations, backlinks, traffic, or conversions.
 - **Editorial link intent** never licenses credit-based reciprocal-link networks, automated exchange articles, or followed-link quid pro quo. Paid placements require truthful disclosure and appropriately qualified links such as `sponsored`/`nofollow`; provider citation observations are targeting evidence, not link value, traffic, conversion, or causality.
 - **Directory submissions** are relevance-first entity/citation work: live-verify public indexability and eligibility,
   treat DR screenshots as leads rather than facts, and require explicit approval before any account/listing write.
