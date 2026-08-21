@@ -36,6 +36,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Audit AI-search/GEO readiness, including current commerce/entity data when applicable | `workflows/geo-audit.md` |
 | Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md` |
 | Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
+| Assess or draft a newsworthy press-release distribution test | Load `references/playbooks/authority/press-release-distribution.md`, then run `workflows/authority-and-links.md`; submission remains approval-gated |
 | Monitor rankings/traffic, GSC 4–20 opportunities, Google AI impressions, updates, and ROI | `workflows/monitoring.md` |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
 | Ideate content angles / pressure-test a niche with customer personas | ICP personas (below) |
@@ -62,7 +63,7 @@ Distilled, original methodology grouped by area. Load the specific file a step n
   content-what-not-to-do, agent-article-production-qa, E-E-A-T, and schema references
 - **authority/** — understanding-authority, link-stealing, affiliate-programs, acquiring-domain-authority, haro,
   manual-outreach, building-an-audience, content-rings-for-links, directory-submissions, startup-backlink verification,
-  Wikipedia dead-link research, other-link-building, and linkbuilding-what-not-to-do
+  press-release distribution, Wikipedia dead-link research, other-link-building, and linkbuilding-what-not-to-do
 - **foundations/** — seo-philosophy, seo-and-ai-future, seo-process-overview
 - **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
   measuring-seo-results, evidence-backed operational SEO, technical maintenance, GSC 4–20 opportunity mining,
@@ -108,6 +109,9 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   overrides fabricated/unsupported claims, product-truth violations, intent mismatch, or the human publication gate.
 - **Directory submissions** are relevance-first entity/citation work: live-verify public indexability and eligibility,
   treat DR screenshots as leads rather than facts, and require explicit approval before any account/listing write.
+- **Press-release distribution** requires real news, current destination-owned terms, an owned evidence hub, natural
+  links, rights/disclosure QA, and explicit approval. MediaBoost and similar paid packages remain unverified candidates
+  until live outlet/link checks pass. Never promise followed links, fast indexing, AI citations, rankings, traffic, or conversions.
 - **Operational SEO checklists** are coverage ledgers, not ranking formulas: preserve conditional guidance, use GSC over
   `site:` counts for indexation, and require URL/template-level evidence before marking a check complete.
 - **Google AI visibility** stays evidence-bound: its Search Console report is Google-only and impression-only. Never invent
