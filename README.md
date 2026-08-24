@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-65-playbooks)
+- [The knowledge layer](#the-knowledge-layer-66-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **65 playbooks**: 36 original course distillations plus 29 operational additions for article QA, schema/E-E-A-T,
+- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,12 +90,12 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 29 operational additions
+  playbooks/                   # 36 course distillations + 30 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (17)       # editorial intent, statistics pages, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
     foundations/     (6)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
-    maintenance/     (13)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
+    maintenance/     (14)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
@@ -125,13 +125,13 @@ assets/                        # fill-in templates emitted into the workspace
   topic-architecture-map.csv  internal-link-ledger.csv
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
   statistics-page-brief.csv  search-led-expert-answer-map.csv  local-business-profile-audit.csv
-  outreach-email.md  monitoring-snapshot.md
+  content-opportunity-ledger.json  outreach-email.md  monitoring-snapshot.md
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```
 
 ---
 
-## The knowledge layer (65 playbooks)
+## The knowledge layer (66 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -157,7 +157,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
 `local-business-profile-audit` ·
-`gsc-position-4-20-opportunity-mining` · `google-generative-ai-visibility` · `ai-search-commerce-readiness` ·
+`gsc-position-4-20-opportunity-mining` · `content-opportunity-audit-and-measurement` · `google-generative-ai-visibility` · `ai-search-commerce-readiness` ·
 `cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop` · `ai-overviews-and-serp-features`
 
 > **Flagship play:** proactive niche discovery — mining search data for a low-KD, buildable gap with a real LSI cluster
@@ -176,7 +176,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **content-production** | content-type selection → brief/topic architecture → optional cross-platform commercial-intent map → optional evidence packet, article draft, anti-slop rewrite, lint, bounded QA | content brief; optional topic/link ledgers, distribution map, source packet, review draft, QA report |
 | **site-audit** | technical + on-page + content + opportunity + authority audit; optional read-only local Business Profile pass | prioritized, severity-ranked fix list; optional local-profile ledger |
 | **authority-and-links** | pick tactics, including one-site hosted-publishing pilots and bounded press-release distribution → ranked opportunity list → **drafted** outreach/releases (never auto-sent) | opportunity list, outreach drafts, optional hosted-publishing/press-release plans |
-| **monitoring** | rank/traffic snapshots + GSC 4–20 opportunities + optional Google AI, Cloudflare agent/AEO, and provider citation evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
+| **monitoring** | rank/traffic snapshots + GSC 4–20 and recurring measured content opportunities + optional Google AI, Cloudflare agent/AEO, and provider citation evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
 | **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare and provider-specific citation lanes | readiness report and raw findings |
 | **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific buyer-question citations | category/citation baseline and loop plan |

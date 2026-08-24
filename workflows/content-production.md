@@ -20,6 +20,7 @@ playbooks:
   - references/playbooks/research/match-and-exceed.md
   - references/playbooks/research/search-intent.md
   - references/playbooks/maintenance/seo-operational-checklist.md
+  - references/playbooks/maintenance/content-opportunity-audit-and-measurement.md
 scripts:
   - scripts/workspace.py
   - scripts/search_course.py
@@ -34,6 +35,7 @@ outputs:
   - research/<date>_<keyword-slug>-source-packet.json  # if drafting an article
   - drafts/<date>_<keyword-slug>.md                    # if drafting an article
   - audits/<date>_<keyword-slug>-content-qa.json       # if drafting an article
+  - drafts/<date>_<candidate>-proposed-change.md      # if routed from a content-opportunity audit
   - research/<date>_topic-architecture.csv             # when producing a multi-page topic cluster
   - research/<date>_internal-link-ledger.csv            # contextual links with reader reasons
 ---
@@ -73,6 +75,8 @@ outputs:
 
    If the brief is being routed from `geo-audit.md` or `category-citation-loop.md`, also load `references/playbooks/maintenance/cross-platform-ai-citation-loop.md`. Carry forward the exact buyer-question version, scoped provider, observed source/page-role gap (`problem`, `use_case`, `comparison`, `pricing`, `trust`, `case_study`, `implementation`), and required first-party evidence. Build pages for buyers, not an AI quota: do not mint one page per synthetic fan-out or create unsupported comparison claims just to chase citations.
 
+   **Content-opportunity handoff.** When `monitoring.md` routes a candidate from `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md`, preserve its candidate ID, query/page pair, source windows, primary lever, assumptions, live-page/SERP evidence, and cannibalization disposition. A narrow update must be an exact proposed diff with evidence, risk, rollback, and measurement dates. A new-page candidate still passes every normal brief and QA gate. Headroom only orders review; it is not approval to publish.
+
    Apply the relevant content checks from `references/playbooks/maintenance/seo-operational-checklist.md`: titles are intent-first (50–60 characters is guidance, not a hard pass/fail), authorship/E-E-A-T signals must be real, schema must match visible content, `dateModified` changes only after material edits, and FAQ/PAA sections belong on the most appropriate page unless a standalone page has distinct demand and enough value.
 
    **Multi-page topic branch.** When the request covers a pillar plus supporting pages, load `references/playbooks/content/topic-architecture-and-internal-link-ledger.md`. Resolve overlap before drafting, assign each URL one distinct role and user job, identify the relevant money/service page, and maintain the two workspace CSVs copied from `assets/topic-architecture-map.csv` and `assets/internal-link-ledger.csv`. A support page needs distinct value and evidence; adding a page merely to increase “topical depth” is a hard fail. Navigation/footer links do not replace contextual ledger rows.
@@ -111,6 +115,7 @@ outputs:
 - `research/<date>_<keyword-slug>-source-packet.json` — claim-to-source evidence packet (if an article draft is requested).
 - `drafts/<date>_<keyword-slug>.md` — evidence-grounded review draft (if requested).
 - `audits/<date>_<keyword-slug>-content-qa.json` — weighted QA, hard-fail results, revisions, and remaining defects (if requested).
+- `drafts/<date>_<candidate>-proposed-change.md` — exact evidence-backed diff when routed from the content-opportunity audit.
 - `research/<date>_topic-architecture.csv` and `research/<date>_internal-link-ledger.csv` — required when the job advances a multi-page topic cluster.
 
-**Done when.** Every targeted keyword has a brief whose format matches the live SERP, includes an outline + metadata + internal-link + upsell plan, and passes the what-not-to-do checklist. A multi-page topic job also has distinct-role architecture and an inspectable contextual-link ledger, with no page-count inflation or fabricated authority score. Citation-loop-driven briefs also preserve the triggering question version, provider scope, and evidence plan. Any cross-platform distribution branch also has dated surface evidence, no more than three selected surfaces, distinct native value, a disclosure plan, an owned evidence hub, and separate search/native/referral/conversion/revenue metrics. If an article draft was requested, the source packet, draft, and QA report are inspectable; the draft scores at least 85/100; no hard fail remains; and no more than two automated revisions were used. Hand review-ready artifacts to the user/builder for the confirmation-gated build; route "ranks but needs links" pages to `authority-and-links.md` and add new pages to `monitoring.md`.
+**Done when.** Every targeted keyword has a brief whose format matches the live SERP, includes an outline + metadata + internal-link + upsell plan, and passes the what-not-to-do checklist. A multi-page topic job also has distinct-role architecture and an inspectable contextual-link ledger, with no page-count inflation or fabricated authority score. Citation-loop-driven briefs also preserve the triggering question version, provider scope, and evidence plan. Any cross-platform distribution branch also has dated surface evidence, no more than three selected surfaces, distinct native value, a disclosure plan, an owned evidence hub, and separate search/native/referral/conversion/revenue metrics. If an article draft was requested, the source packet, draft, and QA report are inspectable; the draft scores at least 85/100; no hard fail remains; and no more than two automated revisions were used. Opportunity-routed artifacts also preserve the candidate ID, exact diff or normal brief, assumptions, approval state, and measurement dates. Hand review-ready artifacts to the user/builder for the confirmation-gated build; route "ranks but needs links" pages to `authority-and-links.md` and add new pages to `monitoring.md`.

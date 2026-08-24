@@ -52,6 +52,7 @@ Use this for ongoing optimization when a site already has live pages and Search 
 - Average position is an aggregate, not a stable rank; preserve device/country/date scope.
 - Search Console rows are evidence of observed performance, not proof that one edit will cause a ranking gain.
 - Keep implementation and measurement separate: route page changes to `content-production.md`, then follow up in `monitoring.md`.
+- For a recurring cross-window queue with explicit headroom signals, guarded execution, and change-level +28/+56-day reads, load `content-opportunity-audit-and-measurement.md`.
 
 ## Done condition
 

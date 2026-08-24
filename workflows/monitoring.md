@@ -7,6 +7,7 @@ playbooks:
   - references/playbooks/maintenance/navigating-google-updates.md
   - references/playbooks/maintenance/keyword-intent-evolution.md
   - references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md
+  - references/playbooks/maintenance/content-opportunity-audit-and-measurement.md
   - references/playbooks/maintenance/seo-operational-checklist.md
   - references/playbooks/maintenance/local-business-profile-audit.md
   - references/playbooks/maintenance/google-generative-ai-visibility.md
@@ -27,6 +28,9 @@ outputs:
   - monitoring/<date>_leading-indicators.json  # the 6 action-task checklist
   - monitoring/<date>_snapshot.json         # raw ordinary-search snapshot payload
   - monitoring/<date>_gsc-4-20-opportunities.json # current, verified quick-win/recovery rows
+  - monitoring/<date>_content-opportunity-audit.json # optional recurring ranked candidate ledger
+  - monitoring/<date>_content-opportunity-summary.md # optional review summary and exact proposed diffs
+  - monitoring/content-change-ledger.jsonl # approved-write receipts plus 28/56-day enrollment
   - monitoring/<date>_google-ai-visibility.json # optional Google AI impression snapshot
   - monitoring/<date>_cloudflare-agent-aeo.json # optional Cloudflare readiness, synthetic panel, and operator snapshot
   - monitoring/<date>_ai-citation-observations.json # optional non-Google provider citation snapshot
@@ -59,6 +63,8 @@ outputs:
    **Optional cross-platform citation layer.** When the workspace tracks a fixed buyer-question set for ChatGPT, Microsoft Copilot, Perplexity, Claude, or another named provider, load `references/playbooks/maintenance/cross-platform-ai-citation-loop.md`. Re-run the same question versions modestly, save dated provider/surface/locale/account-state observations to `monitoring/<date>_ai-citation-observations.json`, and keep mentions/citations separate from ordinary Search metrics, Google AI impressions, and Cloudflare evidence.
 
 4. **Mine current GSC positions 4–20.** Load `references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md`. Use the latest final 28-day query+page rows, reject stale/irrelevant/intent-mismatched candidates, and inspect the live page/SERP before recommending a narrow change. Keep 90-day-only rows as recovery context unless current data confirms them. Save valid, rejected, and recovery-only rows to `monitoring/<date>_gsc-4-20-opportunities.json` and route implementation briefs to `content-production.md`.
+
+   **Optional recurring content-opportunity audit.** When the user wants a joined weekly audit rather than a one-off 4–20 list, load `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md` and copy `assets/content-opportunity-ledger.json`. Join the current and previous final windows with the live CMS inventory and prior run. Store real click loss, CTR headroom, and rank headroom separately; use soft estimates only to order a capped review queue. Verify the live page, SERP, canonical, product truth, and cannibalization before drafting. The agent remains read/draft-only. Any approved write must use a deterministic executor that rejects stale revisions, records the live receipt, and enrolls like-for-like +28-day and +56-day reads with same-period site evidence. Save the audit and review summary to the declared outputs.
 
 5. **Track the six leading indicators (the work).** From `measuring-seo-results.md`, log the action-task checklist for the period: (1) content shipped, (2) new keywords/content targeted, (3) existing pages optimized, (4) link opportunities identified + contacted, (5) backlinks acquired, (6) competitor backlinks tracked. Save to `monitoring/<date>_leading-indicators.json`. These are checked weekly; the user fills them or the agent reads them from the workspace (briefs shipped, drafts sent in `outreach/`, etc.).
 
@@ -93,9 +99,12 @@ outputs:
 - `monitoring/<date>_leading-indicators.json` — the six action-task checklist for the period.
 - `monitoring/<date>_snapshot.json` — raw ordinary-search payload for trend diffing.
 - `monitoring/<date>_gsc-4-20-opportunities.json` — current valid opportunities plus rejected/recovery-only rows.
+- `monitoring/<date>_content-opportunity-audit.json` — optional ranked candidate ledger with separate real-loss and estimated-headroom signals.
+- `monitoring/<date>_content-opportunity-summary.md` — optional review queue with exact diffs, evidence, assumptions, and dispositions.
+- `monitoring/content-change-ledger.jsonl` — approved-write receipts, stale checks, and 28/56-day measurement enrollment.
 - `monitoring/<date>_google-ai-visibility.json` — optional impression-only Google AI snapshot with explicit limitations.
 - `monitoring/<date>_cloudflare-agent-aeo.json` — optional Cloudflare snapshot with readiness, synthetic panel, and operator-activity lanes kept separate.
 - `monitoring/<date>_ai-citation-observations.json` — optional provider-specific citation observation snapshot with explicit metric limitations.
 - `monitoring/<date>_local-business-profile.json` — optional local-profile snapshot that keeps visibility, profile interactions, leads, conversions, and revenue separate.
 
-**Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. If local-profile work was in scope, its profile visibility, interaction, and business-outcome metrics remain separate and the recorded limitations rule out causal overclaiming. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, citation observations, or local rank observations as clicks or revenue.
+**Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. If local-profile work was in scope, its profile visibility, interaction, and business-outcome metrics remain separate and the recorded limitations rule out causal overclaiming. If the recurring content-opportunity audit was used, every applied change also has an approval receipt and scheduled +28-day/+56-day reads. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, citation observations, or local rank observations as clicks or revenue.
