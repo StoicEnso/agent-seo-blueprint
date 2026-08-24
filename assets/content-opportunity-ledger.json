@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "run": {
+    "run_id": "YYYY-MM-DD-site",
+    "site": "https://example.com",
+    "gsc_property": "sc-domain:example.com",
+    "search_type": "web",
+    "country": null,
+    "device": null,
+    "current_window": ["YYYY-MM-DD", "YYYY-MM-DD"],
+    "previous_window": ["YYYY-MM-DD", "YYYY-MM-DD"],
+    "source_freshness": {},
+    "candidate_cap": 15,
+    "verification_buffer": 3,
+    "limitations": []
+  },
+  "candidate": {
+    "candidate_id": "sha256-or-stable-id",
+    "query": "",
+    "page": "https://example.com/page",
+    "canonical": "https://example.com/page",
+    "cms_revision": "",
+    "content_hash": "",
+    "intent": "",
+    "serp_observed_at": "",
+    "serp_features": [],
+    "current": {"clicks": 0, "impressions": 0, "ctr": 0.0, "position": 0.0},
+    "previous": {"clicks": 0, "impressions": 0, "ctr": 0.0, "position": 0.0},
+    "headroom": {
+      "recover_clicks": 0,
+      "ctr_clicks": 0,
+      "rank_clicks": 0,
+      "primary_lever": "RECOVER|CTR|RANK|NONE",
+      "expected_ctr_source": "PROPERTY_CURVE|SCOPED_BENCHMARK|HEURISTIC_FALLBACK|NONE",
+      "assumptions": [],
+      "is_forecast": false
+    },
+    "verification": {
+      "live_page_checked_at": "",
+      "ranking_page_confirmed": false,
+      "intent_fit": "CONFIRMED|REJECTED|UNCERTAIN",
+      "cannibalization_check": "PASS|FAIL|UNCERTAIN",
+      "product_truth_check": "PASS|FAIL|NOT_APPLICABLE|UNCERTAIN",
+      "source_packet": [],
+      "observed_gap": "",
+      "constraint": "CONTENT|METADATA|AUTHORITY|TECHNICAL|DEMAND|UNKNOWN"
+    },
+    "decision": {
+      "disposition": "METADATA_TEST|SURGICAL_CORRECTION|CONTENT_ADDITION|REFORMAT_OR_REBUILD|CONSOLIDATE_OR_RETARGET|NEW_PAGE_BRIEF|AUTHORITY_ROUTE|TECHNICAL_ROUTE|NO_ACTION|NEEDS_MORE_DATA",
+      "reason": "",
+      "candidate_status": "SCREENED|VERIFIED|PROPOSED|APPROVED|SKIPPED|STALE|APPLIED|MEASURING|COMPLETE|FAILED"
+    },
+    "proposal": {"old_text": "", "new_text": "", "exact_diff": "", "hypothesis": "", "risk": "", "rollback": "", "hard_fails": []},
+    "approval": {"state": "UNREVIEWED|APPROVED|EDIT_REQUESTED|SKIPPED", "approved_by": "", "approved_at": "", "approved_revision": "", "approved_content_hash": ""},
+    "execution": {"executor": "", "idempotency_key": "", "lock_receipt": "", "prewrite_revision": "", "stale_check": "PASS|FAIL|NOT_RUN", "revalidation": "PASS|FAIL|NOT_RUN", "write_receipt": "", "live_revision": "", "live_verified_at": ""},
+    "measurement": {"changed_at": "", "before_page_query": {}, "before_site_control": {}, "before_analytics": {}, "before_ai_crawl": {}, "before_ai_citations": {}, "before_ai_referrals": {}, "day_28_due": "", "day_28_result": null, "day_56_due": "", "day_56_result": null, "interpretation": "", "causality_claimed": false},
+    "notes": []
+  }
+}

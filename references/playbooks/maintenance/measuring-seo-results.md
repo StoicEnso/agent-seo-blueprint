@@ -42,4 +42,4 @@ tools: [gsc, ga4]
 - Letting the checklist lapse and then being shocked when positions fall months later.
 - Treating the weekly dashboard as the place to judge success — judge inputs weekly, outcomes quarterly.
 
-**Related.** [[staying-ahead-with-backlinks]], [[keyword-intent-evolution]], [[navigating-google-updates]], [[seo-process-overview]]. Course ref: 05-05 (Measure if your work pays off).
+**Related.** For exact change-level before evidence and +28/+56-day reads, see [[content-opportunity-audit-and-measurement]]. [[staying-ahead-with-backlinks]], [[keyword-intent-evolution]], [[navigating-google-updates]], [[seo-process-overview]]. Course ref: 05-05 (Measure if your work pays off).

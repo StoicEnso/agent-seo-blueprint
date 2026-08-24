@@ -49,6 +49,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Choose the cheapest/value press-release route, or draft a newsworthy distribution test | Load `references/playbooks/authority/press-release-distribution.md`, compare the current goal-based price path in `assets/press-release-distribution-registry.csv`, then run `workflows/authority-and-links.md`; checkout, payment, and submission remain approval-gated |
 | Find existing editorial link intent (listicle/citation gaps, broken or decayed resources, statistics needs, missing visuals/video, uncited owned assets) | Load `references/playbooks/authority/editorial-link-intent-and-assets.md`, then run `workflows/authority-and-links.md` |
 | Monitor rankings/traffic, GSC 4–20 opportunities, Google AI impressions, provider citation observations, updates, and ROI | `workflows/monitoring.md` |
+| Rank recurring content opportunities, draft narrow fixes, and measure approved changes | Load `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md`, copy `assets/content-opportunity-ledger.json`, then run `workflows/monitoring.md`; route approved briefs to `workflows/content-production.md` |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
 | Ideate content angles / pressure-test a niche with customer personas | ICP personas (below) |
 
@@ -83,6 +84,7 @@ Distilled, original methodology grouped by area. Load the specific file a step n
 - **maintenance/** — navigating-google-updates, keyword-intent-evolution, staying-ahead-with-backlinks,
   measuring-seo-results, evidence-backed operational SEO, technical maintenance, local Business Profile audits,
   GSC 4–20 opportunity mining,
+  content opportunity audits with guarded writes and 28/56-day measurement,
   Google Generative AI visibility measurement, cross-platform AI citation loops, AI-search commerce readiness, and
   Cloudflare Agent Readiness/AEO evidence, and AI Overviews/SERP-feature interpretation
 
@@ -146,6 +148,7 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
   spoof device/location signals.
 - **Article QA** uses evidence-backed claims, hard-fail checks, and at most two automated revision passes. A score never
   overrides fabricated/unsupported claims, product-truth violations, intent mismatch, or the human publication gate.
+- **Content opportunity automation** uses separate real-loss, CTR-headroom, and rank-headroom signals to order review, not forecast results. The agent may inspect, score, and draft but never write to the website. A deterministic executor must revalidate the exact approved diff, reject stale revisions, record a live receipt, and schedule like-for-like 28-day and 56-day readings with same-period site evidence.
 - **Statistics-page link earning** is an evidence experiment, not a ranking shortcut. Require a live SERP fit check, at least one auditable original statistic or reproducible calculation, a source and methodology ledger, a stable yearless URL, honest `datePublished`/`dateModified`, and contextual links with a reader reason. Never fabricate survey results, mass-produce thin year pages, force a footer link, or promise rankings, journalist citations, backlinks, traffic, or conversions.
 - **Search-led expert answers** start from dated question evidence, a real expert/proof packet, an owned-page and cannibalization check, and a 3–10-question pilot. A creator’s “convergence,” LinkedIn-ranking, or 10–30-video claim is a hypothesis, not proof or a quota. Adapt each approved surface natively and measure ordinary search, social, referrals, named answer providers, leads, and conversions separately.
 - **Editorial link intent** never licenses credit-based reciprocal-link networks, automated exchange articles, or followed-link quid pro quo. Paid placements require truthful disclosure and appropriately qualified links such as `sponsored`/`nofollow`; provider citation observations are targeting evidence, not link value, traffic, conversion, or causality.
