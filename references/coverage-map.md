@@ -124,6 +124,10 @@ Proves the distilled playbooks cover the entire course. Generated from `course-i
 - `research/search-intent.md` ← 02-05
 - `research/seo-metrics.md` ← 02-07
 
+## Operational authority additions
+
+- `authority/government-supplier-registry-profiles.md` ← fact-checked creator tactic and registry-owner guidance; not derived from a course lesson
+
 ## Summary
 
 - Total lessons: 62
