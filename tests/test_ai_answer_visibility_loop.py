@@ -175,6 +175,23 @@ class OpportunityAndQueueTest(unittest.TestCase):
         self.assertEqual(queue[0]["approval_state"], "research_only")
         self.assertEqual(queue[0]["execution_state"], "not_executed")
         self.assertEqual(queue[0]["rules_state"], "not_checked")
+        self.assertEqual(queue[0]["reply_pattern"], "evidence_led_community_reply")
+        for field in (
+            "authority_basis",
+            "mechanism_to_explain",
+            "advice_correction",
+            "follow_up_value_plan",
+            "product_mention_justification",
+        ):
+            self.assertEqual(queue[0][field], "")
+
+    def test_community_reply_review_asset_stays_non_executing(self):
+        packet = json.loads((ROOT / "assets" / "community-reply-review.json").read_text(encoding="utf-8"))
+        self.assertEqual(packet["rules_state"], "not_checked")
+        self.assertEqual(packet["product_truth_state"], "not_checked")
+        self.assertEqual(packet["approval_state"], "research_only")
+        self.assertEqual(packet["execution_state"], "not_executed")
+        self.assertEqual(packet["reply_pattern"], "evidence_led_community_reply")
 
 
 class DocumentationContractTest(unittest.TestCase):
@@ -184,13 +201,17 @@ class DocumentationContractTest(unittest.TestCase):
         reference = (ROOT / "references" / "integrations" / "social-fetch.md").read_text(encoding="utf-8")
         self.assertIn("workflows/ai-answer-visibility-loop.md", skill)
         self.assertIn("Reddit RSS/Atom", reference)
+        normalized_workflow = " ".join(workflow.split())
         for phrase in (
             "Do not post, comment, submit, buy a placement, or publish without explicit human approval",
             "Keep providers separate",
             "Never convert answer counts or social observations into estimated impressions, clicks, CTR, conversions, or revenue",
             "A high score never grants action authority",
+            "The reply must still help if the product name is removed",
+            "Never split one answer into multiple comments, seed replies, or prolong a thread to influence ranking",
+            "treat its account-history and causality claims as unverified",
         ):
-            self.assertIn(phrase, workflow)
+            self.assertIn(phrase, normalized_workflow)
 
 
 if __name__ == "__main__":
