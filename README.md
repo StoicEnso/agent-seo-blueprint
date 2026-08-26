@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
+- [The knowledge layer](#the-knowledge-layer-68-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **68 playbooks**: 36 original course distillations plus 32 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,12 +90,12 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 32 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
     foundations/     (6)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
-    maintenance/     (14)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
+    maintenance/     (15)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
@@ -125,13 +125,13 @@ assets/                        # fill-in templates emitted into the workspace
   topic-architecture-map.csv  internal-link-ledger.csv
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
   statistics-page-brief.csv  search-led-expert-answer-map.csv  local-business-profile-audit.csv
-  content-opportunity-ledger.json  outreach-email.md  monitoring-snapshot.md
+  content-opportunity-ledger.json  vendor-owned-commercial-citation-audit.csv  outreach-email.md  monitoring-snapshot.md
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (68 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -159,7 +159,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
 `local-business-profile-audit` ·
 `gsc-position-4-20-opportunity-mining` · `content-opportunity-audit-and-measurement` · `google-generative-ai-visibility` · `ai-search-commerce-readiness` ·
-`cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop` · `ai-overviews-and-serp-features`
+`cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop` · `vendor-owned-commercial-query-citations` · `ai-overviews-and-serp-features`
 
 > **Flagship play:** proactive niche discovery — mining search data for a low-KD, buildable gap with a real LSI cluster
 > behind it, to build a product/startup around. See `research/finding-and-validating-niches.md` (the Ahrefs data-dump
@@ -294,6 +294,7 @@ Ask the agent things like:
 - *"Which pages appear in Google AI Overviews or AI Mode?"* → `monitoring` + `google-generative-ai-visibility` → impression-only page/country/date/device evidence with limitations.
 - *"What does Cloudflare show about agent access, AI citations, and operator traffic?"* → `geo-audit` or `monitoring` + `cloudflare-agent-readiness-and-aeo` → three separate evidence lanes with access state and limitations.
 - *"Show me how ChatGPT/Copilot/Perplexity/Claude cite us for buyer questions."* → `geo-audit` or `category-citation-loop` + `cross-platform-ai-citation-loop` → provider-specific observation sets with separated metrics.
+- *"Do vendor-owned comparison pages get cited for commercial queries?"* → `vendor-owned-commercial-query-citations` + `category-citation-loop` → source-owner audit, fair page gate, and provider-specific retest with no citation promise.
 - *"Track AI answers and find relevant Reddit discussions without posting."* → `ai-answer-visibility-loop` → a versioned question panel, public social evidence, separated metrics, ranked research candidates, and a non-executing approval queue. Optional reply packets require verifiable authority, a useful answer, mechanism detail, respectful correction, value-led follow-up, clear affiliation, and exact approval before posting.
 - *"Which queries rank in positions 4–20 and are worth improving?"* → `monitoring` + `gsc-position-4-20-opportunity-mining`.
 - *"Audit whether my product data and checkout are ready for AI agents."* → `geo-audit` + `ai-search-commerce-readiness`.
