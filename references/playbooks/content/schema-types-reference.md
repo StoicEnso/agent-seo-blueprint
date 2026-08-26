@@ -194,4 +194,8 @@ Replace placeholders with truthful, visible, verifiable data. Remove properties 
 
 ---
 
-**Related.** `workflows/site-audit.md`, `workflows/content-production.md`, `references/playbooks/content/eeat-framework.md`, `workflows/geo-audit.md`.
+### `sameAs` is an identity assertion, not a link tactic
+
+Before adding profile URLs, load `references/playbooks/content/organization-entity-reconciliation.md` and use `assets/organization-entity-identity-audit.csv`. Every URL must unambiguously identify the exact subject of the node. Do not place product pages, repositories, reviews, founders, mentions, or merely high-authority profiles on an Organization node unless they truly identify that same organization. Prefer a short accurate list over bulk URLs. External profile writes require separate approval, and valid markup does not prove rankings, a Knowledge Panel, backlink value, or AI citations.
+
+**Related.** `workflows/site-audit.md`, `workflows/content-production.md`, `references/playbooks/content/eeat-framework.md`, `references/playbooks/content/organization-entity-reconciliation.md`, `workflows/geo-audit.md`.

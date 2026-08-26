@@ -78,7 +78,7 @@ If trust is weak, raise that finding directly. Do not hide it behind a numeric a
 
 **Signals to check:**
 - [ ] The site or author is cited by reputable external sources.
-- [ ] The brand has consistent entity signals: sameAs profiles, schema, social profiles, directory listings, third-party mentions.
+- [ ] The brand has consistent entity signals: one canonical entity node, truthful schema, and reviewed profiles or identity records. For `sameAs`, apply `organization-entity-reconciliation.md`: every URL must unambiguously identify the exact node subject; mentions, products, repositories, reviews, and high-authority URLs are not interchangeable.
 - [ ] Topical coverage shows depth across related questions, not one isolated article.
 - [ ] Backlinks/mentions come from relevant sources, not obvious link schemes.
 - [ ] Reviews, testimonials, case studies, awards, certifications, or media mentions are visible where relevant.
@@ -136,4 +136,4 @@ Use ordinary audit severity, not a pseudo-scientific E-E-A-T score:
 - Assuming AI usage is automatically bad. The issue is whether the output is useful, accurate, reviewed, and enriched.
 - Applying the same bar to all topics. YMYL and high-stakes pages need stronger evidence and review.
 
-**Related.** `references/playbooks/content/content-fundamentals.md`, `references/playbooks/content/content-what-not-to-do.md`, `references/playbooks/foundations/seo-and-ai-future.md`, `workflows/site-audit.md`, `workflows/content-production.md`.
+**Related.** `references/playbooks/content/content-fundamentals.md`, `references/playbooks/content/content-what-not-to-do.md`, `references/playbooks/content/organization-entity-reconciliation.md`, `references/playbooks/foundations/seo-and-ai-future.md`, `workflows/site-audit.md`, `workflows/content-production.md`.

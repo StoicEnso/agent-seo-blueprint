@@ -7,6 +7,7 @@ playbooks:
   - references/playbooks/content/content-what-not-to-do.md
   - references/playbooks/content/content-fundamentals.md
   - references/playbooks/content/content-types-overview.md
+  - references/playbooks/content/organization-entity-reconciliation.md
   - references/playbooks/research/match-and-exceed.md
   - references/playbooks/research/research-for-existing-sites.md
   - references/playbooks/maintenance/keyword-intent-evolution.md
@@ -25,6 +26,7 @@ integrations: [pagespeed, gsc, serp, ahrefs]
 outputs:
   - audits/<date>_audit.md            # severity-ranked fix list (via report.py audit)
   - audits/<date>_audit-findings.json # raw findings payload
+  - audits/<date>_organization-entity-identity-audit.csv # optional, for entity/schema reconciliation
   - audits/<date>_local-business-profile-audit.csv # optional, for eligible local businesses
 ---
 
@@ -47,6 +49,8 @@ outputs:
 
 4. **On-page audit.** Per priority page, scrape it with `serp_capture.py` and check against `on-page-optimization.md`: meta title contains the main keyword AND matches search intent (no obscure titles that cause bounces); meta description uses variants; internal links present and pointing at related pages; H1/H2 structure sane. When the page or SERP is meaningfully visual, load `image-search-optimization.md` and sample priority images for HTML discovery, contextual/accessible alt behavior, stable URLs, responsive sizing, transfer cost/CWV impact, image-sitemap need, and truthful conditional metadata. Record each gap as a finding; do not infer image indexation or traffic from markup alone.
 
+   When Organization, LocalBusiness, Person, Product, or ProfilePage identity is in scope, load `organization-entity-reconciliation.md` and copy `assets/organization-entity-identity-audit.csv` to the workspace. Audit stable `@id` use, duplicate/conflicting nodes, visible fact consistency, and every `sameAs` candidate. Include a URL only when it unambiguously identifies the exact schema subject. Keep products, founders, repositories, reviews, mentions, and organizations as separate subjects. Do not create, claim, or repair external profiles during this read-only audit, and do not report validator success as ranking, Knowledge Panel, backlink, or AI-citation proof.
+
 5. **Content/intent audit.** Load `references/playbooks/content/content-fundamentals.md`, `content-types-overview.md`, and `references/playbooks/maintenance/keyword-intent-evolution.md`. For each key page, capture the live SERP for its target keyword (`serp_capture.py`) and check: does the page's **content type match the format Google now rewards**? An intent/format mismatch (e.g. a landing page where reviews now rank) is a high-severity finding with the fix "reformat to the now-preferred type." Also scan for thin content, keyword stuffing, AI-spam pages, and keyword cannibalization (two pages chasing one keyword) per `content-what-not-to-do.md`.
 
 6. **Opportunity audit (gaps).** Load `references/playbooks/research/research-for-existing-sites.md`. Via `ahrefs_client.py`, surface low-effort wins: add-a-phrase Organic-Keyword wins, Content-Gap keywords, and competitor Top Pages worth building. These become positive "opportunity" findings (lower severity than breakage, but high ROI).
@@ -66,6 +70,7 @@ outputs:
 **Outputs.**
 - `audits/<date>_audit.md` — prioritized, severity-ranked fix list (Markdown table from `report.py`).
 - `audits/<date>_audit-findings.json` — raw findings for re-rendering or diffing against the next audit.
+- `audits/<date>_organization-entity-identity-audit.csv` — optional exact-subject, public-access, control, indexability, and `sameAs` decision evidence.
 - `audits/<date>_operational-seo-coverage.csv` — evidence/status for all 37 operational checks.
 - `audits/<date>_local-business-profile-audit.csv` — optional dated profile, competitor-observation, truth-basis, approval, and measurement ledger for eligible local businesses.
 
