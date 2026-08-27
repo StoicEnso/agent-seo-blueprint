@@ -22,6 +22,7 @@ integrations: [pagespeed, gsc, serp]
 outputs:
   - audits/<date>_technical-seo-audit.md
   - audits/<date>_technical-seo-audit-findings.json
+  - audits/<date>_structured-data-verification-ledger.csv # optional schema evidence
   - monitoring/<date>_technical-seo-cron-check.md
 ---
 
@@ -67,7 +68,7 @@ outputs:
    - redirects: http→https→www chains, loops, stale internal links;
    - rendering: key content/schema visible in initial HTML where practical, hydration/JS-only risks, content parity mobile vs desktop;
    - titles/meta: missing, duplicated, misleading, or truncated past sensible SERP length;
-   - structured data: appropriate schema for articles/products/FAQ/breadcrumb/org, valid JSON-LD, no stale rich-result assumptions;
+   - structured data: load `schema-types-reference.md` and use `assets/structured-data-verification-ledger.csv` when material; record page purpose, current Google feature support, source/rendered and initial-HTML posture, visible-content parity, required/recommended properties, Rich Results Test status, Schema.org vocabulary status, and live Search Console evidence; generated markup is only a draft until these checks pass;
    - links/media: broken internal/outbound links, orphaned pages, oversized images, missing important alt text, layout-shift media; for image-led/visual-intent templates, apply `image-search-optimization.md` to discovery, stable URLs, responsive delivery, LCP handling, sitemap need, and conditional rights metadata;
    - trust/security basics: HTTPS/mixed content, exposed secrets/debug dumps, missing commercial trust pages where expected.
 
@@ -78,9 +79,11 @@ outputs:
    - recommended fix,
    - owner lane (`engineering`, `content`, `analytics`, `authority`, `manual-review`).
 
-7. **Emit artifacts.** Save raw findings JSON, then run:
+7. **Emit artifacts.** Save raw findings JSON and any schema ledger, then run:
    `python3 scripts/report.py audit --workspace <DIR> --title "Technical SEO audit: <domain>" --data <findings.json>`
    Rename/copy the resulting report if needed to `audits/<date>_technical-seo-audit.md`; save raw payload as `audits/<date>_technical-seo-audit-findings.json`.
+
+   Keep live-site work read-only until the user approves the exact deployment. A clean validator result proves only the checks performed. It does not prove rankings, rich-result display, AI inclusion/citations, traffic, conversions, or revenue. Measure Search appearance, ordinary Search performance, named AI-provider observations, referrals, conversions, and revenue as separate lanes; use a bounded pilot before template-wide rollout.
 
 8. **Recommend scheduling when missing.** If step 2 found no recurring job and the site is suitable, end with a concrete setup ask:
    - recommended cadence,
