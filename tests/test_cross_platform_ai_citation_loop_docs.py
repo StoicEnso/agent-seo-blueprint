@@ -79,19 +79,21 @@ class CrossPlatformCitationLoopDocsTest(unittest.TestCase):
 
     def test_readme_counts_match_repo(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertEqual(len(PLAYBOOKS), 66)
+        count = len(PLAYBOOKS)
         self.assertEqual(len(WORKFLOWS), 11)
-        self.assertIn("## The knowledge layer (66 playbooks)", readme)
-        self.assertIn("#the-knowledge-layer-66-playbooks", readme)
-        self.assertIn("**66 playbooks**", readme)
-        self.assertIn("36 original course distillations plus 30 operational additions", readme)
-        self.assertIn("36 course distillations + 30 operational additions", readme)
-        self.assertIn("content/         (18)", readme)
-        self.assertIn("cross-platform-commercial-intent-distribution", readme)
-        self.assertIn("authority/       (18)", readme)
-        self.assertIn("government-supplier-registry-profiles", readme)
-        self.assertIn("foundations/     (6)", readme)
-        self.assertIn("maintenance/     (14)", readme)
+        self.assertIn(f"## The knowledge layer ({count} playbooks)", readme)
+        self.assertIn(f"#the-knowledge-layer-{count}-playbooks", readme)
+        self.assertIn(f"**{count} playbooks**", readme)
+        self.assertIn(f"36 original course distillations plus {count - 36} operational additions", readme)
+        self.assertIn(f"36 course distillations + {count - 36} operational additions", readme)
+        for category in (ROOT / "references" / "playbooks").iterdir():
+            if category.is_dir():
+                import re
+                expected = len(list(category.rglob("*.md")))
+                self.assertRegex(readme, re.escape(category.name) + r"/\s+\(" + str(expected) + r"\)")
+        for name in ("cross-platform-commercial-intent-distribution", "government-supplier-registry-profiles", "local-business-profile-audit"):
+            self.assertIn(name, readme)
+            self.assertTrue(any(p.stem == name for p in PLAYBOOKS))
         self.assertIn("## The workflows (11 runbooks)", readme)
         self.assertIn("**11 workflows**", readme)
         self.assertIn("ai-answer-visibility-loop", readme)

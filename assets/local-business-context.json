@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "private_project_data_only": true,
+  "business_name": {"value": null, "source": null, "verified_at": null, "status": "NEEDS_OWNER_DATA"},
+  "website": {"value": null, "source": null, "verified_at": null, "status": "NOT_VISIBLE"},
+  "profile_url": {"value": null, "source": null, "verified_at": null, "status": "NOT_VISIBLE"},
+  "services": {"value": null, "source": null, "verified_at": null, "status": "NEEDS_OWNER_DATA"},
+  "actual_service_areas": {"value": null, "source": null, "verified_at": null, "status": "NEEDS_OWNER_DATA"},
+  "target_customers": {"value": null, "source": null, "verified_at": null, "status": "NEEDS_OWNER_DATA"},
+  "goals": {"value": null, "source": null, "verified_at": null, "status": "NEEDS_OWNER_DATA"},
+  "baseline_metrics": {"value": null, "source": null, "verified_at": null, "status": "NEEDS_OWNER_DATA"},
+  "competitors": {"value": null, "source": null, "verified_at": null, "status": "NOT_VISIBLE"},
+  "previous_tests": {"value": null, "source": null, "verified_at": null, "status": "NEEDS_OWNER_DATA"}
+}
