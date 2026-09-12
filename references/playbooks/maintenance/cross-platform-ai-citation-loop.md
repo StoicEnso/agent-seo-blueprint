@@ -27,6 +27,8 @@ For every question record:
 
 Do not silently rewrite questions between runs. Add a new version when wording changes so the history remains comparable.
 
+For buyer-question runs, also load `references/query-fanout-checking.md`. Save exposed query strings, citation-only evidence, and inferred ideas separately in `assets/query-fanout-ledger.json` copied to the private project. Validate with `python3 scripts/query_fanout_check.py <ledger.json>`. Unknown query visibility is not zero searches. No hidden-query extractor or cross-provider equivalence is implied.
+
 ## 2. Capture a platform-specific baseline
 
 Run the fixed questions modestly and in accordance with the platform's terms. For each observation save:
