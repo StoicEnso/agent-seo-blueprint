@@ -44,6 +44,8 @@ outputs:
 
 **When to run this.** A keyword (or a row from a `research/<date>_sitemap-plan.json`) is validated and you need to decide *what kind of page* to build and produce a brief for it. When the user also asks for an article draft, continue through the evidence-grounded production and QA branch in step 8. Runs after `research-and-ideation.md`. **This workflow never publishes.** Building/publishing is an irreversible action that requires explicit user confirmation outside this workflow.
 
+**Question/video evidence branch.** For PAA, permitted review/YouTube question mining or video briefs, load `references/question-research-and-youtube.md`. Reuse existing page-ownership, expert-answer and measurement owners. `scripts/question_research.py` imports saved observations and prepares draft-only packets; it does not fetch, spend, publish or schedule.
+
 **Prerequisites.**
 - **Workspace** resolved (`python3 scripts/workspace.py status --path <DIR>`; ASK before creating if absent).
 - **Inputs:** the target keyword(s) and intent from the keyword map / sitemap plan (or an explicit user-selected topic); the target country/locale; the operator's build strength (developer vs writer); the product/offer to upsell; and, when product claims appear, a product-truth contract or a conservative claim boundary.

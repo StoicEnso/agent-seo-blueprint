@@ -32,6 +32,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Produce a complete SEO master plan from live data, with an optional exhaustive adversarial pass | `workflows/full-master-plan.md` |
 | Extend an existing plan into a gated BOFU→MOFU→TOFU rollout | `workflows/full-funnel-rollout.md` |
 | Find/validate a niche, do keyword research, plan a sitemap, find competitor gaps | `workflows/research-and-ideation.md` |
+| Mine People Also Ask, review or YouTube questions and prepare evidence-linked video briefs | Load `references/question-research-and-youtube.md`; use offline `scripts/question_research.py` to validate observations and prepare draft-only handoffs into existing research/content workflows. |
 | Analyze a creator/competitor growth tactic without copying the surface feature | Load `references/playbooks/foundations/mechanic-first-growth-experiments.md`, then route the bounded test to the owning workflow |
 | Screen a repeated avoided chore as one approval-gated product/search wedge | Load `references/playbooks/foundations/mechanic-first-growth-experiments.md`, copy `assets/tiny-loop-opportunity-map.csv`, then run `workflows/research-and-ideation.md` |
 | Plan/produce content: programmatic SEO, free-tool pages, landing pages, articles, cross-platform commercial-intent distribution, on-page, draft QA | `workflows/content-production.md` |
