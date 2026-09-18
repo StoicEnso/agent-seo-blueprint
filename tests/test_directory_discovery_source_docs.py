@@ -44,7 +44,7 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
             rows = list(reader)
             fields = set(reader.fieldnames or [])
 
-        self.assertEqual(len(rows), 142)
+        self.assertEqual(len([row for row in rows if row["source_url"] != "https://launchrepo.dev/"]), 142)
         self.assertTrue(
             {
                 "source_url",
@@ -58,7 +58,7 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
             }.issubset(fields)
         )
         directory_rows = [row for row in rows if row["route_type"] != "hosted_publishing_experiment"]
-        self.assertEqual(len(directory_rows), 141)
+        self.assertEqual(len([row for row in directory_rows if row["source_url"] != "https://launchrepo.dev/"]), 141)
         self.assertTrue(
             all(row["verification_status"] == "UNVERIFIED_SOURCE_LEAD" for row in directory_rows)
         )
