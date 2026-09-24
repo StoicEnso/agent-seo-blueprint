@@ -310,6 +310,10 @@ def normalize_serp(api: Dict[str, Any], top: int = 10) -> Dict[str, Any]:
                 "intent_read": "",
                 "exceedable": "needs human/course review",
                 "check_url": result.get("check_url"),
+                "task_id": task.get("id"),
+                # Preserve complete groups, independent of organic --top truncation.
+                "people_also_ask": [x for x in items if x.get("type") == "people_also_ask"],
+                "video_results": [x for x in items if x.get("type") in ("video", "short_videos")],
             })
     return {"ok": True, "source": "dataforseo", "kind": "serp", "cost": api.get("cost"), "serps": packs, "raw_status": api.get("status_message")}
 

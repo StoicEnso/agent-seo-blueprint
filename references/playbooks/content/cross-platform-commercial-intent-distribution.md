@@ -79,6 +79,8 @@ Adapt the same buyer problem into a genuinely native proof unit: one insight, de
 
 ### Search-led founder or expert answer series
 
+For evidence-bank import, page ownership and an offline YouTube briefing packet, also load `references/question-research-and-youtube.md` and use `scripts/question_research.py`. This extends the same question bank and outcome ledger; it is not a competing distribution workflow.
+
 Use this branch when verified customer questions can support a bounded series of useful native answers.
 
 1. Build the question bank from dated evidence such as Search Console, site search, support, sales, customer interviews, or read-only public research. Record the exact question, locale, source, and capture date. Search volume alone does not prove social resonance.

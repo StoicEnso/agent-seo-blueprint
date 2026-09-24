@@ -36,6 +36,8 @@ outputs:
 
 **When to run this.** The user wants to find a niche to build, has a half-formed product idea and needs proof of demand, or owns a live site and wants new keyword/page opportunities. This is the first stage of the four-stage loop (see `references/playbooks/foundations/seo-process-overview.md`); nothing downstream (content, links) should start until research is done.
 
+**Question/video evidence branch.** For PAA, permitted review/YouTube question mining or video briefs, load `references/question-research-and-youtube.md`. Reuse existing page-ownership, expert-answer and measurement owners. `scripts/question_research.py` imports saved observations and prepares draft-only packets; it does not fetch, spend, publish or schedule.
+
 **Prerequisites.**
 - **Workspace.** Resolve it first: `python3 scripts/workspace.py status --path <DIR>`. If none exists, ASK the user where to put it and whether to create one, then `python3 scripts/workspace.py init --path <DIR> --name <NAME> [--domain d] [--niche n]`. Never create a workspace silently.
 - **Data sources.** Ahrefs (Keyword Explorer, Site Explorer) and the live SERP. Both have a browser-MCP fallback documented in `references/integrations/ahrefs.md` and `references/integrations/serp.md` if no API key is in `project.json`.
