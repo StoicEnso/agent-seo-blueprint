@@ -107,7 +107,7 @@ Required checks:
 - the final URL does not rely on an unintended redirect; and
 - status is `planned | live | broken | redirected | removed`.
 
-Do not count menu/footer links as contextual ledger rows unless the audit explicitly needs a separate navigation inventory.
+Do not count menu/footer links as contextual ledger rows unless the audit explicitly needs a separate navigation inventory. For large URL inventories, an external link-suggestion tool is optional: first check its data handling, crawl load and costs; then review suggestions against canonical targets, page context and reader reason. A tool accepting 2,000 URLs does not imply a 2,000-page target or permission to bulk-place links.
 
 ### 6. Add trust and evidence surfaces conditionally
 
