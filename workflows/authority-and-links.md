@@ -4,6 +4,7 @@ goal: Pick link-building tactics, build a ranked backlink opportunity list, and 
 playbooks:
   - references/playbooks/authority/understanding-authority.md
   - references/playbooks/authority/link-stealing.md
+  - references/playbooks/authority/outdated-resource-replacement.md
   - references/playbooks/authority/affiliate-programs.md
   - references/playbooks/authority/haro.md
   - references/playbooks/authority/manual-outreach.md
@@ -56,6 +57,7 @@ outputs:
 
 2. **Pick tactics for this project.** Choose from the menu based on fit (you can run several):
    - **Link stealing** (`link-stealing.md`) — find roundups/listicles linking a weaker competitor but not you; pitch "add me" or "swap the weak link." Needs you to be genuinely better.
+   - **Outdated-resource replacement** (`outdated-resource-replacement.md`) — on a specific request, verify the exact old editorial link and reader job, then classify true replacement, distinct addition, recheck, or no-fit. Use a five-link pilot with truthful status evidence; never turn a live redirect, temporary fault, or redacted backlink screenshot into a claimed win.
    - **Affiliate program / competitor-affiliate mining** (`affiliate-programs.md`) — for a paid product with sustainable unit economics: fingerprint verified public referral routes, qualify the competitor's editorial affiliates, model a defensible offer, and draft `test/add`, `comparison`, or `switch` asks. Never invent terms or blindly outbid.
    - **HARO / Help a B2B Writer Out** (`haro.md`) — if someone can speak as an expert: draft credible, specific quotes (add a Loom touch) for high-DR editorial links.
    - **Manual outreach** (`manual-outreach.md`) — revisit-the-topic pitches, missing-link asks, free-access offers, and the case-study trade (target smaller tools with few case studies).
