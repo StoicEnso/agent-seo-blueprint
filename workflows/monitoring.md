@@ -108,3 +108,12 @@ outputs:
 - `monitoring/<date>_local-business-profile.json` — optional local-profile snapshot that keeps visibility, profile interactions, leads, conversions, and revenue separate.
 
 **Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. If local-profile work was in scope, its profile visibility, interaction, and business-outcome metrics remain separate and the recorded limitations rule out causal overclaiming. If the recurring content-opportunity audit was used, every applied change also has an approval receipt and scheduled +28-day/+56-day reads. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, citation observations, or local rank observations as clicks or revenue.
+
+## Local AI first-party evidence
+
+For an eligible local-business task, load `references/playbooks/maintenance/local-ai-first-party-evidence.md`. Copy
+`assets/local-ai-evidence-ledger.json` and run `python3 scripts/local_ai_evidence_check.py <ledger.json>` against saved
+records only. Keep unique-domain share separate from citation volume and Maps separate from AI Overviews, AI Mode,
+and ChatGPT. Capture exact prompt/location/locale/account/panel/time; keep no-answer checks separate from unavailable
+retrieval. Map verified facts to existing pages before proposing a new local page. All changes remain draft-only until
+explicit approval; saved observations do not prove traffic, revenue, or causality.

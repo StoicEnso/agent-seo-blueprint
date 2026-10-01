@@ -266,3 +266,12 @@ Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparis
 ## Done when
 
 Platform scope is explicit; Google and non-Google claims are separated; Google eligibility, myth checks, and report availability are recorded when applicable; any Cloudflare readiness, synthetic AEO-panel, and first-party operator evidence is captured in separate lanes with access state and limitations; provider-specific citation baselines are captured when citation diagnosis is in scope; priority pages have evidence-backed findings; agent usability is separately labelled; every recommendation has a concrete fix and owner; the qualitative verdict is assigned; and both Markdown and raw JSON artifacts exist.
+
+## Local AI first-party evidence
+
+For an eligible local-business task, load `references/playbooks/maintenance/local-ai-first-party-evidence.md`. Copy
+`assets/local-ai-evidence-ledger.json` and run `python3 scripts/local_ai_evidence_check.py <ledger.json>` against saved
+records only. Keep unique-domain share separate from citation volume and Maps separate from AI Overviews, AI Mode,
+and ChatGPT. Capture exact prompt/location/locale/account/panel/time; keep no-answer checks separate from unavailable
+retrieval. Map verified facts to existing pages before proposing a new local page. All changes remain draft-only until
+explicit approval; saved observations do not prove traffic, revenue, or causality.

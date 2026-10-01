@@ -70,3 +70,12 @@ outputs:
 - `audits/<date>_local-business-profile-audit.csv` — optional dated profile, competitor-observation, truth-basis, approval, and measurement ledger for eligible local businesses.
 
 **Done when.** Every priority URL has been checked across technical, on-page, content/intent, opportunity, and authority dimensions; all 37 operational checks have evidence-backed statuses or explicit `not_applicable` reasons; all findings carry a severity + concrete fix; and the ranked report plus coverage ledger are written to the workspace. When local profile work was in scope, the separate audit CSV distinguishes first-party guidance, direct observations, and hypotheses, and no profile write occurred without approval. Hand high-ROI content fixes to `content-production.md`, link findings to `authority-and-links.md`, and set a re-audit cadence in `monitoring.md`.
+
+## Local AI first-party evidence
+
+For an eligible local-business task, load `references/playbooks/maintenance/local-ai-first-party-evidence.md`. Copy
+`assets/local-ai-evidence-ledger.json` and run `python3 scripts/local_ai_evidence_check.py <ledger.json>` against saved
+records only. Keep unique-domain share separate from citation volume and Maps separate from AI Overviews, AI Mode,
+and ChatGPT. Capture exact prompt/location/locale/account/panel/time; keep no-answer checks separate from unavailable
+retrieval. Map verified facts to existing pages before proposing a new local page. All changes remain draft-only until
+explicit approval; saved observations do not prove traffic, revenue, or causality.
