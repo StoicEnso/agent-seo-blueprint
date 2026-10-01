@@ -202,6 +202,15 @@ For AI-search audits, buyer-question citation baselines, and content briefs deri
 Record exposed search queries separately from citations and inferred ideas. Hidden or unavailable queries remain unknown,
 not zero. `scripts/query_fanout_check.py` checks saved evidence records offline; it is not a hidden-query extractor.
 
+## Local AI first-party evidence
+
+For local-business website coverage or Maps-versus-AI visibility checks, load
+`references/playbooks/maintenance/local-ai-first-party-evidence.md` alongside the existing local and cross-platform
+playbooks. Copy `assets/local-ai-evidence-ledger.json` and validate saved records with
+`python3 scripts/local_ai_evidence_check.py <ledger.json>`. This read-only supplement separates unique-domain share,
+citation volume, business mentions, and unavailable checks. It does not authorize website, listing, review, account,
+publication, purchase, or outreach changes.
+
 ## Build / maintenance notes
 
 See `DESIGN.md` for the architecture. To extend: add a playbook under `references/playbooks/<area>/`, update its lesson

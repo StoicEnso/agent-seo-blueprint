@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "applicability": "needs_review",
+  "limitations": ["Empty template; not a live-provider observation. Confirm local-business applicability before use."],
+  "fact_checks": [],
+  "source_statistics": [],
+  "observations": []
+}
