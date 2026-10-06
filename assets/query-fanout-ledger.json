@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "questions": [{"prompt_id": "q01", "prompt_version": 1, "exact_text": "SYNTHETIC: Which example tool fits a small team?"}],
+  "observations": [
+    {"observation_id": "gemini-q01-r1", "prompt_id": "q01", "prompt_version": 1, "provider": "gemini", "surface": "app", "model": "unknown", "mode": "unknown", "search_setting": "unknown", "locale": "en-GB", "account_state": "unknown", "captured_at": null, "state": "untested", "queries": [], "citations": [], "evidence": null, "reason": "Template only; no provider run performed."},
+    {"observation_id": "chatgpt-q01-r1", "prompt_id": "q01", "prompt_version": 1, "provider": "chatgpt", "surface": "app", "model": "unknown", "mode": "unknown", "search_setting": "unknown", "locale": "en-GB", "account_state": "unknown", "captured_at": null, "state": "untested", "queries": [], "citations": [], "evidence": null, "reason": "Template only; no provider run performed."},
+    {"observation_id": "perplexity-q01-r1", "prompt_id": "q01", "prompt_version": 1, "provider": "perplexity", "surface": "app", "model": "unknown", "mode": "unknown", "search_setting": "unknown", "locale": "en-GB", "account_state": "unknown", "captured_at": null, "state": "untested", "queries": [], "citations": [], "evidence": null, "reason": "Template only; no provider run performed."},
+    {"observation_id": "claude-q01-r1", "prompt_id": "q01", "prompt_version": 1, "provider": "claude", "surface": "app", "model": "unknown", "mode": "unknown", "search_setting": "unknown", "locale": "en-GB", "account_state": "unknown", "captured_at": null, "state": "untested", "queries": [], "citations": [], "evidence": null, "reason": "Template only; no provider run performed."}
+  ],
+  "hypotheses": [],
+  "limitations": ["Partial observable evidence only", "No live provider verification", "No search-volume or causal inference"]
+}

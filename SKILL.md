@@ -44,6 +44,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Audit AI-search/GEO readiness, including current commerce/entity data when applicable | `workflows/geo-audit.md` |
 | Track buyer-question answers, citations, and public social opportunities with an approval queue | `workflows/ai-answer-visibility-loop.md`; use `assets/community-reply-review.json` for an evidence-led Reddit reply draft that stays non-executing until exact approval |
 | Build and monitor a truthful category/citation evidence loop | `workflows/category-citation-loop.md`; copy `assets/ai-citation-source-coverage.csv` when mapping observed versus candidate source classes |
+| Check AI query fan-out or map related searches to content gaps | Load `references/query-fanout-checking.md`, copy `assets/query-fanout-ledger.json`, then use `workflows/geo-audit.md` and `workflows/category-citation-loop.md`; capture only exposed queries, keep inferred ideas separate, and validate with `python3 scripts/query_fanout_check.py <ledger.json>` |
 | Get backlinks / build authority (link stealing, HARO, affiliate, outreach, directories/entity profiles, content rings) | `workflows/authority-and-links.md` |
 | Evaluate a `.gov` backlink claim from SAM.gov, SBA Small Business Search, a vendor portal, or another procurement registry | Load `references/playbooks/authority/government-supplier-registry-profiles.md`, copy `assets/government-supplier-registry-opportunities.csv`, then run `workflows/authority-and-links.md`; require a real procurement purpose, official eligibility proof, exact-write approval, and a verified public website link |
 | Test Telegra.ph or another hosted-publishing/API backlink claim | Load `references/playbooks/authority/hosted-publishing-experiments.md`, copy `assets/hosted-publishing-experiment.csv`, then run `workflows/authority-and-links.md`; draft and verify one site-specific pilot before any expansion, and never treat API access, `index, follow`, or a domain metric as proof of a dofollow link |
@@ -191,6 +192,15 @@ written by `scripts/report.py` ⇄ templates in `assets/`.
 - **SERP/Google reads** are for personal research — modest volume, respect bot detection, never bypass CAPTCHAs.
 - **Source material** in `_source/` is private paid-course content (gitignored). The playbooks are original distillations
   and are the only course-derived material safe to share.
+
+## Query fan-out checking
+
+For AI-search audits, buyer-question citation baselines, and content briefs derived from those checks, load
+`references/query-fanout-checking.md` alongside the existing cross-platform citation playbook. This supplements
+`workflows/geo-audit.md`, `workflows/category-citation-loop.md`, `workflows/ai-answer-visibility-loop.md`,
+`workflows/content-production.md`, and `workflows/monitoring.md`; it does not replace their approval or quality gates.
+Record exposed search queries separately from citations and inferred ideas. Hidden or unavailable queries remain unknown,
+not zero. `scripts/query_fanout_check.py` checks saved evidence records offline; it is not a hidden-query extractor.
 
 ## Build / maintenance notes
 
