@@ -114,6 +114,10 @@ Pre-register a 4–8 week test where feasible. Keep profile edits small enough t
 
 Do not claim causality from one before/after observation. Record confounders such as seasonality, promotions, review campaigns, website changes, competitors, and Google updates.
 
+## Evidence completeness and project templates
+
+For verified business briefs, unknown-versus-absent observations, review-window sample coverage, truthful service reconciliation and rights-aware photo plans, read [Local profile evidence quality](../../local-profile-evidence-quality.md). Use its blank/example templates in the private project workspace. Preserve every hard rule above; this extension grants no public-write authority.
+
 ## Done condition
 
 The audit CSV contains dated evidence for every applicable field; categories and services have a truth basis; reviews/replies/posts are policy-safe; supported claims and hypotheses are separate; no public change occurred without approval; and the measurement plan distinguishes visibility from leads, conversions, and revenue.
