@@ -87,3 +87,7 @@ Write `audits/<date>_operational-seo-coverage.csv` with:
 ## Done condition
 
 All 37 checks have a status and evidence or an explicit `not_applicable` reason; failures are represented in the main severity-ranked audit; opportunity rows are routed to research/content/authority/monitoring; and no heuristic is reported as a guaranteed ranking factor.
+
+### Sitemap cohort check (conditional evidence)
+
+For an applicable sitemap/indexation finding, add a bounded cohort row in a workspace copy of `assets/sitemap-cohort-evidence.csv` and link it from the coverage ledger. Check property scope, exact sitemap/index URL and membership source, usable current filter, source/capture dates, counts/states, canonical eligibility and deliberate exclusions, overlap handling, representative inspection evidence, confidence/alternatives, and any proposed write/approval/receipt/rollback/follow-up. Keep served, submitted, parsed/discovered, crawled, and indexed states distinct. This is evidence capture, not a required routine for every site and not a live GSC action.

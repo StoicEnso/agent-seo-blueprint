@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
+- [The knowledge layer](#the-knowledge-layer-67-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **67 playbooks**: 36 original course distillations plus 31 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,7 +90,7 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 31 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
@@ -126,12 +126,13 @@ assets/                        # fill-in templates emitted into the workspace
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
   statistics-page-brief.csv  search-led-expert-answer-map.csv  local-business-profile-audit.csv
   content-opportunity-ledger.json  outreach-email.md  monitoring-snapshot.md
+  sitemap-cohort-evidence.csv     # bounded index/child reporting evidence; no GSC writes
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (67 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -349,3 +350,7 @@ endorsed by the course author.
 
 **License:** MIT — see [`LICENSE`](LICENSE). Covers the original work in this repo (playbooks, course index, workflows,
 scripts, templates). Course transcripts are not included and are not covered.
+
+### Sitemap cohort evidence
+
+For an applicable indexation question, run the cohort pass in `workflows/technical-seo-maintenance.md`. Copy the empty `assets/sitemap-cohort-evidence.csv` into the existing project workspace, not back into this repository. It retains the exact property/filter, report metric and observation state, membership limits, representative inspection, proposed action and actual receipt. Valid indexes remain supported; child submission is conditional and separate from read-only inspection. No collector, executor, live GSC access or additional permission is provided.

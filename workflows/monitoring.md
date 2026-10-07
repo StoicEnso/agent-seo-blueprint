@@ -24,6 +24,7 @@ scripts:
   - scripts/report.py
 integrations: [gsc, ga4, ahrefs, dataforseo, serp]
 outputs:
+  - audits/<date>_sitemap-cohort-evidence.csv  # optional material sitemap question; same linked workspace evidence
   - monitoring/<date>_snapshot.md          # rank/traffic snapshot (via report.py monitoring)
   - monitoring/<date>_leading-indicators.json  # the 6 action-task checklist
   - monitoring/<date>_snapshot.json         # raw ordinary-search snapshot payload
@@ -108,3 +109,9 @@ outputs:
 - `monitoring/<date>_local-business-profile.json` — optional local-profile snapshot that keeps visibility, profile interactions, leads, conversions, and revenue separate.
 
 **Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. If local-profile work was in scope, its profile visibility, interaction, and business-outcome metrics remain separate and the recorded limitations rule out causal overclaiming. If the recurring content-opportunity audit was used, every applied change also has an approval receipt and scheduled +28-day/+56-day reads. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, citation observations, or local rank observations as clicks or revenue.
+
+### Sitemap cohort monitoring route
+
+When a previous audit identifies a material sitemap cohort, update its existing evidence row with a comparable property, filter, membership, window, source timestamp, counts/states, and representative inspection evidence. Do not compare mismatched windows/memberships, total overlapping index/child rows, or incomplete examples as if they were complete. Keep submitted/parsed/crawled/indexed states separate and retain alternative explanations. Escalate a child submission only as a separately approved, exact GSC write after a real reporting/filter gap; do not create recurring validation or submission loops.
+
+Use the existing workspace CSV, not the source asset. Keep report metric/unit and collection state explicit; preserve an observation of zero separately from absent or failed collection. Membership changes or a newly available filter require a new baseline, not an invented improvement. Follow up actual approved change receipts separately from proposals, processing success and later indexation evidence.

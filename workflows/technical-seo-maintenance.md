@@ -20,6 +20,7 @@ scripts:
   - scripts/report.py
 integrations: [pagespeed, gsc, serp]
 outputs:
+  - audits/<date>_sitemap-cohort-evidence.csv  # optional material sitemap question; same linked workspace evidence
   - audits/<date>_technical-seo-audit.md
   - audits/<date>_technical-seo-audit-findings.json
   - monitoring/<date>_technical-seo-cron-check.md
@@ -100,3 +101,24 @@ outputs:
 - **Low-only findings:** write to workspace and summarize briefly; don't spam the user.
 
 **Done when.** A bounded technical audit artifact exists, high/critical fixes are clearly ranked, and the recurring cadence posture is explicit: existing cron reused, new cron proposed, or scheduling intentionally skipped with reason.
+
+## Sitemap cohort evidence pass
+
+For a material indexation question, use the existing technical-maintenance pass to create a bounded cohort record in a workspace copy of `assets/sitemap-cohort-evidence.csv`; this is an offline evidence contract, not a collector, GSC write, or indexing guarantee. Inventory the served sitemap index and leaf sitemaps, logical page/template/content/date cohorts, chosen GSC property, canonical eligibility, deliberate exclusions, last read/processing state, and the route used to inspect them. A valid sitemap index remains a supported submission mechanism.
+
+Keep states separate: served sitemap, submitted sitemap, parsed/discovered URL, crawled URL, and indexed canonical URL are not interchangeable. Preserve `unknown`, `missing`, and `partial` states. Do not sum overlapping index and child rows, use incomplete up-to-1,000 URL examples as a census, or compute ratios across different windows or memberships. Inspect representative URLs with cached-versus-live source/render/canonical/robots/noindex evidence; one coverage status alone does not diagnose quality, traffic, crawl budget, or a template fault.
+
+If a child sitemap might improve reporting, inspect the actual current property/filter first. Reuse a usable exact child/index filter; its availability is not a reason for another submission. For an evidenced gap, prepare a conditional proposal with purpose, exact URL, risks, rollback and follow-up. Execute only under owner-approved GSC write authority after a fresh scope/target check, then record the actual receipt. Never submit all children by default, repeat validation, or promise crawling/indexing.
+
+
+### Bounded operating pass
+
+1. Resolve the existing workspace with `python3 scripts/workspace.py status --path <DIR>`; ask before creating one. Preserve existing scoped approvals and holds; this flow widens no access and releases no hold. Copy the empty template to `audits/<date>_sitemap-cohort-evidence.csv`. Never put client observations into the repository template. Link it from the ordinary audit findings and coverage row; it is raw-source authoritative, not a new `report.py` renderer.
+2. Inventory only the relevant existing indexes/leaf sitemaps and logical template/content/date cohorts. Preserve exact property type/host/protocol/path, parent/leaf relation, served/processing states, submission or index/robots discovery route, last read and membership source/version. Do not create nested indexes or split every shard without a useful reporting question.
+3. Inspect the actual Sitemaps detail and Page Indexing selector with existing authorised read access. Distinguish `All known pages`, `All submitted pages`, `Unsubmitted pages` and the specific sitemap/index filter. Record availability; missing access or a missing dropdown is not zero indexation. Sitemaps top-level listing and Page Indexing membership have different rules.
+4. Capture counts by explicit metric/reason/unit plus source timestamp and reporting window. Retain limits: 1,000 displayed submitted requests need not be all submissions; up-to-1,000 URL examples may be incomplete even below that limit. Do not sum overlapping parent/child observations or derive ratios from mismatched windows/memberships.
+5. Inspect bounded affected and comparison URLs, retaining cached-versus-live source/render/canonical/robots/noindex evidence, legitimate exclusions, sample size, alternatives and confidence. Pause only the action needing inadequate evidence; independent safe inspection can continue. The helper `gsc_pull.py` remains a stub, not a new cohort collector.
+6. Reuse a working filter/index or prepare the exact bounded fix/reporting proposal. Record owner, current approval scope and planned rollback separately from the later execution receipt. Do not turn a proposed action into an approved, applied or verified one. Submission, deletion, Validate fix, request indexing, file/robots changes and new recurring jobs require their own authority; this pass grants none.
+7. Save the evidence CSV and linked packets; route actual site fixes to the owning workflow. If separately authorised execution later occurs, verify its receipt, subsequent processing/filter availability and comparable cohort observations at the stated follow-up. A submission acknowledgment or successful processing is not crawling/indexation. Keep absent data and unresolved hypotheses explicit.
+
+**Done when this branch is applicable:** the workspace evidence is saved, source/metric/state and current filter are inspectable, overlap and canonical exclusions are handled, inspection/alternatives are bounded, and the next action is reuse, a reviewable proposal or an explicit data gap. No live write is required to complete the read-only pass. If inapplicable, record the reason in the existing coverage ledger.

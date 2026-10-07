@@ -87,3 +87,26 @@ Each finding should include:
 - owner lane: `engineering | content | analytics | authority | manual-review`
 
 Good weekly output is not "SEO looks fine." Good output is: "Here are the 3 fixes that matter, 7 small cleanup items logged, and no schedule gap / schedule proposed."
+
+## Sitemap cohort evidence (conditional)
+
+When an indexation pattern needs investigation, record one metric/status observation row per logical cohort in a workspace copy of `assets/sitemap-cohort-evidence.csv`. Start with property/type, exact sitemap or index URL, membership source, current filter, capture date/source, report counts/states, and expected canonical-eligible set with exclusion limits. Record overlap/deduplication, representative URL Inspection evidence, alternative explanations and confidence before proposing a bounded fix.
+
+The Sitemaps top-level report lists report/API submissions (an index detail can show auto-discovered children); Page Indexing sitemap membership may come from a report submission or `robots.txt`. A specific sitemap/index filter is not “All submitted pages.” A submitted or parsed sitemap is not proof of crawling or indexation, and Google fetch/processing success is not proof of indexation. Index and child counts may overlap; incomplete examples and the 1,000 displayed-submission limit are observations, not complete censuses. Keep a usable index in place; do not create nested indexes or prescribe routine child submissions for tiny or inapplicable sites.
+
+A direct child submission may be proposed for a real filter/report gap after the exact URL, purpose, risks, planned rollback and follow-up are recorded. A proposal needs no new write grant. Execute only with valid exact owner write approval and a fresh scope/target check, then record the actual receipt; do not invent a receipt in advance. It is a reporting/discovery operation, not proof of a ranking, crawl or indexing improvement. Do not run validation or indexing-request loops.
+
+### Evidence interpretation and record shape
+
+One CSV row is one metric/status observation for an identified logical cohort and capture. Reuse `cohort_id` across its metric/reason rows. Keep `report_name`, `metric_name`, `metric_unit` and `collection_state` beside `report_count`; a blank count is unknown, whereas an observed zero is `0`. Allowed collection descriptions include `OBSERVED`, `MISSING_ACCESS`, `UNAVAILABLE`, `FAILED` and `PARTIAL`. Submission, processing and indexing states are separate fields, not synonyms for collection success. Link the source export, inventory version and inspection packet instead of copying a competing truth set.
+
+Use the Page Indexing summary counts for the selected property/filter; the incomplete examples are a diagnostic sample, not their denominator. For an eligible-indexed ratio, require the same cohort, membership revision, reporting window and defined canonical-eligible denominator. If only a bound or mismatched/partial inventory exists, leave the ratio unknown. Keep intentional exclusions and not-yet-known URLs separate. Never add the parent index and overlapping child counts to make a site total.
+
+`Crawled - currently not indexed` alone does not prove low quality, a crawl-budget problem or a template failure. Inspect representative affected and comparison URLs. Distinguish the indexed/cached state and selected canonical from a live fetch/render; a successful live test cannot prove that URL is indexed. Preserve alternate explanations, confidence reasons and the limits of the sample.
+
+Removing a sitemap from the report does not remove its pages from the index. A rollback is a reviewed reporting/file-change plan, not promised deindexing or a guaranteed undo of discovery. `Validate fix`, request indexing, robots/file edits and submission/deletion are consequential actions, not inspection steps. Sitemap-scoped validation uses membership at request time; it is not an automatic whole-site test.
+
+**Source basis, checked 7 October 2026:**
+- Practitioner prompt: https://x.com/brodieseo/status/2107457558248358111; Nick's quoted endorsement: https://x.com/nickleroy/status/2107519993936048128. The screenshot shows a January 2025 property example, not a present-day universal rule.
+- Sitemaps report/listing, index coverage, discovery and display limits: https://support.google.com/webmasters/answer/7451001?hl=en.
+- Page Indexing filter membership, incomplete examples, canonical goals and validation scope: https://support.google.com/webmasters/answer/7440203?hl=en.
