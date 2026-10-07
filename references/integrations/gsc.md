@@ -71,9 +71,9 @@ The standard Search Console API endpoint documented above is for Search Analytic
 
 ## Rate limits / gotchas
 - **Property type matters:** URL-prefix (`https://example.com/`) vs Domain (`sc-domain:example.com`) report differently — match what the user verified.
-- GSC data lags ~2-3 days and the per-query table is **sampled/limited** to ~1,000 rows in the UI (more via API). Average position is an average — a small move can hide big per-query swings.
-- API: standard Search Console API quotas (per-property + per-project QPS); page through `rowLimit`/`startRow` for large pulls.
-- Position is 1-indexed; "0" CTR rows with high impressions = ranking but not clicked (snippet/title problem).
+- Verify freshness and final/incomplete state instead of assuming a fixed lag. A UI top-N capture is a bounded sample. Privacy filtering and internal top-row limits can omit query/page rows; do not describe every limitation as random sampling. Average position is an aggregate, not every observed rank.
+- API: `rowLimit` is 1–25,000 per request (default 1,000); paginate with `startRow` and record errors, returned rows and the exposed end. Internal top-row limits remain even after pagination. Keep property totals, page aggregation and query/page rows separate; preserve requested and returned aggregation. Dates and incomplete-data metadata use America/Los_Angeles. Record `dataState` (`final`, `all`, or `hourly_all`) and any incomplete boundary.
+- A zero CTR row with impressions is a measured observation, not a confirmed snippet/title diagnosis. Check position, query intent, SERP features, window and filters before proposing a change.
 - Generative AI data has different metrics and dimensions from ordinary Search results; keep the snapshots separate and join only in a clearly labeled analysis layer.
 
 ## Output shape
@@ -92,3 +92,9 @@ Produce this (API or browser) so it feeds `scripts/report.py monitoring` and the
 For `scripts/report.py monitoring`, map `metrics` → its `metrics` block and the top `rows` → its `keywords` list (`{keyword, position, change}` after diffing against the previous snapshot).
 
 For the Generative AI report, use the separate snapshot contract in `references/playbooks/maintenance/google-generative-ai-visibility.md`; do not force impression-only data into the ordinary query/rank schema.
+
+## Recurring-work collection boundary
+
+Before a recurring decision, save a collection manifest with property, source/access state, date window and Pacific-time date boundary, timezone, filters, dimensions, aggregation, freshness, requested/returned rows, pagination state and limits. Keep property totals distinct from query/page rows. `MISSING_ACCESS`, `FAILED`, `PARTIAL`, and `UNAVAILABLE` differ from `MEASURED_ZERO`. Pagination may reach exposed rows without proving all underlying data is available. The documented helper remains a stub unless a separately evidenced live collection says otherwise.
+
+Official Search Analytics boundary: https://developers.google.com/webmaster-tools/v1/searchanalytics/query (checked 7 October 2026). Save the manifest and raw observations as authoritative evidence; the legacy monitoring renderer displays only its supported fields.

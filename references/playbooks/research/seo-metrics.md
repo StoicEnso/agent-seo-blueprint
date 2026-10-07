@@ -7,35 +7,31 @@ tools: [ahrefs, serp]
 
 # Key SEO Metrics & Thresholds — KD, Authority, Volume, CPC
 
-**What it is.** The four metrics Danny actually filters and decides on in Ahrefs: Keyword Difficulty (KD), Domain/Page Authority, Search Volume, and Cost Per Click (CPC). Each has a concrete threshold that turns a keyword from "interesting" into "build it" or "skip it."
+**What it is.** Provider-specific estimates used alongside current SERP evidence and business context. Course thresholds are exploratory heuristics, not ranking, backlink, timing or revenue promises.
 
-**When to use.**
-- Every time you evaluate a candidate keyword.
-- When setting filters in Ahrefs Keyword Explorer before browsing lists.
-- When comparing yourself against the sites currently ranking.
+**When to use.** When collecting or comparing keyword candidates, selecting project-specific filters, or prioritising a page map.
 
 **Method.**
-1. **Keyword Difficulty (KD).** Estimates how hard it is to rank. Filter your keyword lists to KD < 20. At KD ≤ 20 you typically need only ~10 backlinks, so a new low-authority site can reach the top within ~1-2 months. Higher KD means stronger backlink competition you can't beat early on.
-2. **Domain Authority (DA) & Page Authority (PA).** DA = whole-site authority (backlink strength); PA = a single page's authority (Ahrefs calls page-level "URL rating"). When you look up a keyword, check the DA *and especially the PA* of the pages ranking top 3. A high-DA site can still have a weak top-ranking page (few links to that specific URL) — that's beatable. Authority is logarithmic: each 10 points is ~10× the previous, so a DA-60 link is ~10× a DA-50 link, and a DA-90 link (e.g. CNN) is worth orders of magnitude more than a DA-10 link.
-3. **Search Volume.** Estimated monthly searches for *that exact keyword* (LSI/related terms not included). Use US volume by default — usually the highest-paying market — but check global too. Apply the click-curve: position #1 ≈ 30% of clicks, #2 ≈ 15%, #3 ≈ 10%. Hard-skip anything under 100 volume; strongly discount under 500.
-4. **CPC (cost per click).** What advertisers pay per click for the term in Google Ads. Use it as a monetization filter: high volume + meaningful CPC = people pay real money for this traffic → moneymaker. High volume + near-zero CPC (1-2 cents) = traffic nobody monetizes → usually not worth it.
-5. **Combine into a verdict.** The ideal keyword: KD < 20, volume comfortably > 500, weak page authority among the top 3, and a healthy CPC. Run the live SERP to confirm content type and exceedability (see [[match-and-exceed]]).
+1. **Keyword Difficulty (KD).** Preserve the provider, definition, market and capture date. Ahrefs KD and another provider's KD are not interchangeable measurements. A low score is a screening signal; it does not specify a required backlink count or time to rank. Inspect the actual competing pages, intent and capabilities.
+2. **Authority metrics.** Ahrefs DR/UR and Moz DA/PA are distinct proprietary estimates, not Google ranking scores. Keep domain and page measures separate. Do not convert an authority-score difference into a fixed multiplier of link value. Review relevant editorial links, exact-page competition and user value rather than a score alone.
+3. **Search volume.** Record source, period, country, search engine, unit and provider grouping. Estimates are not exact market totals; related variants may overlap. GSC impressions are the property's observed appearances, not all searches in a market. Use the project's actual customer market rather than defaulting to US demand.
+4. **CPC and value.** A provider's CPC estimate can be a commercial clue. It is not proof of margin, willingness to pay for this offer or SEO profitability. Low CPC or low search volume does not automatically reject a high-value customer job.
+5. **CTR and scenarios.** Use comparable first-party query/page/device evidence where available. Any click/conversion curve is `MODELLED`, with explicit assumptions and a sensitivity range; do not apply fixed rank-to-click percentages as observations. SERP features and intent affect clicks.
+6. **Verdict.** Combine live SERP fit, distinct page value, observed customer need, product truth, delivery capacity, conversion path and available evidence. Use volume/KD thresholds only as optional filters with a documented business reason. Keep unknowns and rejected alternatives visible.
 
 **Decision criteria / heuristics.**
-- KD < 20 → rankable as a new site (~10 backlinks, 1-2 months).
-- Volume < 100 → skip. Volume < 500 → discount heavily.
-- Sanity-check expected clicks: at #3 you get ~10% of volume; 150 volume → ~15 clicks/mo → at 1% conversion ≈ 1 sale/year (worthless).
-- Top-3 pages with low PA / few referring domains → beatable even if DA is high.
-- High volume + ~$0 CPC → traffic isn't monetizable, deprioritize.
-- High volume + low KD + solid CPC → priority target.
-- Prefer US-paying markets, but a healthy global split (e.g. half US, half other Western countries) means more money overall.
+- Historical course filters such as KD < 20 are starting views, not universal go/no-go rules.
+- A low-volume, high-margin service query can outrank a larger generic query on documented business value.
+- A low-DR/UR incumbent is not proof that a newcomer will beat it.
+- Do not sum overlapping keyword estimates into market size without a stated deduplication/grouping method and uncertainty.
+- An AI assistant may retrieve or classify sourced data; it must not invent volume, KD, CPC, trends or prompt-demand figures.
 
-**Example.** A keyword with KD 9, 20k US searches, and a real CPC, where the #1 page has a URL rating of ~7 and only ~16 referring domains, is a green light — the difficulty is low and the incumbent's page is weakly linked despite a decent domain. Contrast `car insurance`: KD 83 and $20 CPC — lucrative but unwinnable without CNN-tier authority, so skip the head term and hunt sub-niches.
+**Example.** A current buyer query has a small provider-estimated volume, a verified fit to the offer, a useful answer that competitors lack and a working lead path. Retain it for a bounded review rather than rejecting it at an arbitrary volume cutoff. No ranking or revenue outcome is established.
 
-**Pitfalls.**
-- Reading DA alone and missing that the *page* ranking has almost no links (the real bar).
-- Falling for low KD on a near-zero-volume keyword — math leaves you with no traffic.
-- Ignoring CPC and building for high-volume traffic that earns nothing.
-- Forgetting volume is per-keyword only — sum LSI/long-tails to see the real opportunity (see [[keyword-fundamentals]]).
+**Pitfalls.** Mixing provider definitions; relabelling estimates as measurements; treating GSC appearances as market volume; assuming authority-score arithmetic determines link value; and calling a scenario a forecast without assumptions.
 
-**Related.** [[keyword-fundamentals]], [[match-and-exceed]], [[competitor-research]], [[finding-and-validating-niches]]. Course refs: 02-07 (key SEO metrics).
+**Related.** [[keyword-fundamentals]], [[match-and-exceed]], [[competitor-research]], [[finding-and-validating-niches]], [[number-reconciliation]]. Course ref: 02-07 (key SEO metrics). Current source boundary: https://developers.google.com/webmaster-tools/v1/searchanalytics/query.
+
+## Recurring-work provenance boundary
+
+For recurring prioritisation, attach source, capture date, date window, country, search engine, unit and one status: `OBSERVED`, `PROVIDER_ESTIMATE`, `MODELLED`, or `UNKNOWN`. Tool disagreement stays visible. Do not relabel GSC impressions as market demand, sum overlapping estimates without a deduplication method, turn authority scores into fixed link value, or treat optional thresholds as universal rules.

@@ -11,7 +11,7 @@ Think of it as two planes that reference each other:
    coverage), operational article-production QA, directory/entity-submission, hosted-publishing experiments, local Business Profile audits, and 37-check SEO coverage playbooks,
    plus a searchable course index so any agent can answer
    *"what does the course say about X?"* and pull the right playbook.
-2. **Pipeline layer** — 11 workflows total: 5 core pipelines, 4 operational deep dives, and 2 end-to-end planning
+2. **Pipeline layer** — 12 workflows total: 5 core pipelines, 4 operational deep dives, 1 recurring delivery wrapper, and 2 end-to-end planning
    workflows that compose those
    playbooks, drive the data integrations, summon customer-persona subagents for ideation, and produce concrete
    deliverables.
@@ -26,8 +26,8 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
-- [The workflows](#the-workflows-11-runbooks)
+- [The knowledge layer](#the-knowledge-layer-67-playbooks)
+- [The workflows](#the-workflows-12-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
 - [Scripts reference](#scripts-reference)
@@ -46,12 +46,12 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **67 playbooks**: 36 original course distillations plus 31 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
-- **11 workflows**: five core pipelines, four operational deep dives, and two end-to-end planning workflows for a full
+- **12 workflows**: five core pipelines, four operational deep dives, one recurring delivery wrapper, and two end-to-end planning workflows for a full
   SEO master plan and a BOFU→MOFU→TOFU rollout.
 - **8 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, CWV thresholds, and public social research.
 - **ICP persona subagents** — summon Opus subagents that role-play ideal customers to ideate content angles, surface the
@@ -90,7 +90,7 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 31 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
@@ -101,12 +101,13 @@ references/
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
   integrations/                # 8 source/threshold references, including DataForSEO, CWV, and public social research
   coverage-map.md              # proof: every lesson → its playbook(s)
-workflows/                     # 5 core pipelines + 4 operational deep dives + 2 planning workflows
+workflows/                     # 5 core pipelines + 4 operational deep dives + 1 delivery wrapper + 2 planning workflows
   research-and-ideation.md  content-production.md  site-audit.md
   authority-and-links.md    monitoring.md         technical-seo-maintenance.md
   geo-audit.md              category-citation-loop.md
   ai-answer-visibility-loop.md
   full-master-plan.md       full-funnel-rollout.md
+  recurring-work-delivery.md
 agents/
   icp-persona.md               # launcher template for ONE persona subagent
   synthesizer.md               # merges N persona outputs into ranked insights
@@ -131,7 +132,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (67 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -167,7 +168,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 
 ---
 
-## The workflows (11 runbooks)
+## The workflows (12 runbooks)
 
 Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `outputs`) and concrete numbered steps.
 
@@ -184,6 +185,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **ai-answer-visibility-loop** | freeze buyer questions, measure provider-separated answer visibility, collect public social evidence, and review evidence-led community reply drafts | answer metrics, social candidates, non-executing approval queue and reply-review packet |
 | **full-master-plan** | build an evidence-grounded end-to-end SEO plan; use the adversarial cascade for exhaustive work | master plan, executive summary, source data, reconciled forecast |
 | **full-funnel-rollout** | extend an existing plan into gated BOFU→MOFU→TOFU delivery waves | rollout plan, funnel map, entry/exit/kill gates |
+| **recurring-work-delivery** | manual daily/weekly/monthly/release-triggered preparation; route bounded work to existing workflows without activating timers or writes | reviewed-work ledger, weekly change review, monthly outcome review |
 
 ---
 
