@@ -79,11 +79,11 @@ class CrossPlatformCitationLoopDocsTest(unittest.TestCase):
 
     def test_readme_counts_match_repo(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertEqual(len(PLAYBOOKS), 66)
+        self.assertEqual(len(PLAYBOOKS), 67)
         self.assertEqual(len(WORKFLOWS), 11)
-        self.assertIn("## The knowledge layer (66 playbooks)", readme)
-        self.assertIn("#the-knowledge-layer-66-playbooks", readme)
-        self.assertIn("**66 playbooks**", readme)
+        self.assertIn("## The knowledge layer (67 playbooks)", readme)
+        self.assertIn("#the-knowledge-layer-67-playbooks", readme)
+        self.assertIn("**67 playbooks**", readme)
         self.assertIn("36 original course distillations plus 30 operational additions", readme)
         self.assertIn("36 course distillations + 30 operational additions", readme)
         self.assertIn("content/         (18)", readme)

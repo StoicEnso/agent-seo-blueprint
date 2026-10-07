@@ -87,3 +87,11 @@ Each finding should include:
 - owner lane: `engineering | content | analytics | authority | manual-review`
 
 Good weekly output is not "SEO looks fine." Good output is: "Here are the 3 fixes that matter, 7 small cleanup items logged, and no schedule gap / schedule proposed."
+
+## Sitemap cohort evidence (conditional)
+
+When an indexation pattern needs investigation, record one row per logical cohort in 'assets/sitemap-cohort-evidence.csv'. Start with property/type, exact sitemap or index URL, membership source, current filter, capture date/source, report counts/states, and expected canonical-eligible set with exclusion limits. Record overlap/deduplication, representative URL Inspection evidence, alternative explanations and confidence before proposing a bounded fix.
+
+The Sitemaps report lists report/API submissions; Page Indexing sitemap membership may come from a report submission or 'robots.txt'. A specific sitemap/index filter is not “All submitted pages.” A submitted or parsed sitemap is not proof of crawling or indexation, and Google fetch/processing success is not proof of indexation. Index and child counts may overlap; incomplete examples and the 1,000 displayed-submission limit are observations, not complete censuses. Keep a usable index in place; do not create nested indexes or prescribe routine child submissions for tiny or inapplicable sites.
+
+A direct child submission is only a conditional reporting option after a real filter/report gap is observed and the exact URL, purpose, owner write approval, rollback, receipt, and follow-up are recorded. It is not a ranking, crawl, or indexing lever. Do not run validation or indexing-request loops.

@@ -100,3 +100,11 @@ outputs:
 - **Low-only findings:** write to workspace and summarize briefly; don't spam the user.
 
 **Done when.** A bounded technical audit artifact exists, high/critical fixes are clearly ranked, and the recurring cadence posture is explicit: existing cron reused, new cron proposed, or scheduling intentionally skipped with reason.
+
+## Sitemap cohort evidence pass
+
+For a material indexation question, use the existing technical-maintenance pass to create a bounded cohort record in 'assets/sitemap-cohort-evidence.csv'; this is an offline evidence contract, not a collector, GSC write, or indexing guarantee. Inventory the served sitemap index and leaf sitemaps, logical page/template/content/date cohorts, chosen GSC property, canonical eligibility, deliberate exclusions, last read/processing state, and the route used to inspect them. A valid sitemap index remains a supported submission mechanism.
+
+Keep states separate: served sitemap, submitted sitemap, parsed/discovered URL, crawled URL, and indexed canonical URL are not interchangeable. Preserve 'unknown', 'missing', and 'partial' states. Do not sum overlapping index and child rows, use incomplete up-to-1,000 URL examples as a census, or compute ratios across different windows or memberships. Inspect representative URLs with cached-versus-live source/render/canonical/robots/noindex evidence; one coverage status alone does not diagnose quality, traffic, crawl budget, or a template fault.
+
+If a child sitemap might improve reporting, first verify that the actual property has a usable exact child/index filter or report gap. Recommend a direct child submission only with a stated purpose, exact URL, owner-approved GSC write authority, rollback, and receipt. Never submit all children by default, repeat validation, or promise crawling/indexing.

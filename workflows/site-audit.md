@@ -70,3 +70,7 @@ outputs:
 - `audits/<date>_local-business-profile-audit.csv` — optional dated profile, competitor-observation, truth-basis, approval, and measurement ledger for eligible local businesses.
 
 **Done when.** Every priority URL has been checked across technical, on-page, content/intent, opportunity, and authority dimensions; all 37 operational checks have evidence-backed statuses or explicit `not_applicable` reasons; all findings carry a severity + concrete fix; and the ranked report plus coverage ledger are written to the workspace. When local profile work was in scope, the separate audit CSV distinguishes first-party guidance, direct observations, and hypotheses, and no profile write occurred without approval. Hand high-ROI content fixes to `content-production.md`, link findings to `authority-and-links.md`, and set a re-audit cadence in `monitoring.md`.
+
+### Sitemap cohort routing
+
+When a sitemap/indexation issue is in scope, route it to 'technical-seo-maintenance.md' and use 'assets/sitemap-cohort-evidence.csv' for the bounded evidence row. Retain property scope, exact index/child URL, membership source, filter, timestamps, canonical eligibility/exclusions, overlap handling, representative inspection, unknown/partial states, and confidence/alternatives. Do not infer indexation from sitemap processing, or derive a whole-site diagnosis from one status. Any proposed GSC write stays conditional on an observed filter/report gap and exact owner approval.

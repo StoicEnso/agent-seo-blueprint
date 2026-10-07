@@ -92,3 +92,9 @@ Produce this (API or browser) so it feeds `scripts/report.py monitoring` and the
 For `scripts/report.py monitoring`, map `metrics` → its `metrics` block and the top `rows` → its `keywords` list (`{keyword, position, change}` after diffing against the previous snapshot).
 
 For the Generative AI report, use the separate snapshot contract in `references/playbooks/maintenance/google-generative-ai-visibility.md`; do not force impression-only data into the ordinary query/rank schema.
+
+## Sitemap cohort inspection boundary
+
+Use 'assets/sitemap-cohort-evidence.csv' for a read-only, human-reviewed cohort record. The Sitemaps report is a report/API submission list, while Page Indexing sitemap membership can reflect report/API submission or 'robots.txt'; do not merge those definitions. Record the exact property, exact sitemap/index filter, source timestamp, counts/states, and any unknown or partial data. A specific sitemap/index filter is not “All submitted pages.”
+
+The UI can show up to 1,000 submitted requests and URL examples can be incomplete even below 1,000. Do not treat either as a census or sum overlapping index/child results. Valid index submission is supported. Propose a child submission only when a real report/filter gap is evidenced and an owner has approved the exact GSC write, purpose, rollback, and follow-up. No submission, deletion, Validate fix, or Request indexing action is part of this guidance.
