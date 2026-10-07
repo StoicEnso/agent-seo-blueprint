@@ -50,6 +50,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Test Telegra.ph or another hosted-publishing/API backlink claim | Load `references/playbooks/authority/hosted-publishing-experiments.md`, copy `assets/hosted-publishing-experiment.csv`, then run `workflows/authority-and-links.md`; draft and verify one site-specific pilot before any expansion, and never treat API access, `index, follow`, or a domain metric as proof of a dofollow link |
 | Choose the cheapest/value press-release route, or draft a newsworthy distribution test | Load `references/playbooks/authority/press-release-distribution.md`, compare the current goal-based price path in `assets/press-release-distribution-registry.csv`, then run `workflows/authority-and-links.md`; checkout, payment, and submission remain approval-gated |
 | Find existing editorial link intent (listicle/citation gaps, broken or decayed resources, statistics needs, missing visuals/video, uncited owned assets) | Load `references/playbooks/authority/editorial-link-intent-and-assets.md`, then run `workflows/authority-and-links.md` |
+| Coordinate daily, weekly, monthly or release-triggered SEO work after an audit | `workflows/recurring-work-delivery.md`; use the existing owner workflow and link its artifacts from `assets/recurring-work-ledger.md`; manual by default, no timers or writes from this wrapper |
 | Monitor rankings/traffic, GSC 4–20 opportunities, Google AI impressions, provider citation observations, updates, and ROI | `workflows/monitoring.md` |
 | Rank recurring content opportunities, draft narrow fixes, and measure approved changes | Load `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md`, copy `assets/content-opportunity-ledger.json`, then run `workflows/monitoring.md`; route approved briefs to `workflows/content-production.md` |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
@@ -206,7 +207,3 @@ not zero. `scripts/query_fanout_check.py` checks saved evidence records offline;
 
 See `DESIGN.md` for the architecture. To extend: add a playbook under `references/playbooks/<area>/`, update its lesson
 mapping in `references/course-index/course-index.json`, and reference it from the relevant workflow.
-
-## Recurring work routing
-
-For manual daily, weekly, monthly, or release-triggered preparation and delivery, start with [`workflows/recurring-work-delivery.md`](workflows/recurring-work-delivery.md) and its [`assets/recurring-work-ledger.md`](assets/recurring-work-ledger.md). It routes into existing workflows; it does not create a scheduler, collector, publishing lane, outreach lane, or output quota.

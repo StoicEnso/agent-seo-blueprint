@@ -11,7 +11,7 @@ Think of it as two planes that reference each other:
    coverage), operational article-production QA, directory/entity-submission, hosted-publishing experiments, local Business Profile audits, and 37-check SEO coverage playbooks,
    plus a searchable course index so any agent can answer
    *"what does the course say about X?"* and pull the right playbook.
-2. **Pipeline layer** — 12 workflows total: 5 core pipelines, 4 operational deep dives, and 2 end-to-end planning
+2. **Pipeline layer** — 12 workflows total: 5 core pipelines, 4 operational deep dives, 1 recurring delivery wrapper, and 2 end-to-end planning
    workflows that compose those
    playbooks, drive the data integrations, summon customer-persona subagents for ideation, and produce concrete
    deliverables.
@@ -27,7 +27,7 @@ Think of it as two planes that reference each other:
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
 - [The knowledge layer](#the-knowledge-layer-67-playbooks)
-- [The workflows](#the-workflows-11-runbooks)
+- [The workflows](#the-workflows-12-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
 - [Scripts reference](#scripts-reference)
@@ -51,7 +51,7 @@ Think of it as two planes that reference each other:
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
-- **12 workflows**: five core pipelines, four operational deep dives, and two end-to-end planning workflows for a full
+- **12 workflows**: five core pipelines, four operational deep dives, one recurring delivery wrapper, and two end-to-end planning workflows for a full
   SEO master plan and a BOFU→MOFU→TOFU rollout.
 - **8 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, CWV thresholds, and public social research.
 - **ICP persona subagents** — summon Opus subagents that role-play ideal customers to ideate content angles, surface the
@@ -101,12 +101,13 @@ references/
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
   integrations/                # 8 source/threshold references, including DataForSEO, CWV, and public social research
   coverage-map.md              # proof: every lesson → its playbook(s)
-workflows/                     # 5 core pipelines + 4 operational deep dives + 2 planning workflows
+workflows/                     # 5 core pipelines + 4 operational deep dives + 1 delivery wrapper + 2 planning workflows
   research-and-ideation.md  content-production.md  site-audit.md
   authority-and-links.md    monitoring.md         technical-seo-maintenance.md
   geo-audit.md              category-citation-loop.md
   ai-answer-visibility-loop.md
   full-master-plan.md       full-funnel-rollout.md
+  recurring-work-delivery.md
 agents/
   icp-persona.md               # launcher template for ONE persona subagent
   synthesizer.md               # merges N persona outputs into ranked insights
@@ -184,6 +185,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **ai-answer-visibility-loop** | freeze buyer questions, measure provider-separated answer visibility, collect public social evidence, and review evidence-led community reply drafts | answer metrics, social candidates, non-executing approval queue and reply-review packet |
 | **full-master-plan** | build an evidence-grounded end-to-end SEO plan; use the adversarial cascade for exhaustive work | master plan, executive summary, source data, reconciled forecast |
 | **full-funnel-rollout** | extend an existing plan into gated BOFU→MOFU→TOFU delivery waves | rollout plan, funnel map, entry/exit/kill gates |
+| **recurring-work-delivery** | manual daily/weekly/monthly/release-triggered preparation; route bounded work to existing workflows without activating timers or writes | reviewed-work ledger, weekly change review, monthly outcome review |
 
 ---
 

@@ -22,7 +22,7 @@ integrations: [pagespeed, gsc, serp]
 outputs:
   - audits/<date>_technical-seo-audit.md
   - audits/<date>_technical-seo-audit-findings.json
-  - monitoring/<date>_technical-seo-cron-check.md
+  - monitoring/<date>_technical-seo-schedule-check.md
 ---
 
 # Technical SEO Maintenance
@@ -71,7 +71,7 @@ outputs:
    - links/media: broken internal/outbound links, orphaned pages, oversized images, missing important alt text, layout-shift media; for image-led/visual-intent templates, apply `image-search-optimization.md` to discovery, stable URLs, responsive delivery, LCP handling, sitemap need, and conditional rights metadata;
    - trust/security basics: HTTPS/mixed content, exposed secrets/debug dumps, missing commercial trust pages where expected.
 
-6. **Turn findings into a small weekly fix backlog.** Prefer "fix 10 small things" over vague advice. Each finding needs:
+6. **Turn findings into a small weekly fix backlog.** Prefer a bounded set of evidence-backed, useful fixes over vague advice or a fixed fix-count quota. Each finding needs:
    - severity (`critical | high | medium | low`),
    - area (`technical | indexation | schema | performance | rendering | metadata | internal-links | trust`),
    - evidence (URL, metric, snippet, screenshot/report path),
