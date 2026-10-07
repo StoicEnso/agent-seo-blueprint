@@ -24,6 +24,7 @@ scripts:
   - scripts/report.py
 integrations: [gsc, ga4, ahrefs, dataforseo, serp]
 outputs:
+  - audits/<date>_sitemap-cohort-evidence.csv  # optional material sitemap question; same linked workspace evidence
   - monitoring/<date>_snapshot.md          # rank/traffic snapshot (via report.py monitoring)
   - monitoring/<date>_leading-indicators.json  # the 6 action-task checklist
   - monitoring/<date>_snapshot.json         # raw ordinary-search snapshot payload
@@ -112,3 +113,5 @@ outputs:
 ### Sitemap cohort monitoring route
 
 When a previous audit identifies a material sitemap cohort, update its existing evidence row with a comparable property, filter, membership, window, source timestamp, counts/states, and representative inspection evidence. Do not compare mismatched windows/memberships, total overlapping index/child rows, or incomplete examples as if they were complete. Keep submitted/parsed/crawled/indexed states separate and retain alternative explanations. Escalate a child submission only as a separately approved, exact GSC write after a real reporting/filter gap; do not create recurring validation or submission loops.
+
+Use the existing workspace CSV, not the source asset. Keep report metric/unit and collection state explicit; preserve an observation of zero separately from absent or failed collection. Membership changes or a newly available filter require a new baseline, not an invented improvement. Follow up actual approved change receipts separately from proposals, processing success and later indexation evidence.
