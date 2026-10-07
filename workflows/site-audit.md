@@ -70,3 +70,9 @@ outputs:
 - `audits/<date>_local-business-profile-audit.csv` — optional dated profile, competitor-observation, truth-basis, approval, and measurement ledger for eligible local businesses.
 
 **Done when.** Every priority URL has been checked across technical, on-page, content/intent, opportunity, and authority dimensions; all 37 operational checks have evidence-backed statuses or explicit `not_applicable` reasons; all findings carry a severity + concrete fix; and the ranked report plus coverage ledger are written to the workspace. When local profile work was in scope, the separate audit CSV distinguishes first-party guidance, direct observations, and hypotheses, and no profile write occurred without approval. Hand high-ROI content fixes to `content-production.md`, link findings to `authority-and-links.md`, and set a re-audit cadence in `monitoring.md`.
+
+## Recurring delivery handoff
+
+When recurring review identifies a technical or conversion-path concern, create a reviewable row through [`recurring-work-delivery.md`](recurring-work-delivery.md). Retain observed evidence, reproduction, alternatives, confidence reason, owner, approval, exact proposed change, rollback, receipt and outcome check. Robots are not deindexing; redirects need relevant replacements; canonicals require duplicate relationships; rendered and source HTML need separate inspection; valid schema does not prove eligibility or performance.
+
+A `noindex` directive needs crawler access to be seen; do not use robots blocking as a substitute for deindexing.

@@ -39,3 +39,7 @@ tools: [ahrefs, serp]
 - Forgetting volume is per-keyword only — sum LSI/long-tails to see the real opportunity (see [[keyword-fundamentals]]).
 
 **Related.** [[keyword-fundamentals]], [[match-and-exceed]], [[competitor-research]], [[finding-and-validating-niches]]. Course refs: 02-07 (key SEO metrics).
+
+## Recurring-work provenance boundary
+
+For recurring prioritisation, attach source, capture date, date window, country, search engine, unit and one status: `OBSERVED`, `PROVIDER_ESTIMATE`, `MODELLED`, or `UNKNOWN`. Tool disagreement stays visible. Do not relabel GSC impressions as market demand, sum overlapping estimates without a deduplication method, turn authority scores into fixed link value, or treat optional thresholds as universal rules.

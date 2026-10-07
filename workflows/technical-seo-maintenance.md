@@ -100,3 +100,7 @@ outputs:
 - **Low-only findings:** write to workspace and summarize briefly; don't spam the user.
 
 **Done when.** A bounded technical audit artifact exists, high/critical fixes are clearly ranked, and the recurring cadence posture is explicit: existing cron reused, new cron proposed, or scheduling intentionally skipped with reason.
+
+## Recurring delivery handoff
+
+Use [`recurring-work-delivery.md`](recurring-work-delivery.md) for manual recurring technical preparation. Recheck current target state and approval immediately before a write; record the exact revision, rollback and receipt. Never turn a daily check into an automatic fix or a ranking/indexation promise.

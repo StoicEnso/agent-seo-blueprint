@@ -92,3 +92,7 @@ Produce this (API or browser) so it feeds `scripts/report.py monitoring` and the
 For `scripts/report.py monitoring`, map `metrics` → its `metrics` block and the top `rows` → its `keywords` list (`{keyword, position, change}` after diffing against the previous snapshot).
 
 For the Generative AI report, use the separate snapshot contract in `references/playbooks/maintenance/google-generative-ai-visibility.md`; do not force impression-only data into the ordinary query/rank schema.
+
+## Recurring-work collection boundary
+
+Before a recurring decision, save a collection manifest with property, source/access state, date window and Pacific-time date boundary, timezone, filters, dimensions, aggregation, freshness, requested/returned rows, pagination state and limits. Keep property totals distinct from query/page rows. `MISSING_ACCESS`, `FAILED`, `PARTIAL`, and `UNAVAILABLE` differ from `MEASURED_ZERO`. Pagination may reach exposed rows without proving all underlying data is available. The documented helper remains a stub unless a separately evidenced live collection says otherwise.

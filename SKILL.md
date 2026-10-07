@@ -206,3 +206,7 @@ not zero. `scripts/query_fanout_check.py` checks saved evidence records offline;
 
 See `DESIGN.md` for the architecture. To extend: add a playbook under `references/playbooks/<area>/`, update its lesson
 mapping in `references/course-index/course-index.json`, and reference it from the relevant workflow.
+
+## Recurring work routing
+
+For manual daily, weekly, monthly, or release-triggered preparation and delivery, start with [`workflows/recurring-work-delivery.md`](workflows/recurring-work-delivery.md) and its [`assets/recurring-work-ledger.md`](assets/recurring-work-ledger.md). It routes into existing workflows; it does not create a scheduler, collector, publishing lane, outreach lane, or output quota.

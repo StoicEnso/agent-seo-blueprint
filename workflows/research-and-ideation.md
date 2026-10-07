@@ -88,3 +88,7 @@ outputs:
 - `research/<date>_tiny-loop-opportunity-map.csv` — optional evidence and safety screen for one avoided-loop wedge.
 
 **Done when.** At least one niche/keyword cluster has passed the full gauntlet (or all are correctly rejected), the keyword map CSV exists, and every validated keyword has a home in the sitemap plan with an intent-matched format chosen. Any cluster advanced to production also has distinct page roles and contextual-link rows without thin depth inflation. A tiny-loop input also has an explicit approval boundary and independent demand evidence before it enters the build backlog. Hand the sitemap plan + keyword map to `content-production.md`; hand any "needs authority first" keywords to `authority-and-links.md`.
+
+## Recurring delivery handoff
+
+Use [`recurring-work-delivery.md`](recurring-work-delivery.md) for buyer-question, comparison and page-map signals. Preserve provider, capture date, window, country, engine, unit and status. AI may classify supplied data but must not invent volume, difficulty, CPC, trend or prompt demand. A low-volume, high-value query may remain a priority with documented business rationale.
