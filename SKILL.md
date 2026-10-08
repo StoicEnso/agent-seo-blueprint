@@ -206,3 +206,6 @@ not zero. `scripts/query_fanout_check.py` checks saved evidence records offline;
 
 See `DESIGN.md` for the architecture. To extend: add a playbook under `references/playbooks/<area>/`, update its lesson
 mapping in `references/course-index/course-index.json`, and reference it from the relevant workflow.
+
+## Zero-click query triage
+For saved GSC zero-click query/page observations, load references/playbooks/maintenance/gsc-zero-click-untargeted-query-triage.md. Use scripts/gsc_zero_click_triage.py to create a read-only review ledger, then follow workflows/monitoring.md.
