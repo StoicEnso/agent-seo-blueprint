@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "property": "sc-domain:example.com",
+    "search_type": "web",
+    "dimensions": ["query", "page"],
+    "filters": {},
+    "date_range": {
+      "start": "2026-09-01",
+      "end": "2026-09-28",
+      "timezone": "America/Los_Angeles",
+      "finalized": true
+    }
+  },
+  "properties": ["sc-domain:example.com"],
+  "data_quality": {
+    "complete_window": true,
+    "anonymous_rows": true,
+    "row_limit_reached": false
+  },
+  "query_totals": {"gazebo size calculator": {"clicks": 0}},
+  "history": {"gazebo size calculator": {"clicks": 2}},
+  "rows": [
+    {
+      "query": "gazebo size calculator",
+      "page": "https://example.com/calculators/pergola",
+      "clicks": 0,
+      "impressions": 60,
+      "ctr": 0,
+      "position": 18,
+      "relevant": true
+    }
+  ],
+  "coverage": [
+    {
+      "query": "gazebo size calculator",
+      "status": "unknown",
+      "evidence": "Illustrative fixture only. Replace with dated inventory and live page/control/intent evidence before making a page decision."
+    }
+  ]
+}

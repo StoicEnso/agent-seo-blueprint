@@ -7,6 +7,7 @@ playbooks:
   - references/playbooks/maintenance/navigating-google-updates.md
   - references/playbooks/maintenance/keyword-intent-evolution.md
   - references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md
+  - references/playbooks/maintenance/gsc-zero-click-untargeted-query-triage.md
   - references/playbooks/maintenance/content-opportunity-audit-and-measurement.md
   - references/playbooks/maintenance/seo-operational-checklist.md
   - references/playbooks/maintenance/local-business-profile-audit.md
@@ -17,6 +18,7 @@ playbooks:
 scripts:
   - scripts/workspace.py
   - scripts/gsc_pull.py
+  - scripts/gsc_zero_click_triage.py
   - scripts/ga4_pull.py
   - scripts/ahrefs_client.py
   - scripts/dataforseo_client.py
@@ -28,6 +30,7 @@ outputs:
   - monitoring/<date>_leading-indicators.json  # the 6 action-task checklist
   - monitoring/<date>_snapshot.json         # raw ordinary-search snapshot payload
   - monitoring/<date>_gsc-4-20-opportunities.json # current, verified quick-win/recovery rows
+  - monitoring/<date>_gsc-zero-click-ledger.json # optional draft query-to-page triage; no live writes
   - monitoring/<date>_content-opportunity-audit.json # optional recurring ranked candidate ledger
   - monitoring/<date>_content-opportunity-summary.md # optional review summary and exact proposed diffs
   - monitoring/content-change-ledger.jsonl # approved-write receipts plus 28/56-day enrollment
@@ -110,4 +113,4 @@ outputs:
 **Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. If local-profile work was in scope, its profile visibility, interaction, and business-outcome metrics remain separate and the recorded limitations rule out causal overclaiming. If the recurring content-opportunity audit was used, every applied change also has an approval receipt and scheduled +28-day/+56-day reads. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, citation observations, or local rank observations as clicks or revenue.
 
 ## Optional zero-click/untargeted-query triage
-Load references/playbooks/maintenance/gsc-zero-click-untargeted-query-triage.md only for saved comparable final GSC query+page data. Zero clicks do not prove a missing page because GSC associates the query with an observed URL. Require inventory, owned-page, and intent evidence; keep overlapping domain and URL-prefix properties separate; preserve anonymous/pagination/row-limit limits and earlier-click history. The stdlib offline ledger builder produces drafts only and cannot change GSC, CMS, URLs, publication, scheduling, outreach, or spend.
+Load references/playbooks/maintenance/gsc-zero-click-untargeted-query-triage.md for saved GSC query-only plus query/page data. Use templates/gsc-zero-click-input.json. Nonfinal/incomplete data stays unknown; anonymity and row caps stay explicit limitations. Zero clicks do not prove a missing page because GSC associates the query with an observed URL. Require inventory, owned-page, and intent evidence; keep overlapping domain and URL-prefix properties separate; preserve anonymous/pagination/row-limit limits and earlier-click history. The stdlib offline ledger builder produces drafts only and cannot change GSC, CMS, URLs, publication, scheduling, outreach, or spend.
