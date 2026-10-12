@@ -21,6 +21,7 @@ playbooks:
   - references/playbooks/research/search-intent.md
   - references/playbooks/maintenance/seo-operational-checklist.md
   - references/playbooks/maintenance/content-opportunity-audit-and-measurement.md
+  - references/playbooks/maintenance/weekly-gsc-action-queue.md
 scripts:
   - scripts/workspace.py
   - scripts/search_course.py
@@ -76,6 +77,8 @@ outputs:
    If the brief is being routed from `geo-audit.md` or `category-citation-loop.md`, also load `references/playbooks/maintenance/cross-platform-ai-citation-loop.md`. Carry forward the exact buyer-question version, scoped provider, observed source/page-role gap (`problem`, `use_case`, `comparison`, `pricing`, `trust`, `case_study`, `implementation`), and required first-party evidence. Build pages for buyers, not an AI quota: do not mint one page per synthetic fan-out or create unsupported comparison claims just to chase citations.
 
    **Content-opportunity handoff.** When `monitoring.md` routes a candidate from `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md`, preserve its candidate ID, query/page pair, source windows, primary lever, assumptions, live-page/SERP evidence, and cannibalization disposition. A narrow update must be an exact proposed diff with evidence, risk, rollback, and measurement dates. A new-page candidate still passes every normal brief and QA gate. Headroom only orders review; it is not approval to publish.
+
+   **Weekly GSC queue handoff.** Load `references/playbooks/maintenance/weekly-gsc-action-queue.md`. Preserve the stable task/dedup identity, saved evidence references, exact property/window scope, live diagnosis, source/CMS revision, cannibalization disposition, named owner/due policy, PENDING approval, acceptance criteria, and separate +28/+56 plan. A new-page review is not a publishing brief until demand, relevance, distinct intent, useful original contribution, source packet, and absence of an existing owner are checked. An existing-page update needs the smallest useful exact diff and the unchanged approval/QA gates. A valid queue is not authorization to write, publish, connect an account, or schedule work.
 
    Apply the relevant content checks from `references/playbooks/maintenance/seo-operational-checklist.md`: titles are intent-first (50–60 characters is guidance, not a hard pass/fail), authorship/E-E-A-T signals must be real, schema must match visible content, `dateModified` changes only after material edits, and FAQ/PAA sections belong on the most appropriate page unless a standalone page has distinct demand and enough value.
 

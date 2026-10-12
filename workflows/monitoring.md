@@ -8,6 +8,7 @@ playbooks:
   - references/playbooks/maintenance/keyword-intent-evolution.md
   - references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md
   - references/playbooks/maintenance/content-opportunity-audit-and-measurement.md
+  - references/playbooks/maintenance/weekly-gsc-action-queue.md
   - references/playbooks/maintenance/seo-operational-checklist.md
   - references/playbooks/maintenance/local-business-profile-audit.md
   - references/playbooks/maintenance/google-generative-ai-visibility.md
@@ -17,6 +18,7 @@ playbooks:
 scripts:
   - scripts/workspace.py
   - scripts/gsc_pull.py
+  - scripts/weekly_gsc_actions.py
   - scripts/ga4_pull.py
   - scripts/ahrefs_client.py
   - scripts/dataforseo_client.py
@@ -28,6 +30,7 @@ outputs:
   - monitoring/<date>_leading-indicators.json  # the 6 action-task checklist
   - monitoring/<date>_snapshot.json         # raw ordinary-search snapshot payload
   - monitoring/<date>_gsc-4-20-opportunities.json # current, verified quick-win/recovery rows
+  - monitoring/<date>_weekly-gsc-action-queue.json # optional offline, non-executing weekly work list
   - monitoring/<date>_content-opportunity-audit.json # optional recurring ranked candidate ledger
   - monitoring/<date>_content-opportunity-summary.md # optional review summary and exact proposed diffs
   - monitoring/content-change-ledger.jsonl # approved-write receipts plus 28/56-day enrollment
@@ -66,6 +69,8 @@ outputs:
 
    **Optional recurring content-opportunity audit.** When the user wants a joined weekly audit rather than a one-off 4–20 list, load `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md` and copy `assets/content-opportunity-ledger.json`. Join the current and previous final windows with the live CMS inventory and prior run. Store real click loss, CTR headroom, and rank headroom separately; use soft estimates only to order a capped review queue. Verify the live page, SERP, canonical, product truth, and cannibalization before drafting. The agent remains read/draft-only. Any approved write must use a deterministic executor that rejects stale revisions, records the live receipt, and enrolls like-for-like +28-day and +56-day reads with same-period site evidence. Save the audit and review summary to the declared outputs.
 
+   **Optional offline weekly action queue.** Load `references/playbooks/maintenance/weekly-gsc-action-queue.md` and copy `assets/weekly-gsc-action-queue.json` to `monitoring/<date>_weekly-gsc-action-queue.json`. Resolve the existing project and authorized property; record current/previous scopes, finalized windows, data limits, unknowns, and prior pending tasks. Turn selected evidence into UPDATE_EXISTING, NEW_PAGE_REVIEW, HOLD/NEEDS_MORE_DATA, or NO_ACTION records. Require owner, project due policy/timezone, acceptance criteria, evidence-bearing live checks, baseline revision, pending approval, and separate +28/+56 measurement. Run `python3 scripts/weekly_gsc_actions.py <queue.json>` before review; use an explicit `--as-of YYYY-MM-DD` only for a historical check. Passing schema validation is not independent verification or approval. No Monday task, account connection, website write, or schedule is created.
+
 5. **Track the six leading indicators (the work).** From `measuring-seo-results.md`, log the action-task checklist for the period: (1) content shipped, (2) new keywords/content targeted, (3) existing pages optimized, (4) link opportunities identified + contacted, (5) backlinks acquired, (6) competitor backlinks tracked. Save to `monitoring/<date>_leading-indicators.json`. These are checked weekly; the user fills them or the agent reads them from the workspace (briefs shipped, drafts sent in `outreach/`, etc.).
 
 6. **Benchmark competitor backlink pace.** Load `references/playbooks/maintenance/staying-ahead-with-backlinks.md`. In Ahrefs (`ahrefs_client.py`), for you + the top 3–5 competitors run the filtered query: DR > ~25, one link per domain, "new" in the last 30 days. Count unique new referring domains (and high-DR wins separately). If you're below a competitor's pace, that's a leading indicator of future ranking loss → flag "increase outreach" and route to `authority-and-links.md`.
@@ -99,6 +104,7 @@ outputs:
 - `monitoring/<date>_leading-indicators.json` — the six action-task checklist for the period.
 - `monitoring/<date>_snapshot.json` — raw ordinary-search payload for trend diffing.
 - `monitoring/<date>_gsc-4-20-opportunities.json` — current valid opportunities plus rejected/recovery-only rows.
+- `monitoring/<date>_weekly-gsc-action-queue.json` — optional evidence-backed work list; all action lanes remain PENDING, non-executing, and capped.
 - `monitoring/<date>_content-opportunity-audit.json` — optional ranked candidate ledger with separate real-loss and estimated-headroom signals.
 - `monitoring/<date>_content-opportunity-summary.md` — optional review queue with exact diffs, evidence, assumptions, and dispositions.
 - `monitoring/content-change-ledger.jsonl` — approved-write receipts, stale checks, and 28/56-day measurement enrollment.
