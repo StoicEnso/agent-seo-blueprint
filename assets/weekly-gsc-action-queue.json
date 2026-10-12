@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "queue_id": "REPLACE_WITH_STABLE_QUEUE_ID",
+  "scope": {
+    "project": "REPLACE_WITH_PROJECT",
+    "property": "REPLACE_WITH_AUTHORIZED_GSC_PROPERTY",
+    "search_type": "web",
+    "dimensions": [
+      "query",
+      "page"
+    ],
+    "filters": [],
+    "aggregation": "byPage",
+    "timezone": "America/Los_Angeles"
+  },
+  "windows": {
+    "current": {
+      "start": "2026-09-01",
+      "end": "2026-09-28",
+      "final": true,
+      "scope": {
+        "project": "REPLACE_WITH_PROJECT",
+        "property": "REPLACE_WITH_AUTHORIZED_GSC_PROPERTY",
+        "search_type": "web",
+        "dimensions": [
+          "query",
+          "page"
+        ],
+        "filters": [],
+        "aggregation": "byPage",
+        "timezone": "America/Los_Angeles"
+      },
+      "source_refs": [
+        "REPLACE_WITH_CURRENT_EXPORT_REFERENCE"
+      ]
+    },
+    "previous": {
+      "start": "2026-08-04",
+      "end": "2026-08-31",
+      "final": true,
+      "scope": {
+        "project": "REPLACE_WITH_PROJECT",
+        "property": "REPLACE_WITH_AUTHORIZED_GSC_PROPERTY",
+        "search_type": "web",
+        "dimensions": [
+          "query",
+          "page"
+        ],
+        "filters": [],
+        "aggregation": "byPage",
+        "timezone": "America/Los_Angeles"
+      },
+      "source_refs": [
+        "REPLACE_WITH_PREVIOUS_EXPORT_REFERENCE"
+      ]
+    },
+    "collection_date": "2026-10-02",
+    "final_through": "2026-09-28"
+  },
+  "limitations": [
+    "Template only: dates and caps are illustrative, not an active data pull or schedule.",
+    "API/UI exports contain top/visible rows; missing or privacy-limited queries are unknown, not zero.",
+    "Replace declarations with inspectable saved evidence; validation alone does not verify it."
+  ],
+  "caps": {
+    "candidate_cap": 20,
+    "expensive_check_cap": 8
+  },
+  "execution": {
+    "mode": "review_only",
+    "cms_write": false,
+    "publish": false,
+    "schedule": false
+  },
+  "review_policy": {
+    "max_data_age_days": 7,
+    "max_evidence_age_days": 7,
+    "due_timezone": "REPLACE_WITH_PROJECT_TIMEZONE"
+  },
+  "prior_pending_tasks": [],
+  "tasks": [
+    {
+      "id": "REPLACE_WITH_STABLE_TASK_ID",
+      "dedup_key": "REPLACE_WITH_STABLE_QUERY_INTENT_AND_PAGE_KEY",
+      "outcome": "HOLD",
+      "hold_reason": "Template: add authorized, finalized, like-for-like evidence before review.",
+      "evidence_refs": [
+        "REPLACE_WITH_SAVED_EVIDENCE_REFERENCE"
+      ],
+      "carried_forward": false,
+      "expensive_check": false
+    }
+  ]
+}
