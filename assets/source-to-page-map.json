@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "site_url": "https://example.invalid",
+  "mappings": [
+    {
+      "claim_id": "example-plan-limit",
+      "source_paths": ["src/product/limits.ts"],
+      "owned_page": "/pricing",
+      "claim": "Illustrative mapping only. Replace with a verified product statement.",
+      "evidence_urls": []
+    }
+  ],
+  "notes": "Copy into the project workspace. Map exact non-sensitive source paths to each owned claim or page. This example does not establish a real product fact."
+}

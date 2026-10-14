@@ -40,6 +40,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Plan a topic cluster with distinct page roles and an inspectable contextual-link ledger | Load `references/playbooks/content/topic-architecture-and-internal-link-ledger.md`, then run `workflows/research-and-ideation.md` and `workflows/content-production.md` |
 | Audit a live site (technical + on-page + content) with a prioritized fix list | `workflows/site-audit.md` |
 | Audit Google Business Profile and local SEO readiness without changing the listing | Load `references/playbooks/maintenance/local-business-profile-audit.md`, copy `assets/local-business-profile-audit.csv`, then route website fixes to `workflows/site-audit.md` and measurement to `workflows/monitoring.md` |
+| Watch product-code changes for stale copy or compare saved competitor sitemap listings | `workflows/change-and-sitemap-review.md`; use pinned commits and dated saved evidence; candidate queues never authorize publishing, scheduling or outreach |
 | Run recurring technical SEO/schema/CWV/indexation maintenance | `workflows/technical-seo-maintenance.md` |
 | Audit AI-search/GEO readiness, including current commerce/entity data when applicable | `workflows/geo-audit.md` |
 | Track buyer-question answers, citations, and public social opportunities with an approval queue | `workflows/ai-answer-visibility-loop.md`; use `assets/community-reply-review.json` for an evidence-led Reddit reply draft that stays non-executing until exact approval |
@@ -109,6 +110,10 @@ Auth rule: the skill **never** enters passwords or completes OAuth itself — it
 then reads the logged-in session. API keys come from env vars named in the workspace `project.json` (never stored in plaintext).
 
 ## Planning pipelines and deterministic tools (`scripts/`)
+
+- `scripts/change_review.py` — bounded pinned-Git metadata and exact source-to-page mapping for product-copy review; no site writes.
+- `scripts/sitemap_snapshot.py` — validate saved UTF-8 sitemap XML and compare compatible complete snapshots offline; no network or ranking inference.
+- `scripts/review_inputs.py` — shared bounded input and nominated-report checks for the two offline review tools.
 
 - `scripts/master_plan_workflow.mjs` — standard multi-agent pipeline for a complete master plan from saved live data.
 - `scripts/master_plan_cascade.mjs` — exhaustive diverge/judge/synthesize/red-team variant with one reproducible

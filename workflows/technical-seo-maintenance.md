@@ -100,3 +100,12 @@ outputs:
 - **Low-only findings:** write to workspace and summarize briefly; don't spam the user.
 
 **Done when.** A bounded technical audit artifact exists, high/critical fixes are clearly ranked, and the recurring cadence posture is explicit: existing cron reused, new cron proposed, or scheduling intentionally skipped with reason.
+
+
+## Change-driven review inputs
+
+When a verified product change or saved competitor sitemap observation triggers this workflow, use
+[change-and-sitemap-review.md](change-and-sitemap-review.md) for pinned revisions, source-to-page mappings,
+dated evidence and bounded candidate dispositions. Git changes are not shipment proof; sitemap listings
+are not indexing or ranking evidence. Keep the existing approval, product-truth, quality and measurement
+gates. This pointer adds no website write, scheduler, outreach, paid service or auto-merge authority.
