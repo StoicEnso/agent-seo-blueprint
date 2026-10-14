@@ -7,6 +7,7 @@ playbooks:
   - references/playbooks/authority/affiliate-programs.md
   - references/playbooks/authority/haro.md
   - references/playbooks/authority/manual-outreach.md
+  - references/playbooks/authority/guest-article-discovery-and-validation.md
   - references/playbooks/authority/content-rings-for-links.md
   - references/playbooks/authority/building-an-audience.md
   - references/playbooks/authority/acquiring-domain-authority.md
@@ -26,8 +27,10 @@ scripts:
   - scripts/dataforseo_client.py
   - scripts/serp_capture.py
   - scripts/report.py
+  - scripts/guest_article_review.py
 integrations: [ahrefs, dataforseo, serp]
 outputs:
+  - outreach/<date>_guest-article-ledger.json # saved first-party evidence; DRAFT only
   - outreach/<date>_opportunities.json   # ranked backlink targets
   - outreach/<date>_drafts.json          # drafted (NOT sent) outreach messages
   - outreach/<date>_directory-submissions.csv  # verified directory/entity pipeline
@@ -59,6 +62,7 @@ outputs:
    - **Affiliate program / competitor-affiliate mining** (`affiliate-programs.md`) — for a paid product with sustainable unit economics: fingerprint verified public referral routes, qualify the competitor's editorial affiliates, model a defensible offer, and draft `test/add`, `comparison`, or `switch` asks. Never invent terms or blindly outbid.
    - **HARO / Help a B2B Writer Out** (`haro.md`) — if someone can speak as an expert: draft credible, specific quotes (add a Loom touch) for high-DR editorial links.
    - **Manual outreach** (`manual-outreach.md`) — revisit-the-topic pitches, missing-link asks, free-access offers, and the case-study trade (target smaller tools with few case studies).
+   - **Guest articles / contributed columns** (`guest-article-discovery-and-validation.md`) — turn a small niche query batch into an evidence-screened queue. Use `guest_article_review.py` to generate query ideas and validate `assets/guest-article-opportunity-ledger.json` offline. Require current publisher-owned guidelines, a usable route, relevant real articles, truthful author/product basis and an original reader benefit. Unknown fees are not free; contact-only and blocked routes stay conditional. No followed-link promise, paid-link package or automatic outreach.
    - **Content rings** (`content-rings-for-links.md`) — link the new page from your own aged, genuinely-useful properties for a launch head start. (Build new ring properties via `content-production.md`'s content-ring path.)
    - **Directories / entity profiles** (`directory-submissions.md`) — relevant public directories, product indexes, launch platforms, review profiles, and entity profiles. Start with niche-filtered discovery sources, preserve source claims as unverified lineage, then verify the destination-owned submit route and a live public listing. Never sort solely by screenshot DR. Use `startup-backlink-directory-submissions.md` to turn sourced startup lists into a classified verification queue.
    - **Government supplier registries** (`government-supplier-registry-profiles.md`) — screen SAM.gov, SBA Small Business Search, state vendor portals, the UK Central Digital Platform, and similar routes only when the legal entity has a real procurement purpose. Copy `assets/government-supplier-registry-opportunities.csv`. Verify official jurisdiction and eligibility rules, required declarations, privacy/publication rules, and one route-matched public profile before owner review. Registration, supplier IDs, private bid records, and share codes are not backlinks; require a live public page with the rendered destination link.
@@ -109,3 +113,7 @@ outputs:
 - `outreach/<date>_press-release-plan.json` — optional evidence packet and exact DRAFT release; no submission authority.
 
 **Done when.** A ranked opportunity list and matching personalized drafts exist in the workspace, every chosen tactic passed the guardrail, and nothing has been sent/submitted without explicit user confirmation. Directory work also has verified route evidence and a tracked public listing URL or rejection reason. Hosted-publishing work also has one row per screened site, one separately approved pilot at most, and live canonical/robots/`href`/`rel` plus outcome evidence before expansion; it never reports API success, crawl eligibility, or domain authority as a dofollow/indexing result. A press-release plan also has real-news, destination, rights, disclosure, link, correction-cost, and post-publication evidence fields, with creator claims kept separate from current observations. Wikipedia research either has ten verified candidates with dead/archive/COI evidence or an exhausted-search report; it never implies that an edit occurred. Feed approved sends + acquired-link counts into `monitoring.md` and re-check competitor backlink pace there monthly.
+
+## Guest-article branch
+
+Load `references/playbooks/authority/guest-article-discovery-and-validation.md`. Record the actual search provider/query and saved publisher evidence before drafting. Structural validation is not acceptance, editorial quality or send permission. Keep unknown cost, member eligibility, author restrictions and non-promotional link rules explicit. Recheck current terms before an exact approved send; put real send/publication/index/referral/conversion receipts in a separate outcome log. No network collector, email sender or scheduler is introduced by this branch.
