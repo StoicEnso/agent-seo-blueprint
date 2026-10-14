@@ -11,8 +11,8 @@ Think of it as two planes that reference each other:
    coverage), operational article-production QA, directory/entity-submission, hosted-publishing experiments, local Business Profile audits, and 37-check SEO coverage playbooks,
    plus a searchable course index so any agent can answer
    *"what does the course say about X?"* and pull the right playbook.
-2. **Pipeline layer** — 11 workflows total: 5 core pipelines, 4 operational deep dives, and 2 end-to-end planning
-   workflows that compose those
+2. **Pipeline layer** — 12 workflows total: 5 core pipelines, 4 operational deep dives, 2 end-to-end planning
+   workflows, and one bounded change-review workflow. These compose those
    playbooks, drive the data integrations, summon customer-persona subagents for ideation, and produce concrete
    deliverables.
 
@@ -26,8 +26,8 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
-- [The workflows](#the-workflows-11-runbooks)
+- [The knowledge layer](#the-knowledge-layer-68-playbooks)
+- [The workflows](#the-workflows-12-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
 - [Scripts reference](#scripts-reference)
@@ -46,13 +46,13 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **68 playbooks**: 36 original course distillations plus 32 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
-- **11 workflows**: five core pipelines, four operational deep dives, and two end-to-end planning workflows for a full
-  SEO master plan and a BOFU→MOFU→TOFU rollout.
+- **12 workflows**: five core pipelines, four operational deep dives, two end-to-end planning workflows, and one
+  bounded product-code/competitor-sitemap review queue.
 - **8 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, CWV thresholds, and public social research.
 - **ICP persona subagents** — summon Opus subagents that role-play ideal customers to ideate content angles, surface the
   exact phrases people search, and pressure-test niches.
@@ -90,23 +90,24 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 32 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
     foundations/     (6)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
-    maintenance/     (14)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
+    maintenance/     (15)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
   integrations/                # 8 source/threshold references, including DataForSEO, CWV, and public social research
   coverage-map.md              # proof: every lesson → its playbook(s)
-workflows/                     # 5 core pipelines + 4 operational deep dives + 2 planning workflows
+workflows/                     # 5 core pipelines + 4 operational deep dives + 2 planning workflows + one bounded review
   research-and-ideation.md  content-production.md  site-audit.md
   authority-and-links.md    monitoring.md         technical-seo-maintenance.md
   geo-audit.md              category-citation-loop.md
   ai-answer-visibility-loop.md
   full-master-plan.md       full-funnel-rollout.md
+  change-and-sitemap-review.md
 agents/
   icp-persona.md               # launcher template for ONE persona subagent
   synthesizer.md               # merges N persona outputs into ranked insights
@@ -117,6 +118,7 @@ scripts/                       # Python 3 stdlib only — no pip deps
   dataforseo_client.py  serp_capture.py  pagespeed_run.py
   forecast.py  master_plan_workflow.mjs  master_plan_cascade.mjs  funnel_rollout_cascade.mjs
   prompt_panel.py  social_fetch.py  geo_metrics.py  rank_social_opportunities.py  approval_queue.py
+  change_review.py  sitemap_snapshot.py  review_inputs.py
 assets/                        # fill-in templates emitted into the workspace
   audit-report.md  content-brief.md  keyword-map.csv
   directory-discovery-sources.csv  directory-submission-tracker.csv
@@ -126,12 +128,13 @@ assets/                        # fill-in templates emitted into the workspace
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
   statistics-page-brief.csv  search-led-expert-answer-map.csv  local-business-profile-audit.csv
   content-opportunity-ledger.json  outreach-email.md  monitoring-snapshot.md
+  source-to-page-map.json  competitor-sitemap-snapshot.schema.json
 _source/                       # PRIVATE, gitignored — paid-course transcripts (NOT in this repo)
 ```
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (68 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -159,7 +162,8 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 `measuring-seo-results` · `seo-operational-checklist` · `technical-seo-maintenance` ·
 `local-business-profile-audit` ·
 `gsc-position-4-20-opportunity-mining` · `content-opportunity-audit-and-measurement` · `google-generative-ai-visibility` · `ai-search-commerce-readiness` ·
-`cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop` · `ai-overviews-and-serp-features`
+`cloudflare-agent-readiness-and-aeo` · `cross-platform-ai-citation-loop` · `ai-overviews-and-serp-features` ·
+`change-and-sitemap-review`
 
 > **Flagship play:** proactive niche discovery — mining search data for a low-KD, buildable gap with a real LSI cluster
 > behind it, to build a product/startup around. See `research/finding-and-validating-niches.md` (the Ahrefs data-dump
@@ -167,7 +171,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 
 ---
 
-## The workflows (11 runbooks)
+## The workflows (12 runbooks)
 
 Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `outputs`) and concrete numbered steps.
 
@@ -178,6 +182,7 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **site-audit** | technical + on-page + content + opportunity + authority audit; optional read-only local Business Profile pass | prioritized, severity-ranked fix list; optional local-profile ledger |
 | **authority-and-links** | pick tactics, including one-site hosted-publishing pilots and bounded press-release distribution → ranked opportunity list → **drafted** outreach/releases (never auto-sent) | opportunity list, outreach drafts, optional hosted-publishing/press-release plans |
 | **monitoring** | rank/traffic snapshots + GSC 4–20 and recurring measured content opportunities + optional Google AI, Cloudflare agent/AEO, and provider citation evidence + update response + ROI measurement | ordinary-search, opportunity, and separated AI-evidence snapshots |
+| **change-and-sitemap-review** | pinned product-code changes and dated saved competitor sitemap comparisons; no automatic edits or ranking claims | candidate review queue and source fingerprints |
 | **technical-seo-maintenance** | recurring indexation, crawlability, schema, CWV, rendering, and hygiene review | evidence ledger and prioritized maintenance report |
 | **geo-audit** | Platform-scoped AI-search audit with official Google eligibility/reporting plus optional Cloudflare and provider-specific citation lanes | readiness report and raw findings |
 | **category-citation-loop** | choose a truthful category phrase, build evidence, and monitor platform-specific buyer-question citations | category/citation baseline and loop plan |
@@ -223,7 +228,10 @@ objections, where they hang out, and willingness-to-pay signals.
 
 ## Scripts reference
 
-All Python 3 standard library only. Every script supports `--help`.
+All command-line tools use the Python 3 standard library and support `--help`. Shared `review_inputs.py` is a library, not a command.
+
+The offline change-review workflow has no network, paid service, website write, schedule or auto-merge path.
+See [its runbook](workflows/change-and-sitemap-review.md) for baseline setup and bounded commands.
 
 ```bash
 # Course search — "what does the course say about X"
@@ -235,6 +243,11 @@ python3 scripts/search_course.py "user intent" --full          # also search tra
 python3 scripts/workspace.py status --path ./seo-workspace/mysite
 python3 scripts/workspace.py init  --path ./seo-workspace/mysite --name mysite --domain mysite.com --niche "ai tools"
 python3 scripts/workspace.py show  --path ./seo-workspace/mysite
+
+# Offline product-copy and saved sitemap review (explicit inputs; no website writes)
+python3 scripts/change_review.py --repo /path/to/product --base LAST_REVIEWED_COMMIT --head CURRENT_COMMIT --map /path/to/source-to-page-map.json --output review.json
+python3 scripts/sitemap_snapshot.py snapshot --input saved.xml --source https://competitor.example/sitemap.xml --observed 2026-10-14T09:00:00+01:00 --output current.json
+python3 scripts/sitemap_snapshot.py compare --baseline previous.json --current current.json --output comparison.json
 
 # Render artifacts (templates in assets/)
 python3 scripts/report.py keywords   --workspace ./seo-workspace/mysite --data keywords.json   # → CSV
