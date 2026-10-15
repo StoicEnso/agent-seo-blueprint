@@ -333,6 +333,8 @@ extra setup. What's *not* shipped is the paid-course **transcripts** — they ar
 
 ## Railway marketing and agent discovery
 
+The [interview source guide](references/sources/railway-interview-source-guide.md) links all 24 lessons to the official full transcript and video. It contains short exact quotations and original source summaries, not a republished transcript. The updated PDF includes this guide as an appendix.
+
 Read the [complete 24-mechanism marketing playbook](references/playbooks/foundations/agent-discoverable-product-growth.md), the [Linkdr skill review](references/integrations/linkdr-review.md), and the [source/coverage map](references/railway-marketing-source-map.json). Copy the non-executing [experiment worksheet](assets/agent-product-growth-experiment.csv). The [full PDF field guide](docs/field-guides/railway-marketing-playbook.pdf) contains the playbook, vendor review and source appendix. Founder reports, current documentation, sales claims and proposed tests remain separate. No installations, checkout, outreach, payment, schedules, production writes or merges are authorised.
 
 ## Evidence-led buyer shortlists
