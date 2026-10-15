@@ -22,7 +22,9 @@
         10,
         62
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m01",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M02",
@@ -34,7 +36,9 @@
         26,
         30
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m02",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M03",
@@ -43,7 +47,9 @@
         30,
         38
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m03",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M04",
@@ -51,7 +57,9 @@
       "paragraphs": [
         38
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m04",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M05",
@@ -59,7 +67,9 @@
       "paragraphs": [
         134
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m05",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M06",
@@ -67,7 +77,9 @@
       "paragraphs": [
         50
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m06",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M07",
@@ -75,7 +87,9 @@
       "paragraphs": [
         50
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m07",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M08",
@@ -86,7 +100,9 @@
         50,
         54
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m08",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M09",
@@ -94,7 +110,9 @@
       "paragraphs": [
         46
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m09",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M10",
@@ -103,7 +121,9 @@
         34,
         254
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m10",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M11",
@@ -112,7 +132,9 @@
         86,
         90
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m11",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M12",
@@ -120,7 +142,9 @@
       "paragraphs": [
         102
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m12",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M13",
@@ -134,7 +158,9 @@
         102,
         106
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m13",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M14",
@@ -147,7 +173,9 @@
         126,
         150
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m14",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M15",
@@ -159,7 +187,9 @@
         174,
         178
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m15",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M16",
@@ -167,7 +197,9 @@
       "paragraphs": [
         182
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m16",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M17",
@@ -177,7 +209,9 @@
         190,
         214
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m17",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M18",
@@ -185,7 +219,9 @@
       "paragraphs": [
         194
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m18",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M19",
@@ -195,7 +231,9 @@
         198,
         202
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m19",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M20",
@@ -203,7 +241,9 @@
       "paragraphs": [
         210
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m20",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M21",
@@ -215,7 +255,9 @@
         150,
         250
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m21",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M22",
@@ -224,7 +266,9 @@
         230,
         234
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m22",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M23",
@@ -236,7 +280,9 @@
         278,
         282
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m23",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     },
     {
       "id": "M24",
@@ -245,7 +291,9 @@
         298,
         326
       ],
-      "classification": "reported_practice_or_context_not_causal_proof"
+      "classification": "reported_practice_or_context_not_causal_proof",
+      "source_card": "references/sources/railway-interview-source-guide.md#source-m24",
+      "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper"
     }
   ],
   "coverage": [
@@ -2369,7 +2417,7 @@
     {
       "claim": "Seven-person stated team does no manual outreach",
       "status": "not_disclosed_in_interview",
-      "basis": "P092–P106 gives seven roles and system-building; does not rule out manual outreach."
+      "basis": "P092\u2013P106 gives seven roles and system-building; does not rule out manual outreach."
     },
     {
       "claim": "Paid placements caused the reported ARR growth",
@@ -2386,5 +2434,155 @@
   },
   "outreach_authorized": false,
   "purchase_authorized": false,
-  "production_authorized": false
+  "production_authorized": false,
+  "source_guide": {
+    "path": "references/sources/railway-interview-source-guide.md",
+    "kind": "original_summaries_short_quotations_and_official_source_links_not_full_transcript",
+    "publisher_full_transcript_url": "https://www.knuckleup.co/episodes/jake-cooper",
+    "quote_verification": "exact_match_to_saved_publisher_text_not_full_audio_verification",
+    "quotation_character_count": 40,
+    "full_transcript_redistributed": false,
+    "redistribution_permission_established": false,
+    "publisher_chapters": [
+      {
+        "seconds": 0,
+        "time": "00:00",
+        "label": "Opening and origin",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=0s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 174,
+        "time": "02:54",
+        "label": "Free offer and costs",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=174s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 361,
+        "time": "06:01",
+        "label": "Growth and agent workflows",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=361s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 585,
+        "time": "09:45",
+        "label": "Learning and market research",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=585s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 874,
+        "time": "14:34",
+        "label": "Founder and company context",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=874s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 1204,
+        "time": "20:04",
+        "label": "Small team and leverage",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=1204s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 1361,
+        "time": "22:41",
+        "label": "Timing and prioritisation",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=1361s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 1735,
+        "time": "28:55",
+        "label": "Talent and recommendation work",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=1735s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 1945,
+        "time": "32:25",
+        "label": "Capability changes",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=1945s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 2134,
+        "time": "35:34",
+        "label": "Onboarding and judgement",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=2134s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 2699,
+        "time": "44:59",
+        "label": "Values and reliable delivery",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=2699s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 2929,
+        "time": "48:49",
+        "label": "Reflection and working rhythm",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=2929s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 3294,
+        "time": "54:54",
+        "label": "Agent access and delivery",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=3294s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 3589,
+        "time": "59:49",
+        "label": "Future direction",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=3589s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 3697,
+        "time": "1:01:37",
+        "label": "Delegation and leadership",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=3697s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 4169,
+        "time": "1:09:29",
+        "label": "Constraints and learning",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=4169s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      },
+      {
+        "seconds": 4347,
+        "time": "1:12:27",
+        "label": "Limits of startup advice",
+        "url": "https://www.youtube.com/watch?v=LQNqM1mA2e8&t=4347s",
+        "precision": "publisher_chapter_start_not_utterance_timestamp"
+      }
+    ]
+  },
+  "short_quotations": [
+    {
+      "mechanism": "M05",
+      "paragraph": 134,
+      "speaker": "Jake Cooper",
+      "text": "recommend us"
+    },
+    {
+      "mechanism": "M10",
+      "paragraph": 34,
+      "speaker": "Jake Cooper",
+      "text": "brick by brick"
+    },
+    {
+      "mechanism": "M19",
+      "paragraph": 202,
+      "speaker": "Jake Cooper",
+      "text": "don't oversell"
+    }
+  ]
 }
