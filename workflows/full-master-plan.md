@@ -97,3 +97,7 @@ python3 scripts/forecast.py --in pools.json --aio-haircut 0.5
 ## Next — operational rollout
 
 Once the plan exists and the user wants the operating sequence ("roll out BOFU, then mid, then top of funnel"), run **[full-funnel-rollout.md](./full-funnel-rollout.md)** (`scripts/funnel_rollout_cascade.mjs`): it extends this plan into a wave-by-wave BOFU→MOFU→TOFU rollout with entry/exit/KILL gates and the down-funnel handoff plumbing — TOFU as reach/citation only, built last, never a revenue line.
+
+## Agent-discoverable product growth
+
+Add an optional agent-discovery and first-value lane only when the product and evidence justify it. Load the 24-mechanism `references/playbooks/foundations/agent-discoverable-product-growth.md` and source map. Select one audience, job, constraint and reason to act now; retain pricing, trust, delivery and retention constraints. This supplements the SEO plan, not its live-data requirements. Use `assets/agent-product-growth-experiment.csv`; all external actions require exact approval; any external publication or spend requires separate explicit approval.

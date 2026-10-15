@@ -41,3 +41,7 @@ Use when the user wants to own a defensible category phrase and become easier to
 ## Done condition
 
 The report contains the versioned evidence baseline, primary/supporting phrase decision, competitor/framing map, only the justified page briefs, distribution concept, exact monitoring prompt set, and separated citation-versus-business measurement plan.
+
+## Agent-discoverable product growth
+
+For an agent-recommendation thesis, load `references/playbooks/foundations/agent-discoverable-product-growth.md`. Separate the founder's reported recommendation work from the creator's paid-listicle interpretation. Capture a versioned provider baseline and source ownership where observable; improve one truthful evidence gap, not a fixed page or paid-placement quota. Record the bounded test in `assets/agent-product-growth-experiment.csv`; citations are not clicks, task success or causal revenue.
