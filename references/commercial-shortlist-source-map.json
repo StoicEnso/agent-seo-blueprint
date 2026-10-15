@@ -1,0 +1,192 @@
+{
+  "artifact": "references/playbooks/content/evidence-led-buyer-shortlists.md",
+  "status": "SOURCE_ADAPTATION_NOT_EXECUTION_AUTHORITY",
+  "source": {
+    "url": "https://x.com/robhoffman_/status/2110083165306155141",
+    "author": "Rob Hoffman",
+    "published_at": "2026-10-13",
+    "evidence_status": "creator-authored field guidance; outcome claims unverified"
+  },
+  "owner_playbooks": {
+    "audit_workflows": [
+      "workflows/category-citation-loop.md",
+      "workflows/geo-audit.md"
+    ],
+    "production_workflow": "workflows/content-production.md",
+    "measurement_workflow": "workflows/monitoring.md",
+    "relationship": "production supplement; no separate citation audit or outreach system"
+  },
+  "steps": [
+    {
+      "n": 1,
+      "source": "author byline",
+      "adaptation": "real, consented identity and relevant expertise; no invented authority"
+    },
+    {
+      "n": 2,
+      "source": "published/updated dates",
+      "adaptation": "honest dates; update cadence illustrative only"
+    },
+    {
+      "n": 3,
+      "source": "title and H1",
+      "adaptation": "matching reader-visible title/H1; normal brand suffix allowed; no bots-only version or cloaking"
+    },
+    {
+      "n": 4,
+      "source": "short intro",
+      "adaptation": "decision context and disclosure; 95 words illustrative"
+    },
+    {
+      "n": 5,
+      "source": "key takeaways",
+      "adaptation": "source-backed buyer points"
+    },
+    {
+      "n": 6,
+      "source": "category definition",
+      "adaptation": "define scope and wrong-fit cases"
+    },
+    {
+      "n": 7,
+      "source": "methodology",
+      "adaptation": "consistent disclosed criteria, sources, limits and ownership"
+    },
+    {
+      "n": 8,
+      "source": "option list",
+      "adaptation": "fair fit-based profiles; word count illustrative"
+    },
+    {
+      "n": 9,
+      "source": "option data",
+      "adaptation": "current sourced facts; no fabricated ratings, logos, results, testimonials or counts"
+    },
+    {
+      "n": 10,
+      "source": "comparison table",
+      "adaptation": "semantic accessible HTML table, not image-only"
+    },
+    {
+      "n": 11,
+      "source": "use-case guide",
+      "adaptation": "fit-and-trade-off mapping, not false certainty"
+    },
+    {
+      "n": 12,
+      "source": "social proof",
+      "adaptation": "only genuine permissioned contextual evidence"
+    },
+    {
+      "n": 13,
+      "source": "FAQ",
+      "adaptation": "real buyer questions; short answers illustrative, not quota"
+    },
+    {
+      "n": 14,
+      "source": "CTA",
+      "adaptation": "truthful accessible next step; free only when genuinely free"
+    }
+  ],
+  "conversion_ideas": [
+    {
+      "n": 1,
+      "source": "early lead magnet",
+      "adaptation": "optional/relevant, disclose data exchange"
+    },
+    {
+      "n": 2,
+      "source": "image CTA",
+      "adaptation": "accessible image plus real HTML text/button"
+    },
+    {
+      "n": 3,
+      "source": "YouTube embed",
+      "adaptation": "proof-led and captioned; no ranking causality claim"
+    },
+    {
+      "n": 4,
+      "source": "floating CTA buttons",
+      "adaptation": "one dismissible keyboard-accessible control; mobile limits"
+    },
+    {
+      "n": 5,
+      "source": "natural CTA link",
+      "adaptation": "contextual, descriptive, disclosed"
+    },
+    {
+      "n": 6,
+      "source": "final image CTA",
+      "adaptation": "optional accessible complement, never required"
+    }
+  ],
+  "rejected_claims": [
+    "creator six-week AI Overview outcome or weekly pipeline proves this template works",
+    "video embed causes ranking",
+    "fixed word counts, dates, CTA positions, FAQ counts, or table format cause citation/ranking",
+    "vendor listicle is independent editorial",
+    "bots-only title wording is acceptable",
+    "results, metrics, reviews, logos, or testimonials may be invented"
+  ],
+  "measurement": {
+    "separate_lanes": [
+      "ordinary search",
+      "answer-engine mentions/citations",
+      "native/video engagement",
+      "referrals",
+      "leads/trials/transactions/revenue"
+    ],
+    "causality": "post-publication association is not proof of causation"
+  },
+  "source_numeric_illustrations": {
+    "review_interval_days": [
+      30,
+      90
+    ],
+    "introduction_max_words": 95,
+    "takeaway_count": 5,
+    "takeaway_sentences": [
+      2,
+      3
+    ],
+    "category_words": [
+      200,
+      300
+    ],
+    "methodology_criteria_min": 4,
+    "list_introduction_sentences": [
+      3,
+      4
+    ],
+    "product_profile_words": [
+      200,
+      300
+    ],
+    "best_suited_sentences": 2,
+    "use_case_table_columns": [
+      3,
+      4
+    ],
+    "faq_questions": [
+      6,
+      8
+    ],
+    "faq_answer_sentences": [
+      2,
+      3
+    ],
+    "cta_sentences": [
+      5,
+      6
+    ],
+    "conversion_positions_percent": [
+      10,
+      15,
+      30
+    ],
+    "status": "creator-specific illustrations, not requirements or performance evidence"
+  },
+  "publication_authorized": false,
+  "outreach_authorized": false,
+  "purchase_authorized": false
+}

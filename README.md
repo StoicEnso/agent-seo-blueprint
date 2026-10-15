@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-68-playbooks)
+- [The knowledge layer](#the-knowledge-layer-69-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **68 playbooks**: 36 original course distillations plus 32 operational additions for article QA, schema/E-E-A-T,
+- **69 playbooks**: 36 original course distillations plus 33 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,9 +90,9 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 32 operational additions
+  playbooks/                   # 36 course distillations + 33 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
-    content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
+    content/         (19)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
     foundations/     (7)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
     maintenance/     (14)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
@@ -131,7 +131,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (68 playbooks)
+## The knowledge layer (69 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -334,6 +334,10 @@ extra setup. What's *not* shipped is the paid-course **transcripts** — they ar
 ## Railway marketing and agent discovery
 
 Read the [complete 24-mechanism marketing playbook](references/playbooks/foundations/agent-discoverable-product-growth.md), the [Linkdr skill review](references/integrations/linkdr-review.md), and the [source/coverage map](references/railway-marketing-source-map.json). Copy the non-executing [experiment worksheet](assets/agent-product-growth-experiment.csv). The [full PDF field guide](docs/field-guides/railway-marketing-playbook.pdf) contains the playbook, vendor review and source appendix. Founder reports, current documentation, sales claims and proposed tests remain separate. No installations, checkout, outreach, payment, schedules, production writes or merges are authorised.
+
+## Evidence-led buyer shortlists
+
+Use the [buyer-shortlist production guide](references/playbooks/content/evidence-led-buyer-shortlists.md), [14-step and six-idea source map](references/commercial-shortlist-source-map.json), and non-executing [brief template](assets/commercial-shortlist-brief.json). This supplements existing citation-audit and content workflows. Creator results remain unverified; no publication, outreach or purchase is authorised.
 
 ## Extending the skill
 

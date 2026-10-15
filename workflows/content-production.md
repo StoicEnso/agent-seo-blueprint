@@ -123,3 +123,7 @@ outputs:
 ## Agent-discoverable product growth
 
 For agent-facing docs, comparison evidence, sample tasks or launch notes, load `references/playbooks/foundations/agent-discoverable-product-growth.md`. Verify live product claims, permissions, costs, errors and limits. A skill file may help a product be understood; it does not authorise installation, account creation, data transfer or checkout. Keep content distinct and useful to a reader; no manufactured consensus, thin query permutations or promised model recommendations. All external publication remains approval-gated.
+
+## Evidence-led buyer shortlists
+
+For a justified best-of, alternatives or buyer-comparison brief, load `references/playbooks/content/evidence-led-buyer-shortlists.md`, the complete `references/commercial-shortlist-source-map.json`, and `assets/commercial-shortlist-brief.json`. Use current source ownership, pricing and limits, fair criteria, real trade-offs, truthful dates and CTA terms. Treat all 14 source steps and six conversion ideas as conditional design prompts, not ranking requirements. Keep publication and outreach approval-gated; measure Search, named-provider observations and business outcomes separately.

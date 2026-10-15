@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "DRAFT_NOT_EXECUTABLE",
+  "scope": {
+    "query": null,
+    "locale": null,
+    "language": null,
+    "buyer_job": null,
+    "canonical_url": null,
+    "existing_page_decision": null,
+    "demand_evidence": []
+  },
+  "publisher": {
+    "real_author": null,
+    "ownership_disclosure": null,
+    "published_date": null,
+    "materially_updated_date": null,
+    "revision_log": []
+  },
+  "methodology": {
+    "inclusion_rule": null,
+    "criteria": [],
+    "missing_data_rule": "Unknown, not zero",
+    "ranking_rule": null,
+    "material_owner_product_tradeoffs": []
+  },
+  "products": [],
+  "claim_ledger": [],
+  "claim_fields": [
+    "product",
+    "claim_text_or_table_cell",
+    "source_url",
+    "source_owner",
+    "checked_at",
+    "claim_type",
+    "limitation",
+    "rights_status"
+  ],
+  "layout": {
+    "semantic_comparison_table": null,
+    "real_buyer_questions": [],
+    "optional_conversion_elements": [],
+    "mobile_keyboard_checks": "NOT_TESTED"
+  },
+  "offer": {
+    "cta_destination": null,
+    "free_offer_terms": null,
+    "data_exchange": null
+  },
+  "measurement": {
+    "baseline_id": null,
+    "window": null,
+    "separate_lanes": [
+      "ordinary_search",
+      "named_provider_observations",
+      "referrals",
+      "qualified_trials_or_leads",
+      "transactions_or_revenue"
+    ],
+    "causality": "No causal inference from before/after alone"
+  },
+  "approval": {
+    "publication": "NOT_GRANTED",
+    "outreach": "NOT_GRANTED",
+    "purchase": "NOT_GRANTED",
+    "exact_content_and_destinations": null
+  },
+  "execution_receipt": null,
+  "observed_outcomes": "NOT_RUN"
+}
