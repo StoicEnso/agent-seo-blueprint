@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
+- [The knowledge layer](#the-knowledge-layer-68-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **68 playbooks**: 36 original course distillations plus 32 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,11 +90,11 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 32 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
-    foundations/     (6)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
+    foundations/     (7)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
     maintenance/     (14)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
@@ -131,7 +131,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (68 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -152,7 +152,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 `hosted-publishing-experiments` · `wikipedia-dead-link-building` · `press-release-distribution` ·
 `other-link-building` · `linkbuilding-what-not-to-do`
 
-**foundations/** — `seo-philosophy` · `seo-and-ai-future` · `google-generative-ai-search-official` ·
+**foundations/** — `agent-discoverable-product-growth` · `seo-philosophy` · `seo-and-ai-future` · `google-generative-ai-search-official` ·
 `seo-process-overview` · `adversarial-agent-orchestration` · `mechanic-first-growth-experiments`
 
 **maintenance/** — `navigating-google-updates` · `keyword-intent-evolution` · `staying-ahead-with-backlinks` ·
@@ -330,6 +330,10 @@ extra setup. What's *not* shipped is the paid-course **transcripts** — they ar
 - **Auth** is always performed by you (login/OAuth); the skill reads the authorized session and never handles passwords.
 
 ---
+
+## Railway marketing and agent discovery
+
+Read the [complete 24-mechanism marketing playbook](references/playbooks/foundations/agent-discoverable-product-growth.md), the [Linkdr skill review](references/integrations/linkdr-review.md), and the [source/coverage map](references/railway-marketing-source-map.json). Copy the non-executing [experiment worksheet](assets/agent-product-growth-experiment.csv). The [full PDF field guide](docs/field-guides/railway-marketing-playbook.pdf) contains the playbook, vendor review and source appendix. Founder reports, current documentation, sales claims and proposed tests remain separate. No installations, checkout, outreach, payment, schedules, production writes or merges are authorised.
 
 ## Extending the skill
 

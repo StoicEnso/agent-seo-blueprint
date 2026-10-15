@@ -1,0 +1,2390 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-15",
+  "kind": "source_map_not_campaign_authority",
+  "publisher_url": "https://www.knuckleup.co/episodes/jake-cooper",
+  "video_url": "https://www.youtube.com/watch?v=LQNqM1mA2e8",
+  "commentary_url": "https://x.com/illyism/status/2110205324586270827",
+  "transcript": {
+    "paragraph_count": 330,
+    "speaker_labels_included": true,
+    "current_matches_saved_text": true,
+    "sha256": "d2a997987acde36bf962efe41a548d6392f643d203f0d45dd6077aa07c25f5df",
+    "audio_verified": false,
+    "utterance_timestamps_available": false,
+    "raw_transcript_committed": false
+  },
+  "mechanisms": [
+    {
+      "id": "M01",
+      "title": "Narrow real job",
+      "paragraphs": [
+        10,
+        62
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M02",
+      "title": "Sustainable offer economics",
+      "paragraphs": [
+        14,
+        18,
+        22,
+        26,
+        30
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M03",
+      "title": "Changing user workflow",
+      "paragraphs": [
+        30,
+        38
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M04",
+      "title": "First value and identity",
+      "paragraphs": [
+        38
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M05",
+      "title": "Recommendation versus execution",
+      "paragraphs": [
+        134
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M06",
+      "title": "User feedback system",
+      "paragraphs": [
+        50
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M07",
+      "title": "Dogfood customer path",
+      "paragraphs": [
+        50
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M08",
+      "title": "Marketing intelligence",
+      "paragraphs": [
+        42,
+        46,
+        50,
+        54
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M09",
+      "title": "Build versus buy",
+      "paragraphs": [
+        46
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M10",
+      "title": "Weekly constraint",
+      "paragraphs": [
+        34,
+        254
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M11",
+      "title": "Why now and prioritisation",
+      "paragraphs": [
+        86,
+        90
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M12",
+      "title": "Manual learning before automation",
+      "paragraphs": [
+        102
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M13",
+      "title": "Lean team and systems",
+      "paragraphs": [
+        92,
+        94,
+        96,
+        98,
+        100,
+        102,
+        106
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M14",
+      "title": "Player coaches and ownership",
+      "paragraphs": [
+        58,
+        110,
+        114,
+        118,
+        126,
+        150
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M15",
+      "title": "Trust clarity judgement",
+      "paragraphs": [
+        158,
+        166,
+        170,
+        174,
+        178
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M16",
+      "title": "Essential maintenance",
+      "paragraphs": [
+        182
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M17",
+      "title": "Context and remote handoffs",
+      "paragraphs": [
+        186,
+        190,
+        214
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M18",
+      "title": "Proof-led changelog",
+      "paragraphs": [
+        194
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M19",
+      "title": "Truth and incident trust",
+      "paragraphs": [
+        194,
+        198,
+        202
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M20",
+      "title": "Enterprise relationships",
+      "paragraphs": [
+        210
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M21",
+      "title": "Capability and roadmap review",
+      "paragraphs": [
+        138,
+        142,
+        146,
+        150,
+        250
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M22",
+      "title": "Scoped permission and delivery",
+      "paragraphs": [
+        230,
+        234
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M23",
+      "title": "Reflection and one-variable learning",
+      "paragraphs": [
+        206,
+        270,
+        274,
+        278,
+        282
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    },
+    {
+      "id": "M24",
+      "title": "Context and compounding",
+      "paragraphs": [
+        298,
+        326
+      ],
+      "classification": "reported_practice_or_context_not_causal_proof"
+    }
+  ],
+  "coverage": [
+    {
+      "paragraph": 1,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 2,
+      "classification": "reported_context",
+      "mechanisms": [],
+      "reason": "Montage, host framing, company scale or future goals; not audited growth attribution."
+    },
+    {
+      "paragraph": 3,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 4,
+      "classification": "reported_context",
+      "mechanisms": [],
+      "reason": "Montage, host framing, company scale or future goals; not audited growth attribution."
+    },
+    {
+      "paragraph": 5,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 6,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 7,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 8,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 9,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 10,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M01"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 11,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 12,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 13,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 14,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M02"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 15,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 16,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 17,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 18,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M02"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 19,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 20,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 21,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 22,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M02"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 23,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 24,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 25,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 26,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M02"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 27,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 28,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 29,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 30,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M02",
+        "M03"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 31,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 32,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 33,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 34,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M10"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 35,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 36,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 37,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 38,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M03",
+        "M04"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 39,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 40,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 41,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 42,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M08"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 43,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 44,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 45,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 46,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M08",
+        "M09"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 47,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 48,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 49,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 50,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M06",
+        "M07",
+        "M08"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 51,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 52,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 53,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 54,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M08"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 55,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 56,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 57,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 58,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M14"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 59,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 60,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 61,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 62,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M01"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 63,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 64,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 65,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 66,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 67,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 68,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 69,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 70,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 71,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 72,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 73,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 74,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 75,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 76,
+      "classification": "reported_context",
+      "mechanisms": [],
+      "reason": "Montage, host framing, company scale or future goals; not audited growth attribution."
+    },
+    {
+      "paragraph": 77,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 78,
+      "classification": "reported_context",
+      "mechanisms": [],
+      "reason": "Montage, host framing, company scale or future goals; not audited growth attribution."
+    },
+    {
+      "paragraph": 79,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 80,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 81,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 82,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 83,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 84,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 85,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 86,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M11"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 87,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 88,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 89,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 90,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M11"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 91,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 92,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M13"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 93,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 94,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M13"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 95,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 96,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M13"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 97,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 98,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M13"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 99,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 100,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M13"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 101,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 102,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M12",
+        "M13"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 103,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 104,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 105,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 106,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M13"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 107,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 108,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 109,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 110,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M14"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 111,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 112,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 113,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 114,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M14"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 115,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 116,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 117,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 118,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M14"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 119,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 120,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 121,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 122,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 123,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 124,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 125,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 126,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M14"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 127,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 128,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 129,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 130,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 131,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 132,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 133,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 134,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M05"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 135,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 136,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 137,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 138,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M21"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 139,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 140,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 141,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 142,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M21"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 143,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 144,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 145,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 146,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M21"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 147,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 148,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 149,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 150,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M14",
+        "M21"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 151,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 152,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 153,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 154,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 155,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 156,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 157,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 158,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M15"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 159,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 160,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 161,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 162,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 163,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 164,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 165,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 166,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M15"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 167,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 168,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 169,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 170,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M15"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 171,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 172,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 173,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 174,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M15"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 175,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 176,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 177,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 178,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M15"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 179,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 180,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 181,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 182,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M16"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 183,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 184,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 185,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 186,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M17"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 187,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 188,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 189,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 190,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M17"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 191,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 192,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 193,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 194,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M18",
+        "M19"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 195,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 196,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 197,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 198,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M19"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 199,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 200,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 201,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 202,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M19"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 203,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 204,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 205,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 206,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M23"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 207,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 208,
+      "classification": "reported_context",
+      "mechanisms": [],
+      "reason": "Montage, host framing, company scale or future goals; not audited growth attribution."
+    },
+    {
+      "paragraph": 209,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 210,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M20"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 211,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 212,
+      "classification": "reported_context",
+      "mechanisms": [],
+      "reason": "Montage, host framing, company scale or future goals; not audited growth attribution."
+    },
+    {
+      "paragraph": 213,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 214,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M17"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 215,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 216,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 217,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 218,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 219,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 220,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 221,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 222,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 223,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 224,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 225,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 226,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 227,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 228,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 229,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 230,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M22"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 231,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 232,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 233,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 234,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M22"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 235,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 236,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 237,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 238,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 239,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 240,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 241,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 242,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Future infrastructure and compute thesis; not an observed acquisition result or prescribed SEO tactic."
+    },
+    {
+      "paragraph": 243,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 244,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 245,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 246,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 247,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 248,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 249,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 250,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M21"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 251,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 252,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 253,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 254,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M10"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 255,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 256,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 257,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 258,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 259,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 260,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 261,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 262,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 263,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 264,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 265,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 266,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 267,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 268,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Personal/team/leadership context or interview question; related general themes already extracted without prescribing personal preferences."
+    },
+    {
+      "paragraph": 269,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 270,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M23"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 271,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 272,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 273,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 274,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M23"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 275,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 276,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 277,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 278,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M23"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 279,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 280,
+      "classification": "supporting_context",
+      "mechanisms": [],
+      "reason": "Question, brief exchange or contextual passage; no independent additional marketing mechanism."
+    },
+    {
+      "paragraph": 281,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 282,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M23"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 283,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 284,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 285,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 286,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 287,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 288,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 289,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 290,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 291,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 292,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 293,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 294,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 295,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 296,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 297,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 298,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M24"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 299,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 300,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 301,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 302,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 303,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 304,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 305,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 306,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 307,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 308,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 309,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 310,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 311,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 312,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 313,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 314,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 315,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 316,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 317,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 318,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 319,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 320,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 321,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 322,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 323,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 324,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 325,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 326,
+      "classification": "marketing_mechanism",
+      "mechanisms": [
+        "M24"
+      ],
+      "reason": "Primary source passage for listed mechanisms."
+    },
+    {
+      "paragraph": 327,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 328,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    },
+    {
+      "paragraph": 329,
+      "classification": "speaker_label",
+      "mechanisms": [],
+      "reason": "Structural label, retained in paragraph numbering."
+    },
+    {
+      "paragraph": 330,
+      "classification": "non_marketing_context",
+      "mechanisms": [],
+      "reason": "Quickfire, personal philosophy, speculative future or closing; no additional marketing tactic."
+    }
+  ],
+  "claim_distinctions": [
+    {
+      "claim": "The four-point post directly comments on the saved Railway interview",
+      "status": "supported_source_relationship",
+      "basis": "Same guest, host/video context, four themes match publisher passages."
+    },
+    {
+      "claim": "Zero signup means no identity or authentication required",
+      "status": "not_supported_by_current_docs",
+      "basis": "Official SSH page documents first-time signup/sign-in and key approval; Priority Boarding access."
+    },
+    {
+      "claim": "Railway said it buys third-party listicle placements using Linkdr",
+      "status": "not_disclosed_in_interview",
+      "basis": "P134 mentions recommendation work without a method; listicle sales links belong to creator commentary."
+    },
+    {
+      "claim": "Seven-person stated team does no manual outreach",
+      "status": "not_disclosed_in_interview",
+      "basis": "P092–P106 gives seven roles and system-building; does not rule out manual outreach."
+    },
+    {
+      "claim": "Paid placements caused the reported ARR growth",
+      "status": "not_established",
+      "basis": "No causal attribution, source panel, campaign data or Linkdr customer evidence supplied."
+    }
+  ],
+  "timestamp_pointers": {
+    "source": "creator_post_not_audio_verified",
+    "09:20": "agent access",
+    "13:47": "marketing intelligence",
+    "25:35": "team systems",
+    "31:50": "model recommendations"
+  },
+  "outreach_authorized": false,
+  "purchase_authorized": false,
+  "production_authorized": false
+}
