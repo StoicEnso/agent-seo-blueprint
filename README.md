@@ -120,7 +120,7 @@ scripts/                       # Python 3 stdlib only — no pip deps
 assets/                        # fill-in templates emitted into the workspace
   audit-report.md  content-brief.md  keyword-map.csv
   directory-discovery-sources.csv  directory-submission-tracker.csv
-  startup-backlink-candidates.csv  # 161 directory mentions + one hosted-publishing intake → 157 research leads
+  startup-backlink-candidates.csv  # 194 directory mentions + one hosted-publishing intake → 190 research leads
   hosted-publishing-experiment.csv  # per-site fit, approval, rendered-link, index, referral, and outcome evidence
   topic-architecture-map.csv  internal-link-ledger.csv
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
