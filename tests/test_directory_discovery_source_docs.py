@@ -44,7 +44,7 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
             rows = list(reader)
             fields = set(reader.fieldnames or [])
 
-        self.assertEqual(len(rows), 142)
+        self.assertEqual(len(rows), 157)
         self.assertTrue(
             {
                 "source_url",
@@ -58,7 +58,7 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
             }.issubset(fields)
         )
         directory_rows = [row for row in rows if row["route_type"] != "hosted_publishing_experiment"]
-        self.assertEqual(len(directory_rows), 141)
+        self.assertEqual(len(directory_rows), 156)
         self.assertTrue(
             all(row["verification_status"] == "UNVERIFIED_SOURCE_LEAD" for row in directory_rows)
         )
@@ -104,6 +104,28 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
             "Blogarama",
         }
         self.assertTrue(names.isdisjoint(excluded))
+
+    def test_publicly_linked_directory_reference_stays_an_unverified_queue(self):
+        path = ROOT / "assets" / "startup-backlink-candidates.csv"
+        with path.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+
+        source_url = "https://gist.github.com/sosidudku1/311f704aed8fec04770b37c02a29e904"
+        added = [row for row in rows if row["source_url"] == source_url]
+        self.assertEqual(len(added), 15)
+        self.assertEqual(len({row["canonical_domain"] for row in added}), 15)
+        self.assertTrue(all(row["verification_status"] == "UNVERIFIED_SOURCE_LEAD" for row in added))
+        self.assertTrue(all(row["submission_url"] == "" for row in added))
+        self.assertTrue(all(row["public_indexable"] == "unknown" for row in added))
+        self.assertTrue(all("not first-party verified" in row["notes"] for row in added))
+
+        registry = ROOT / "assets" / "directory-discovery-sources.csv"
+        with registry.open(newline="", encoding="utf-8") as handle:
+            source_rows = list(csv.DictReader(handle))
+        source = next(row for row in source_rows if row["source_url"] == source_url)
+        self.assertEqual(source["verification_status"], "DISCOVERY_SOURCE_ONLY")
+        self.assertEqual(source["observed_candidate_count"], "15")
+        self.assertIn("first-party verification", source["notes"])
 
     def test_submission_tracker_separates_claims_from_direct_observations(self):
         path = ROOT / "assets" / "directory-submission-tracker.csv"
