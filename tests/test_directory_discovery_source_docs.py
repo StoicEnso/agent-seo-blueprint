@@ -44,7 +44,7 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
             rows = list(reader)
             fields = set(reader.fieldnames or [])
 
-        self.assertEqual(len(rows), 142)
+        self.assertEqual(len(rows), 190)
         self.assertTrue(
             {
                 "source_url",
@@ -58,7 +58,7 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
             }.issubset(fields)
         )
         directory_rows = [row for row in rows if row["route_type"] != "hosted_publishing_experiment"]
-        self.assertEqual(len(directory_rows), 141)
+        self.assertEqual(len(directory_rows), 189)
         self.assertTrue(
             all(row["verification_status"] == "UNVERIFIED_SOURCE_LEAD" for row in directory_rows)
         )
@@ -104,6 +104,53 @@ class DirectoryDiscoverySourceDocsTests(unittest.TestCase):
             "Blogarama",
         }
         self.assertTrue(names.isdisjoint(excluded))
+
+    def test_publicly_linked_directory_reference_stays_an_unverified_queue(self):
+        path = ROOT / "assets" / "startup-backlink-candidates.csv"
+        with path.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+
+        source_url = "https://gist.github.com/sosidudku1/311f704aed8fec04770b37c02a29e904"
+        added = [row for row in rows if row["source_url"] == source_url]
+        self.assertEqual(len(added), 48)
+        self.assertEqual(len({row["canonical_domain"] for row in added}), 48)
+        self.assertTrue(all(row["verification_status"] == "UNVERIFIED_SOURCE_LEAD" for row in added))
+        self.assertTrue(all(row["submission_url"] == "" for row in added))
+        self.assertTrue(all(row["public_indexable"] == "unknown" for row in added))
+        self.assertTrue(all("not first-party verified" in row["notes"] for row in added))
+
+        registry = ROOT / "assets" / "directory-discovery-sources.csv"
+        with registry.open(newline="", encoding="utf-8") as handle:
+            source_rows = list(csv.DictReader(handle))
+        source = next(row for row in source_rows if row["source_url"] == source_url)
+        self.assertEqual(source["verification_status"], "DISCOVERY_SOURCE_ONLY")
+        self.assertEqual(source["observed_candidate_count"], "130")
+        self.assertIn("first-party verification", source["notes"])
+
+    def test_reference_intake_rejects_aliases_unavailable_and_unrelated_destinations(self):
+        with (ROOT / "assets/startup-backlink-candidates.csv").open(newline="", encoding="utf-8") as handle:
+            added = [row for row in csv.DictReader(handle) if row["source_url"].startswith("https://gist.github.com/sosidudku1/")]
+        expected_source_ids = {2, 4, 7, 9, 10, 12, 13, 14, 16, 17, 19, 20, 25, 28, 29, 31, 33, 34, 35, 38, 39, 43, 44, 45, 50, 51, 54, 55, 56, 57, 63, 67, 69, 70, 73, 74, 75, 77, 78, 79, 80, 83, 85, 86, 98, 99, 100, 124}
+        self.assertEqual({int(row["source_row_numbers"]) for row in added}, expected_source_ids)
+        excluded_domains = {"startupstash.com", "toolpilot.ai", "aitoolhunt.com", "aitoolz.net", "ai-finder.net", "aeotools.space", "aiscoop.com", "remote.tools", "creativeaitools.com", "aipediahub.com", "copytools.ai", "aidesigntools.io"}
+        self.assertTrue({row["canonical_domain"] for row in added}.isdisjoint(excluded_domains))
+        for row in added:
+            for key in ("source_claimed_dr_unverified", "source_claimed_cost_unverified", "source_claimed_link_attribute_unverified", "last_verified_at"):
+                self.assertEqual(row[key], "")
+
+    def test_specialist_surfaces_and_discovery_lists_keep_their_eligibility_gates(self):
+        with (ROOT / "assets/startup-backlink-candidates.csv").open(newline="", encoding="utf-8") as handle:
+            rows = {row["candidate_name"]: row for row in csv.DictReader(handle)}
+        for name in ("Zapier App Directory", "Slack App Directory", "Notion Integrations Gallery"):
+            self.assertEqual(rows[name]["route_type"], "marketplace")
+            self.assertIn("not a general SaaS listing", rows[name]["notes"])
+        self.assertEqual(rows["Awesome AI Tools (GitHub)"]["route_type"], "asset_contribution")
+        self.assertIn("mahseema/awesome-ai-tools", rows["Awesome AI Tools (GitHub)"]["source_entry_url"])
+        self.assertNotIn("Top AI Directories", rows)
+        with (ROOT / "assets/directory-discovery-sources.csv").open(newline="", encoding="utf-8") as handle:
+            discovery = {row["source_name"]: row for row in csv.DictReader(handle)}
+        self.assertEqual(discovery["Top AI Directories"]["verification_status"], "DISCOVERY_SOURCE_ONLY")
+        self.assertIn("Login/payment", discovery["Top AI Directories"]["notes"])
 
     def test_submission_tracker_separates_claims_from_direct_observations(self):
         path = ROOT / "assets" / "directory-submission-tracker.csv"
