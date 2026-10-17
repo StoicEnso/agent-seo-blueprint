@@ -44,3 +44,19 @@ class AiReferralContentPilotDocsTests(unittest.TestCase):
             self.assertIn("evidence-bound-ai-referral-content-pilot.md", text)
             self.assertIn("ai-referral-content-pilot.csv", text)
         self.assertIn("does not authorize publishing, analytics changes, outreach, or a schedule", content)
+
+    def test_illustrative_row_does_not_claim_observed_evidence_or_a_new_page(self):
+        with (ROOT / "assets" / "ai-referral-content-pilot.csv").open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertNotIn(None, row)
+        self.assertNotIn(None, row.values())
+        self.assertEqual(row["evidence_source"], "illustrative_fixture_not_a_live_observation")
+        self.assertEqual(row["evidence_observed_at"], "unknown")
+        self.assertEqual(row["canonical_url"], row["existing_page_url"])
+        self.assertEqual(row["content_approval_state"], "not_approved")
+        self.assertEqual(row["decision_state"], "planned")
+        self.assertEqual(row["paid_customer_or_revenue_unit"], "eligible paid accounts")
+        for field in ("provider_observation_value", "referral_session_value", "eligible_signup_value", "paid_customer_or_revenue_value"):
+            self.assertEqual(row[field], "unknown")

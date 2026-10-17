@@ -31,7 +31,9 @@ Route provider observations through workflows/ai-answer-visibility-loop.md, ordi
 
 ## Compact example
 
-A verified sales objection asks whether a product can score inbound leads without a long form. The team observes a fixed provider answer but no owned page that directly explains the workflow. It checks an existing lead-qualification guide first. If that guide can add a distinct, sourced scoring section without intent conflict, the pilot records an update. If not, it briefs one question-answer page. It records provider observations and first-party referral sessions separately for a four-week Europe/London window, then reviews deduplicated eligible signups without claiming the provider caused them.
+The template row below is illustrative, not a live observation or a published-page decision. Keep its current canonical URL on the existing page until reuse has been reviewed. Replace fixture fields only with checked project evidence.
+
+In a hypothetical project, sales research identifies a buyer question that asks whether a product can score inbound leads without a long form. The team observes a fixed provider answer but no owned page that directly explains the workflow. It checks an existing lead-qualification guide first. If that guide can add a distinct, sourced scoring section without intent conflict, the pilot records an update. If not, it briefs one question-answer page. It records provider observations and first-party referral sessions separately for a four-week Europe/London window, then reviews deduplicated eligible signups without claiming the provider caused them.
 
 ## Required artifact fields
 
