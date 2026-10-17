@@ -159,6 +159,7 @@ For each useful opportunity choose one lane:
 
 1. **Observe only** — weak or volatile evidence.
 2. **Owned content** — create or improve a page that directly answers the buyer question.
+   When the response needs a bounded question-led, use-case, alternative, or comparison content pilot with first-party referral/signup review, route the content decision through `references/playbooks/content/evidence-bound-ai-referral-content-pilot.md` and its `assets/ai-referral-content-pilot.csv` template. Inspect existing-page reuse first and preserve separate provider, referral, signup, and paid-outcome lanes.
 3. **Product feedback** — route repeated unmet needs to the product backlog.
 4. **Affiliated community draft** — only where community rules allow it and the speaker can disclose the relationship clearly.
 5. **Editorial outreach draft** — offer checked product facts, methodology, screenshots, or corrections to an independent editor.
