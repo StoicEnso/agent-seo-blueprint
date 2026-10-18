@@ -145,3 +145,7 @@ A ranking change after cluster publication is not proof that the map caused it. 
 ## Done condition
 
 Every retained page has a distinct user job, evidence plan, canonical URL, owner, and useful place in the journey; every planned contextual link has a ledger row and reader reason; thin depth-manufacturing pages are absent; and the map is measured with project evidence rather than a fabricated topical-authority score.
+
+## Internal-linking optimisations for existing pages
+
+For missing-link discovery after the page map is set, use [the Google and programmable review method](internal-linking-optimisations.md). It extends this ledger rather than creating another programme. The offline scanner produces review candidates, not publication decisions. Do not force exact anchors or a five-link quota.
