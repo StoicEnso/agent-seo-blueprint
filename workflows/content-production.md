@@ -13,6 +13,7 @@ playbooks:
   - references/playbooks/content/articles.md
   - references/playbooks/content/content-rings.md
   - references/playbooks/content/on-page-optimization.md
+  - references/playbooks/content/internal-linking-optimisations.md
   - references/playbooks/content/topic-architecture-and-internal-link-ledger.md
   - references/playbooks/content/image-search-optimization.md
   - references/playbooks/content/content-what-not-to-do.md
@@ -119,3 +120,7 @@ outputs:
 - `research/<date>_topic-architecture.csv` and `research/<date>_internal-link-ledger.csv` — required when the job advances a multi-page topic cluster.
 
 **Done when.** Every targeted keyword has a brief whose format matches the live SERP, includes an outline + metadata + internal-link + upsell plan, and passes the what-not-to-do checklist. A multi-page topic job also has distinct-role architecture and an inspectable contextual-link ledger, with no page-count inflation or fabricated authority score. Citation-loop-driven briefs also preserve the triggering question version, provider scope, and evidence plan. Any cross-platform distribution branch also has dated surface evidence, no more than three selected surfaces, distinct native value, a disclosure plan, an owned evidence hub, and separate search/native/referral/conversion/revenue metrics. If an article draft was requested, the source packet, draft, and QA report are inspectable; the draft scores at least 85/100; no hard fail remains; and no more than two automated revisions were used. Opportunity-routed artifacts also preserve the candidate ID, exact diff or normal brief, assumptions, approval state, and measurement dates. Hand review-ready artifacts to the user/builder for the confirmation-gated build; route "ranks but needs links" pages to `authority-and-links.md` and add new pages to `monitoring.md`.
+
+## Existing-page internal-linking optimisation branch
+
+For Google-assisted or programmable missing-link discovery, load `references/playbooks/content/internal-linking-optimisations.md` and use `scripts/internal_link_opportunities.py` on a bounded saved-HTML manifest. Copy `assets/internal-link-opportunity-review.csv`; keep retained links in the existing `assets/internal-link-ledger.csv`. Resolve the keyword owner, protected/revenue pages and overlapping PRs first. Reject footer-only matches, aliases, duplicates and already-useful links. Read-only candidates are not approval to edit, merge, deploy, request indexing or schedule work.

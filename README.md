@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
+- [The knowledge layer](#the-knowledge-layer-68-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **68 playbooks**: 36 original course distillations plus 32 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,9 +90,9 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 32 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
-    content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
+    content/         (19)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
     foundations/     (6)        # SEO philosophy/process + AI guidance + mechanic-first/adversarial experiments
     maintenance/     (14)       # updates, ROI, local SEO, technical SEO, SERP features, and platform-scoped AI evidence
@@ -122,7 +122,7 @@ assets/                        # fill-in templates emitted into the workspace
   directory-discovery-sources.csv  directory-submission-tracker.csv
   startup-backlink-candidates.csv  # 146 directory mentions + one hosted-publishing intake → 142 research leads
   hosted-publishing-experiment.csv  # per-site fit, approval, rendered-link, index, referral, and outcome evidence
-  topic-architecture-map.csv  internal-link-ledger.csv
+  topic-architecture-map.csv  internal-link-ledger.csv  internal-link-opportunity-review.csv
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
   statistics-page-brief.csv  search-led-expert-answer-map.csv  local-business-profile-audit.csv
   content-opportunity-ledger.json  outreach-email.md  monitoring-snapshot.md
@@ -131,7 +131,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (68 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -143,7 +143,7 @@ heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_les
 **content/** — `content-fundamentals` · `content-types-overview` · `cross-platform-commercial-intent-distribution` ·
 `programmatic-seo` · `free-tools-strategy` · `content-pages` · `landing-pages` · `articles` · `content-rings` ·
 `on-page-optimization` · `content-what-not-to-do` · `image-search-optimization` · `agent-article-production-qa` ·
-`programmatic-pattern-library` · `topic-architecture-and-internal-link-ledger` · `full-funnel-rollout` ·
+`programmatic-pattern-library` · `topic-architecture-and-internal-link-ledger` · `internal-linking-optimisations` · `full-funnel-rollout` ·
 `eeat-framework` · `schema-types-reference`
 
 **authority/** — `understanding-authority` · `link-stealing` · `editorial-link-intent-and-assets` · `statistics-page-link-earning` · `affiliate-programs` ·
@@ -349,3 +349,7 @@ endorsed by the course author.
 
 **License:** MIT — see [`LICENSE`](LICENSE). Covers the original work in this repo (playbooks, course index, workflows,
 scripts, templates). Course transcripts are not included and are not covered.
+
+## Internal-linking optimisations
+
+Use [Google discovery and programmable review](references/playbooks/content/internal-linking-optimisations.md) to find relevant existing text that lacks a useful contextual link. The original offline `scripts/internal_link_opportunities.py` uses saved HTML only, with zero network requests and no site edits. It does not install MaillageBooster or scrape Google. Candidates require intent, protected-page, live-source and PR review. Five exact anchors are not a ranking rule.
