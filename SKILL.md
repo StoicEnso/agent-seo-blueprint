@@ -55,6 +55,10 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Ask "what does the course say about X" / look up a method | Course search (below) |
 | Ideate content angles / pressure-test a niche with customer personas | ICP personas (below) |
 
+## Evidence-first extensions
+
+For process-first business audits, use the existing-sites research playbook through `workflows/site-audit.md`. For cited-source and author reviews, extend the existing cross-platform citation loop through `workflows/geo-audit.md`. `scripts/audit_evidence_review.py` reviews local process baselines and provider observations without network calls, live actions or a universal score; its input template is `assets/process-first-audit-input.json`.
+
 ## Course knowledge: search + mirror
 
 The full course is mirrored and searchable.

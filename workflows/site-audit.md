@@ -39,6 +39,8 @@ outputs:
 
 **Steps.**
 
+0. **Process-first check when business workflow or automation is in scope.** Load the “Process-first audit before acquisition or automation” section of `references/playbooks/research/research-for-existing-sites.md`. Name the completed customer job, map cross-team handoffs and exceptions, state whether the evidence is public-only or first-party validated, and record missing baselines as unknown. Remove/simplify steps before proposing code or agents. Choose one read-only/shadow pilot with quality and stop conditions, not an assumed revenue or labour-saving result. Use `assets/process-first-audit-input.json` and the offline `scripts/audit_evidence_review.py` helper if a structured evidence summary helps. Do not run a transformation programme during an ordinary technical SEO check.
+
 1. **Scope the audit.** List the URLs to inspect (priority pages from the user; or pull the top traffic pages via `ahrefs_client.py` Top Pages / `gsc_pull.py`). Decide how deep (single page, key templates, or whole site sample). Load `references/playbooks/maintenance/seo-operational-checklist.md`, create a 37-row coverage ledger, and record which URLs/templates represent each applicable check. Do not infer whole-site coverage from the homepage.
 
 2. **Technical audit — speed & Core Web Vitals.** Load `references/playbooks/content/on-page-optimization.md` (page-speed section). Run `python3 scripts/pagespeed_run.py <url>` for each priority URL (browser-Lighthouse fallback in `references/integrations/pagespeed.md`). Flag slow loads (5–10s), poor CWV, and non-static pages that should be statically generated. Severity by impact on rankings/conversion.
