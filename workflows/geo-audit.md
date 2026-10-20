@@ -129,6 +129,8 @@ Do not call the product free without a current first-party pricing or entitlemen
 - when source breadth is part of the diagnosis, copy `assets/ai-citation-source-coverage.csv` and separate observed cited sources from candidate comparison, editorial, directory, community, repository, review, or partner surfaces;
 - write the raw observation set to `audits/<date>_provider-citation-observations.json`, or state why no provider citation baseline was collected.
 
+For citation-source/author work, use the bounded Treg adaptation in the same playbook and `assets/citation-source-opportunities.csv`. Verify product fit, the cited page, its byline/editorial team and destination-owned contact route. Unrun provider checks are not zero visibility; label a readiness-only audit. Paid calls, new accounts, installs, outreach and schedules need their own applicable approval. The offline `scripts/audit_evidence_review.py` validates saved evidence states, but does not collect answers or authorise actions.
+
 Keep each provider in its own dataset. These observations are not interchangeable with ordinary Search data, the Google Search Console Generative AI performance report, or Cloudflare's synthetic AEO panel. Do not invent clicks, queries, CTR, conversions, attribution, or a universal GEO score/formula from citation observations.
 Source counts are not quotas or causal weights. Never infer that a fixed number of comparison pages, directory listings, repository stars, reviews, or community mentions creates a recommendation rank.
 

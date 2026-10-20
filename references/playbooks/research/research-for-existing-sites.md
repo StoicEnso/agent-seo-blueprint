@@ -60,3 +60,28 @@ tools: [ahrefs, serp]
 - Cannibalizing your own keywords by targeting the same term with multiple pages.
 
 **Related.** [[competitor-research]], [[keyword-fundamentals]], [[seo-metrics]], [[match-and-exceed]], [[finding-and-validating-niches]], [[keyword-to-sitemap]]. Course refs: 02-14 (research for existing businesses), 02-15 (finding keywords in top pages), 02-16 (content gaps), 02-17 (also ranks for).
+
+
+## Process-first audit before acquisition or automation
+
+Use this section when auditing an existing site's business workflow, not just its page markup. It adapts Vas's [19 October 2026 article](https://x.com/vasuman/status/2112287872615387215), “Where to Begin With AI Transformation.” His improvement percentages and client examples are attributed experience, not independently verified results or targets for another business.
+
+1. **Start with the completed customer job.** Name the useful result and its owner. Prioritize a workflow by evidenced volume, human cost, risk, and cross-team handoffs. If these inputs are unavailable, provide an unranked shortlist; do not invent a financial score or assume finance is always first.
+2. **Agree the baseline before building.** Record the measurement period, attempted and completed jobs, human touch time, waiting time, exception/rework rate, actual costs and evidence source. Keep processing speed, end-to-end time, released capacity, cash savings and extra revenue separate. A model is not a measured customer result. Never count the same released hours as both saved payroll and new sales without a justified allocation.
+3. **Map the real work.** Combine permitted event logs with operator interviews and representative difficult cases. Include intake, informal email/manual work, queues, approvals, handoffs and downstream failures. A public-site journey is only a `public_proposal`; it cannot establish the actual internal bottleneck. Use `first_party_validated` only with evidence for each step. Missing private evidence is `not_measured`, not zero.
+4. **Delete or simplify first.** For each step record `delete | simplify | deterministic_code | model_assist | human_decision`. Fixed rules normally belong in ordinary code; variable documents may justify model assistance. Do not automate an unnecessary handoff or remove a legal, consent, security or expert-review control.
+5. **Keep existing systems and knowledge boundaries.** Define inputs, outputs, owner, source/version, permissions, data retention and exception route. Reuse existing systems where appropriate. A shared knowledge store is not permission to copy private material across accounts, customers or teams.
+6. **Prove the pilot without live effects.** Use read-only analysis, drafts, or shadow mode. Shadow mode compares proposed decisions with the approved human process; it must not send, publish, file, charge or change production. Include non-happy-path cases, stop conditions, quality/risk checks and an explicit human promotion decision. Existing approvals and owner holds still apply; this method grants no new authority.
+7. **Measure useful staff work.** Capture reusable staff procedures only after real cases show value. Measure completed-job time, quality, exceptions and cost, not seats, tokens, tasks launched or agents installed. Retain the baseline and limitations when reporting progress.
+
+### Output and offline review
+
+Use `assets/process-first-audit-input.json` for one or more sites. A public-only audit must identify which internal facts remain unknown and the one bounded pilot that could test the hypothesis. It must not call itself a completed process-discovery or return-on-investment audit.
+
+```bash
+python3 scripts/audit_evidence_review.py \
+  --input assets/process-first-audit-input.json \
+  --output /your/project/audits/process-evidence-summary.json
+```
+
+The helper reads local JSON only. It validates evidence states, calculates measured human minutes per completed job and exception rates only when the inputs support them, and keeps provider/surface/locale observation lanes separate. It never makes a network call, spends money, sends outreach, changes a site or promotes a pilot. Empty provider observations are not zero visibility. See the existing `cross-platform-ai-citation-loop.md` playbook for citation-source work; keep SEO acquisition and operational delivery evidence separate.

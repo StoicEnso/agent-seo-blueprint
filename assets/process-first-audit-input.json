@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "sites": [
+    {
+      "site_id": "example",
+      "domain": "example.com",
+      "workflow": {
+        "job": "Give the customer one checked useful result",
+        "evidence_scope": "public_proposal",
+        "steps": [
+          {
+            "step": "Intake to checked result: proposed public journey only",
+            "owner_role": "Proposed operator; confirm through discovery",
+            "evidence": []
+          }
+        ]
+      },
+      "baseline": {
+        "status": "not_measured",
+        "period": null,
+        "completed_jobs": null,
+        "total_human_minutes": null,
+        "exception_jobs": null,
+        "evidence": []
+      },
+      "pilot": {
+        "mode": "shadow",
+        "success_measure": "Completed-job time and exception quality against a measured human baseline",
+        "stop_condition": "Any unsafe proposal or missing evidence; no live action"
+      },
+      "provider_observations": []
+    }
+  ]
+}
