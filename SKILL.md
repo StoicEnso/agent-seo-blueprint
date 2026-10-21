@@ -52,6 +52,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Find existing editorial link intent (listicle/citation gaps, broken or decayed resources, statistics needs, missing visuals/video, uncited owned assets) | Load `references/playbooks/authority/editorial-link-intent-and-assets.md`, then run `workflows/authority-and-links.md` |
 | Monitor rankings/traffic, GSC 4–20 opportunities, Google AI impressions, provider citation observations, updates, and ROI | `workflows/monitoring.md` |
 | Rank recurring content opportunities, draft narrow fixes, and measure approved changes | Load `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md`, copy `assets/content-opportunity-ledger.json`, then run `workflows/monitoring.md`; route approved briefs to `workflows/content-production.md` |
+| Find commercial-term candidates in GSC or check a shared query regex | Load `references/gsc-commercial-query-triage.md`, then run `workflows/monitoring.md`; use the offline analyzer, keep nonmatching controls and verify intent/existing pages before drafting |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
 | Ideate content angles / pressure-test a niche with customer personas | ICP personas (below) |
 
