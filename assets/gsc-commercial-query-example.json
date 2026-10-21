@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "site": "sc-domain:example.com",
+    "start": "2026-09-21",
+    "end": "2026-10-18",
+    "dimensions": [
+      "query"
+    ],
+    "type": "web",
+    "data_state": "final",
+    "country": "all",
+    "device": "all"
+  },
+  "rows": [
+    {
+      "keys": [
+        "best garden app"
+      ],
+      "clicks": 1,
+      "impressions": 20,
+      "ctr": 0.05,
+      "position": 8
+    },
+    {
+      "keys": [
+        "garden generator"
+      ],
+      "clicks": 2,
+      "impressions": 10,
+      "ctr": 0.2,
+      "position": 4
+    },
+    {
+      "keys": [
+        "app alternatives"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 10
+    }
+  ]
+}

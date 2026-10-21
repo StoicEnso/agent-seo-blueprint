@@ -92,3 +92,8 @@ Produce this (API or browser) so it feeds `scripts/report.py monitoring` and the
 For `scripts/report.py monitoring`, map `metrics` → its `metrics` block and the top `rows` → its `keywords` list (`{keyword, position, change}` after diffing against the previous snapshot).
 
 For the Generative AI report, use the separate snapshot contract in `references/playbooks/maintenance/google-generative-ai-visibility.md`; do not force impression-only data into the ordinary query/rank schema.
+
+
+## Commercial-query regex discovery
+
+Use `references/gsc-commercial-query-triage.md` for a corrected English modifier seed, source-pattern false-negative checks and an unfiltered control. Google uses RE2; the optional offline `scripts/gsc_commercial_queries.py` validates normalized exports and produces review-only rows. It is not an API collector. Keep final Pacific-date windows, country/device/search-type scope and query versus query+page aggregation explicit. Query filters omit hidden data; row pagination is not exhaustive coverage. Never equate a keyword match with buying intent, a content gap or a conversion.

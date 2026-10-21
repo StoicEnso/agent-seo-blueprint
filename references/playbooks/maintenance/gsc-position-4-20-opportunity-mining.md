@@ -57,3 +57,8 @@ Use this for ongoing optimization when a site already has live pages and Search 
 ## Done condition
 
 Produce an implementation-ready list of valid opportunities and explicit rejected/recovery-only rows. Every valid row includes current GSC evidence, a verified ranking page, live intent/SERP evidence, a precise change, and caveats.
+
+
+## Optional commercial-term filter
+
+When reviewing a commercial-modifier tip, first load `references/gsc-commercial-query-triage.md`. The corrected filter and offline analyzer provide a review-only candidate lane plus nonmatching controls; they do not replace live intent, existing-page ownership or the current 4–20 evidence gates. A query outside the regex can still be valuable. Multiple URLs do not alone prove cannibalization.
