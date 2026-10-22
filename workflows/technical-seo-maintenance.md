@@ -7,6 +7,7 @@ playbooks:
   - references/playbooks/content/on-page-optimization.md
   - references/playbooks/content/image-search-optimization.md
   - references/playbooks/content/schema-types-reference.md
+  - references/playbooks/content/organization-entity-reconciliation.md
   - references/playbooks/content/content-what-not-to-do.md
 references:
   - references/integrations/cwv-thresholds.md
@@ -22,6 +23,7 @@ integrations: [pagespeed, gsc, serp]
 outputs:
   - audits/<date>_technical-seo-audit.md
   - audits/<date>_technical-seo-audit-findings.json
+  - audits/<date>_organization-entity-identity-audit.csv # optional identity/schema evidence
   - monitoring/<date>_technical-seo-cron-check.md
 ---
 
@@ -67,7 +69,7 @@ outputs:
    - redirects: http→https→www chains, loops, stale internal links;
    - rendering: key content/schema visible in initial HTML where practical, hydration/JS-only risks, content parity mobile vs desktop;
    - titles/meta: missing, duplicated, misleading, or truncated past sensible SERP length;
-   - structured data: appropriate schema for articles/products/FAQ/breadcrumb/org, valid JSON-LD, no stale rich-result assumptions;
+   - structured data: appropriate schema for articles/products/FAQ/breadcrumb/org, valid JSON-LD, no stale rich-result assumptions; when entity identity is in scope, load `organization-entity-reconciliation.md`, use `assets/organization-entity-identity-audit.csv`, require exact-subject identity for every `sameAs` URL, and separate Organization, Person, Product, repository, review, and mention subjects;
    - links/media: broken internal/outbound links, orphaned pages, oversized images, missing important alt text, layout-shift media; for image-led/visual-intent templates, apply `image-search-optimization.md` to discovery, stable URLs, responsive delivery, LCP handling, sitemap need, and conditional rights metadata;
    - trust/security basics: HTTPS/mixed content, exposed secrets/debug dumps, missing commercial trust pages where expected.
 
@@ -90,6 +92,8 @@ outputs:
    - owner of fixes.
 
    Only after the user says yes, create the recurring job using the host harness's scheduler. The job instructions should tell the agent to run this workflow for the exact workspace/domain, write artifacts, avoid noisy notifications, and surface only critical/high findings or blockers.
+
+   External profile creation, claiming, or repair is never part of a maintenance run. Draft the exact change and route it to the relevant platform workflow for approval. A valid graph or newly observed search appearance does not prove ranking lift, a Knowledge Panel, backlink value, or AI citations.
 
 ## Decision points
 
