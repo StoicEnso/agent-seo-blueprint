@@ -349,3 +349,7 @@ endorsed by the course author.
 
 **License:** MIT — see [`LICENSE`](LICENSE). Covers the original work in this repo (playbooks, course index, workflows,
 scripts, templates). Course transcripts are not included and are not covered.
+
+## Launch-site source audit (20 September 2026)
+
+The [94-site reconciliation](assets/launch94-readme.md) separates 47 existing entries, 11 entries in pending LaunchRepo changes, 35 new unverified research leads, and one deferred site. The [supplemental candidate data](assets/launch94-missing-candidates.csv) contains source claims only, not approved submission targets.
