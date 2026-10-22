@@ -93,7 +93,7 @@ Reject the candidate when the only link is inside a private account, the listing
 
 These are discovery leads from a public X checklist. **No DR values are preserved in this curated table because they are unverified and mutable.** Five were already present in the maintained directory catalog; twelve are newly recorded candidates.
 
-The broader source intake is stored in `assets/startup-backlink-candidates.csv`: 146 source mentions normalized to 141 unique candidate names after the 19-row Directory Finder fit screen, with source lineage and mention counts preserved. The asset is deliberately a research queue, not an approved directory list. Its `source_claimed_dr_unverified` values are source-reported snapshots only; never sort or recommend on them without current verification. Promote a row into the submission tracker only after completing the verification checklist below.
+The broader source intake is stored in `assets/startup-backlink-candidates.csv`: 143 unique candidate names, including the prior 19-row Directory Finder fit screen, Telegra.ph, and one September SubmitForBacklinks source lead. Source lineage and mention counts are preserved. The asset is deliberately a research queue, not an approved directory list. Its `source_claimed_dr_unverified` values are source-reported snapshots only; never sort or recommend on them without current verification. Promote a row into the submission tracker only after completing the verification checklist below.
 
 | Destination | Route type | Catalog status | What to verify before use |
 |---|---|---|---|
@@ -103,7 +103,7 @@ The broader source intake is stored in `assets/startup-backlink-candidates.csv`:
 | Uneed | Product directory / launch | Existing | Current submission route, moderation, public listing |
 | What Launched Today | Launch directory | Existing | Current submission route, category fit, public listing |
 | ProvenExpert | Review/profile platform | New candidate | Business eligibility, public indexability, no review manipulation |
-| Aural++ (`auralplusplus.com`) | AI-tool claim/listing | New candidate | Domain identity, ownership claim flow, moderation, public link |
+| Aura++ (`auraplusplus.com`) | AI-tool claim/listing | New candidate | Domain identity, ownership claim flow, moderation, public link |
 | Reclaim.ai | Account/profile candidate | New candidate — likely reject unless public | Confirm a public indexable profile exists; private account links do not count |
 | Grokipedia | Editorial/topic suggestion | New candidate — editorial only | Editorial policy, notability, conflict-of-interest disclosure, no self-authored promotion |
 | Modal | Account/profile candidate | New candidate — likely reject unless public | Confirm a public indexable profile exists and the project genuinely uses Modal |
@@ -114,6 +114,10 @@ The broader source intake is stored in `assets/startup-backlink-candidates.csv`:
 | Needle (`useneedle.net`) | Directory | New candidate | Live domain, free-listing claim, public indexability |
 | ABackLaunch (`abacklaunch.com`) | Startup launch directory | New candidate | Live submission route, moderation, public listing |
 | Nick Launches (`nicklaunches.com`) | Product launch directory | New candidate | Live submission route, moderation, public listing |
+
+## September 2026 source follow-up
+
+The [18-site source reconciliation](../../../assets/haris-backlinks-source-reconciliation.csv) adds only SubmitForBacklinks.com as an unverified research lead. Sixteen source sites were already represented in the candidate registry or guide; CodeHype remains covered by the pending LaunchRepo intake. The source image corrects the Aura++ spelling above, but identity and submission checks still apply. A homepage read showed public listings and a submission link; this does not verify cost, eligibility, indexing or link attributes. No submission is authorized by this intake.
 
 ## Priority model
 
