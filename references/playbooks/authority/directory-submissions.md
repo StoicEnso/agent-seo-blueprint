@@ -168,3 +168,7 @@ Report verified outcomes, not submission volume:
 - referral traffic or assisted conversions when available
 
 A batch of 20 unverified submissions is not success. Three accurate, relevant, public listings can be.
+
+## LaunchRepo public-source supplement — September 2026
+
+Read [LaunchRepo public intake](launchrepo-public-intake.md) for the source limits and confirmation lessons. The dated reconciliation is `assets/launchrepo-source-reconciliation.csv`: 121 domains, 66 newly appended unverified leads, existing entries/aliases retained, five community domains kept separate, and four deferred. Earlier counts in this document are historical source batches, not current totals. No submission permission or backlink proof is implied.

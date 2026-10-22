@@ -45,3 +45,7 @@ Every state change needs dated evidence. Creating accounts, posting, submitting,
 ## Done condition
 
 The selected candidate batch is source-audited, deduplicated, classified, and live-verified with first-party route evidence, discrepancy notes, and rejection reasons. No row is called a backlink win until a public listing URL and observed link/indexability evidence exist.
+
+## LaunchRepo public-source supplement — September 2026
+
+Read [LaunchRepo public intake](launchrepo-public-intake.md) for the source limits and confirmation lessons. The dated reconciliation is `assets/launchrepo-source-reconciliation.csv`: 121 domains, 66 newly appended unverified leads, existing entries/aliases retained, five community domains kept separate, and four deferred. Earlier counts in this document are historical source batches, not current totals. No submission permission or backlink proof is implied.
