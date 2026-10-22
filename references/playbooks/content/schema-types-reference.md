@@ -1,8 +1,8 @@
 ---
 title: Schema Types Reference — Google Rich Results and JSON-LD Templates
 area: content
-updated: 2026-05
-verification: Checked against Schema.org and Google Search structured-data docs on 2026-05-31. Verify current docs before shipping because rich-result eligibility changes.
+updated: 2026-08
+verification: Checked against Schema.org and Google Search structured-data and AI-feature docs on 2026-08-27. Verify current docs before shipping because rich-result eligibility changes.
 ---
 
 # Schema Types Reference — Google Rich Results and JSON-LD Templates
@@ -99,6 +99,22 @@ Before including schema in a brief or recommendation:
 8. Dates are ISO 8601 and reflect the actual content state.
 9. Ratings/reviews are truthful, visible to users, and policy-compliant.
 10. Important schema appears in initial HTML where possible.
+
+## Evidence-Gated Verification Loop
+
+Use `assets/structured-data-verification-ledger.csv` when schema is a material audit or release item. Keep these evidence lanes separate:
+
+1. **Page purpose and feature goal.** Name the real page role and the current Google Search feature the markup is meant to support. Schema.org validity is not Google rich-result eligibility; check the current Google feature documentation and policies.
+2. **Source and rendered inventory.** Record the template, canonical URL, schema type, format, whether the markup is in source or rendered HTML, and whether important commercial or time-sensitive facts are available in initial HTML where practical.
+3. **Visible truth parity.** Verify that names, descriptions, dates, prices, availability, ratings, reviews, images, authors, and entity relationships match what users can see. Remove invented or stale properties instead of filling a graph for completeness.
+4. **Two validator lanes.** Parse JSON-LD and check vocabulary/type shape with Schema.org. Separately run Google's Rich Results Test for the named feature. A vocabulary-valid type can still be unsupported for a Google rich result.
+5. **Generated markup review.** Generated markup is a draft, not production evidence. Review the type choice, feature policy, required and recommended properties, absolute URLs, date/number formats, visible-content parity, and current product truth before release.
+6. **Live verification.** After an approved deployment, inspect the live URL, rendered markup, canonical node count, Search Console URL Inspection/enhancement evidence where available, and the exact deployment receipt. A staging or pasted-code test is not proof of the live page.
+7. **Bounded pilot and measurement.** Use a bounded pilot of a representative cohort before a template-wide rollout. Compare like-for-like eligible pages and dates. Keep Search appearance, ordinary Search performance, named AI-provider observations, referrals, conversions, and revenue as separate outcomes.
+
+Google states that AI Overviews and AI Mode have **no extra technical requirements or special Schema.org markup**. Structured data used for those surfaces should still match visible text. Do not create an “AI schema” layer or infer citation impact from validator output.
+
+**Proof boundary:** validator success does not prove rankings, rich-result display, inclusion in AI features, citations, traffic, conversions, or revenue. Errors, warnings, unsupported features, live deployment state, Search appearance, and business outcomes must remain separate findings.
 
 ---
 
