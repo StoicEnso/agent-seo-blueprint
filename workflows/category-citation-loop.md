@@ -8,6 +8,7 @@ playbooks:
   - references/playbooks/content/agent-article-production-qa.md
   - references/playbooks/research/search-intent.md
   - references/playbooks/maintenance/cross-platform-ai-citation-loop.md
+  - references/playbooks/maintenance/vendor-owned-commercial-query-citations.md
 outputs:
   - research/<date>_category-citation-loop.md
 ---
@@ -18,7 +19,7 @@ Use when the user wants to own a defensible category phrase and become easier to
 
 ## Procedure
 
-1. **Capture a platform-specific baseline.** Load `cross-platform-ai-citation-loop.md` and run `geo-audit.md` for a bounded prompt set. When the work also needs repeatable panel validation, deterministic metrics, public social listening, opportunity ranking, or a human approval queue, route the evidence run through `ai-answer-visibility-loop.md`. Freeze exact buyer-question versions per provider/surface, then record dates, platform/account/location where relevant, mentioned brands, cited domains, source types, and owned-page citations. When source breadth matters, copy `assets/ai-citation-source-coverage.csv` and separate observed cited sources from candidates. Keep Google AI impression data separate from answer-engine citation observations, and do not merge different platforms into one universal score.
+1. **Capture a platform-specific baseline.** Load `cross-platform-ai-citation-loop.md` and run `geo-audit.md` for a bounded prompt set. When the work also needs repeatable panel validation, deterministic metrics, public social listening, opportunity ranking, or a human approval queue, route the evidence run through `ai-answer-visibility-loop.md`. Freeze exact buyer-question versions per provider/surface, then record dates, platform/account/location where relevant, mentioned brands, cited domains, source types, and owned-page citations. When source breadth matters, copy `assets/ai-citation-source-coverage.csv` and separate observed cited sources from candidates. Keep Google AI impression data separate from answer-engine citation observations, and do not merge different platforms into one universal score. When commercial queries expose vendor-owned sources, also load `vendor-owned-commercial-query-citations.md`, copy `assets/vendor-owned-commercial-citation-audit.csv`, and record source ownership, result type, vendor disclosure, and whether the owned URL was actually cited.
 2. **Choose one primary phrase.** Score candidates on buyer intent, specificity, product-truth fit, live SERP/answer evidence, conversion relevance, and the ability to publish genuinely useful material. Add 2–4 supporting phrases and a do-not-use list for overbroad or untrue claims.
 3. **Build an owned evidence cluster, not a quota.** Consider category definition, use-case, comparison, alternatives, pricing, implementation, trust/case-study, and a useful tool/resource. Match page roles to the observed buyer-question gaps. Create only pages with distinct demand, intent, evidence, and non-duplicative value.
 4. **Make comparison claims defensible.** Include real alternatives and tradeoffs, explain evaluation criteria, state who each option is for, cite material claims, and preserve limitations. Never rank the product first for every use case by construction.
@@ -29,6 +30,7 @@ Use when the user wants to own a defensible category phrase and become easier to
 ## Evidence and spam guardrails
 
 - Owned pages must help a buyer even if the brand were removed.
+- A vendor-owned citation is a scoped source observation, not an independent endorsement or proof that ownership, formatting, recency, or backlinks caused the citation.
 - Do not manufacture third-party mentions, citations, proof, or category demand.
 - Do not turn answer-engine observations into a universal GEO score or formula.
 - Do not fabricate community discussion, hidden sponsorship, or undisclosed influence to force citations.
