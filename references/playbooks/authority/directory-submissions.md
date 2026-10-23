@@ -41,6 +41,42 @@ For every imported claim:
 
 As observed on 2026-08-07, Directory Finder exposed 68 listing pages through its public sitemap and offered filters/claims for niche, DR, estimated traffic, price, approval time, link type, and submission route. Those fields are useful discovery metadata, but they remain third-party, mutable claims until checked against destination-owned pages and live public listings. The dated source record lives in `assets/directory-discovery-sources.csv`. Only 19 relevant, non-duplicate candidates were added to the research queue; local, travel, health, awards, jobs, crypto, generic-web, and other poor-fit entries were excluded at intake. This is not an endorsement of all 68 destinations.
 
+## RankInPublic comment-list intake — 23 October 2026
+
+Antonio Escudero's [post](https://x.com/antonioescudero/status/2113691684739674556) names six starting points. His [own comment](https://x.com/antonioescudero/status/2113691938767699998) links to `https://rankinpublic.xyz/directory-submission-service`. The publicly delivered page asset contained **201 records with 201 distinct normalized source hostnames**. The page's “11,464 directories” label is a marketing claim, **not the number extracted or verified**. The displayed cards and client payload differ in visibility; this snapshot is the openly delivered payload, not a purchased service catalog. No purchase, account, form submission or access-control bypass was used.
+
+The complete observed factual inventory is [assets/rankinpublic-directory-source-20261023.csv](../../../assets/rankinpublic-directory-source-20261023.csv). It is a **source inventory, not an approved submission queue**. All 201 records remain `UNVERIFIED_SOURCE_LEAD`. DR, category and destination URL are third-party claims. `canonical_domain` only lowercases the source URL hostname and removes `www.`; it does not certify ownership, redirects or the correct current destination.
+
+The dated comparison against this repository's main branch and four open directory-intake branches found:
+
+- **8 `MAIN_CANDIDATE_NAME_ONLY`** records: an earlier candidate name exists, but its stored domain is empty. Do not claim destination verification.
+- **1 `MAIN_DOC_DOMAIN_ONLY`** record: CtrlAlt/`ctrlalt.cc` already appears in the directory playbook, but not the candidate CSV.
+- **2 `MAIN_DOC_NAME_ONLY`** records: Brownbook and What Launched Today already appear in the playbook without a confirmed domain identity.
+- **12 `OPEN_PR_CANDIDATE`** records: eleven have matching domains in the LaunchRepo intake branch; AiToolex has a matching domain in the 16 October intake branch. They are **unmerged**, not main-branch coverage.
+- **2 `NAME_COLLISION_REVIEW`** records: `nxgntools.com` and `nextgentools.me` collapse to the earlier “Next Gen Tools” name. Preserve both domains until first-party identity evidence establishes any relationship.
+- **176 `NEW_SOURCE_LEAD`** records: no matching candidate record or specific documented identity was found within the checked scope. This does not prove absence from every historical branch or installed copy.
+
+For the six explicitly named in the post: Crunchbase, StackShare and SaaSHub have earlier candidate names; Brownbook has an earlier documented name; Callupcontact and Viesearch are new source leads. None of these observations establishes current eligibility, cost, link type, indexation or approval.
+
+### Use without duplicate or unsafe promotion
+
+1. Search this source inventory as well as `assets/startup-backlink-candidates.csv`. A name match alone is not a domain match. Keep similarly named sites separate.
+2. Check `baseline_coverage` and `existing_evidence` before adding a candidate. Do not recreate a lead already in an open PR. Reconcile the recorded branches again if main or those PRs change.
+3. Apply `fit_gate` to the actual project. General/local directories need a real eligible business and geography; AI/software directories need a relevant product. Community and media surfaces need genuine native/editorial work, not profile or comment link spam. Unclear search/DR tools are not automatically directories.
+4. Promote only a relevant, non-duplicate record into the maintained candidate queue. Retain both the post/comment lineage and original source row. Do not bulk-import all 201 into a project plan or sort by claimed DR.
+5. Complete the existing **First-party verification gate** below before recommendation: destination-owned eligibility and route, current costs/moderation, a public comparable listing, indexability and rendered link behavior.
+6. Account creation, payment, publishing and listing submission still require explicit approval. Snapshot completeness is not approval, and no followed link, DR increase, ranking, traffic or AI citation is promised.
+
+The source registry records this as discovery-only. The existing candidate CSV and empty submission tracker remain unchanged; all 201 observed entries are retained here for gap review without duplicating earlier records or promoting weak-fit sites.
+
+Comparison pins (23 October 2026):
+
+- `main` at `d884d31904f7e242d167327ca3731859a7182552`.
+- `henry/directory-gap-intake-20261016` at `eae356ff58242f8547552b27c91efd21544319f7`.
+- `henry/haris-intake-20260920` at `7e7fe12ea97b2037e51cab2f016024901cfe0a85`.
+- `henry/launch94-20260920` at `bd7017293b43a685a83113c825c0056cd037eb1c`.
+- `henry/launchrepo-directories-20260918` at `0d7a6d95045189bcc2bb2e2e8de19e215e4d7040`.
+
 ## Conditional local-entity baseline
 
 A 2026-08-09 social checklist named 35 business profiles, general directories, maps, and content/community platforms as a universal “backlink starter pack.” The list is retained as a discovery source, not imported wholesale. A physical or service-area business may have a legitimate local-entity lane, but an online-only startup should not manufacture a location or create irrelevant profiles for links.
