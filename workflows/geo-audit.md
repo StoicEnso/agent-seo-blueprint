@@ -145,6 +145,8 @@ For each priority page:
 
 Treat “citability” as a local clarity/evidence heuristic, not a Google requirement. Do not prescribe a fixed word count, fixed answer-block size, or artificial chunking pattern.
 
+For a source-led page-anatomy review, load the **Optional AI-search page-structure review** in `references/playbooks/content/agent-article-production-qa.md` and copy `assets/ai-search-page-review.json`. Apply its ten source-claim checks and optional image-component menu to the actual page type. Keep unrun checks `not_checked`, evidence-backed findings separate from vendor claims, and signup friction separate from ranking. This produces proposed fixes, not live changes or a complete provider citation panel.
+
 ### 7. Audit entity consistency and authentic corroboration
 
 Compare the canonical entity name, product/service description, authorship, organization/person schema, social profiles, directories, reviews, and earned coverage. Search the priority topics and inspect which sources are actually cited or ranked.

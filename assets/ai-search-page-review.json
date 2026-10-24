@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "source_reference": "https://x.com/irabukht/status/2114031412991218048",
+  "purpose": "Evidence review only; no ranking formula, action authority or completed audit is implied.",
+  "page_url": null,
+  "canonical_url": null,
+  "captured_at": null,
+  "platform_scope": [],
+  "page_type": null,
+  "checks": [
+    {
+      "claim_id": "markdown_parity",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    },
+    {
+      "claim_id": "agent_signup",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    },
+    {
+      "claim_id": "answer_first",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    },
+    {
+      "claim_id": "original_data",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    },
+    {
+      "claim_id": "html_comparison",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    },
+    {
+      "claim_id": "author_schema",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    },
+    {
+      "claim_id": "buyer_faq",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    },
+    {
+      "claim_id": "bing_discovery",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    },
+    {
+      "claim_id": "provider_access",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    },
+    {
+      "claim_id": "source_quotes",
+      "state": "not_checked",
+      "evidence": [],
+      "not_applicable_reason": null,
+      "finding": null,
+      "recommendation": null,
+      "owner": null
+    }
+  ],
+  "optional_components": [],
+  "agent_usability": {
+    "state": "not_checked",
+    "environment": null,
+    "authorized_stop_boundary": null,
+    "observed_stop": null,
+    "untested_steps": [],
+    "evidence": []
+  },
+  "conversion_experiments": [],
+  "outcomes": {
+    "indexing": {
+      "state": "not_checked",
+      "evidence": []
+    },
+    "citations": {
+      "state": "not_checked",
+      "evidence": []
+    },
+    "referrals": {
+      "state": "not_measured",
+      "evidence": []
+    },
+    "conversions": {
+      "state": "not_measured",
+      "evidence": []
+    },
+    "revenue": {
+      "state": "not_measured",
+      "evidence": []
+    },
+    "causality": {
+      "state": "not_established",
+      "evidence": []
+    }
+  },
+  "approval": {
+    "state": "not_requested",
+    "scope": null,
+    "evidence": null
+  },
+  "limitations": [
+    "Template only; not observed page evidence.",
+    "Source claims are not measured outcomes.",
+    "No account creation, publication, crawler policy change or scheduled monitoring is authorised."
+  ]
+}

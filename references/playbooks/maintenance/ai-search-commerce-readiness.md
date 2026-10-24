@@ -44,3 +44,12 @@ Keep evidence layers separate:
 - controlled causal evidence, if any.
 
 A visibility screenshot cannot substantiate a revenue claim. Correlation, temporal sequence, attribution-model output, and controlled causality are different evidence grades and must be labelled honestly.
+
+
+## Bounded agent-signup review
+
+For a page-structure review, keep signup friction in the **agent-usability** lane, not a ranking score. Use an owner-approved test environment or inspect the public flow without submission. Record the user job, environment, account/data authority, accessibility labels, DOM controls, validation/error states and exact authorised stop boundary. Check email/password, SSO/OAuth, consent, verification and billing steps without weakening them. Redact credentials, tokens and personal data from evidence.
+
+A safe stop before creating an account is a completed bounded inspection, not a successful signup. Do not infer completion from a visible form or vendor agent count. Actual account creation, outbound email, OAuth consent, subscription/payment or a third-party agent-audit run needs explicit scope and applicable approval. A CAPTCHA/verification requirement is not permission to bypass security. If the authorised boundary prevents an end-to-end test, say which step is untested.
+
+Retain provider, browser/agent version and task observations separately from crawling, answer citations and business outcomes. A friction finding does not establish a Google or ChatGPT ranking penalty. See the ten-claim review in `references/playbooks/content/agent-article-production-qa.md` and `assets/ai-search-page-review.json` for the linked evidence record.
