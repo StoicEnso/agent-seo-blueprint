@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "DRAFT_NOT_RUN",
+  "panel_id": null,
+  "brand_entity_id": null,
+  "source_reference": "https://x.com/charles_seo/status/2113655739772535200",
+  "prompt": {
+    "id": null,
+    "version": 1,
+    "text": null,
+    "locale": null,
+    "language": null
+  },
+  "context_policy": "Freeze exact question and slots; fresh chat each run; record actual model, account and location limits. No silent provider substitution.",
+  "planned_runs": [
+    {
+      "slot_id": "chatgpt-1",
+      "provider": "chatgpt",
+      "surface": "web_search"
+    },
+    {
+      "slot_id": "chatgpt-2",
+      "provider": "chatgpt",
+      "surface": "web_search"
+    },
+    {
+      "slot_id": "chatgpt-3",
+      "provider": "chatgpt",
+      "surface": "web_search"
+    },
+    {
+      "slot_id": "gemini-1",
+      "provider": "gemini",
+      "surface": "app"
+    },
+    {
+      "slot_id": "gemini-2",
+      "provider": "gemini",
+      "surface": "app"
+    },
+    {
+      "slot_id": "gemini-3",
+      "provider": "gemini",
+      "surface": "app"
+    },
+    {
+      "slot_id": "google-1",
+      "provider": "google",
+      "surface": "ai_mode"
+    },
+    {
+      "slot_id": "google-2",
+      "provider": "google",
+      "surface": "ai_mode"
+    },
+    {
+      "slot_id": "google-3",
+      "provider": "google",
+      "surface": "ai_mode"
+    }
+  ],
+  "observations": [],
+  "approval": {
+    "read_only_scope": null,
+    "publication": "NOT_GRANTED",
+    "tracking_installation": "NOT_GRANTED",
+    "spend": "NOT_GRANTED",
+    "scheduling": "NOT_GRANTED"
+  },
+  "business_outcomes": "NOT_MEASURED",
+  "limitations": [
+    "Unconfigured template; no live observations or zero-visibility claims.",
+    "Three repeated runs do not represent independent users or market share.",
+    "No pooled cross-provider score, traffic, conversion, revenue or causal inference."
+  ]
+}

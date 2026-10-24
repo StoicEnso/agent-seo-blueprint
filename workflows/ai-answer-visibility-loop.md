@@ -119,6 +119,10 @@ Report separately:
 
 The convenience `all_providers` block is not a universal score. Do not compare or trend it unless the exact provider/sample mix is unchanged and clearly disclosed.
 
+### Optional explicit buyer-recommendation check
+
+For sole picks versus ties, options, mentions and citations, load the optional buyer-recommendation check and source-claim assessment in `references/playbooks/maintenance/cross-platform-ai-citation-loop.md`. Copy `assets/buyer-recommendation-panel.json` into the private project, freeze the question/context, and record manually reviewed answers. Run `python3 scripts/recommendation_panel.py <panel.json>` for offline, provider/surface/context-separated arithmetic. Missing or unclear answers are not absences; do not turn three runs per provider into a pooled 0/9 ranking score or a conversion forecast. Existing `geo_metrics.py` metrics retain their original meaning.
+
 ## 6. Collect public social evidence
 
 Load `references/integrations/social-fetch.md`. Version 1 supports public Reddit research through RSS/Atom, with a bounded public JSON fallback for thread URLs.
