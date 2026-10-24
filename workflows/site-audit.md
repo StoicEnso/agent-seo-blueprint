@@ -57,6 +57,10 @@ outputs:
 
 9. **Score, rank, and emit the report.** Assign each finding a severity (`critical | high | medium | low`), an area (technical / on-page / content / intent / opportunity / authority), the issue, and the recommended fix (with evidence). Assemble `{summary, score?, findings:[...]}` and run `python3 scripts/report.py audit --workspace <DIR> --title "Site audit: <domain>" --data <findings.json>`. `report.py` sorts findings by severity into a prioritized table → `audits/<date>_audit.md`. Save the raw payload too (`report.py note ... --subdir audits --name audit-findings`).
 
+## Optional Brave Search coverage and approved re-fetch
+
+For Brave-specific discovery or URL-submission requests, follow the [supplemental Brave procedure](../references/playbooks/maintenance/seo-operational-checklist.md#brave-search-url-submission-and-re-fetch-supplemental). Copy `assets/brave-url-submission-tracker.csv` into the workspace as `audits/<date>_brave-url-submissions.csv`. Check canonical/crawl directives and prior receipts first. This audit stays read-only: an actual Submit action requires explicit approval for the named URLs. Save provider acceptance separately from dated search visibility and independently measured referrals/conversions/revenue. Do not turn an audit or recurring pass into automatic submission, resubmission or a new schedule.
+
 **Decision points.**
 - **Drop with a confirmed Google update** → treat as a content-quality/value finding (audit helpfulness) per `keyword-intent-evolution.md` / maintenance.
 - **Drop with no update** → suspect intent/format shift (step 5) or competitor backlink momentum (step 7) before anything else.

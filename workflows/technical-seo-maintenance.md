@@ -91,6 +91,10 @@ outputs:
 
    Only after the user says yes, create the recurring job using the host harness's scheduler. The job instructions should tell the agent to run this workflow for the exact workspace/domain, write artifacts, avoid noisy notifications, and surface only critical/high findings or blockers.
 
+## Optional Brave Search coverage and approved re-fetch
+
+For Brave-specific discovery or URL-submission requests, follow the [supplemental Brave procedure](../references/playbooks/maintenance/seo-operational-checklist.md#brave-search-url-submission-and-re-fetch-supplemental). Copy `assets/brave-url-submission-tracker.csv` into the workspace as `audits/<date>_brave-url-submissions.csv`. Check canonical/crawl directives and prior receipts first. This audit stays read-only: an actual Submit action requires explicit approval for the named URLs. Save provider acceptance separately from dated search visibility and independently measured referrals/conversions/revenue. Do not turn an audit or recurring pass into automatic submission, resubmission or a new schedule.
+
 ## Decision points
 
 - **No GSC/GA4 access:** continue with public/PageSpeed/schema/indexation checks and mark GSC/GA4 as a data-access blocker, not a workflow failure.
