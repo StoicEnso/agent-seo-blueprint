@@ -6,6 +6,7 @@ source_scope: Dated answer-engine observations plus ordinary SEO and first-party
 field_inputs:
   - https://x.com/i/article/2083164906480656384
   - https://x.com/mal_shaik/status/2089120487481982981
+  - https://x.com/charles_seo/status/2113655739772535200
 ---
 
 # Cross-Platform Buyer-Question Citation Loop
@@ -66,6 +67,72 @@ Suggested artifact: `monitoring/<date>_ai-citation-observations.json`.
   "limitations": ["mutable_answers", "no_impression_or_click_count", "no_causality"]
 }
 ```
+
+### Optional buyer-recommendation mini-panel
+
+Use this only when the question is **who the answer recommends**, not merely whether a brand is mentioned or cited. Discovery: [Charles Floate, 23 October 2026](https://x.com/charles_seo/status/2113655739772535200). His three-runs-on-three-surfaces idea is a small diagnostic, not an industry benchmark, a complete ten-question panel or proof of a default entity.
+
+Copy `assets/buyer-recommendation-panel.json` to the private project's `monitoring/` directory. The shipped file is an **unconfigured, not-run template**: no answers, zeroes, approvals or business results are supplied. Fill the canonical brand entity and one versioned, evidence-backed buyer question, locale and language. Avoid naming your brand in an otherwise unbranded question. The initial nine planned slots are three each for ChatGPT, the Gemini app and Google AI Mode. Gemini is not AI Mode, and AI Mode is not an AI Overview. If a surface is unavailable or requires login, record that fact; never silently substitute a provider, API or model to complete nine cells. Claude and Perplexity need separately scoped slots; this panel says nothing about them.
+
+Before collection, freeze the planned slots and context policy. Use a fresh conversation for each run; do not let prior answers, memory, leading follow-ups or brand hints contaminate a supposedly unprimed run. Record actual model (or `not_exposed`), surface, account/personalization state, locale, language, timezone-aware capture time, exact prompt/version and durable evidence for each slot. Logged out and Incognito are different observations. Incognito does not hide location or make runs independent, anonymous or fully unpersonalized. Record unavoidable context limits. Do not evade access controls or buy calls to fill missing slots.
+
+Manually review the full answer against the real entity and classify **the target brand**:
+
+| Label | Meaning |
+|---|---|
+| `primary` | An explicit, sole first choice for the scoped buyer job, supported by the answer's wording. Being first in an unordered list is insufficient. |
+| `tied_primary` | Explicitly shares the first choice; not a sole pick. |
+| `option` | A recommended option, but no explicit sole first choice. |
+| `mention_only` | Named without being recommended, including rejected or negative mentions. |
+| `absent` | A complete, reviewed answer does not name the target brand. |
+| `unclear` | Ambiguous, incomplete, unreviewed, failed or inaccessible evidence. |
+
+Store citation presence separately as `cited`: whether the answer cites an owned URL for the target brand. A citation alone must not upgrade a label. Retain the raw answer and, for every positive/non-absent classification, a verbatim `classification_quote` that occurs in that answer. This supports review, but does not mechanically prove that the quote endorses the brand. Record ties, conditions, negation and the actual winner in the private review notes. A reviewer must resolve these meanings; do not ask this arithmetic tool to infer them.
+
+Each observation uses this shape (illustrative only, not a real measurement):
+
+```json
+{
+  "slot_id": "chatgpt-1", "provider": "chatgpt", "surface": "web_search",
+  "model": "not_exposed", "account_state": "logged_out; fresh_chat; memory_not_available",
+  "locale": "en-GB", "language": "en", "captured_at": "2026-10-25T10:00:00+00:00",
+  "prompt_text": "EXACT FROZEN PROMPT", "prompt_version": 1,
+  "status": "ok", "review_state": "verified", "recommendation": "option",
+  "raw_answer": "Example is one option for this job.",
+  "classification_quote": "Example is one option for this job.",
+  "cited": false, "evidence_locator": "answers/chatgpt-1.txt"
+}
+```
+
+For `partial | error | refusal | blocked | not_available`, set `recommendation: unclear` and add `reason`. An absent slot is **not run**, not a zero. Keep attempts/retries in the private collection log; select one observation per preplanned slot without cherry-picking. Do not replace a non-favourable answer with a retry. A different prompt, locale or language needs a new panel/version. Context changes remain separate result groups.
+
+Summarize saved, manually labelled evidence offline:
+
+```bash
+python3 scripts/recommendation_panel.py monitoring/buyer-panel.json --out monitoring/buyer-panel-summary.json
+```
+
+The script makes no provider requests, parses no answer semantics, writes no website and creates no schedule. It rejects duplicate/unknown slots, prompt drift, malformed labels, timezone-free timestamps and malformed evidence fields. It preserves planned/observed/not-run coverage and separates provider, surface, model, account state, locale and language. Only complete `ok`, manually `verified`, non-`unclear` answers enter the denominator. It reports **strict primary picks / classifiable answers**, with ties/options/mentions/absences and citations separate. Zero classifiable answers gives `null`, never 0%. Report the denominator and exclusions beside every rate. Do not pool the three providers into a single 0/9 or 9/9 visibility score. With this sample, zero observed picks does not prove universal absence and nine picks do not establish market dominance. Repeated outputs can be correlated; no population estimate or causal inference is justified.
+
+Keep `geo_metrics.py` unchanged for mention, position and citation metrics. Its first mention position and positive sentiment are not recommendation labels. Link the two artifacts by immutable run/slot IDs in the private workspace; do not silently reinterpret historic observations.
+
+### Source claims and the buyer-page conversion loop
+
+The source's $200k/month take-home claim, 8x ChatGPT lead-generation conversion claim and approximately 57% international AI Overview prevalence are **unverified source claims**, not targets or forecasts. The attached custom income dashboard shows approximately $199,392 USD equivalent for 24 September–23 October 2026, including community, PressWhizz pay, consulting, affiliate, training and partner income. It does not expose underlying transactions, costs, taxes, acquisition cohorts, conversion denominators or a causal AI-SEO contribution. Do not call it audited profit, client results, a conversion study, or proof that all income came from recommendations. No linked dataset supports 8x or 57%; no universal multiplier or prevalence rate is established.
+
+Retain the useful sequence as a **bounded hypothesis**, using the existing workflows:
+
+1. Validate one buyer job/question and inspect its live search/answer intent. Keep an existing-page and cannibalization check; update a suitable page before proposing another URL.
+2. Save the provider baseline and the actual cited/recommended competitors. A recommendation gap is not automatically a content or access fault.
+3. Route a justified page brief to `workflows/content-production.md`: truthful fit/limitations, offer, proof, price/terms where relevant, one clear next action and accessible mobile controls. Do not claim to be best or default without support.
+4. Expand the question only with real customer/search evidence or exposed provider queries. Use `references/query-fanout-checking.md`; distinguish inferred ideas from observed searches. Do not create thin pages for every generated variant.
+5. Separate **CRO (conversion-rate optimization)** from search eligibility. Identify one page/offer/friction hypothesis and a predeclared conversion event, denominator, cohort, date range, timezone, attribution scope and decision rule. Obtain applicable approval before any page or tracking change. A nine-answer panel is not a conversion sample.
+6. Compare actual first-party cohorts only: report eligible sessions/users and completed, deduplicated qualified leads/signups using like-for-like definitions, windows and conversion lag. Exclude bots/internal tests and distinguish qualified leads from submitted forms, sales and net profit. If the comparator rate is zero or the data is absent, the ratio is undefined, not 8x. Missing referrers and attribution limits remain unknown; a referrer does not prove a particular prompt, citation or recommendation.
+7. Retest identical question versions and observe search, referrals, leads and revenue in separate lanes. Choose a review window with the owner; do not activate a cadence. Heatmaps/session replay are optional page-behaviour evidence, not SEO ranking or causality proof. Use existing lawful, consented, masked evidence only; no installation or collection of credentials, sensitive fields or personal recordings follows from this source. A before/after change alone proves no causal lift.
+
+As checked 25 October 2026, [Google's AI-features guide](https://developers.google.com/search/docs/appearance/ai-features) says ordinary Search foundations apply, with no additional technical requirements, and that AI Overviews do not always trigger. This does not validate 57% international prevalence. Check the live reporting surface before making attribution claims. [GA4 channel documentation](https://support.google.com/analytics/answer/9756891?hl=en) now describes **AI Assistant** separately from Organic Search, explicitly excluding Google AI Overviews and AI Mode from that assistant channel. Record the report's actual date, available channel/source dimensions and session/user/event scope; do not impose a historic referral classification or mix scopes. The [Chrome Incognito documentation](https://support.google.com/chrome/answer/95464?hl=en) explains its local privacy limits. Neither these sources nor the panel establish conversion uplift.
+
+This is a research/briefing branch of the existing citation loop, not a new publishing system. Public submissions, outreach, new accounts, paid calls, analytics/heatmap installation, crawler/security changes and live edits still need their own applicable authority. Copying the template grants none.
 
 ## 3. Diagnose the gap before prescribing work
 

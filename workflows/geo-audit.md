@@ -132,6 +132,8 @@ Do not call the product free without a current first-party pricing or entitlemen
 Keep each provider in its own dataset. These observations are not interchangeable with ordinary Search data, the Google Search Console Generative AI performance report, or Cloudflare's synthetic AEO panel. Do not invent clicks, queries, CTR, conversions, attribution, or a universal GEO score/formula from citation observations.
 Source counts are not quotas or causal weights. Never infer that a fixed number of comparison pages, directory listings, repository stars, reviews, or community mentions creates a recommendation rank.
 
+For an explicit **buyer recommendation** question, use the optional mini-panel in the optional buyer-recommendation check and source-claim assessment in `references/playbooks/maintenance/cross-platform-ai-citation-loop.md`, copy `assets/buyer-recommendation-panel.json`, and summarize saved manual labels with `scripts/recommendation_panel.py`. A mention, citation or first list position is not a sole pick. Keep unknown/unrun outcomes, provider contexts and business conversions separate; source revenue/8x/57% claims are not benchmarks. This is optional read-only evidence, not a live-site or tracking change.
+
 ### 6. Audit human usefulness, clarity, and evidence
 
 For each priority page:
