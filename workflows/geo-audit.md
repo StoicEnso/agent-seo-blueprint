@@ -266,3 +266,12 @@ Save the exact JSON separately as `audits/<date>_geo-findings.json` for comparis
 ## Done when
 
 Platform scope is explicit; Google and non-Google claims are separated; Google eligibility, myth checks, and report availability are recorded when applicable; any Cloudflare readiness, synthetic AEO-panel, and first-party operator evidence is captured in separate lanes with access state and limitations; provider-specific citation baselines are captured when citation diagnosis is in scope; priority pages have evidence-backed findings; agent usability is separately labelled; every recommendation has a concrete fix and owner; the qualitative verdict is assigned; and both Markdown and raw JSON artifacts exist.
+
+## Product-led AEO gap-to-action extension
+
+For a HubSpot-style strategy or a site-specific full evaluation pack, load
+`references/hubspot-aeo-gap-to-action.md`. It maps all 12 source points into these
+existing workflows and supplies `assets/aeo-gap-action-map.csv` and
+`assets/aeo-site-evaluation-brief.md`. Reuse current evidence, panels, tickets, and
+source custody; source results are self-reports, not promised uplifts. Research and
+drafts do not authorize external writes, spend, publication, schedules, or deployment.

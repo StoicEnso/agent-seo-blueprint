@@ -108,3 +108,12 @@ outputs:
 - `monitoring/<date>_local-business-profile.json` — optional local-profile snapshot that keeps visibility, profile interactions, leads, conversions, and revenue separate.
 
 **Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. If local-profile work was in scope, its profile visibility, interaction, and business-outcome metrics remain separate and the recorded limitations rule out causal overclaiming. If the recurring content-opportunity audit was used, every applied change also has an approval receipt and scheduled +28-day/+56-day reads. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, citation observations, or local rank observations as clicks or revenue.
+
+## Product-led AEO gap-to-action extension
+
+For a HubSpot-style strategy or a site-specific full evaluation pack, load
+`references/hubspot-aeo-gap-to-action.md`. It maps all 12 source points into these
+existing workflows and supplies `assets/aeo-gap-action-map.csv` and
+`assets/aeo-site-evaluation-brief.md`. Reuse current evidence, panels, tickets, and
+source custody; source results are self-reports, not promised uplifts. Research and
+drafts do not authorize external writes, spend, publication, schedules, or deployment.

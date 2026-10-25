@@ -1,0 +1,86 @@
+{
+  "source": "https://x.com/wespreadjam/status/2114021961450033430",
+  "primary": "https://blog.hubspot.com/marketing/hubspot-aeo-case-study",
+  "checked_at": "2026-10-25",
+  "independently_verified": false,
+  "promised_uplift": null,
+  "points": [
+    {
+      "id": 1,
+      "tactic": "Product/feature tracking",
+      "source_claim": "Eight product groups plus brand and feature views",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 2,
+      "tactic": "Industry pages from real case studies",
+      "source_claim": "92% cited; 49% visibility lift",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 3,
+      "tactic": "Industry-specific comparisons",
+      "source_claim": "642% more citations; 58% more mentions",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 4,
+      "tactic": "Problem exploration glossary",
+      "source_claim": "60% higher citation share",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 5,
+      "tactic": "Buyer-question product pages",
+      "source_claim": "56% more citations",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 6,
+      "tactic": "Reverse-map cited sources",
+      "source_claim": "Identify publishers cited for missing-brand prompts",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 7,
+      "tactic": "Publisher partnerships",
+      "source_claim": "Hundreds of websites; nearly 1,000 pages",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 8,
+      "tactic": "Community gap research",
+      "source_claim": "Weekly Reddit monitoring",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 9,
+      "tactic": "Locale gaps",
+      "source_claim": "France 33.5%; Germany 17.1% in one month",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 10,
+      "tactic": "Gap-specific response",
+      "source_claim": "Different gaps require different actions",
+      "evidence_grade": "strategy_synthesis"
+    },
+    {
+      "id": 11,
+      "tactic": "Overall citations",
+      "source_claim": "433% citation increase",
+      "evidence_grade": "first_party_self_report"
+    },
+    {
+      "id": 12,
+      "tactic": "Leads and conversion",
+      "source_claim": "1,850% qualified AI lead increase; 3x conversion",
+      "evidence_grade": "first_party_self_report"
+    }
+  ],
+  "source_only_claims": [
+    "Q1 2025 to Q1 2026 interval",
+    "$13.5 billion headline"
+  ],
+  "conversion_comparator_limit": "Primary says other sources; post says traditional search. Do not equate."
+}

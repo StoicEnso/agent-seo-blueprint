@@ -119,3 +119,12 @@ outputs:
 - `research/<date>_topic-architecture.csv` and `research/<date>_internal-link-ledger.csv` — required when the job advances a multi-page topic cluster.
 
 **Done when.** Every targeted keyword has a brief whose format matches the live SERP, includes an outline + metadata + internal-link + upsell plan, and passes the what-not-to-do checklist. A multi-page topic job also has distinct-role architecture and an inspectable contextual-link ledger, with no page-count inflation or fabricated authority score. Citation-loop-driven briefs also preserve the triggering question version, provider scope, and evidence plan. Any cross-platform distribution branch also has dated surface evidence, no more than three selected surfaces, distinct native value, a disclosure plan, an owned evidence hub, and separate search/native/referral/conversion/revenue metrics. If an article draft was requested, the source packet, draft, and QA report are inspectable; the draft scores at least 85/100; no hard fail remains; and no more than two automated revisions were used. Opportunity-routed artifacts also preserve the candidate ID, exact diff or normal brief, assumptions, approval state, and measurement dates. Hand review-ready artifacts to the user/builder for the confirmation-gated build; route "ranks but needs links" pages to `authority-and-links.md` and add new pages to `monitoring.md`.
+
+## Product-led AEO gap-to-action extension
+
+For a HubSpot-style strategy or a site-specific full evaluation pack, load
+`references/hubspot-aeo-gap-to-action.md`. It maps all 12 source points into these
+existing workflows and supplies `assets/aeo-gap-action-map.csv` and
+`assets/aeo-site-evaluation-brief.md`. Reuse current evidence, panels, tickets, and
+source custody; source results are self-reports, not promised uplifts. Research and
+drafts do not authorize external writes, spend, publication, schedules, or deployment.
