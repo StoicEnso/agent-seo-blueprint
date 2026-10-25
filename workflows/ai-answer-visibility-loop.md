@@ -235,3 +235,12 @@ Stop and mark the lane blocked when:
 ## Done condition
 
 The workspace contains validated product truth, a versioned ten-question panel, raw provider-specific answer runs, deterministic separated metrics, raw public social captures, a ranked research-only opportunity file, and an approval queue with no externally executed action. Findings state sample sizes and limitations. Every proposed page or draft maps to a real observed gap and preserves human approval.
+
+## Product-led AEO gap-to-action extension
+
+For a HubSpot-style strategy or a site-specific full evaluation pack, load
+`references/hubspot-aeo-gap-to-action.md`. It maps all 12 source points into these
+existing workflows and supplies `assets/aeo-gap-action-map.csv` and
+`assets/aeo-site-evaluation-brief.md`. Reuse current evidence, panels, tickets, and
+source custody; source results are self-reports, not promised uplifts. Research and
+drafts do not authorize external writes, spend, publication, schedules, or deployment.

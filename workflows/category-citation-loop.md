@@ -41,3 +41,12 @@ Use when the user wants to own a defensible category phrase and become easier to
 ## Done condition
 
 The report contains the versioned evidence baseline, primary/supporting phrase decision, competitor/framing map, only the justified page briefs, distribution concept, exact monitoring prompt set, and separated citation-versus-business measurement plan.
+
+## Product-led AEO gap-to-action extension
+
+For a HubSpot-style strategy or a site-specific full evaluation pack, load
+`references/hubspot-aeo-gap-to-action.md`. It maps all 12 source points into these
+existing workflows and supplies `assets/aeo-gap-action-map.csv` and
+`assets/aeo-site-evaluation-brief.md`. Reuse current evidence, panels, tickets, and
+source custody; source results are self-reports, not promised uplifts. Research and
+drafts do not authorize external writes, spend, publication, schedules, or deployment.

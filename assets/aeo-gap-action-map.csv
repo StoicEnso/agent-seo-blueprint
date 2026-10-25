@@ -1,0 +1,13 @@
+source_point,tactic,disposition,evidence_date,evidence_locator,group,feature_or_job,intent,locale,language,current_url,existing_ticket,gap,proposed_action,truth_and_rights_check,priority,confidence,effort_dependency,owner,approval_state,baseline_status,success_reading,stop_or_revisit_trigger
+1,Product/feature tracking,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+2,Industry pages from real case studies,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+3,Industry-specific comparisons,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+4,Problem exploration glossary,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+5,Buyer-question product pages,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+6,Reverse-map cited sources,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+7,Publisher partnerships,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+8,Community gap research,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+9,Locale gaps,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+10,Gap-specific response,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+11,Overall citations,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,
+12,Leads and conversion,unassessed,,,,,,,,,,,,,,,,,draft_only,not_run,,

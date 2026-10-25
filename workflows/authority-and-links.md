@@ -109,3 +109,12 @@ outputs:
 - `outreach/<date>_press-release-plan.json` — optional evidence packet and exact DRAFT release; no submission authority.
 
 **Done when.** A ranked opportunity list and matching personalized drafts exist in the workspace, every chosen tactic passed the guardrail, and nothing has been sent/submitted without explicit user confirmation. Directory work also has verified route evidence and a tracked public listing URL or rejection reason. Hosted-publishing work also has one row per screened site, one separately approved pilot at most, and live canonical/robots/`href`/`rel` plus outcome evidence before expansion; it never reports API success, crawl eligibility, or domain authority as a dofollow/indexing result. A press-release plan also has real-news, destination, rights, disclosure, link, correction-cost, and post-publication evidence fields, with creator claims kept separate from current observations. Wikipedia research either has ten verified candidates with dead/archive/COI evidence or an exhausted-search report; it never implies that an edit occurred. Feed approved sends + acquired-link counts into `monitoring.md` and re-check competitor backlink pace there monthly.
+
+## Product-led AEO gap-to-action extension
+
+For a HubSpot-style strategy or a site-specific full evaluation pack, load
+`references/hubspot-aeo-gap-to-action.md`. It maps all 12 source points into these
+existing workflows and supplies `assets/aeo-gap-action-map.csv` and
+`assets/aeo-site-evaluation-brief.md`. Reuse current evidence, panels, tickets, and
+source custody; source results are self-reports, not promised uplifts. Research and
+drafts do not authorize external writes, spend, publication, schedules, or deployment.
