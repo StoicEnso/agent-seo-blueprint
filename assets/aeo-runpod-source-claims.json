@@ -1,0 +1,123 @@
+{
+  "source": "https://x.com/wespreadjam/status/2114809274132295868",
+  "primary": "https://scrunch.com/case-studies/2025-07-how-runpod-leveraged-the-scrunch-ai-platform-to-achieve-4x-growth,-turning-chatgpt-into-a-top-performing-acquisition-channel-",
+  "checked_at": "2026-10-26",
+  "primary_search_reported_date": "2025-07-28",
+  "case_implementation_period": "April 2025, as stated by vendor",
+  "evidence_grade": "vendor_authored_customer_case_study",
+  "independently_verified": false,
+  "promised_uplift": null,
+  "current_prices_verified": false,
+  "points": [
+    {
+      "id": 1,
+      "topic": "Persona/funnel/use-case prompts; 50 to 300",
+      "repository_coverage": "covered_strengthen_comparability",
+      "evidence_grade": "vendor_self_report",
+      "treatment": "Versioned panel already exists; retain a matched cohort separately from expanded coverage."
+    },
+    {
+      "id": 2,
+      "topic": "Prioritize ChatGPT based on observed referral channel",
+      "repository_coverage": "extend_evidence_record",
+      "evidence_grade": "vendor_self_report_ambiguous_denominator",
+      "treatment": "Use our own dated first-party referral taxonomy, absolute counts, gaps and qualified/paid outcomes; 98% is not a default."
+    },
+    {
+      "id": 3,
+      "topic": "Articles expose titles but not complete bodies",
+      "repository_coverage": "extend_delivery_gate",
+      "evidence_grade": "vendor_self_report_no_raw_urls",
+      "treatment": "Inspect actual body delivery and applicable access/index evidence before drafting more content; proposed repairs remain approval-gated."
+    },
+    {
+      "id": 4,
+      "topic": "Very specific technical buying questions",
+      "repository_coverage": "already_covered",
+      "evidence_grade": "exact_examples_source_only",
+      "treatment": "Existing question panel covers segment, funnel and intent; the two exact examples are not verified primary quotations."
+    },
+    {
+      "id": 5,
+      "topic": "Use winning prompts to guide topics",
+      "repository_coverage": "covered_strengthen_selection",
+      "evidence_grade": "post_synthesis",
+      "treatment": "Inspect successes, relevant losses and missing samples; never redefine the evaluation panel around winners."
+    },
+    {
+      "id": 6,
+      "topic": "Export segmented data for roadmap decisions",
+      "repository_coverage": "already_covered",
+      "evidence_grade": "export_requirement_vendor_self_report",
+      "treatment": "Reuse existing immutable runs and canonical backlog; export availability is not proof of a completed production integration."
+    },
+    {
+      "id": 7,
+      "topic": "ChatGPT Deep Research",
+      "repository_coverage": "optional_not_required",
+      "evidence_grade": "named_tool_source_only",
+      "treatment": "Use existing authorized research and verified citations; no new provider, spend, account or model requirement."
+    },
+    {
+      "id": 8,
+      "topic": "Reverse-map owned/competitor/third-party sources",
+      "repository_coverage": "already_covered",
+      "evidence_grade": "post_synthesis",
+      "treatment": "Reuse the citation-source coverage ledger and editorial review; citation frequency is not trust, traffic or outreach permission."
+    },
+    {
+      "id": 9,
+      "topic": "Find/research/fix/measure feedback loop",
+      "repository_coverage": "already_covered",
+      "evidence_grade": "post_synthesis",
+      "treatment": "Use the existing workflow and matched evaluation window; an observational before/after change is not causal proof."
+    },
+    {
+      "id": 10,
+      "topic": "Bring production in-house",
+      "repository_coverage": "case_specific_not_requirement",
+      "evidence_grade": "vendor_self_report",
+      "treatment": "Reuse the responsible owner and current capacity; do not replace approved writers or assume labor cost disappeared."
+    },
+    {
+      "id": 11,
+      "topic": "Monthly platform cost from $3000 to $500",
+      "repository_coverage": "extend_cost_scope_record",
+      "evidence_grade": "historical_vendor_self_report",
+      "treatment": "About 83.3% platform-spend reduction, not verified all-in savings or current prices; 6x more prompts is not 6x better visibility."
+    },
+    {
+      "id": 12,
+      "topic": "4x paid customers and referral/conversion figures",
+      "repository_coverage": "extend_outcome_definitions",
+      "evidence_grade": "vendor_self_report_no_raw_cohorts",
+      "treatment": "Keep visitors, conversion events, unique paid accounts, refunds and revenue separate with mature, compatible periods."
+    }
+  ],
+  "source_only_details_not_established_by_primary": [
+    "$325M valuation",
+    "two exact technical question examples",
+    "named ChatGPT Deep Research workflow"
+  ],
+  "arithmetic": {
+    "conversions_over_reported_visitors": {
+      "numerator": 2100,
+      "denominator_approximate": 28000,
+      "calculated_percent": 7.5,
+      "vendor_rounded_percent": 8
+    },
+    "platform_spend_reduction_percent": 83.33333333333333,
+    "prompt_coverage_multiplier": 6,
+    "fourfold_increase_percent_if_comparable": 300
+  },
+  "unresolved": [
+    "Exact compatible reporting windows",
+    "98% referral denominator and taxonomy",
+    "Definition of conversion versus unique new paid account",
+    "Cohort maturity and deduplication",
+    "Refunds, revenue and acquisition cost",
+    "Independent access to source analytics",
+    "Specific affected URLs and raw page/index evidence",
+    "Current pricing and full operating costs"
+  ]
+}
