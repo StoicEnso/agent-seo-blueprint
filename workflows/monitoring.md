@@ -117,3 +117,9 @@ existing workflows and supplies `assets/aeo-gap-action-map.csv` and
 `assets/aeo-site-evaluation-brief.md`. Reuse current evidence, panels, tickets, and
 source custody; source results are self-reports, not promised uplifts. Research and
 drafts do not authorize external writes, spend, publication, schedules, or deployment.
+
+For Runpod-style claims, use the **Runpod acquisition evidence extension** in the
+same guide and the draft-only `assets/aeo-acquisition-review.json`. Check complete
+body delivery, our own referral denominator, matched prompt cohorts, mature paid
+account definitions and total cost scope. Reuse current evidence; no new monitor,
+provider purchase, production write or schedule is authorized by this review.

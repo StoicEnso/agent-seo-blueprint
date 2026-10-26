@@ -357,3 +357,10 @@ the [full source post](references/source-notes/2026-10-25-jam-hubspot-aeo-post.m
 cross-checks first-party self-reports, and maps all twelve points into the existing
 visibility/content/authority workflows. Use the inert gap map and full-site review
 brief for an evidence-led evaluation, not a page quota or expected uplift.
+
+The same guide now includes a **Runpod acquisition evidence extension**: check full
+page-body delivery, choose provider attention using first-party referrals, preserve
+a matched question cohort, distinguish conversions from mature paid accounts, and
+compare full stack costs. Use `assets/aeo-acquisition-review.json` as a draft-only
+record. The [Runpod source audit](audit-log/2026-10-26-jam-runpod-aeo.md) reconciles
+all twelve source points; reported 2025 vendor results are not forecasts or current prices.

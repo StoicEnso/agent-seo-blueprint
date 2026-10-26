@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "state": "draft_only",
+  "execution_status": "not_run",
+  "source_case": "https://x.com/wespreadjam/status/2114809274132295868",
+  "owner": "",
+  "existing_ticket": "",
+  "evidence_date": null,
+  "panel_comparability": {
+    "existing_panel_path": "research/ai-answer-panel.csv",
+    "baseline_panel_version": null,
+    "followup_panel_version": null,
+    "matched_prompt_versions": [],
+    "added_prompt_versions": [],
+    "retired_prompt_versions": [],
+    "provider_surface_locale_account_match": null,
+    "comparable": null,
+    "limitations": []
+  },
+  "page_body_delivery": [
+    {
+      "url": "",
+      "status": "not_checked",
+      "initial_html_body_evidence": null,
+      "rendered_body_evidence": null,
+      "robots_canonical_index_evidence": null,
+      "provider_access_evidence": null,
+      "proposed_diff": "",
+      "approval_state": "draft_only",
+      "release_receipt": null
+    }
+  ],
+  "provider_allocation": {
+    "window_start": null,
+    "window_end": null,
+    "timezone": "",
+    "referral_taxonomy": "",
+    "unit": null,
+    "providers": [],
+    "unknown_or_dark_referrals": null,
+    "priority_provider": null,
+    "priority_reason": "",
+    "other_provider_check": "bounded_matched_sample",
+    "review_trigger": ""
+  },
+  "business_outcomes": {
+    "as_of": null,
+    "window_start": null,
+    "window_end": null,
+    "attribution_model": "",
+    "visitor_definition": "",
+    "conversion_event_definition": "",
+    "new_paid_account_definition": "",
+    "deduplication_rule": "",
+    "cohort_maturity_days": null,
+    "visitors": null,
+    "conversion_events": null,
+    "unique_new_paid_accounts": null,
+    "refunded_paid_accounts": null,
+    "revenue": null,
+    "currency": null,
+    "private_evidence_locators": [],
+    "known_gaps": []
+  },
+  "cost_comparison": {
+    "currency": null,
+    "before_period": null,
+    "after_period": null,
+    "same_capabilities_and_scope": null,
+    "subscription_before": null,
+    "subscription_after": null,
+    "usage_and_collection_before": null,
+    "usage_and_collection_after": null,
+    "model_and_research_before": null,
+    "model_and_research_after": null,
+    "labor_and_maintenance_before": null,
+    "labor_and_maintenance_after": null,
+    "evidence_locators": [],
+    "decision": "unassessed"
+  },
+  "release_and_measurement": {
+    "approval_state": "draft_only",
+    "approved_diff_locator": null,
+    "release_receipt": null,
+    "matched_review_window": null,
+    "confounders": [],
+    "stop_condition": "",
+    "causal_claim": "not_established"
+  }
+}

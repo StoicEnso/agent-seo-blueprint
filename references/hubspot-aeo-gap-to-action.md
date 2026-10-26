@@ -198,3 +198,111 @@ before retrying. Do not create new workers, schedules, or competing source write
 - Measure after approved release on matched panels and like-for-like business periods.
   A before/after result alone is not causal proof. Stop expansion if evidence, support,
   editorial fit, or maintenance capacity fails; do not scale page count for its own sake.
+
+## Runpod acquisition evidence extension
+
+Use this extension for a Runpod-style acquisition or tooling-cost claim. It
+extends this guide and the current visibility/content/monitoring workflows; do
+not start a second panel or tracking system. Read the
+[complete Runpod post](source-notes/2026-10-26-jam-runpod-aeo-post.md),
+[claim audit](../audit-log/2026-10-26-jam-runpod-aeo.md),
+[twelve-point coverage map](../assets/aeo-runpod-source-map.csv) and
+[claim registry](../assets/aeo-runpod-source-claims.json). Historical vendor
+self-reports are not independent verification or expected gains.
+
+Copy `assets/aeo-acquisition-review.json` into the existing project only when the
+review is requested. Its draft_only/not_run state and null measurements are
+intentional. Empty or inaccessible evidence is unknown, never a measured zero.
+Keep the canonical backlog, owner, approved writers, source custody and holds.
+
+#### R1. Check the body before prescribing more content
+
+For a valuable existing URL, compare normal initial HTML and rendered page body;
+retain a short content excerpt or permissioned evidence locator. Check HTTP
+status, canonical, robots/noindex and relevant authorized index/provider evidence
+separately. Record title-only, partial, full, blocked or unknown observations with
+date and method. A body absent from initial HTML may render normally; a browser
+render is not proof that a named AI service retrieved or indexed it. Search
+snippets and a `site:` result are not proof of complete indexation.
+
+Draft the smallest supported metadata, rendering or formatting repair only after
+the actual delivery failure is observed. Do not invent a universal 'AI crawl'
+agent, bypass a WAF/access control, or prescribe removing scripts or protections
+on the strength of a vendor story. A proposed diff needs existing release
+approval and a receipt; only then recheck actual page delivery. More articles
+are not a remedy for a broken shared page template.
+
+#### R2. Allocate provider attention from our evidence
+
+Use consented first-party referral/analytics data for the same declared window,
+timezone, source taxonomy and unit. Record absolute provider counts, the
+qualified-lead/paid-account evidence when available, and unknown/dark referrals.
+A missing referrer does not establish no AI influence. Do not apply Runpod's 98%
+to this site, confuse sessions with users, or choose a provider because it is
+convenient or appears in one screenshot. Keep the denominator inspectable.
+
+Give the evidenced useful provider more of the approved collection budget, while
+retaining a bounded matched sample for other relevant providers. State why,
+confidence, limitations and a revisit trigger. A proposed allocation is not
+approval to buy a vendor, add an account or increase query volume.
+
+#### R3. Expand discovery without moving the goalposts
+
+The existing panel records persona/segment, intent and funnel stage. Add justified
+technical use cases there, with question IDs, versions and evidence. Start with
+3–10 useful questions, not a 300-prompt quota. Keep a stable matched cohort for
+baseline/follow-up comparison and report added/retired prompts separately. Match
+provider, surface, locale, account state, sampling and dates; if those change,
+label results non-comparable or show the matched subset with sample counts.
+
+Review both useful wins and relevant losses. Do not keep only winning answers,
+pick favorable screenshots, silently rewrite questions, or generate a title for
+every prompt. Use research to check the gap, existing page overlap, product truth
+and buyer value before one normal brief or narrow diff. ChatGPT Deep Research is
+an optional named source suggestion, not a verified case requirement, mandatory
+tool purchase or substitute for source checking.
+
+#### R4. Connect questions to outcomes without pretending to join users
+
+Join a prompt/version to the proposed page, canonical existing ticket, approved
+diff and actual release receipt. A prompt observation is not a visit or a person;
+do not fabricate a user-level prompt-to-payment join. In consented first-party
+analytics, define visitors/sessions, the exact conversion event, unique new paid
+accounts, attribution model/window, deduplication, refunds and revenue separately.
+Use private minimal evidence locators; never put customer records or identifiers
+in a public PR or send private analytics to an external model.
+
+Report an as-of date and sufficiently mature acquisition cohort for the observed
+close cycle; two weeks is this case's claim, not our fixed lag. An immature cohort
+is pending, not zero success. Compare compatible periods, units and denominators.
+2,100 / ~28,000 = 7.5%, approximately 8%, but those figures do not prove 2,100
+unique paid accounts. Do not multiply the reported 40/day by 90 days or invent
+paid revenue. Report changed spend, seasonality, releases and other confounders.
+A before/after change remains observational, not causal proof.
+
+#### R5. Compare costs on the same basis
+
+Before recommending a stack change, record current authorized cost evidence,
+currency, billing periods, prompt/provider/surface coverage, export/retention
+requirements and quality/maintenance tradeoffs. Compare subscription, usage and
+collection, model/research, and labor/maintenance costs; unknown components remain
+unknown. Do not call platform-only savings total operating savings. $3,000 to
+$500 is about 83.3% platform-spend reduction in a historical vendor case, not a
+current quote, verified ROI or required product purchase. The 6x prompt count is
+coverage, not a visibility score. Keep the existing stack when added cost or
+maintenance exceeds evidenced value; do not cancel or buy anything from this review.
+
+#### R6. Reuse the existing feedback and approval loop
+
+One evidenced question → delivery/source diagnosis → existing ticket or distinct
+brief → exact approved diff → release receipt → matched visibility and separately
+defined business review. Preserve raw data, dates, missing evidence and failure
+states; reuse existing exports rather than a second collector. Provider/API/data
+availability must be live-checked; a repository stub is not a working integration.
+
+No live panel, publication, production change, outreach, external audit reply,
+purchase, account, staffing decision, installed-skill update or schedule is implied.
+Stop expansion for non-comparable panels, inaccessible bodies, immature cohorts,
+missing outcome definitions, unapproved spend, unsupported claims or rights issues.
+Keep unaffected read/draft work moving and name the one exact owner decision if
+needed. No causal revenue forecast or rank-#1 guarantee belongs in the result.
