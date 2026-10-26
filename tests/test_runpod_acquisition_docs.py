@@ -110,6 +110,9 @@ class RunpodAcquisitionDocsTest(unittest.TestCase):
             text = (ROOT / f'workflows/{name}.md').read_text()
             self.assertIn('Runpod acquisition evidence extension', text)
             self.assertIn('assets/aeo-acquisition-review.json', text)
+        skill = (ROOT / 'SKILL.md').read_text()
+        self.assertIn('industry/comparison/glossary/product/source/community/locale', skill)
+        self.assertIn('AI-answer visibility/category citation/content/monitoring loops', skill)
         for name in ('README.md', 'SKILL.md'):
             self.assertIn('Runpod', (ROOT / name).read_text())
             self.assertIn('references/hubspot-aeo-gap-to-action.md', (ROOT / name).read_text())
