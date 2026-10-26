@@ -174,3 +174,10 @@ A design software company has original before/after research and a public method
 - Declaring success from one indexed URL without referral or business evidence.
 
 **Related.** [[directory-submissions]] (destination verification), [[press-release-distribution]] (hosted distribution and link qualification), [[editorial-link-intent-and-assets]] (reader-first reasons to link), [[linkbuilding-what-not-to-do]] (scaled manipulation guardrails), [[measuring-seo-results]] (outcome separation). Official API: `https://telegra.ph/api`. Google spam policy: `https://developers.google.com/search/docs/essentials/spam-policies`.
+
+
+## Parasite SEO and backlinks: 11-idea intake (26 October 2026)
+
+For the exact Ira Bodnar source and all eleven claims, load `audit-log/2026-10-26-parasite-seo-11-idea-intake.md` and copy `assets/parasite-seo-idea-pilots.csv`. This extends this existing playbook; it does not add a second publishing workflow or make creator claims standing advice. Default is **DRAFT_RESEARCH_ONLY**, not an acquired backlink. No live experiment has run in this repository update.
+
+Prioritise one useful, truthful, disclosed article, worksheet or open technical resource. Reject fake jobs, disguised promotional research, fabricated future tests, title bait-and-switch, biased undisclosed rankings, duplicate Gamma doorway decks, backlink-only extensions and expired-domain abuse. Respect GitHub Pages commercial/SaaS limits. Distinguish local prototype, approved external write, actual public link, indexing, citation, referral and business outcome. Exact publication approval, spend and redirect gates remain unchanged.
