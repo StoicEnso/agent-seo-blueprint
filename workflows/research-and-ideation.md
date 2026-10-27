@@ -88,3 +88,14 @@ outputs:
 - `research/<date>_tiny-loop-opportunity-map.csv` — optional evidence and safety screen for one avoided-loop wedge.
 
 **Done when.** At least one niche/keyword cluster has passed the full gauntlet (or all are correctly rejected), the keyword map CSV exists, and every validated keyword has a home in the sitemap plan with an intent-matched format chosen. Any cluster advanced to production also has distinct page roles and contextual-link rows without thin depth inflation. A tiny-loop input also has an explicit approval boundary and independent demand evidence before it enters the build backlog. Hand the sitemap plan + keyword map to `content-production.md`; hand any "needs authority first" keywords to `authority-and-links.md`.
+
+## Search-led product launch review (including zero followers)
+
+For a Figcomponents-style idea, use this workflow rather than a second launch pipeline.
+Consult `assets/danny-search-led-claim-map.csv`; the core method is already covered.
+Before a forecast or build decision, load `references/playbooks/research/number-reconciliation.md`
+and its search-to-orders section. Require dated market-specific volume, current intent/SERP
+fit, distinct-page value, a useful accessible product sample, asset rights, an affordable
+bounded pilot, an owner and a measurable stop/review rule. Paid conversion and willingness
+to pay need their own evidence; follower count, free-tool usage and CPC do not prove them.
+Keep all automatic global-volume, page-count, ranking and revenue promises out of the plan.

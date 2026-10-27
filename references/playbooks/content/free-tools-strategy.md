@@ -43,3 +43,15 @@ tools: [ahrefs, serp, openai]
 - Forgetting the upsell — free traffic with no monetization path wastes the channel.
 
 **Related.** [[programmatic-seo]], [[content-rings]], [[on-page-optimization]], [[content-what-not-to-do]] · course refs 03-07 (concept), 03-08 (PFP.AI), 03-09 (HeadshotPro LinkedIn), 03-10 (tool autonomy). Free tools also power the content-rings backlink play.
+
+## Historical free-to-paid launch caveat
+
+For the [2023 Figcomponents account](https://x.com/dannypostma/status/1646368426246680579),
+keep the useful idea: satisfy a real searcher's task immediately, then test a truthful
+paid upgrade. **A free tier or longer dwell time does not prove a ranking gain.**
+A one-time payment is a pricing hypothesis, not a universal conversion advantage.
+Measure completed free tasks, upgrade exposure, visits, trials and mature paid orders
+with distinct denominators; use `references/playbooks/research/number-reconciliation.md` for the scenario maths.
+Before curating a Figma Community library or other third-party asset, verify the actual
+licence, attribution and redistribution/commercial-use rights. Public availability is
+not permission to copy, sell or rehost assets. No asset rights were established here.

@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
+- [The knowledge layer](#the-knowledge-layer-67-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **67 playbooks**: 36 original course distillations plus 31 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,7 +90,7 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 31 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
@@ -131,7 +131,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (67 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -349,3 +349,11 @@ endorsed by the course author.
 
 **License:** MIT — see [`LICENSE`](LICENSE). Covers the original work in this repo (playbooks, course index, workflows,
 scripts, templates). Course transcripts are not included and are not covered.
+
+## Historical search-led launch review
+
+The 2023 Danny Postma/Figcomponents thread mostly restates existing research, useful-product,
+internal-link, authority and monitoring methods. `assets/danny-search-led-claim-map.csv`
+reconciles all 20 posts. New checks qualify country-volume/sales arithmetic, fixed backlink
+and ranking claims, asset rights, free-tier assumptions and Product Hunt link evidence.
+See `audit-log/2026-10-27-danny-search-led-launch.md`. Examples are not measured outcomes.

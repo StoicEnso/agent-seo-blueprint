@@ -42,3 +42,54 @@ tools: [ahrefs]
 - Skipping the reconciliation pass "because the critic will catch it" — make it a required step, not luck.
 
 **Related.** [[seo-metrics]], [[measuring-seo-results]], [[ai-overviews-and-serp-features]], [[research-for-existing-sites]]. Tooling: `scripts/forecast.py` (reproducible forecasts). Used by the `full-master-plan` workflow.
+
+## Search-led launch claims: the 2023 Figcomponents example
+
+The [20-post Danny Postma thread](https://x.com/dannypostma/status/1646368426246680579)
+is a historical founder account, not a current benchmark. Its four-stage pattern
+(keyword → useful product → distribution → observation) already belongs to the existing
+research, content, authority and monitoring workflows. Do not create a second pipeline.
+See `audit-log/2026-10-27-danny-search-led-launch.md` and
+`assets/danny-search-led-claim-map.csv` for all 20 source records and their existing homes.
+
+**Searches are not visits or sales.** The source's `500 × 3 × 2% = 30` omits
+organic click-through and assumes an unverified country multiplier. Use:
+
+`expected_orders = eligible_non_overlapping_searches × organic_click_share × visit_to_paid_rate`
+
+Define each denominator. A visit-to-trial rate followed by a trial-to-paid rate
+requires both factors; neither is a visit-to-paid rate. Do not apply an extra CTR
+if the input is already observed organic visits. Search volume, Search Console
+impressions, clicks, analytics sessions, trials and paid orders are distinct metrics.
+
+- Use country-specific or directly reported global volumes with provider, date,
+  locale, device where available, and deduplication rules. **Do not triple a country volume.**
+- Do not add related-keyword volumes blindly: overlapping intents, close variants,
+  country/global pools and multiple URLs can count the same opportunity twice.
+- Even accepting 1,500 monthly searches only for illustration, a hypothetical 10%
+  organic click share and 2% visit-to-paid rate produce **3 expected orders, not 30**.
+  At 5% click share it is 1.5. At 1% it is 0.3. These are scenario expectations,
+  not measured customer counts. Fractional expectations are not observed orders.
+- `assets/danny-search-led-scenarios.json` preserves these explicit assumptions and
+  a compatible input for the **existing** `scripts/forecast.py`. Its KD-to-position,
+  CTR and maturity defaults are modelling assumptions, not validated forecasts.
+  Override with site/locale/SERP evidence before any business decision.
+- Revenue needs price, refunds and time basis. Profit also needs labour, hosting,
+  tooling, payment fees and fulfilment costs. A `$0 marketing budget` is not zero total cost.
+
+Run the existing forecast offline with the `forecast_pools` list copied into a
+project-local input file; do not point it at the whole scenario object:
+
+```sh
+python3 - <<'PY'
+import json
+import subprocess
+from pathlib import Path
+example = json.loads(Path('assets/danny-search-led-scenarios.json').read_text())
+subprocess.run(['python3', 'scripts/forecast.py', '--json'],
+               input=json.dumps(example['forecast_pools']), text=True, check=True)
+PY
+```
+
+No live keyword, search console, customer or revenue data is included. This command
+reads local example data and prints a model; it neither validates a niche nor launches a product.

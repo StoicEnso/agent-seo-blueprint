@@ -45,3 +45,24 @@ Every state change needs dated evidence. Creating accounts, posting, submitting,
 ## Done condition
 
 The selected candidate batch is source-audited, deduplicated, classified, and live-verified with first-party route evidence, discrepancy notes, and rejection reasons. No row is called a backlink win until a public listing URL and observed link/indexability evidence exist.
+
+## Product Hunt launch claims: verify the exact page, not domain strength
+
+The [2023 Figcomponents thread](https://x.com/dannypostma/status/1646368426246680579)
+recommends a Product Hunt launch. Keep it inside this candidate pipeline:
+
+1. Check current destination-owned eligibility, rules, costs and the project's fit.
+   Historical DR 90, 10–50 copies, and a first-page result are **unverified source claims**.
+2. Draft one useful, truthful launch only if it serves relevant users. Obtain exact
+   publication approval; this reference does not submit, create an account or buy anything.
+3. After an approved launch, save the public listing URL, actual destination `href`,
+   redirects, rendered `rel` (`nofollow`, `ugc`, `sponsored` where present), and observed
+   indexability evidence with a timestamp. Domain DR is not Google PageRank or proof of link value.
+4. Treat syndicated copies as candidates until each actual public link is observed.
+   **10–50 copies are not 10–50 independent endorsements**. Deduplicate mirrors and referring domains.
+5. Keep publication receipts, observed links, referral visits, qualified actions and
+   paid orders separate. A submitted listing is not a live backlink; a live backlink
+   is not proof of ranking, traffic, indexation or revenue. Do not promise any of them.
+
+No Product Hunt page or link attribute was live-verified as part of this source review.
+The existing registry is not expanded with a duplicate Product Hunt candidate.
