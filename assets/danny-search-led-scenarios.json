@@ -1,0 +1,44 @@
+{
+  "status": "illustrative_not_measured",
+  "source_url": "https://x.com/dannypostma/status/1646368426246680579",
+  "source_claim": {
+    "country_searches": 500,
+    "world_multiplier_unverified": 3,
+    "visit_to_paid_rate_assumed": 0.02,
+    "claimed_sales": 30
+  },
+  "corrected_examples": [
+    {
+      "label": "illustrative_10pct",
+      "eligible_searches": 1500,
+      "organic_click_share": 0.1,
+      "visit_to_paid_rate": 0.02,
+      "expected_orders": 3.0
+    },
+    {
+      "label": "illustrative_5pct",
+      "eligible_searches": 1500,
+      "organic_click_share": 0.05,
+      "visit_to_paid_rate": 0.02,
+      "expected_orders": 1.5
+    },
+    {
+      "label": "illustrative_1pct",
+      "eligible_searches": 1500,
+      "organic_click_share": 0.01,
+      "visit_to_paid_rate": 0.02,
+      "expected_orders": 0.3
+    }
+  ],
+  "forecast_pools": [
+    {
+      "name": "Illustrative only: assumed 1500 searches, not verified global demand",
+      "volume": 1500,
+      "position": 3,
+      "intent": "commercial",
+      "aio": false,
+      "capture_share": 1.0
+    }
+  ],
+  "forecast_note": "Uses existing forecast.py with assumed position 3, default CTR 10% and default maturity ramp; no validated rank, country multiplier, revenue, paid orders or new estimator."
+}

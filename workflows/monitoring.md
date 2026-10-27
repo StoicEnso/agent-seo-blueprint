@@ -108,3 +108,14 @@ outputs:
 - `monitoring/<date>_local-business-profile.json` — optional local-profile snapshot that keeps visibility, profile interactions, leads, conversions, and revenue separate.
 
 **Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. If local-profile work was in scope, its profile visibility, interaction, and business-outcome metrics remain separate and the recorded limitations rule out causal overclaiming. If the recurring content-opportunity audit was used, every applied change also has an approval receipt and scheduled +28-day/+56-day reads. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, citation observations, or local rank observations as clicks or revenue.
+
+## Search-led launches are not set-and-forget
+
+The 2023 Figcomponents account's three-/six-month timing and passive-traffic claims are
+historical anecdotes, not deadlines. Name an owner and review dates. Start on demand unless
+a schedule is separately approved; this source review creates no recurring job. Check crawl
+and index eligibility, important query/page changes, actual organic clicks/sessions, completed
+free tasks, upgrade exposure, mature paid orders and full operating costs separately.
+If visibility rises without qualified visits or paid outcomes, diagnose intent, SERP click
+availability and conversion measurement before making more pages or assuming a link deficit.
+A pre-registered pilot may be revised, stopped or marked inconclusive; no sunk-cost page quota.

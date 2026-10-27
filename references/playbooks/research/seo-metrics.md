@@ -15,14 +15,14 @@ tools: [ahrefs, serp]
 - When comparing yourself against the sites currently ranking.
 
 **Method.**
-1. **Keyword Difficulty (KD).** Estimates how hard it is to rank. Filter your keyword lists to KD < 20. At KD ≤ 20 you typically need only ~10 backlinks, so a new low-authority site can reach the top within ~1-2 months. Higher KD means stronger backlink competition you can't beat early on.
-2. **Domain Authority (DA) & Page Authority (PA).** DA = whole-site authority (backlink strength); PA = a single page's authority (Ahrefs calls page-level "URL rating"). When you look up a keyword, check the DA *and especially the PA* of the pages ranking top 3. A high-DA site can still have a weak top-ranking page (few links to that specific URL) — that's beatable. Authority is logarithmic: each 10 points is ~10× the previous, so a DA-60 link is ~10× a DA-50 link, and a DA-90 link (e.g. CNN) is worth orders of magnitude more than a DA-10 link.
+1. **Keyword Difficulty (KD).** Estimates how hard it is to rank. Filter your keyword lists to KD < 20. The course uses low KD as a screening heuristic, not a ten-backlink prescription or a 1–2-month deadline. Inspect current page-level competition, intent and SERP features before judging feasibility.
+2. **Domain Authority (DA) & Page Authority (PA).** DA = whole-site authority (backlink strength); PA = a single page's authority (Ahrefs calls page-level "URL rating"). When you look up a keyword, check the DA *and especially the PA* of the pages ranking top 3. A high-DA site can still have a weak top-ranking page (few links to that specific URL) — that's beatable. Provider authority metrics use their own scales; a ten-point increase does not establish a tenfold increase in link value. Verify topical fit, the exact linking page and actual link attributes.
 3. **Search Volume.** Estimated monthly searches for *that exact keyword* (LSI/related terms not included). Use US volume by default — usually the highest-paying market — but check global too. Apply the click-curve: position #1 ≈ 30% of clicks, #2 ≈ 15%, #3 ≈ 10%. Hard-skip anything under 100 volume; strongly discount under 500.
 4. **CPC (cost per click).** What advertisers pay per click for the term in Google Ads. Use it as a monetization filter: high volume + meaningful CPC = people pay real money for this traffic → moneymaker. High volume + near-zero CPC (1-2 cents) = traffic nobody monetizes → usually not worth it.
 5. **Combine into a verdict.** The ideal keyword: KD < 20, volume comfortably > 500, weak page authority among the top 3, and a healthy CPC. Run the live SERP to confirm content type and exceedability (see [[match-and-exceed]]).
 
 **Decision criteria / heuristics.**
-- KD < 20 → rankable as a new site (~10 backlinks, 1-2 months).
+- KD < 20 → candidate for live SERP review; no backlink-count or timing guarantee.
 - Volume < 100 → skip. Volume < 500 → discount heavily.
 - Sanity-check expected clicks: at #3 you get ~10% of volume; 150 volume → ~15 clicks/mo → at 1% conversion ≈ 1 sale/year (worthless).
 - Top-3 pages with low PA / few referring domains → beatable even if DA is high.
@@ -39,3 +39,15 @@ tools: [ahrefs, serp]
 - Forgetting volume is per-keyword only — sum LSI/long-tails to see the real opportunity (see [[keyword-fundamentals]]).
 
 **Related.** [[keyword-fundamentals]], [[match-and-exceed]], [[competitor-research]], [[finding-and-validating-niches]]. Course refs: 02-07 (key SEO metrics).
+
+## Scope of the numerical heuristics
+
+The course thresholds above and the [2023 Figcomponents thread](https://x.com/dannypostma/status/1646368426246680579)
+are screening examples, not rank, backlink-count or timing promises. KD is a tool's
+estimate; it does not prescribe ten backlinks or a first-page deadline. Inspect the
+actual ranking pages, search intent and SERP features with `winnability-and-serp-regimes.md`.
+DR/DA/UR are provider metrics, not Google ranking scores; a ten-point increase does
+not establish a tenfold increase in link value. CPC is advertiser evidence, not
+proof of this product's willingness-to-pay or conversion rate. Low volume can still
+serve a high-value niche. Use the target market, not an automatic US preference.
+Forecast clicks and paid outcomes separately under `number-reconciliation.md`.
