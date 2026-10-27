@@ -16,6 +16,7 @@ class DannySearchLedTests(unittest.TestCase):
         return (ROOT / path).read_text(encoding='utf-8')
 
     def test_all_twenty_posts_are_unique_and_routed(self):
+        self.assertNotIn(b'\r', (ROOT / 'assets/danny-search-led-claim-map.csv').read_bytes())
         with (ROOT / 'assets/danny-search-led-claim-map.csv').open(newline='') as f:
             rows = list(csv.DictReader(f))
         self.assertEqual(list(range(1, 21)), [int(x['sequence']) for x in rows])
