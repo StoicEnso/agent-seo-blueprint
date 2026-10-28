@@ -1,0 +1,133 @@
+{
+  "source_url": "https://x.com/wespreadjam/status/2115174505459122445",
+  "primary_url": "https://graphite.io/five-percent/case-studies/webflow-llm-signups",
+  "case_period": "Historical 2025 case; primary describes Q1\u2192Q2 and W33\u2013W37 2025",
+  "evidence_grade": "agency_authored_case_report_not_independent_raw_analytics",
+  "independently_verified": false,
+  "raw_cohorts_available": false,
+  "p_values_reproduced": false,
+  "promised_uplift": null,
+  "points": [
+    {
+      "id": 1,
+      "source_point": "Separate AI acquisition channel",
+      "repository_coverage": "covered_strengthen_event_and_share_definitions",
+      "treatment": "Reported SoV33\u219264; signup share4\u21928. Define free account/signup event and keep shares distinct from absolute count."
+    },
+    {
+      "id": 2,
+      "source_point": "Map onsite/offsite cited sources",
+      "repository_coverage": "covered_keep_provider_denominators",
+      "treatment": "Reported Reddit10% of ChatGPT citations vs YouTube32% of Perplexity responses. Different denominators; no universal source quota."
+    },
+    {
+      "id": 3,
+      "source_point": "Specific buyer/team/tool questions",
+      "repository_coverage": "covered_reuse_matched_panel",
+      "treatment": "Ten long-tail questions and38\u2192100SoV are case observations. Use justified question versions and real supported integrations; no permutation factory."
+    },
+    {
+      "id": 4,
+      "source_point": "Optimize existing high-intent templates",
+      "repository_coverage": "extend_existing_page_selection",
+      "treatment": "Inventory actual converting page families, demand, body delivery and overlap; rank narrow existing-page diffs, not1500-page quotas."
+    },
+    {
+      "id": 5,
+      "source_point": "Four-part audience/outcome copy",
+      "repository_coverage": "extend_copy_review_not_formula",
+      "treatment": "Question, truthful branded context, actual user and supported outcome form a review aid, not mandatory repeated keywords."
+    },
+    {
+      "id": 6,
+      "source_point": "168\u2192983 template signups",
+      "repository_coverage": "audit_scope_and_noncausality",
+      "treatment": "Graphite reports485%QoQ template LLM free-account signups. Cohort/raw analytics absent; no all-site or paid-sales causal claim."
+    },
+    {
+      "id": 7,
+      "source_point": "100-query Reddit monitoring",
+      "repository_coverage": "covered_extend_review_evidence",
+      "treatment": "Reuse permitted community review; preserve thread/provider/prompt, useful affiliated draft, moderator rules and approved-post receipt separately."
+    },
+    {
+      "id": 8,
+      "source_point": "Reddit growth and sentiment",
+      "repository_coverage": "covered_separate_community_outcomes",
+      "treatment": "98%positive-or-neutral and135/12/145%community changes are vendor reports, not conversion or causal link proof."
+    },
+    {
+      "id": 9,
+      "source_point": "Table-of-contents comparison",
+      "repository_coverage": "extend_matched_url_experiment",
+      "treatment": "Separate one ToC treatment, matched control URLs, prior/post windows, raw counts and control-adjusted effect; inspect real anchor targets."
+    },
+    {
+      "id": 10,
+      "source_point": "Section retrieval mechanism",
+      "repository_coverage": "covered_keep_as_hypothesis",
+      "treatment": "Useful navigation and direct answers can be tested; not proof of model retrieval, required artificial chunks or special Google AI markup."
+    },
+    {
+      "id": 11,
+      "source_point": "Question-heading comparison",
+      "repository_coverage": "extend_separate_variant",
+      "treatment": "Keep heading treatment separate from ToC, answer question naturally, retain visible section meaning and approved product claims."
+    },
+    {
+      "id": 12,
+      "source_point": "10+10 URLs, five weeks and p-values",
+      "repository_coverage": "extend_statistical_review",
+      "treatment": "Preserve case-reported4-week result/five-week design distinction; allocation, URL-level variation, controls and analysis assumptions must be reviewable; p-values not reproduced."
+    },
+    {
+      "id": 13,
+      "source_point": "SEO and AEO content together",
+      "repository_coverage": "covered_existing_workflows",
+      "treatment": "Retain useful existing content, product truth and ordinary Search performance; no AI-only rewrite or automatic publication."
+    },
+    {
+      "id": 14,
+      "source_point": "SoV, signups and6x conversion",
+      "repository_coverage": "audit_incompatible_metrics",
+      "treatment": "33\u219264 is31pp/about94%relative.4\u21928 signup share doubles, not necessarily absolute signup count.24%vs4%is free-signup CVR, not paid conversion or expected gain."
+    }
+  ],
+  "arithmetic": {
+    "template_signup_before": 168,
+    "template_signup_after": 983,
+    "template_signup_growth_percent": 485.11904761904765,
+    "sov_before_percent": 33,
+    "sov_after_percent": 64,
+    "sov_percentage_point_change": 31,
+    "sov_relative_growth_percent": 93.93939393939394,
+    "signup_share_before_percent": 4,
+    "signup_share_after_percent": 8,
+    "signup_share_multiplier": 2,
+    "reported_signup_cvr_ai_percent": 24,
+    "reported_signup_cvr_nonbrand_seo_percent": 4,
+    "signup_cvr_ratio": 6,
+    "toc_ai_visits_before": 119,
+    "toc_ai_visits_after": 127,
+    "toc_ai_raw_growth_percent": 6.722689075630252,
+    "toc_ai_reported_control_adjusted_percent": 60,
+    "toc_clicks_before": 191,
+    "toc_clicks_after": 220,
+    "toc_click_raw_growth_percent": 15.18324607329843,
+    "toc_click_reported_control_adjusted_percent": 23,
+    "heading_ai_visits_before": 41,
+    "heading_ai_visits_after": 70,
+    "heading_ai_raw_growth_percent": 70.73170731707317,
+    "heading_ai_reported_control_adjusted_percent": 58
+  },
+  "statistical_claims": {
+    "test_urls": 10,
+    "control_urls": 10,
+    "design_weeks": 5,
+    "reported_result_weeks": 4,
+    "question_heading_p": 0.001,
+    "table_of_contents_p": 0.002,
+    "random_assignment_established": false,
+    "control_means_and_variance_available": false
+  }
+}

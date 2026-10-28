@@ -306,3 +306,107 @@ Stop expansion for non-comparable panels, inaccessible bodies, immature cohorts,
 missing outcome definitions, unapproved spend, unsupported claims or rights issues.
 Keep unaffected read/draft work moving and name the one exact owner decision if
 needed. No causal revenue forecast or rank-#1 guarantee belongs in the result.
+
+
+## Webflow existing-page and matched-experiment extension
+
+For a Webflow-style template/category-page or answer-structure review, read the
+[full source](source-notes/2026-10-28-jam-webflow-aeo-post.md),
+[fourteen-point map](../assets/aeo-webflow-source-map.csv),
+[case audit](../audit-log/2026-10-28-jam-webflow-aeo.md) and
+[claim registry](../assets/aeo-webflow-source-claims.json). This extends the same
+HubSpot/Runpod feedback loop; it is not a separate workflow or a provider tool.
+Use `assets/aeo-page-experiment-review.json` only as a requested draft review.
+Keep its draft_only/not_run state and null measurements until actual evidence exists.
+
+#### W1. Prefer a useful existing conversion page over another article
+
+Inventory current template/category/use-case URLs, canonical/robots state, body
+availability and the exact real conversion event. Verify demand, audience, product
+fit, rights and overlap with the current CMS/sitemap. Reuse R1 page-delivery checks.
+Where first-party analytics exists, use comparable page-family sessions, signups,
+qualified leads or paid accounts and denominators separately; missing data is
+unknown, not a zero or automatic rejection. Choose one small justified pilot.
+The case's 1,500 pages are not a target or permission for mass rewriting.
+
+Review the existing above-the-fold copy for a clear buyer question, truthful
+branded/product context, the actual intended user and a supported useful outcome.
+Those four elements are a copy-review aid, not a keyword formula or a demand to
+repeat the brand in every heading. Keep natural readable text, unique page value,
+existing working conversion paths and approved claims. Do not replace useful
+content with an AI-only introduction, force an answer format, create near-duplicate
+team×tool pages, or invent product integrations, local coverage or customer proof.
+Draft the exact smallest diff and link the canonical ticket; protected claim/CTA
+changes retain their owner gate. No CMS write or release follows from this review.
+
+#### W2. Review cited communities without an auto-comment loop
+
+Reuse the existing source map and `assets/community-reply-review.json`. Retain the
+provider, exact prompt/version, cited thread URL, date, observed need, affiliation,
+community rules and useful original contribution. A cited thread is not a marketing
+invitation. Track response suggestion, sentiment method/denominator, reviewer,
+exact-word approval, actual post receipt and post outcome as distinct states.
+Draft only where the contribution helps the reader; never automatically post,
+coordinate votes, hide affiliation, seed praise or manufacture endorsements.
+The case's 100 queries and 98% sentiment are not quotas or proof of lead quality.
+
+#### W3. Freeze the proposed URL experiment before any approved change
+
+Choose **one** treatment per cohort: a useful table of contents, question headings,
+or an existing-page audience/outcome copy improvement. Do not mix all three and
+attribute the result to one. A table of contents needs real working anchors and
+helpful section labels; headings must preserve meaning and accurately introduce
+answers. Inspect rendered keyboard/mobile navigation and ordinary Search effects.
+These are user-focused hypotheses, not special AI markup, mandatory chunking or
+proof that a model retrieved a section.
+
+Record the hypothesis, primary outcome/event/unit, assignment unit (normally URL),
+unique, disjoint test/control URLs, matching factors, baseline, post window, timezone,
+provider/referrer taxonomy, minimum evidence/precision rule, approval state, exact
+diff, release receipt, cost cap, guardrails, analysis plan and stop rules **before**
+the change. State whether assignment is randomized or matched observational.
+Match page type, relevant traffic/impressions and comparable product intent; avoid
+cross-group templates, shared edits, redirects or canonical overlap. Record
+contamination, tracking changes, campaigns, seasonality and other releases. Ten
+URLs per group and five weeks were this case's design, not a powered universal
+sample size. Choose duration/sample needs from real baseline volume; do not keep
+checking and stop at the first favorable week. Missing or immature data is pending.
+
+#### W4. Keep raw change, control adjustment and uncertainty separate
+
+Retain test/control pre/post absolute counts, units and source locators. Define
+whether aggregation uses URL means, totals, sessions, users, events or rates;
+account for repeated observations at URL level. A raw relative change is
+(test_post/test_pre−1)×100. If a multiplicative difference-in-differences is the
+pre-registered estimator, adjusted relative uplift is
+((test_post/test_pre)/(control_post/control_pre)−1)×100. Other estimators must
+state their own definition; this formula is not claimed to reproduce Graphite's
+analysis. Missing/zero baseline or control denominators make that ratio undefined,
+not zero. Percentage-point change for rates is not relative growth.
+
+Keep the raw data, control trend, chosen estimator, effect size, uncertainty or
+confidence interval and statistical assumptions reviewable. Do not treat weekly
+rows as independent URL experiments or infer adequate power from 10+10 URLs.
+Disclose multiple outcomes/comparisons and any changes to the analysis plan.
+A vendor p-value without data is source-only; a low p-value is not a guarantee,
+a probability that a hypothesis is true, or proof of causality. The source's
+119→127 raw AI visits is about 6.7%, not its reported 60% adjusted effect. Its four-week
+outcomes and five-week design must stay distinct. Do not reproduce that effect or
+p-value without inspectable controls, variance and a valid analysis. Check pre-trends and the estimator's
+parallel-trend assumptions; matching alone does not remove confounding.
+
+#### W5. Separate signup scope and decide whether expansion is justified
+
+A free signup, new paid account, qualified lead and revenue are different events.
+Record exact event definition, attribution window, deduplication, denominator,
+page-family scope, consented evidence and as-of date; never join provider prompt
+observations to imaginary users. Preserve the matched question panel separately
+from referral/acquisition cohorts. 4%→8% signup share is not necessarily 2x absolute
+signups; 24% vs 4% is a reported free-signup CVR comparison, not a 6x paid-sales forecast.
+
+Return draft_only, needs_evidence, stop, no_clear_result or bounded_expand_review
+with reasons. Stop affected expansion for low counts, insufficient precision,
+non-comparable controls, contamination, tracking changes, ordinary-search or
+conversion harm, unsupported claims, rights issues, missing approval or excess cost.
+A promising effect is an owner-reviewed next decision, never permission to scale
+1,500 pages, buy a vendor, publish, post, add a schedule or change the installed skill.

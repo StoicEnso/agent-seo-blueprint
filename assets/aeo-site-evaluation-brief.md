@@ -47,3 +47,13 @@ State the exact first recommended action, evidence, effort/cost, risk, and appro
 needed (if any). Do not confuse research complete, code ready, released, delivered,
 or revenue earned. An accepted session handoff is not channel delivery. Reconcile
 prior sends before retry. No auto-send to publishers or communities.
+
+## Optional existing-page experiment review
+
+For Webflow-style page improvements, add `aeo-page-experiment-review.json` and
+the fourteen-point `aeo-webflow-source-map.csv` to the existing pack. Keep the
+original twelve-point source evaluation intact; the Webflow map is a separate
+source extension. Inventory existing high-intent pages and natural buyer/user/
+outcome copy before a new-page brief. Proposed URL cohorts, controls, windows,
+event definitions, raw/adjusted effects and uncertainty remain unrun/null.
+Follow the Webflow extension in `references/hubspot-aeo-gap-to-action.md`.

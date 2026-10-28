@@ -364,3 +364,12 @@ a matched question cohort, distinguish conversions from mature paid accounts, an
 compare full stack costs. Use `assets/aeo-acquisition-review.json` as a draft-only
 record. The [Runpod source audit](audit-log/2026-10-26-jam-runpod-aeo.md) reconciles
 all twelve source points; reported 2025 vendor results are not forecasts or current prices.
+
+### Webflow existing-page experiment review
+
+The [existing product-led AEO guide](references/hubspot-aeo-gap-to-action.md#webflow-existing-page-and-matched-experiment-extension)
+now covers high-intent template copy and bounded matched URL experiments for
+tables of contents or question headings. Read the [full source audit](audit-log/2026-10-28-jam-webflow-aeo.md)
+and use [the inert review record](assets/aeo-page-experiment-review.json).
+This extends the existing HubSpot/Runpod reviews; it does not add a workflow,
+promised uplift, live experiment, automatic edit or publishing authority.
