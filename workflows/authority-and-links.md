@@ -54,6 +54,8 @@ outputs:
 
 1. **Set strategy & map the landscape.** Load `understanding-authority.md`. Identify the top-ranking competitor for the money keyword (`serp_capture.py`), then Site-Explorer it in Ahrefs (`ahrefs_client.py`) → Backlinks. Note high-DR, dofollow, low-dilution, topically-relevant referring domains — this is the raw target pool. Weight by quality (DR is logarithmic; few outbound links = more value passed), not count.
 
+   **Asset/host scope check:** load the backlink-scope section of `references/playbooks/research/research-for-existing-sites.md`. Separate CDN asset/download/embed/customer links from verified editorial page recommendations before creating an outreach lead. Inspect the exact referring page, target host/path, `href` and `rel`; keep backlink totals, unique referring domains and grouped report rows separate. Unknown is not zero. An asset link is not automatically worthless, but it is not automatically an attainable product recommendation either. Classification grants no disavow, customer contact or link-change authority.
+
 2. **Pick tactics for this project.** Choose from the menu based on fit (you can run several):
    - **Link stealing** (`link-stealing.md`) — find roundups/listicles linking a weaker competitor but not you; pitch "add me" or "swap the weak link." Needs you to be genuinely better.
    - **Affiliate program / competitor-affiliate mining** (`affiliate-programs.md`) — for a paid product with sustainable unit economics: fingerprint verified public referral routes, qualify the competitor's editorial affiliates, model a defensible offer, and draft `test/add`, `comparison`, or `switch` asks. Never invent terms or blindly outbid.
