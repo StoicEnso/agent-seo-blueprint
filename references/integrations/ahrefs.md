@@ -50,6 +50,12 @@ The user must already be logged into Ahrefs at `app.ahrefs.com`. The skill never
 
 If a login wall or 2FA prompt appears, STOP and ask the user to log in — never enter credentials or complete auth for them.
 
+## Saved Top Pages export contract (manual fallback)
+
+For competitor-page planning, use the existing Top Pages UI export; enable **SERP titles** when available. Preserve the original CSV plus capture time, country/database, device, report date, target mode/host/prefix, filters and export row limits. Label missing fields unknown and incomplete coverage PARTIAL. Read `../playbooks/research/research-for-existing-sites.md` for the export-to-owned-content review and `../../assets/competitor-page-gap-map.csv` for its output. This change adds no Top Pages API command to `ahrefs_client.py`.
+
+A SERP title is not necessarily the page's HTML title or its actual intent. Ahrefs traffic is an estimate, not analytics visits or sales. Total backlinks, unique referring domains, grouped backlink rows and links to CDN assets are different measures. Inspect the exact source/target URL and `href`/`rel` context before treating an asset customer as an editorial outreach lead. Blank metrics remain unknown, not zero. No paid access, account creation, export upload or outreach is authorized by this read-only fallback.
+
 ## Rate limits / gotchas
 - **API:** v3 spends "units" per row/endpoint against your plan quota; batch queries and request only needed columns. 401/403 = bad/expired token; 429 = rate limit.
 - **Browser:** Ahrefs throttles rapid navigation; keep it to a human pace. Heavy report pages are JS-rendered — wait for load before reading. Some reports are paginated; capture the top rows you need, don't crawl everything.
