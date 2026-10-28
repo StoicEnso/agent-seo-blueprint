@@ -31,8 +31,8 @@ means a **free Webflow account**, not a paid customer, qualified lead or revenue
 - 24% vs 4% is a 6x reported signup conversion-rate comparison with **non-brand SEO**,
   not all Google traffic or paid conversion. The template cohort and aggregate CVR
   are not established as identical. Do not multiply 983 by 24% or forecast revenue.
-- Ten long-tail questions, 38%→100% SoV and 70% improvement after three weeks are
-  scoped case claims. Do not extrapolate them to all buyer questions/providers.
+- Ten long-tail questions, 38%→100% SoV and improvement in **70% of questions**
+  after three weeks are scoped case claims; 70% is a question share, not uplift. Do not extrapolate them to all buyer questions/providers.
 - Reddit 10% of ChatGPT **citations** and YouTube 32% of Perplexity **responses** have
   different denominators/providers. Neither justifies a source/channel quota.
 - The 1,500-page initiative and 100-query Reddit programme are case scale, not a

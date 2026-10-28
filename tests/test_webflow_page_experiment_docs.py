@@ -46,6 +46,8 @@ class WebflowPageExperimentDocsTest(unittest.TestCase):
         self.assertEqual(a['sov_percentage_point_change'],31)
         self.assertEqual(a['signup_share_multiplier'],2)
         self.assertEqual(a['signup_cvr_ratio'],6)
+        self.assertEqual(load('assets/aeo-webflow-source-claims.json')['statistical_claims']['reported_question_share_improved_percent'],70)
+        self.assertIn('70% of questions',AUDIT.read_text())
         t=norm(AUDIT)
         for x in ('free Webflow account','share of total signups','not necessarily twice','non-brand SEO','NOT independent verification','historical 2025'):
             self.assertIn(x,t)
