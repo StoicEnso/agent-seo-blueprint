@@ -134,3 +134,13 @@ same guide and the draft-only `assets/aeo-acquisition-review.json`. Check comple
 body delivery, our own referral denominator, matched prompt cohorts, mature paid
 account definitions and total cost scope. Reuse current evidence; no new monitor,
 provider purchase, production write or schedule is authorized by this review.
+
+
+## Existing-page matched experiment review
+
+For template/category copy, table-of-contents or question-heading experiments, use the
+**Webflow existing-page and matched-experiment extension** in
+`references/hubspot-aeo-gap-to-action.md` and `assets/aeo-page-experiment-review.json`.
+Reuse existing tickets, matched panels and consented analytics. Freeze separate URL
+cohorts, raw/control-adjusted definitions and guardrails before an approved change.
+This is draft-only review, not a live experiment, automatic CMS edit or schedule.

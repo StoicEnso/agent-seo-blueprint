@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "state": "draft_only",
+  "execution_status": "not_run",
+  "source_case": "https://x.com/wespreadjam/status/2115174505459122445",
+  "owner": "",
+  "existing_ticket": "",
+  "hypothesis": "",
+  "candidate_pages": [],
+  "copy_review": {
+    "buyer_question": "",
+    "truthful_brand_context": "",
+    "actual_target_user": "",
+    "supported_outcome": "",
+    "current_page_evidence": null,
+    "duplicate_and_product_truth_review": null,
+    "proposed_diff": null
+  },
+  "design": {
+    "treatment": null,
+    "assignment_unit": "url",
+    "assignment_method": null,
+    "test_urls": [],
+    "control_urls": [],
+    "matching_factors": [],
+    "baseline_start": null,
+    "baseline_end": null,
+    "post_start": null,
+    "post_end": null,
+    "timezone": null,
+    "primary_outcome_event": null,
+    "measurement_unit": null,
+    "aggregation_method": null,
+    "provider_referrer_taxonomy": null,
+    "analysis_plan": null,
+    "estimator": null,
+    "minimum_evidence_or_precision_rule": null,
+    "uncertainty_method": null,
+    "repeated_observation_handling": null,
+    "multiple_comparison_policy": null,
+    "interim_look_policy": null,
+    "cost_cap": null
+  },
+  "counts": {
+    "test_pre": null,
+    "test_post": null,
+    "control_pre": null,
+    "control_post": null
+  },
+  "results": {
+    "raw_relative_percent": null,
+    "control_adjusted_relative_percent": null,
+    "percentage_point_change": null,
+    "confidence_interval": null,
+    "p_value": null
+  },
+  "evidence": {
+    "raw_private_locators": [],
+    "matched_prompt_panel_path": "research/ai-answer-panel.csv",
+    "confounders": [],
+    "contamination": [],
+    "missing_or_immature_data": [],
+    "ordinary_search_guardrail": null,
+    "conversion_guardrail": null,
+    "toc_anchor_navigation_check": null,
+    "heading_meaning_check": null
+  },
+  "community_review": {
+    "existing_template": "assets/community-reply-review.json",
+    "cited_thread_url": null,
+    "provider_prompt_evidence": null,
+    "sentiment_definition_and_denominator": null,
+    "reviewer": null,
+    "exact_word_approval": null,
+    "post_receipt": null,
+    "business_outcome": null
+  },
+  "release": {
+    "approval_state": "draft_only",
+    "approved_diff": null,
+    "release_receipt": null
+  },
+  "decision": {
+    "verdict": "needs_evidence",
+    "reason": "Template only; no experiment or provider measurement ran.",
+    "stop_conditions": [],
+    "owner_review_required_before_expansion": true,
+    "causality": "not_established"
+  }
+}
