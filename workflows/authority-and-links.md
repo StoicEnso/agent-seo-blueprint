@@ -114,3 +114,7 @@ outputs:
 ### Parasite SEO / backlinks source intake
 
 Ira’s 11-idea list is a research input, not 11 verified links. Use the existing `references/playbooks/authority/hosted-publishing-experiments.md` branch with `assets/parasite-seo-idea-pilots.csv`; source review: `audit-log/2026-10-26-parasite-seo-11-idea-intake.md`. Record all eleven decisions, even when a variant is rejected or needs spend, research eligibility, hiring truth, product fit or exact public-copy approval. Do not call a draft, a provider URL or a domain metric a completed backlink pilot. The existing per-batch external-write gate is unchanged.
+
+
+## YouTube Posts source review
+For YouTube channel Posts (formerly Community posts), use the YouTube section in `references/playbooks/authority/hosted-publishing-experiments.md`, copy `assets/youtube-post-review.json`, and read `audit-log/2026-10-29-youtube-posts-review.md`. Channel eligibility, exact-copy approval, public-page/link verification and separated outcomes are mandatory; no indexing service, public post or automated expansion is authorized.

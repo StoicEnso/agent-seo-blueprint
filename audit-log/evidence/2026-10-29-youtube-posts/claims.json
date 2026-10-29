@@ -1,0 +1,83 @@
+{
+  "checked_on": "2026-10-29",
+  "initiating_request": "Ihusan Telegram27698; save source, explain community posts, create paired Agent SEO review PRs",
+  "source_url": "https://x.com/jespernissenseo/status/2115426892459254182",
+  "source_status": "untrusted_creator_claims",
+  "image_query": "Youtube community posts exploded in visibility",
+  "example_url": "https://www.youtube.com/post/Ugkx0v-XA-3duIc5yIZEN0OhUOcogADoy8EZ",
+  "independent_google_rank_reproduced": false,
+  "claims": [
+    {
+      "id": "post-format",
+      "claim": "YouTube community posts exist",
+      "disposition": "verified_official_feature",
+      "reason": "Official YouTube help describes channel Posts; distinguish subscriber Communities."
+    },
+    {
+      "id": "rank-13-minutes",
+      "claim": "Number 1 and AI Overview after 13 minutes",
+      "disposition": "source_snapshot_only",
+      "reason": "Image shows exact query, one organic result and an AI Overview source card. No independent reproduction, competitiveness or persistence proof."
+    },
+    {
+      "id": "query",
+      "claim": "Youtube community posts exploded in visibility",
+      "disposition": "visible_in_source_image",
+      "reason": "Distinctive phrase matches opening copy. Do not infer valuable generic or local demand."
+    },
+    {
+      "id": "indexing-tool",
+      "claim": "Primeindexer indexes posts super fast",
+      "disposition": "unverified_vendor_attribution",
+      "reason": "No controlled comparison, indexing receipt or cost/safety evaluation. Do not buy or submit."
+    },
+    {
+      "id": "backlinks",
+      "claim": "Useful backlinks",
+      "disposition": "unverified_page_level_link_value",
+      "reason": "No project destination link, rendered href/rel or ranking-credit proof. The inspected example text has no outbound project website URL."
+    },
+    {
+      "id": "entities",
+      "claim": "Entity reinforcement",
+      "disposition": "hypothesis_not_measured",
+      "reason": "Truthful consistent naming can help readers; no causal entity or ranking result established."
+    },
+    {
+      "id": "local",
+      "claim": "Very good local SEO results",
+      "disposition": "anecdote_no_project_evidence",
+      "reason": "No location/query/device baseline, local rank series or leads supplied."
+    },
+    {
+      "id": "traffic",
+      "claim": "184k to 5.3m to 440k monthly traffic",
+      "disposition": "example_author_claim_unverified",
+      "reason": "Linked post gives aggregate-looking figures without an inspectable dataset or denominator; not this single post, own referrals or revenue. No causal spam-update conclusion."
+    },
+    {
+      "id": "unlimited",
+      "claim": "Free and as many as you want",
+      "disposition": "partly_correct_limit_claim_contradicted",
+      "reason": "Official create help imposes a channel 24-hour post limit; eligibility and availability vary. Free posting is not zero production cost."
+    },
+    {
+      "id": "policy",
+      "claim": "Parasite SEO is automatically safe or automatically a violation",
+      "disposition": "neither_blanket_conclusion_supported",
+      "reason": "Google lists sites designed for user-generated content among site-reputation exceptions; link spam and scaled-content rules still apply. Judge purpose and behavior, not the label."
+    }
+  ],
+  "official_sources": {
+    "create": "https://support.google.com/youtube/answer/7124474?hl=en",
+    "eligibility": "https://support.google.com/youtube/answer/9409631",
+    "communities": "https://support.google.com/youtube/answer/15739414",
+    "spam": "https://developers.google.com/search/docs/essentials/spam-policies"
+  },
+  "sha256": {
+    "example-post.txt": "04bfeace0c887d3fd8a83a94bbf64e250d8574bfd541b3ae52c2eb04d2edbf61",
+    "official-excerpts.txt": "3ef90ab11af2ec8afaa2b4f2b8c50817ead6902ab726d805d68676707042c402",
+    "source-image.jpg": "af6c3a45b820446a6d675218685fd83e7346ec04b3927a7a9317c141fd40e9a4",
+    "source-post.txt": "430dec34e3aa3fa9f2d7b9b71dbb1df453114a575c48f9aaaec9bd91a767b476"
+  }
+}
