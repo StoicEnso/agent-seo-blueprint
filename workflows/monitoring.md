@@ -108,3 +108,20 @@ outputs:
 - `monitoring/<date>_local-business-profile.json` — optional local-profile snapshot that keeps visibility, profile interactions, leads, conversions, and revenue separate.
 
 **Done when.** A snapshot + leading-indicator log are written for the period, operational regressions/opportunities have evidence-backed status changes, any ranking movement has been diagnosed (settling / update / intent / links) with the right follow-up routed, and — if scheduled — the recurring routine is registered at the user-confirmed cadence. If the Google AI report was available, its separate impression snapshot, inclusion-control state, limitations, and journey-role interpretation are also recorded. If Cloudflare evidence was in scope, its readiness, synthetic panel, and first-party operator lanes are preserved separately with access state and limitations. If cross-platform citation monitoring was in scope, its provider-specific observation snapshot and limitations are recorded separately. If local-profile work was in scope, its profile visibility, interaction, and business-outcome metrics remain separate and the recorded limitations rule out causal overclaiming. If the recurring content-opportunity audit was used, every applied change also has an approval receipt and scheduled +28-day/+56-day reads. The quarterly review explicitly answers "did the work pay off?" by connecting inputs to outcomes without treating AI impressions, vendor panel scores, citation observations, or local rank observations as clicks or revenue.
+
+
+## Directory survival and evidence freshness
+
+When directory/entity records are in scope, run the **Evidence reconciliation and survival review**
+section in `references/playbooks/authority/directory-submissions.md` against saved observations.
+Run `scripts/directory_evidence.py <ledger.json> --as-of <timezone-aware-time> --limit 20` and attach
+its report to the existing snapshot; do not equate today's report date with a fresh public read.
+Keep matching human reviews, stale observations, changed-page review history, public anchor/rel,
+indexing `unknown`, referrals and business outcomes distinct. Blank next-check dates and overdue
+checks require one bounded proposed next step, not resubmission or a new schedule. A hold always
+blocks execution until its named owner releases it. Previously uncollected rows are not lost listings.
+Pending **Public #34 / Full #27** owns the wider recurring-delivery ledger/capability enhancements;
+this extension neither duplicates that ledger nor claims to activate it. Full local-profile parity
+remains pending in Public #33 / Full #26. Route factual conflicts and qualified prospects back to
+`authority-and-links.md` with exact evidence/approval gaps. No collection, installation or external
+write occurs from this offline review command.

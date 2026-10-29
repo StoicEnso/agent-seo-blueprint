@@ -168,3 +168,106 @@ Report verified outcomes, not submission volume:
 - referral traffic or assisted conversions when available
 
 A batch of 20 unverified submissions is not success. Three accurate, relevant, public listings can be.
+
+
+## Evidence reconciliation and survival review (Indexsy gap review)
+
+**Entry:** run this section from `workflows/authority-and-links.md` after resolving the existing
+project workspace, before promoting directory/entity opportunities, and from `workflows/monitoring.md`
+when a prior listing needs a survival or freshness review. This extends the existing directory
+tracker; it does not create another target database or a sending tool.
+
+### Vendor and business-fact reconciliation
+
+Compare each existing vendor/directory record against source-backed, owner-approved business facts:
+name, website, category, public business phone, actual address/service area, and operating status.
+Save the approved value/source/verification date separately from the observed public value/source/date.
+Use `scripts/directory_evidence.py`'s `reconcile_business` for saved-field comparisons. A mismatch is
+`conflict_review`, not permission to change either side. Missing public fields stay `unknown`.
+Record old-business conflicts (previous occupant, old name/phone/address/domain, duplicate or acquired
+entity) and the precise factual resolution needed. Never create a false office, reuse another
+business identity, silently replace protected product claims, or assert a discrepancy from missing UI.
+
+For competitor citation discovery, use only already-public BUSINESS phone/address/name/website
+fields on official business pages and relevant public listings. Record the exact search, source,
+observed date and candidate lineage. Do not use personal numbers, private customer/provider records,
+residential data without a legitimate approved business purpose, contact enrichment or inferred locations.
+An exact-field search is a discovery lead, not evidence that every result represents that entity.
+Deduplicate and verify destination-owned eligibility/routes before promotion. Paid collection,
+account access, claims, correction requests and submissions retain their separate approval gates.
+
+The richer local brief, observation, review-window and real-photo templates remain in pending
+**Public #33 / Full #26**, not in this extension. Full main still lacks local-profile parity;
+this change neither copies those templates nor claims that pending coverage is installed.
+
+### Community, school and sponsorship fit
+
+A school, club, local association, event or community page is a candidate only with a documented
+reader/service-area/product connection, real benefit to that audience, eligibility and current
+published terms. Online-only tools must not pretend to be local trades or offices. Record fit
+reason, evidence, proposed contribution, cost, rights, disclosure, contact policy, owner and exact
+approval state. Reject irrelevant logo farms, fabricated participation, profile/comment spam and
+paid followed-link schemes. Review genuine sponsorship by audience value, not domain suffix or DR.
+A paid placement needs explicit spend AND outreach/publication approval, honest disclosure and
+appropriate `sponsored`/`nofollow` qualification. This section never authorizes a contact or payment.
+
+### Snapshot-keyed human review
+
+Keep immutable, dated saved page bytes and their SHA-256 content hash (`page_sha256`) in the private
+project evidence store. Hash the actual page response or rendered snapshot bytes, not a URL, a
+run date or an excerpt. Identify the exact source URL, final URL, target URL and response status.
+The helper combines those fields with a stable record ID into `snapshot_key`. Context changes
+invalidate reuse even if the body happens to match. Collection timestamps remain separate.
+
+Record a human review as `reviewer`, timezone-aware `reviewed_at`, `decision` and `snapshot_key`.
+Allowed decisions: `accurate`, `review_needed`, `not_applicable`, `unverifiable`. Record rationale,
+source versions and any browser-scope limits. On recollection, supply the saved earlier rows as
+`previous_records`. Preserve the review only for the same page bytes AND identity/context. Changed
+or unverifiable bytes become `stale_review` or `pending_review`; retain old decisions in
+`review_history`, never silently erase them or replay domain-keyed reviews on new text. A record
+not collected this time remains in `not_collected_previous_records`, not a deletion finding.
+Legacy reviews with no exact snapshot hash remain historical and need a new scoped review.
+
+### Listing survival, indexation and bounded next steps
+
+Store public listing presence, actual target anchors/`rel`, robots/canonical/access state,
+review decision, indexing observations, referral traffic and business results as separate facts.
+A `200`, visible anchor, `index, follow`, submitted form, launch date or a successful API request
+is NOT indexed-page proof. Missing/challenged/failed reads are `unknown`, not removal. A dated,
+authorized URL Inspection of the exact URL may support `indexed_at_observation` or
+`not_indexed_at_observation`, not a guarantee. Without authorized first-party coverage, especially
+for third-party pages, indexing remains `unknown`; do not try an indexing service to fill the gap.
+
+Use the saved `observed_at`, not today's report date, for freshness. Set a project-specific
+`max_age_days` (1–365; default 30 is a review policy, not a provider claim). Future/missing/invalid
+dates cannot establish current evidence. A review may match unchanged bytes while the observation
+is stale; show both states. Every applicable row has `next_check` (or `follow_up_at`), owner,
+retry trigger and hold/suppression state. Past dates are `overdue`; blank dates are `missing_date`.
+Expose one bounded proposed check, never a repeated submission, email or automatic timer. Preserve
+holds even when overdue. Read the existing submission ledger and suppression/receipt history before
+any separately approved check or send. No date alone grants permission, and this helper creates no schedule.
+
+Copy `assets/directory-evidence-review.json` into the existing private project workspace, link rows
+by stable ID to the current tracker, and replace only synthetic examples with authorized saved
+observations. The sample contains no actual targets or private contacts. Run:
+
+```bash
+python3 scripts/directory_evidence.py <saved-ledger.json> --as-of 2026-10-29T07:00:00Z --limit 20 > <review-report.json>
+```
+
+The command is offline, writes only stdout, reads no credentials and performs no network requests,
+submissions, purchases or scheduler writes. Invalid supplied reviews fail closed. The queue is
+capped (1–100), and excess rows are counted as deferred. Its tests do not establish live enforcement
+or real-world results. Repeated execution does not manufacture collection or action receipts.
+
+**Exit:** attach the review report and original evidence references to the current directory tracker
+and monitoring snapshot. Report research, descriptions reviewed, approvals, actual attempts,
+public anchors/rel, indexing-unknown rows, survival/freshness limits and business results separately.
+Return exact approval/data gates and a bounded next check; do not claim new links, installation,
+indexation, traffic or revenue from this source change. Preserve the host's existing holds and
+separately approved recurring-delivery workflow rather than creating a parallel reporting system.
+
+Source: Ihusan request 29 October 2026 (Telegram 27661), prompted by
+https://x.com/indexsy/status/2115248306557477229 and the dated 28 October practice audit. The social
+source and automatically generated captions are unverified tactic claims, not operating instructions,
+independently verified audio, a ranking guarantee, or authority to act. This is a source review only.
