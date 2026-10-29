@@ -109,3 +109,15 @@ outputs:
 - `outreach/<date>_press-release-plan.json` — optional evidence packet and exact DRAFT release; no submission authority.
 
 **Done when.** A ranked opportunity list and matching personalized drafts exist in the workspace, every chosen tactic passed the guardrail, and nothing has been sent/submitted without explicit user confirmation. Directory work also has verified route evidence and a tracked public listing URL or rejection reason. Hosted-publishing work also has one row per screened site, one separately approved pilot at most, and live canonical/robots/`href`/`rel` plus outcome evidence before expansion; it never reports API success, crawl eligibility, or domain authority as a dofollow/indexing result. A press-release plan also has real-news, destination, rights, disclosure, link, correction-cost, and post-publication evidence fields, with creator claims kept separate from current observations. Wikipedia research either has ten verified candidates with dead/archive/COI evidence or an exhausted-search report; it never implies that an edit occurred. Feed approved sends + acquired-link counts into `monitoring.md` and re-check competitor backlink pace there monthly.
+
+
+## Directory evidence review handoff
+
+For existing vendor facts, public-business-field citation discovery, fit-qualified community or
+sponsorship candidates, and saved listing survival/review evidence, run the **Evidence reconciliation
+and survival review** section of `references/playbooks/authority/directory-submissions.md`.
+Use `assets/directory-evidence-review.json` and offline `scripts/directory_evidence.py`; retain the
+current tracker IDs, provenance, holds and exact external-action approvals. Changed page bytes
+invalidate previous reviews without erasing history. Send the resulting review report, dated
+presence/anchor observations, unresolved indexing and bounded proposed checks to `monitoring.md`.
+This adds no outreach, purchase, collector or schedule and does not adopt pending local-profile work.

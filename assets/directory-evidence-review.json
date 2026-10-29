@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "synthetic_example": true,
+  "max_age_days": 30,
+  "records": [
+    {
+      "record_id": "synthetic-1",
+      "listing_url": "https://directory.example/products/synthetic-1",
+      "target_url": "https://business.example/",
+      "final_url": "https://directory.example/products/synthetic-1",
+      "http_status": 200,
+      "page_sha256": "3a595e9d14f7915eb556e1c8387ffa39aaa79cbd9d348c0bbc5fe13864829edf",
+      "observed_at": "2026-10-19T12:00:00Z",
+      "listing_state": "public_reference_at_observation",
+      "link_attributes": [
+        "nofollow"
+      ],
+      "next_check": "2026-10-26T00:00:00Z",
+      "hold": "",
+      "indexing": {
+        "state": "unknown"
+      },
+      "business_outcome": "unknown"
+    },
+    {
+      "record_id": "synthetic-2",
+      "listing_url": "https://directory.example/products/synthetic-2",
+      "target_url": "https://business.example/",
+      "final_url": "https://directory.example/products/synthetic-2",
+      "http_status": 200,
+      "page_sha256": "96c0625dae29e3392d7461eefd75505248411dbb7549bf849c2c95fd8d20c90e",
+      "observed_at": "2026-10-19T12:00:00Z",
+      "listing_state": "public_reference_at_observation",
+      "link_attributes": [
+        "nofollow"
+      ],
+      "next_check": "",
+      "hold": "owner hold; no external action",
+      "indexing": {
+        "state": "unknown"
+      },
+      "business_outcome": "unknown"
+    },
+    {
+      "record_id": "synthetic-3",
+      "listing_url": "https://directory.example/products/synthetic-3",
+      "target_url": "https://business.example/",
+      "final_url": "https://directory.example/products/synthetic-3",
+      "http_status": 200,
+      "page_sha256": "e40e26efaf00022d2b05af15e8a5cee57811335259d5aef890e1269b658daa62",
+      "observed_at": "2026-10-19T12:00:00Z",
+      "listing_state": "public_reference_at_observation",
+      "link_attributes": [
+        "nofollow"
+      ],
+      "next_check": "2026-11-05T00:00:00Z",
+      "hold": "",
+      "indexing": {
+        "state": "unknown"
+      },
+      "business_outcome": "unknown"
+    }
+  ],
+  "previous_records": []
+}
