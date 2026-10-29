@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "state": "DRAFT_RESEARCH_ONLY",
+  "execution": "manual_review_only",
+  "source_url": "https://x.com/jespernissenseo/status/2115426892459254182",
+  "project": null,
+  "channel_url": null,
+  "channel_role": null,
+  "eligibility_evidence": null,
+  "availability_checked_at": null,
+  "reader_job": null,
+  "demand_evidence": null,
+  "original_evidence": null,
+  "owned_page_overlap_review": null,
+  "disclosure": null,
+  "draft": {
+    "text": null,
+    "media_rights": null,
+    "destination_url": null,
+    "link_reader_reason": null
+  },
+  "approval": {
+    "state": "EXACT_PUBLICATION_NOT_APPROVED",
+    "exact_copy_digest": null,
+    "channel": null,
+    "destination": null,
+    "reviewer": null,
+    "approved_at": null
+  },
+  "measurement_plan": {
+    "primary_goal": null,
+    "success_threshold": null,
+    "query_panel": [],
+    "locale": null,
+    "device": null,
+    "account_state": null,
+    "baseline": null,
+    "proposed_manual_days": [
+      0,
+      7,
+      14,
+      30
+    ],
+    "schedules_created": false,
+    "cost_cap": null,
+    "stop_conditions": [
+      "missing exact approval",
+      "no standalone reader value",
+      "thin duplicate or keyword spam",
+      "misleading affiliation or local presence",
+      "platform removal or restriction",
+      "no useful signal in the registered window"
+    ]
+  },
+  "publication": {
+    "public_url": null,
+    "receipt": null,
+    "published_at": null
+  },
+  "page_evidence": {
+    "http_status": null,
+    "canonical": null,
+    "robots": null,
+    "rendered_href": null,
+    "rendered_rel": null,
+    "visible_without_login": null,
+    "checked_at": null
+  },
+  "observations": [],
+  "outcomes": {
+    "youtube_engagement": null,
+    "ordinary_search_visibility": null,
+    "google_ai_overview_citation": null,
+    "other_provider_citations": null,
+    "qualified_referrals": null,
+    "leads": null,
+    "conversions": null,
+    "revenue": null
+  },
+  "verdict": "NOT_RUN",
+  "indexing_service_used": false,
+  "expansion_authorized": false
+}

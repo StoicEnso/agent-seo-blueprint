@@ -1,0 +1,113 @@
+## youtube-posts-help (fetched 2026-10-29)
+Create a post
+YouTube Community Posts
+Posts can give you more reach on YouTube and greater engagement with your audience. Learn more about
+Posts tab benefits and eligibility
+. If you want to create posts to connect only with subscribers in your Community, learn more about
+Communities on YouTub
+e
+.
+Create a post
+To create a post:
+Sign in to
+YouTube
+.
+At the top of the page, select
+Create
+Create post
+.
+In the box at the top:
+Type a message to create a text post or choose from the bottom menu to create a video
+, poll
+, quiz
+, or image
+post.
+Select
+Post
+.
+We limit how many posts a channel can create in a 24-hour period to protect the YouTube community. If you run into a “limit reached” error message, try again in 24 hours.
+
+
+## youtube-eligibility (fetched 2026-10-29)
+Learn about posts
+YouTube Community Posts
+Subscribe to the
+YouTube Creators channel
+for the latest news, updates, and tips.
+You can create posts to connect and interact with your viewers through polls, quizzes, GIFs, text, music, images, and video. If you want to create posts to connect only with subscribers in your Community, learn more about
+Communities on YouTube
+.
+Your audience can find your posts on your channel page either on the Posts shelf in the Home tab or in the Posts tab. Posts may also show up on their homepage and Subscriptions feed, and image posts may additionally show on the Shorts feed. If they’re subscribed to your channel, they may get a notification when you post.
+Engaging with other creators’ posts may increase the chance of your viewers seeing those posts across YouTube.
+Posts aren’t available if:
+You’re using a
+supervised account
+.
+Your channel is
+set as “Made for Kids.”
+If your channel’s audience is
+set as "Made for Kids,"
+your Posts tab will only be visible to you and not your viewers. You also can't create new posts, but you can view past posts.
+Note:
+Access to posts can change
+based on your channel role
+. Posts are not currently available in Germany.
+
+
+## youtube-communities (fetched 2026-10-29)
+Communities are a dedicated space for you and your audience to connect with each other right from your channel. In your Community, your subscribers can start discussions about your videos, share pictures, and other activities that create more engagement about your videos. You can choose whether or not you want to make a Community available on your channel.
+Posts that you or your viewers create from your Community are shared only to your Community, and will not show on the
+Posts tab
+for viewers. Community-only posts may be recommended to viewers on their homepage, Subscriptions, and Watch Next feed.
+Note:
+Viewers must be subscribed to your channel for a minimum amount of time before they can post. You can adjust the period of time in your
+Content controls settings
+.
+Communities on YouTube
+You can start your own Community if:
+You have existing access to posts
+You’re over 16 and your channel is not set up as a
+supervised experience
+Your audience is not set as
+made for kids
+Your channel is not a VEVO channel
+
+
+## google-spam (fetched 2026-10-29)
+Site reputation policy
+The site reputation policy applies where third-party content is published on a host site mainly
+  because of that host's already-established ranking signals, which it has earned primarily from its
+  first-party content. The goal of this tactic is for the content to rank better than it could
+  otherwise on its own. We have
+made changes
+applicable to the policy in the
+European Economic Area
+(EEA).
+Third-party content
+is content that's created by an entity that's separate
+  from the established host site. Examples of separate entities include users of that site,
+  freelancers, white-label services, and content created by people not employed directly by the host
+  site.
+Having third-party content alone isn't inconsistent with the site reputation policy; it's only
+  inconsistent if the third-party content is published on a host site mainly because of that host
+  site's already-established ranking signals.
+Examples inconsistent with the site reputation policy include, but aren't limited to:
+An educational site hosting a page about sponsored reviews of payday loans written by a
+    third-party that distributes the same page to other sites across the web
+A medical site hosting a low-quality, third-party advertising page about "best casinos" that
+    isn't integrated with the site, and that's being placed on the site to rank better due to the
+    established site's ranking signals
+Examples that are
+NOT
+considered inconsistent with the site reputation policy include:
+Wire service or press release service sites
+News publications that have syndicated news content from other news publications
+Sites designed to allow user-generated content, such as a forum website or comment sections
+Columns, opinion pieces, articles, and other work of an editorial nature
+Third-party content (for example, "advertorial" or "native advertising" type pages) where the
+    purpose is to share content directly to readers (such as through promotion within the publication
+    itself), rather than hosting the content to manipulate search rankings
+Using affiliate links throughout a page, with
+links treated appropriately
+,
+    or embedding third-party ad units throughout a page

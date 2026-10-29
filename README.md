@@ -349,3 +349,7 @@ endorsed by the course author.
 
 **License:** MIT — see [`LICENSE`](LICENSE). Covers the original work in this repo (playbooks, course index, workflows,
 scripts, templates). Course transcripts are not included and are not covered.
+
+
+## YouTube channel Posts claim review
+The existing [hosted-publishing playbook](references/playbooks/authority/hosted-publishing-experiments.md) now includes a review-only YouTube Posts branch. See the [dated source review](audit-log/2026-10-29-youtube-posts-review.md) and [inert pilot form](assets/youtube-post-review.json). A distinctive-query screenshot is not a competitive-rank, backlink, local-SEO or revenue guarantee. No live publication or indexing experiment is included.
