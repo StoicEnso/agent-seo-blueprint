@@ -10,6 +10,7 @@ playbooks:
   - references/playbooks/authority/content-rings-for-links.md
   - references/playbooks/authority/building-an-audience.md
   - references/playbooks/authority/acquiring-domain-authority.md
+  - references/playbooks/authority/journalist-ready-data-packets.md
   - references/playbooks/authority/other-link-building.md
   - references/playbooks/authority/directory-submissions.md
   - references/playbooks/authority/startup-backlink-directory-submissions.md
@@ -57,6 +58,7 @@ outputs:
 2. **Pick tactics for this project.** Choose from the menu based on fit (you can run several):
    - **Link stealing** (`link-stealing.md`) — find roundups/listicles linking a weaker competitor but not you; pitch "add me" or "swap the weak link." Needs you to be genuinely better.
    - **Affiliate program / competitor-affiliate mining** (`affiliate-programs.md`) — for a paid product with sustainable unit economics: fingerprint verified public referral routes, qualify the competitor's editorial affiliates, model a defensible offer, and draft `test/add`, `comparison`, or `switch` asks. Never invent terms or blindly outbid.
+   - **Journalist-ready data** (`journalist-ready-data-packets.md`) — verify a recent bylined article and a genuinely additive question; use approved aggregate data, a deterministic chart, source CSV, method and DRAFT quote. Copy `assets/journalist-data-brief.csv`; `scripts/journalist_data_packet.py` builds an offline draft only. Public-source reanalysis must not be called proprietary database research. Hold publication and the exact outreach batch separately.
    - **HARO / Help a B2B Writer Out** (`haro.md`) — if someone can speak as an expert: draft credible, specific quotes (add a Loom touch) for high-DR editorial links.
    - **Manual outreach** (`manual-outreach.md`) — revisit-the-topic pitches, missing-link asks, free-access offers, and the case-study trade (target smaller tools with few case studies).
    - **Content rings** (`content-rings-for-links.md`) — link the new page from your own aged, genuinely-useful properties for a launch head start. (Build new ring properties via `content-production.md`'s content-ring path.)

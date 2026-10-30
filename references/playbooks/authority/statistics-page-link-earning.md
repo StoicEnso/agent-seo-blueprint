@@ -147,3 +147,7 @@ Stop or revise when:
 ## Done when
 
 A brief exists with a qualified live SERP, stable yearless URL, checked evidence ledger, at least one auditable original or reproducible statistic, draft page structure, honest schema plan, two-way contextual-link reasons, approval states, maintenance date, and a measurement plan. No fabricated data, page publication, outreach send, or ranking/backlink promise occurred.
+
+## Journalist follow-up branch
+
+For a finished chart/CSV/quote packet matched to a recent article, load [[journalist-ready-data-packets]]. It adds reporter-fit, aggregate-data privacy, deterministic chart and first-email packaging checks; it does not replace this playbook’s source, search-fit, architecture or publication gates.
