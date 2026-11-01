@@ -1,0 +1,13 @@
+source_entries,family,decision,existing_route,evidence_gate
+1-5,editorial_exchange,REJECT_EXCHANGE_CONDITION,references/playbooks/authority/editorial-link-intent-and-assets.md,Reject network credits or required reciprocity; independent useful citations only.
+6-12,buyer_roundups,COVERED,references/playbooks/authority/link-stealing.md,Inspect the live page and buyer gap; supply tested evidence; draft an optional addition.
+13-19,original_statistics,COVERED,references/playbooks/authority/statistics-page-link-earning.md,Use an auditable sample and methodology with a stable research URL; no invented data.
+20-27,journalist_requests,COVERED,references/playbooks/authority/editorial-link-intent-and-assets.md,Verify requester and deadline; obtain named-expert approval; deduplicate exact requests.
+28-32,competitor_link_reason,COVERED,references/playbooks/authority/editorial-link-intent-and-assets.md,Read the surrounding sentence and match the actual editorial reason; do not copy the backlink.
+33-37,earned_link_recovery,COVERED,references/playbooks/authority/editorial-link-intent-and-assets.md,Verify ownership and missing attribution; document old and equivalent replacement URLs; hold redirect writes for approval.
+38-43,useful_free_tools,COVERED,references/playbooks/content/free-tools-strategy.md,Validate normal and boundary inputs; explain units and assumptions; require publication approval.
+44-49,broken_or_decayed_resource,COVERED,references/playbooks/authority/editorial-link-intent-and-assets.md,Check HTTP state plus archived purpose; a resolving obsolete resource differs from a dead URL; match original intent.
+50-55,permission_first_visual,COVERED,references/playbooks/authority/editorial-link-intent-and-assets.md,Ask before production; check source facts and rights; no mandatory followed link or optimized embed anchor.
+56-60,permission_first_video,COVERED,references/playbooks/authority/editorial-link-intent-and-assets.md,Confirm publisher interest and rights; verify script and captions; gift the asset without a link condition.
+61-64,vendor_customer_story,COVERED,references/playbooks/authority/manual-outreach.md,Use only tools actually used and evidenced results; disclose incentives; editor controls publication and links.
+65-69,eligible_business_listings,COVERED,references/playbooks/authority/government-supplier-registry-profiles.md,Verify destination-owned rules and real eligibility; procurement registration is not a backlink; public rendered link required.

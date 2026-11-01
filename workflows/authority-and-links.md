@@ -4,6 +4,8 @@ goal: Pick link-building tactics, build a ranked backlink opportunity list, and 
 playbooks:
   - references/playbooks/authority/understanding-authority.md
   - references/playbooks/authority/link-stealing.md
+  - references/playbooks/authority/editorial-link-intent-and-assets.md
+  - references/playbooks/authority/statistics-page-link-earning.md
   - references/playbooks/authority/affiliate-programs.md
   - references/playbooks/authority/haro.md
   - references/playbooks/authority/manual-outreach.md
@@ -55,6 +57,7 @@ outputs:
 1. **Set strategy & map the landscape.** Load `understanding-authority.md`. Identify the top-ranking competitor for the money keyword (`serp_capture.py`), then Site-Explorer it in Ahrefs (`ahrefs_client.py`) → Backlinks. Note high-DR, dofollow, low-dilution, topically-relevant referring domains — this is the raw target pool. Weight by quality (DR is logarithmic; few outbound links = more value passed), not count.
 
 2. **Pick tactics for this project.** Choose from the menu based on fit (you can run several):
+   - **Editorial intent and research assets** (`editorial-link-intent-and-assets.md`, `statistics-page-link-earning.md`) — verify the actual recipient-side gap, ownership and evidence before an asset or DRAFT pitch. For the 69-entry Borja source list, use [the reviewed crosswalk](../audit-log/2026-11-01-borja-backlink-tactics.md) and `assets/borja-backlink-tactic-review.csv`: reuse these existing methods, reject exchange conditions, and do not count source steps as new tactics.
    - **Link stealing** (`link-stealing.md`) — find roundups/listicles linking a weaker competitor but not you; pitch "add me" or "swap the weak link." Needs you to be genuinely better.
    - **Affiliate program / competitor-affiliate mining** (`affiliate-programs.md`) — for a paid product with sustainable unit economics: fingerprint verified public referral routes, qualify the competitor's editorial affiliates, model a defensible offer, and draft `test/add`, `comparison`, or `switch` asks. Never invent terms or blindly outbid.
    - **HARO / Help a B2B Writer Out** (`haro.md`) — if someone can speak as an expert: draft credible, specific quotes (add a Loom touch) for high-DR editorial links.
