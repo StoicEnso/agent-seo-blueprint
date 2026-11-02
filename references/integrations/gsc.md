@@ -92,3 +92,8 @@ Produce this (API or browser) so it feeds `scripts/report.py monitoring` and the
 For `scripts/report.py monitoring`, map `metrics` → its `metrics` block and the top `rows` → its `keywords` list (`{keyword, position, change}` after diffing against the previous snapshot).
 
 For the Generative AI report, use the separate snapshot contract in `references/playbooks/maintenance/google-generative-ai-visibility.md`; do not force impression-only data into the ordinary query/rank schema.
+
+
+## Eight-plus-word query/page exports
+
+For the exact RE2 filter, query+page extraction and pagination contract, load `references/gsc-long-query-review.md`. `scripts/gsc_long_query_review.py` analyzes private saved exports offline; it does not turn `gsc_pull.py` into a working API client. Keep anonymized/top-row omissions explicit and use the actual authorized data route. High impressions with low clicks do not alone establish a snippet or content problem.

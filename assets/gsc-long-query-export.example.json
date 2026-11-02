@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "example_only": true,
+    "property": "sc-domain:example.com",
+    "start_date": "2026-10-04",
+    "end_date": "2026-10-31",
+    "captured_at": "2026-11-02T12:00:00+00:00",
+    "search_type": "web",
+    "data_state": "final",
+    "dimensions": ["query", "page"],
+    "filters": {"country": "all", "device": "all", "query": "none; offline matched and nonmatching controls"},
+    "extraction_complete": true,
+    "source": "SYNTHETIC TEST FIXTURE, not a live GSC export",
+    "pagination_notes": "Three synthetic rows only; no network call."
+  },
+  "rows": [
+    {"query": "how much does a small garden redesign cost", "page": "https://example.com/garden-cost", "clicks": 2, "impressions": 200, "ctr": 0.01, "position": 12.5},
+    {"query": "what should I check before hiring a landscaper", "page": "https://example.com/hiring", "clicks": 0, "impressions": 150, "ctr": 0.0, "position": 23.0},
+    {"query": "how much does a small garden cost", "page": "https://example.com/garden-cost", "clicks": 3, "impressions": 100, "ctr": 0.03, "position": 8.0}
+  ]
+}
