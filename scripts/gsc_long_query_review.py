@@ -10,7 +10,11 @@ import re
 from urllib.parse import urlsplit
 
 PATTERN = r"^(?:\S+\s+){7,}\S+$"
-LONG_QUERY = re.compile(PATTERN, re.ASCII)
+# RE2 Perl whitespace excludes vertical tab and Unicode spaces; Python \s differs.
+RE2_SPACE = r"[ \t\n\f\r]"
+RE2_TOKEN = r"[^ \t\n\f\r]"
+LONG_QUERY = re.compile(PATTERN.replace(r"\S", RE2_TOKEN).replace(r"\s", RE2_SPACE))
+TOKENS = re.compile(RE2_TOKEN + "+")
 
 
 def page_in_property(page, prop):
@@ -109,7 +113,7 @@ def review(payload, as_of=None, max_age_days=7):
             if supplied > 1 or abs(supplied - ctr) > 0.0001:
                 raise ValueError(f"row {i}: CTR must be a 0..1 ratio consistent with clicks/impressions")
         row.update(clicks=clicks, impressions=impressions, ctr=ctr, position=position,
-                   word_count=len(re.findall(r"\S+", row["query"], flags=re.ASCII)),
+                   word_count=len(TOKENS.findall(row["query"])),
                    status="STALE_DATA" if stale else "NEEDS_PAGE_REVIEW")
         (candidates if LONG_QUERY.fullmatch(row["query"]) else nonmatches).append(row)
     candidates.sort(key=lambda r: (-r["impressions"], r["ctr"], r["query"], r["page"]))

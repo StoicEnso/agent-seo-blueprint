@@ -31,7 +31,7 @@ An @askOkara screenshot dated 2 November 2026 suggests filtering Google Search C
 }
 ```
 
-Dates above are an example, not a permanent window. Retain country/device filters and page through `startRow` in a bounded rate-safe sequence. Google uses RE2; the expression uses no lookbehind or backreferences. The offline Python helper uses compatible syntax, not an embedded RE2 engine.
+Dates above are an example, not a permanent window. Retain country/device filters and page through `startRow` in a bounded rate-safe sequence. Google uses RE2; the expression uses no lookbehind or backreferences. The offline Python helper emulates RE2’s ASCII whitespace classes (including its vertical-tab and Unicode-space exclusions); it is not an embedded RE2 engine.
 
 ## Offline candidate review
 

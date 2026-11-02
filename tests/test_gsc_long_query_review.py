@@ -35,6 +35,13 @@ class LongQueryTest(unittest.TestCase):
             self.assertIsNone(MOD.LONG_QUERY.fullmatch(q2))
         self.assertIsNone(MOD.LONG_QUERY.fullmatch("花园设计需要多少钱应该如何规划"))
 
+    def test_re2_whitespace_semantics_not_python_unicode_split(self):
+        for separator in ["\u00a0", "\v", "\u2003"]:
+            q = "one" + separator + "two three four five six seven eight"
+            self.assertIsNone(MOD.LONG_QUERY.fullmatch(q))
+            self.assertEqual(len(MOD.TOKENS.findall(q)), 7)
+        self.assertTrue(MOD.LONG_QUERY.fullmatch("one\ftwo three four five six seven eight"))
+
     def test_raw_rows_manifest_and_input_preserved(self):
         original = copy.deepcopy(self.data)
         result = self.run_review()
