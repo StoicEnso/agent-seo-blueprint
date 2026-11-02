@@ -57,3 +57,8 @@ Use this for ongoing optimization when a site already has live pages and Search 
 ## Done condition
 
 Produce an implementation-ready list of valid opportunities and explicit rejected/recovery-only rows. Every valid row includes current GSC evidence, a verified ranking page, live intent/SERP evidence, a precise change, and caveats.
+
+
+## Optional eight-plus-word discovery slice
+
+Load `references/gsc-long-query-review.md` when filtering for long, specific queries. Reuse this playbook’s page/intent evidence and content-production handoff, but do not impose the 4–20 rank cutoff on the separate length-filtered export. Word count alone proves neither a question nor an AI-provider prompt.
