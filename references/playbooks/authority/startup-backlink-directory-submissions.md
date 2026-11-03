@@ -23,6 +23,16 @@ Directory Finder is registered as a structured discovery source because it expos
 5. Check that the source exposes enough provenance to revisit the entry. A screenshot, copied DR table, or anonymous list with no destination route is a weaker lead.
 6. Do not crawl or import an entire changing source merely to inflate the queue. Start with the niche/region/product filters that match the project.
 
+## Dated Void / Dotstore intake
+
+The [2026-11-03 source audit](../../audit-log/2026-11-03-voidyaps-directory-intake.md) recovers all **186** rows behind the social screenshots, not just the first 76 shown in images. `assets/voidyaps-directory-intake-20261103.csv` retains every source row and its disposition. `assets/voidyaps-missing-candidates.csv` adds **77** source-audited, **unverified** directory/launch/profile leads; it uses the existing candidate schema without rewriting the 142-row legacy file.
+
+The other rows are 31 already represented in main, 60 represented in open directory-intake PRs, and 18 held or routed outside the generic queue. Pending PR coverage is not merged coverage. Check the cited branch/file evidence and deduplicate again when combining or merging intakes. Domain identity takes precedence over similar names: `Launch`/`LaunchIt` are not one destination, while a reviewed brand alias can refer to the same destination.
+
+This is **not an all-free list** and not a recommendation to submit 77 listings. Preserve source prices, DR, badge conditions and link claims as unverified. Clearity's named destination is a journal app, AI Directories sells a submission service, and the Linguix row points at a review-platform host; those rows are not copied into the generic candidate queue. Community, design-award, editorial, games-marketplace and generic-web entries retain their separate reasons. Source metadata alone is not destination-owned verification.
+
+Join only relevant rows from the additional candidate CSV with the existing research queue. Complete the verification pipeline below before any promotion, approval or external write. No accounts, submissions, outreach, spend, installations or scheduled work are authorized by importing the files.
+
 ## Verification pipeline
 
 1. Resolve the current domain and confirm it is the same entity named by the source.
