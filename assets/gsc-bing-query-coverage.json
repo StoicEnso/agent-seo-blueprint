@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "mode": "draft_only",
+  "example": false,
+  "page": {
+    "url": null,
+    "observed_canonical": null,
+    "primary_target": null,
+    "audience_and_offer": null,
+    "revision_or_hash": null,
+    "read_at": null,
+    "content_evidence": null
+  },
+  "scope_policy": {
+    "current_window_days": 28,
+    "cluster_cap": 5,
+    "minimum_impressions_by_engine": {
+      "gsc": null,
+      "bing": null
+    },
+    "comparison": "unknown",
+    "limitations": []
+  },
+  "sources": {
+    "gsc": {
+      "status": "not_requested",
+      "property": null,
+      "report_surface": null,
+      "page_filter": null,
+      "date_start": null,
+      "date_end": null,
+      "timezone": null,
+      "country": null,
+      "device": null,
+      "search_type": null,
+      "collected_at": null,
+      "data_finality": "unknown",
+      "row_limit": null,
+      "pagination_complete": null,
+      "known_omissions": [],
+      "raw_export": null,
+      "failure_reason": null
+    },
+    "bing": {
+      "status": "not_requested",
+      "property": null,
+      "report_surface": null,
+      "page_filter": null,
+      "date_start": null,
+      "date_end": null,
+      "timezone": null,
+      "country": null,
+      "device": null,
+      "search_type": null,
+      "collected_at": null,
+      "data_finality": "unknown",
+      "row_limit": null,
+      "pagination_complete": null,
+      "known_omissions": [],
+      "raw_export": null,
+      "failure_reason": null
+    }
+  },
+  "clusters": [],
+  "cluster_template": {
+    "cluster_id": null,
+    "normalized_label": null,
+    "source_presence": "unverified",
+    "source_presence_limitations": [],
+    "observations": {
+      "gsc": {
+        "queries": [],
+        "raw_row_locators": [],
+        "clicks": null,
+        "impressions": null,
+        "ctr": null,
+        "avg_position": null,
+        "metric_status": "unavailable",
+        "metric_limitations": []
+      },
+      "bing": {
+        "queries": [],
+        "raw_row_locators": [],
+        "clicks": null,
+        "impressions": null,
+        "ctr": null,
+        "avg_position": null,
+        "metric_status": "unavailable",
+        "metric_limitations": []
+      }
+    },
+    "coverage": {
+      "status": "unverified",
+      "page_quote": null,
+      "section_locator": null,
+      "reason": null
+    },
+    "serp_evidence": [],
+    "serp_status_by_engine": {
+      "gsc": "not_checked",
+      "bing": "not_checked"
+    },
+    "owner_and_cannibalization_check": "not_checked",
+    "priority": null,
+    "priority_reason": null,
+    "disposition": "research_only",
+    "recommendation": {
+      "target_queries": [],
+      "exact_diff": null,
+      "insertion_point": null,
+      "suggested_heading": null,
+      "section_description": null,
+      "evidence": [],
+      "effort": null,
+      "internal_links": [],
+      "metadata_options": []
+    }
+  },
+  "decision": {
+    "approval": "not_requested",
+    "approved_revision_or_hash": null,
+    "risk": null,
+    "rollback": null,
+    "website_write_allowed": false,
+    "indexing_submission_allowed": false
+  },
+  "measurement": {
+    "days_after_approved_change": [
+      28,
+      56
+    ],
+    "gsc_baseline": null,
+    "bing_baseline": null,
+    "gsc_followup": null,
+    "bing_followup": null,
+    "confounders": [],
+    "causality_claimed": false,
+    "schedule_created": false
+  }
+}
