@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
+- [The knowledge layer](#the-knowledge-layer-67-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,14 +46,15 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **67 playbooks**: 36 original course distillations plus 31 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
   `coverage-map.md` proves all 62 lessons map to at least one course-derived playbook.
 - **11 workflows**: five core pipelines, four operational deep dives, and two end-to-end planning workflows for a full
   SEO master plan and a BOFU→MOFU→TOFU rollout.
-- **8 integration references** covering Ahrefs, GSC, GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, CWV thresholds, and public social research.
+- **9 integration references** covering Ahrefs, GSC, Bing Webmaster Tools (saved exports/browser only), GA4, live SERP, PageSpeed/Lighthouse, DataForSEO, CWV thresholds, and public social research.
+- **Dual-engine page-query coverage** — optional [Google + Bing review](references/playbooks/maintenance/content-opportunity-audit-and-measurement.md#optional-google--bing-page-query-coverage-review), [ledger template](assets/gsc-bing-query-coverage.json), and [synthetic worked example](examples/gsc-bing-query-coverage.md). Discover queries together; keep metrics separate; draft only after page/intent checks.
 - **ICP persona subagents** — summon Opus subagents that role-play ideal customers to ideate content angles, surface the
   exact phrases people search, and pressure-test niches.
 - **Per-project workspace** — config + dated artifacts (audits, keyword maps, briefs, source packets, drafts,
@@ -90,7 +91,7 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 31 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
@@ -99,7 +100,7 @@ references/
   course-index/
     course-index.json          # searchable index: 62 lessons → summary, takeaways, aliases, playbooks
     course-index.md            # human-readable mirror (6 chapters, 62 lessons)
-  integrations/                # 8 source/threshold references, including DataForSEO, CWV, and public social research
+  integrations/                # 9 source/threshold references, including DataForSEO, CWV, and public social research
   coverage-map.md              # proof: every lesson → its playbook(s)
 workflows/                     # 5 core pipelines + 4 operational deep dives + 2 planning workflows
   research-and-ideation.md  content-production.md  site-audit.md
@@ -131,7 +132,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (67 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.

@@ -13,6 +13,10 @@ First-party Google search performance for a property you own/verify:
 - `references/playbooks/maintenance/google-generative-ai-visibility.md` — Google AI impression collection, inclusion-control audit, limitations, and response matrix.
 - Workflows: `monitoring.md`, `site-audit.md`.
 
+## Optional Bing query-discovery supplement
+
+For page-level coverage reviews, use `references/integrations/bing.md` and the optional Google + Bing branch in `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md`. Preserve raw exports, page filters, reporting scope and missing-query limits. Union discovery only: never blend engine positions/CTR or interpret absent Google rows as zero demand.
+
 ## Auth — API path (documented; stub is dependency-free)
 - **Script:** `scripts/gsc_pull.py` — checks for creds, prints the target output shape, and (when creds exist) reports what it *would* query. It intentionally does **not** import Google libraries (none are installed).
 - **Env var:** `GSC_CREDS` = path to a service-account JSON (recommended) or an OAuth token file.

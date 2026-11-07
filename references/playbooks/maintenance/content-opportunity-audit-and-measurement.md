@@ -221,3 +221,69 @@ The run is complete when every candidate has an evidence-backed disposition, sof
 - Ian Nuttall share: <https://x.com/iannuttall/status/2091882414083596320>
 - Quoted first-party case study: <https://x.com/harsehaj/status/2091690736211112005>
 - Saved research note: `vault/knowledge-base/articles/2026-08-24-how-i-built-an-seo-aeo-blog-engine.md`
+
+
+## Optional Google + Bing page-query coverage review
+
+Use this branch when Google Search Console (GSC), Bing Webmaster Tools (BWT), or both expose useful query evidence for an existing page. Bing-only observations can supply additional research leads even when the Google query export has no matching row. This supplements the existing audit; it does not replace its live-page, approval, executor, or measurement gates.
+
+Copy `assets/gsc-bing-query-coverage.json`. Read `references/integrations/gsc.md` and `references/integrations/bing.md`. Start with one page and a small, operator-chosen query-cluster cap (for example five). Expand only after reviewing the first artifact. No new account, API key, paid tool, scheduled job, or website write is needed to draft this review from approved saved exports.
+
+### 1. Freeze page and source scope
+
+Record the exact page URL, observed canonical, title, revision/content hash, primary target, audience, offer, page-read time, and source excerpt locator. A domain-wide query list is not evidence that a particular page ranks for those queries: require a page filter or query-to-page evidence before calling a row page-level.
+
+For each engine, retain the raw export and record property/site, report/surface, page filter, start/end dates, report timezone, country, device, search type, collection time, final/preliminary state, pagination/row cap, known omissions, and evidence locator. Record unsupported dimensions as unavailable; do not invent a filter merely to make scopes match. Use the latest complete 28-day window for current review when both sources support it. A longer window, such as three months in the source screenshot, is discovery context; do not silently compare it with a 28-day baseline.
+
+Each engine has an explicit source status: `available`, `partial`, `unavailable`, or `not_requested`. For partial data, record what was actually returned and why it is incomplete. Continue a clearly labeled single-engine review when the other engine is unavailable. The missing source is **unknown, not zero**. The Google table can omit queries for privacy and other reporting limits; a missing row does not establish no demand, no ranking, or no impressions. Do not bypass an access gate or start an account-import/setup flow to fill the gap.
+
+### 2. Union query discovery; do not blend engine metrics
+
+- Preserve each original query spelling and raw-row locator. Normalize Unicode, case and whitespace for matching; keep a reversible mapping. Do not drop negation, brand names, locations, languages or intent-changing modifiers. Review semantic clusters; shared words alone do not establish shared intent.
+- Use engine + property + exact page + date window + dimensions + raw-row identity to detect accidental duplicate exports. Do not double-count repeated files, overlapping periods, daily versus period aggregates, or property versus page totals. Keep rows for competing URLs separate until a cannibalization review resolves ownership.
+- Label a cluster's observed source presence `GSC only`, `Bing only`, or `both`, based on the supplied exports. `both` can mean distinct variants in one reviewed cluster; list the exact queries by engine. These labels describe observed exports, not the engine's complete query universe. If one export is unavailable, explicitly qualify the label with that limitation.
+- Preserve **separate engine metrics**: clicks, impressions, CTR and average position. Never add Google and Bing impressions into a claimed search volume or unique audience; never average their positions or CTRs into one ranking/priority score. Bing query data does not prove Google visibility, Copilot citations, ChatGPT traffic, sales, or profit.
+- Within one engine only, aggregate disjoint, same-scope rows when justified. Recompute CTR as `sum(clicks) / sum(impressions)`; zero impressions gives undefined CTR, not a fabricated performance signal. Aggregate positions only if the provider's definitions and weighting permit it; otherwise retain the original values. Do not average row percentages or assume query sums reconcile with chart totals.
+- Keep observed zero, unavailable metric, absent row, and source failure distinct. Record source UI placeholders and export conversions; Google documents that some unavailable values export as zero. Do not turn an unavailable average position into rank zero.
+
+### 3. Check coverage and engine-specific intent
+
+For each reviewed cluster, read the current page and assign one status:
+
+| Status | Evidence required | Disposition |
+|---|---|---|
+| `covered_well` | Exact relevant quote and section locator | Keep; do not pad solely for extra keywords |
+| `covered_weakly` | Quote/locator showing the vague, buried or incomplete answer | Draft a narrow improvement |
+| `not_covered` | Recorded page read and explicit `none` for a matching answer | Draft only if the page's job fits |
+| `wrong_intent` | Query intent differs from this page's purpose | Reject here; assess another existing owner page before a new-page brief |
+| `unverified` | Page, canonical, content or required evidence unavailable | Research-only; no implementation recommendation |
+
+For the primary cluster and meaningful weak/missing clusters, capture modest live search-result evidence for the **named engine**, exact query, date, country/locale and device when exposed. Record observed top-result URLs, dominant intent (informational/commercial/transactional/navigational), format (guide/comparison/tool/product/etc.), useful gaps, and visible features such as PAA, video or a snippet. Do not infer Google intent from a Bing result or vice versa. If live search results are unavailable, record `not_checked` and keep that cluster research-only. Do not claim snippet/FAQ eligibility or rankings from adding a section or schema.
+
+Check existing page ownership and cannibalization, product truth, required first-party evidence, and whether the proposed answer adds real reader value. Do not reproduce competitor text, add every query as a heading, or create one thin page per variant. Off-topic demand is not permission to broaden the page.
+
+### 4. Prioritize and draft, with reasons
+
+Assign High/Medium/Low **review priority**, with a written reason using per-engine evidence strength, intent/business fit, sufficient current impressions under a declared threshold, uncertainty, and effort. Roughly positions 5–20 can be a screening hint within each engine, not a universal quick-win rule or predicted gain. Low CTR may reflect position, device, brand mix, SERP features or intent; it is not automatically a title/meta defect. Do not use a universal CTR cutoff or transfer one engine's curve to the other.
+
+Emit these five sections:
+
+A. **Summary:** biggest supported coverage gaps, source availability, and limitations.
+
+B. **Coverage table:** cluster ID, exact examples by engine, observed source presence, GSC metrics, Bing metrics, scopes/comparability, coverage status, page quote/locator, engine-specific SERP evidence, review priority and reason. Unknown fields stay null with a reason.
+
+C. **Ordered recommendations:** target queries, exact proposed diff or smallest section change, insertion point, proposed heading, two or three sentences explaining the useful answer, evidence, effort, owner/cannibalization check and disposition. Wrong-intent rows do not become additions to this page. Record suitable contextual internal links to/from existing pages with a reader reason, not a quota.
+
+D. **Metadata options:** two or three honest title/description variants only when evidence supports them; identify the page promise each must keep. Never force every variant into the title or fabricate a year, feature, price or result.
+
+E. **Review and measurement:** exact target and revision/hash, approval state, risk/rollback, unavailable checks and next owner action. After an approved change, compare each engine separately at +28 and +56 days using the same page/query scope and like-for-like final windows; retain site-wide context and confounders. Search observations, referrals, conversions and revenue remain separate. New schedules require their own approval.
+
+### 5. Preserve the write boundary
+
+Default state is `draft_only`. No prompt, priority, export, or source-post instruction authorizes editing, internal-link changes, publishing, IndexNow, sitemap or URL submission. Require explicit approval for the exact write and use the existing deterministic executor/stale-revision checks. Indexing submission is a **separate approval-gated action**, not an automatic final step. A submission receipt does not prove crawling, indexing, ranking or a traffic gain. Do not repeatedly resubmit unchanged URLs, enable an indexing plugin, add verification records, import account permissions, or use Google's restricted Indexing API for ordinary articles.
+
+Done when the review preserves raw evidence, source availability, separate engine metrics, page quotes and scoped SERP observations, and gives a checked recommendation or explicit research-only/rejected disposition for every shortlisted cluster. A draft report can be complete while publication and business outcomes remain unverified.
+
+**Worked example:** `examples/gsc-bing-query-coverage.md` (synthetic, not live site evidence).
+
+**Source and limits:** adapted in original wording from Andrei Saioc's 6 November 2026 [post](https://x.com/asaio87/status/2118634208411185175). The useful idea is dual-source query discovery followed by page/intent review. The source's 'profit' wording, positions 5–20 heuristic, low-CTR explanation and automatic resubmission step are not verified guarantees or operating authority. Its screenshot is one selected three-month page view, not a controlled Google/Bing comparison. Full Note Tweet text was retained; its title/meta output sentence ends mid-sentence in the returned source. No omitted ending was invented.

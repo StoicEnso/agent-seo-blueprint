@@ -52,6 +52,7 @@ Do NOT read every playbook up front. Use the workflow runbook + course search to
 | Find existing editorial link intent (listicle/citation gaps, broken or decayed resources, statistics needs, missing visuals/video, uncited owned assets) | Load `references/playbooks/authority/editorial-link-intent-and-assets.md`, then run `workflows/authority-and-links.md` |
 | Monitor rankings/traffic, GSC 4–20 opportunities, Google AI impressions, provider citation observations, updates, and ROI | `workflows/monitoring.md` |
 | Rank recurring content opportunities, draft narrow fixes, and measure approved changes | Load `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md`, copy `assets/content-opportunity-ledger.json`, then run `workflows/monitoring.md`; route approved briefs to `workflows/content-production.md` |
+| Review Google + Bing page-query gaps before refreshing an existing page | Load the optional dual-engine branch in `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md`, copy `assets/gsc-bing-query-coverage.json`, and use `workflows/monitoring.md` then `workflows/content-production.md`; keep engine metrics separate and indexing submissions approval-gated |
 | Ask "what does the course say about X" / look up a method | Course search (below) |
 | Ideate content angles / pressure-test a niche with customer personas | ICP personas (below) |
 
@@ -99,6 +100,7 @@ performed by you via Chrome MCP tools** when no API key/creds are present — th
 |---|---|---|---|
 | Ahrefs | `scripts/ahrefs_client.py` | API if `AHREFS_API_KEY`, else browser | `references/integrations/ahrefs.md` |
 | Google Search Console | `scripts/gsc_pull.py` | API if creds, else browser | `references/integrations/gsc.md` |
+| Bing Webmaster Tools | Approved saved export or browser; no new API client | Export/browser only | `references/integrations/bing.md` |
 | GA4 | `scripts/ga4_pull.py` | API if creds, else browser | `references/integrations/ga4.md` |
 | Live SERP | `scripts/serp_capture.py` | browser only (Chrome MCP) | `references/integrations/serp.md` |
 | PageSpeed/Lighthouse | `scripts/pagespeed_run.py` | public API (key optional) | `references/integrations/pagespeed.md` |

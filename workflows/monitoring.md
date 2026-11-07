@@ -22,12 +22,13 @@ scripts:
   - scripts/dataforseo_client.py
   - scripts/serp_capture.py
   - scripts/report.py
-integrations: [gsc, ga4, ahrefs, dataforseo, serp]
+integrations: [gsc, bing, ga4, ahrefs, dataforseo, serp]
 outputs:
   - monitoring/<date>_snapshot.md          # rank/traffic snapshot (via report.py monitoring)
   - monitoring/<date>_leading-indicators.json  # the 6 action-task checklist
   - monitoring/<date>_snapshot.json         # raw ordinary-search snapshot payload
   - monitoring/<date>_gsc-4-20-opportunities.json # current, verified quick-win/recovery rows
+  - monitoring/<date>_gsc-bing-query-coverage.json # optional dual-engine coverage review; separate metrics
   - monitoring/<date>_content-opportunity-audit.json # optional recurring ranked candidate ledger
   - monitoring/<date>_content-opportunity-summary.md # optional review summary and exact proposed diffs
   - monitoring/content-change-ledger.jsonl # approved-write receipts plus 28/56-day enrollment
@@ -65,6 +66,8 @@ outputs:
 4. **Mine current GSC positions 4–20.** Load `references/playbooks/maintenance/gsc-position-4-20-opportunity-mining.md`. Use the latest final 28-day query+page rows, reject stale/irrelevant/intent-mismatched candidates, and inspect the live page/SERP before recommending a narrow change. Keep 90-day-only rows as recovery context unless current data confirms them. Save valid, rejected, and recovery-only rows to `monitoring/<date>_gsc-4-20-opportunities.json` and route implementation briefs to `content-production.md`.
 
    **Optional recurring content-opportunity audit.** When the user wants a joined weekly audit rather than a one-off 4–20 list, load `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md` and copy `assets/content-opportunity-ledger.json`. Join the current and previous final windows with the live CMS inventory and prior run. Store real click loss, CTR headroom, and rank headroom separately; use soft estimates only to order a capped review queue. Verify the live page, SERP, canonical, product truth, and cannibalization before drafting. The agent remains read/draft-only. Any approved write must use a deterministic executor that rejects stale revisions, records the live receipt, and enrolls like-for-like +28-day and +56-day reads with same-period site evidence. Save the audit and review summary to the declared outputs.
+
+   **Optional Google + Bing page-query review.** Use the dual-engine branch in `references/playbooks/maintenance/content-opportunity-audit-and-measurement.md`, `references/integrations/bing.md` and `assets/gsc-bing-query-coverage.json`. Save raw exports and `monitoring/<date>_gsc-bing-query-coverage.json`; union query discovery only, keep engine metrics and missing-source statuses separate, verify the exact page and engine-specific SERPs, then route narrow review-only diffs to content production. A missing source is unknown, not zero. The synthetic example is `examples/gsc-bing-query-coverage.md`. No write or indexing submission follows automatically.
 
 5. **Track the six leading indicators (the work).** From `measuring-seo-results.md`, log the action-task checklist for the period: (1) content shipped, (2) new keywords/content targeted, (3) existing pages optimized, (4) link opportunities identified + contacted, (5) backlinks acquired, (6) competitor backlinks tracked. Save to `monitoring/<date>_leading-indicators.json`. These are checked weekly; the user fills them or the agent reads them from the workspace (briefs shipped, drafts sent in `outreach/`, etc.).
 
