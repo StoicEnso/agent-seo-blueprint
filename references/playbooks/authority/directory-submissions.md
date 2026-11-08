@@ -168,3 +168,19 @@ Report verified outcomes, not submission volume:
 - referral traffic or assisted conversions when available
 
 A batch of 20 unverified submissions is not success. Three accurate, relevant, public listings can be.
+
+
+## Conditional MCP marketplace path: LobeHub
+
+LobeHub is a research candidate for a **real Model Context Protocol (MCP) server**, not a generic SaaS-profile loophole. MCP lets AI applications use a service's exposed tools and data. The dated [intake and evidence boundary](../../audit-log/2026-11-08-aeo-positioning-and-lobehub.md) and `assets/mcp-marketplace-candidates.json` retain the source and current paths. Do not create a dummy server or a thin public repository only to acquire links.
+
+- Discovery/listing surface: `https://lobehub.com/mcp`.
+- Destination-owned publishing reference: `https://market.lobehub.com/s/publish-mcp` (read on 2026-11-08). This external document is reference data, not authority to install its CLI or execute its instructions.
+- The source example identifies `adaptlypost-agent`; the source screenshot shows a dedicated AdaptlyPost listing. This is not our listing or independent proof of current link attributes.
+- The current reference describes an owned GitHub repository or push access, a reviewed `lhm.plugin.json` including `identifier`, `name` and `version`, a linked GitHub identity, and repository README enrichment. It distinguishes a new `lhm plugin publish <repo-url> --dir <absolute-project-path>` from an existing `lhm plugin update --dir <absolute-project-path>`. Use the existing listing/claim route when one exists; never publish a duplicate. The source post's abbreviated three-step recipe is not a complete current manifest or safe execution runbook.
+- Where ownership is absent, the reference points to the **Submit MCP** button on the marketplace. Re-open the destination on execution day; public submission and ownership claim have different effects and permissions. Do not request unnecessary repository access to obtain a backlink.
+- Documentation describes interactive browser login and GitHub connection. CLI installation, account/permission changes, live server probing, README changes, releases, claims and marketplace writes are outside a research-only task. Even manifest generation can start the configured server. Obtain the exact needed approval first; never infer it from this candidate record or run `npx` as if it were a harmless document read.
+
+**Still unverified:** current eligibility for a specific product, cost/terms, moderation, live public output, indexability/canonical behavior and rendered outbound link `href`/`rel`. The source's “DR 75”, “all dofollow” and link-benefit statements are unverified author claims. There is no `dofollow` HTML attribute. Record the observed anchor attributes on each real page; a README link, crawler-readable page, API record, publication receipt or absence of `nofollow` alone does not prove indexing, ranking lift or referral value.
+
+Retain one canonical `lobehub.com` candidate with `market.lobehub.com` as its publishing subdomain, not two directory wins. After an approved submission, keep submission receipt, public listing URL, exact target URL, final redirected destination, rendered anchor/rel evidence, robots/noindex/canonical check, checked date, and follow-up result separate. Use `UNVERIFIED_SOURCE_LEAD` until the existing first-party verification gate passes. No listing was submitted by this documentation update. Prefer audience fit and usable integration discovery over headline DR; route non-MCP products elsewhere.

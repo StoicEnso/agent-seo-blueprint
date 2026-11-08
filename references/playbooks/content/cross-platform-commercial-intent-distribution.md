@@ -191,3 +191,29 @@ For UK-facing work, commercial intent and affiliate relationships must be made c
 ## Done when
 
 The query and locale are fixed; live surface evidence is dated; one primary and at most two supporting surfaces are selected; every asset has distinct native value, a claim boundary, and a disclosure plan; the owned evidence hub remains clear; the journey and metrics stay separated; publication remains approval-gated; and no copied, deceptive, spammy, or ban-evasion tactic survives the plan. A search-led answer series also has a source-backed question bank, a 3–10-question pilot, an owned-page and cannibalization check, a real expert/proof packet, and one row per question and surface in `assets/search-led-expert-answer-map.csv`.
+
+
+## Buyer-intent and entity-positioning review (Margatix source, 8 November 2026)
+
+Use this optional review when a creator attributes rapid Google and AI visibility to exact-match domains, closely related wording and entity mapping. The [source assessment](../../audit-log/2026-11-08-aeo-positioning-and-lobehub.md) separates the anecdote from reusable work. This is answer-engine optimization (AEO), not a new ranking system.
+
+### Check the missing mechanism, not the domain trick
+
+1. Build a small buyer-query cluster from dated customer, Search Console or permitted public evidence. Record the buyer job, locale, decision stage and business fit. Reject a high-value keyword when the product cannot truthfully serve it.
+2. Map each question to its current canonical owned page. Inspect actual page content and related pages before proposing a new comparison, alternatives or use-case page. Record overlap and cannibalization risk. Prefer improving an existing useful page over creating another near-duplicate domain or page.
+3. State the entity clearly: real product/company name, official URL, audience, capabilities, limits, and verifiable relationships. Reconcile contradictory descriptions across owned pages and authorized profiles. Entity mapping means consistent facts and useful contextual links; it does not mean keyword stuffing, invented endorsements or schema links to unrelated entities.
+4. Make the direct answer useful to a buyer: fit and non-fit cases, explicit comparison criteria, primary evidence, dated facts and a clear next step. Disclose vendor ownership, affiliate interests and sponsorship. A vendor-owned shortlist must not pose as independent consensus.
+5. Capture ordinary Google/Bing results separately from each named answer engine. Save query or exact prompt, provider/surface, model if exposed, locale, date/time, session conditions, returned answer and actual cited URL. A brand mention is not a citation; one Google AI Overview is not evidence for all LLMs.
+6. Review counter-explanations: query novelty/competition, prior domain history, existing authority, content quality, indexing lag, localization, personalization and other simultaneous changes. Exact-match wording alone is not causal proof.
+
+### Prepare one controlled, approval-gated test
+
+Use `assets/aeo-positioning-review.json` as an empty research template. Select one existing page cluster and, where feasible, a comparable unchanged cluster. Pre-register the hypothesis, proposed change, checks, baseline window, review window, success criterion and stop condition. Dates are project decisions, not a promised ten-day result. Preserve page/crawl snapshots and change logs; record changes in the control cluster too. Do not call a simple before/after comparison causal when its controls or attribution are missing.
+
+Measure ordinary-search impressions/clicks/positions, provider-specific mentions/citations, referral sessions, qualified leads and realized revenue as separate outcomes. An acquisition offer is not revenue, a signed deal or proceeds. Missing data stays `NOT_MEASURED`, not zero. Keep costs and failed observations visible. Read-only evidence collection is distinct from publication: page changes, domain purchases, account creation and external publishing require their own approval. This template starts `RESEARCH_ONLY_NOT_APPROVED`; it starts no job or live test.
+
+### Source boundary
+
+Margatix reported number-one Google/LLM positioning in ten days and a seven-figure acquisition offer. The supplied image shows the query “best ai data labs”, a highlighted Google AI Overview mention of Zeton and an ordinary bestaidatalabs.com result. It is a source-supplied screenshot, not an independently reproduced rank check; it supplies no full query panel, controlled comparison, complete citation set or verified transaction evidence. The visible Overview source cards include other sites, so a mention cannot be equated with that exact-match domain being cited. No current-site defect is established by this example.
+
+Google's [AI features guidance](https://developers.google.com/search/docs/appearance/ai-features) says normal SEO fundamentals apply; no special AI schema or machine-readable file is required for eligibility. Its [spam policies](https://developers.google.com/search/docs/essentials/spam-policies) remain the boundary for doorway pages, scaled-content abuse and manipulative links. Do not create exact-match-domain networks, fake independent recommendation sites or thin MCP repositories as a visibility shortcut. Existing `maintenance/cross-platform-ai-citation-loop.md` and `foundations/google-generative-ai-search-official.md` remain the measurement and official-guidance owners.

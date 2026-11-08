@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status": "RESEARCH_ONLY_NOT_APPROVED",
+  "source_url": "https://x.com/margatix/status/2119089991217262884",
+  "query_cluster": [],
+  "buyer_job": null,
+  "locale": null,
+  "canonical_page": null,
+  "existing_page_evidence": null,
+  "cannibalization_check": null,
+  "entity_fact_sources": [],
+  "disclosures": [],
+  "hypothesis": null,
+  "counter_explanations": [],
+  "proposed_change": null,
+  "control_cluster": null,
+  "baseline_window": null,
+  "review_window": null,
+  "success_criterion": null,
+  "stop_condition": null,
+  "change_log": [],
+  "observations": [],
+  "observation_fields": [
+    "query_or_exact_prompt",
+    "provider_surface",
+    "model_if_exposed",
+    "locale",
+    "captured_at",
+    "session_conditions",
+    "returned_answer_evidence",
+    "brand_mentioned",
+    "actual_cited_url"
+  ],
+  "outcomes": {
+    "ordinary_search": "NOT_MEASURED",
+    "provider_mentions_citations": "NOT_MEASURED",
+    "referral_sessions": "NOT_MEASURED",
+    "qualified_leads": "NOT_MEASURED",
+    "realized_revenue": "NOT_MEASURED",
+    "costs": "NOT_MEASURED"
+  },
+  "publication_approval": null
+}
