@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "RESEARCH_ONLY_NOT_APPROVED",
+  "candidates": [
+    {
+      "id": "lobehub-mcp",
+      "name": "LobeHub MCP Marketplace",
+      "canonical_domain": "lobehub.com",
+      "publishing_subdomain": "market.lobehub.com",
+      "discovery_url": "https://lobehub.com/mcp",
+      "publishing_reference": "https://market.lobehub.com/s/publish-mcp",
+      "reference_observed_at": "2026-11-08",
+      "source_url": "https://x.com/tarasshyn/status/2119435109405175973",
+      "source_observed_at": "2026-11-08",
+      "source_claimed_dr_unverified": 75,
+      "source_claimed_link_attribute_unverified": "all dofollow",
+      "eligibility": "real MCP server; legitimate repository ownership or push access for owner publication",
+      "verification_status": "UNVERIFIED_SOURCE_LEAD",
+      "source_example_identifier": "adaptlypost-agent",
+      "observed_live_listing_url": null,
+      "cost_terms": null,
+      "public_indexable": null,
+      "observed_href": null,
+      "observed_rel": null,
+      "submission_receipt": null,
+      "publication_approval": null,
+      "last_live_verified_at": null,
+      "next_action": "Read current destination requirements; check product fit and duplicate listing; inspect current public page/indexability/anchors before promotion",
+      "not_authorized": [
+        "install_cli",
+        "create_account",
+        "connect_github",
+        "launch_server",
+        "change_product_readme",
+        "publish",
+        "claim",
+        "purchase"
+      ]
+    }
+  ]
+}
