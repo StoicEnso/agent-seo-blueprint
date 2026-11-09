@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-24",
+  "source_url": "https://x.com/tarasshyn/status/2113979571884429494",
+  "scope": "12 posts in the full observed quoted-post chain, 7 visible direct/nested replies, plus related already-saved source methods; 26 research rows, not 26 verified backlinks. Two exact public link samples observed: Fern and one Postman profile; neither proves indexing or ranking benefit.",
+  "quote_chain_post_ids": [
+    "2113979571884429494",
+    "2113617183830086115",
+    "2113261569354162494",
+    "2112893275933741142",
+    "2112529846156882274",
+    "2112167451794219483",
+    "2111809522671202657",
+    "2111445575669346623",
+    "2111078201090777406",
+    "2110716568652976638",
+    "2110349682559910166",
+    "2109628678682431507"
+  ],
+  "quote_chain_complete": true,
+  "comments": [
+    {
+      "url": "https://x.com/tomaslau/status/2114089956021055766",
+      "relationship": "direct reply",
+      "summary": "Encouragement; no additional method."
+    },
+    {
+      "url": "https://x.com/RivacAI_Labs/status/2114006054107574671",
+      "relationship": "direct reply",
+      "summary": "Says readable docs should explain the product; no concrete additional backlink route."
+    },
+    {
+      "url": "https://x.com/boardyai/status/2113979755271958826",
+      "relationship": "direct reply",
+      "summary": "Bot-style grade joke; not an independent audit or backlink result."
+    },
+    {
+      "url": "https://x.com/tarasshyn/status/2114090699495018760",
+      "relationship": "nested author reply to Tomas",
+      "summary": "Says more ideas are in the pipeline; does not name a new method."
+    },
+    {
+      "url": "https://x.com/tarasshyn/status/2114008575727071247",
+      "relationship": "nested author reply to RIVAC",
+      "summary": "Thanks emoji; no additional method."
+    },
+    {
+      "url": "https://x.com/QualityMaxApp/status/2114066600810729950",
+      "relationship": "nested reply to Boardy",
+      "summary": "Requests a docs check; not another method or result."
+    },
+    {
+      "url": "https://x.com/tarasshyn/status/2113980011635937618",
+      "relationship": "nested author reply to Boardy",
+      "summary": "Joke about the grade; not additional evidence."
+    }
+  ],
+  "comment_coverage": "3 direct and 4 nested replies observed on logged-out public pages; X offered login to see all replies. Not an exhaustive reply census. No concrete extra backlink method was named in those 7 replies.",
+  "first_party_observations": [
+    {
+      "url": "https://buildwithfern.com/agent-score/company/resend",
+      "http_status": 200,
+      "href": "https://resend.com/docs",
+      "rel": "noopener noreferrer",
+      "robots_noindex_observed": false,
+      "x_robots_tag": null,
+      "actual_indexing": "NOT_MEASURED",
+      "limit": "One first-party public example only; no universal followed-link, future retention, ranking or new-submission success claim."
+    },
+    {
+      "url": "https://learning.postman.com/docs/collaborating-in-postman/using-workspaces/public-workspaces",
+      "http_status": 200,
+      "observation": "Official docs describe public workspaces and team profiles. This does not prove the Website link attributes on every profile."
+    },
+    {
+      "url": "https://buildwithfern.com/agent-score/company/adaptlypost",
+      "http_status": 200,
+      "observation": "Guessed slug returned a noindex not-found shell. Do not count it as a live report; obtain exact result URL instead."
+    },
+    {
+      "observed_at": "2026-10-24T21:39:00+01:00",
+      "method": "rendered_browser_dom",
+      "url": "https://www.postman.com/adaptlypost",
+      "canonical": "https://www.postman.com/adaptlypost",
+      "robots_meta": [],
+      "x_robots_tag": "NOT_MEASURED_IN_BROWSER",
+      "links": [
+        {
+          "location": "Social links Website",
+          "href": "https://adaptlypost.com/",
+          "rel": "noreferrer noopener"
+        },
+        {
+          "location": "About us description Website",
+          "href": "https://adaptlypost.com/",
+          "rel": "noreferrer noopener nofollow"
+        },
+        {
+          "location": "About us API tokens",
+          "href": "https://adaptlypost.com/api-tokens",
+          "rel": "noreferrer noopener nofollow"
+        },
+        {
+          "location": "About us quick start",
+          "href": "https://adaptlypost.com/docs/quick-start",
+          "rel": "noreferrer noopener nofollow"
+        }
+      ],
+      "limits": "One public profile. The rendered Website social link has no nofollow token; description links have nofollow. Actual indexing, ranking credit, traffic and future retention are not measured."
+    }
+  ],
+  "claims_not_verified": [
+    "DR77/91/92 and other domain ratings",
+    "guaranteed followed links or ranking improvements",
+    "instant acceptance, no review or copied source CLI commands",
+    "creator account plan prices and one-time fees",
+    "automatic mirror/directory backlinks",
+    "Claude community noindex state on an actual current entry"
+  ],
+  "actions_performed": [
+    "Public source reads",
+    "Repository documentation, research ledger and tests"
+  ],
+  "actions_not_performed": [
+    "Account creation",
+    "Package install or npx afdocs execution",
+    "Benchmark submission or Request listing",
+    "Package/extension/skill/connector publish",
+    "DNS changes",
+    "Credential upload or scope expansion",
+    "Outreach",
+    "Purchase",
+    "Main-branch push, merge or deployment",
+    "Installed-skill change"
+  ]
+}

@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
+- [The knowledge layer](#the-knowledge-layer-67-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **67 playbooks**: 36 original course distillations plus 31 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,7 +90,7 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 31 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
@@ -121,6 +121,8 @@ assets/                        # fill-in templates emitted into the workspace
   audit-report.md  content-brief.md  keyword-map.csv
   directory-discovery-sources.csv  directory-submission-tracker.csv
   startup-backlink-candidates.csv  # 146 directory mentions + one hosted-publishing intake → 142 research leads
+  backlink-method-research.csv  # 26 source-attributed research rows; not submission approval
+  backlink-method-source-review-20261024.json  # quoted chain, observed comments and exact sample limits
   hosted-publishing-experiment.csv  # per-site fit, approval, rendered-link, index, referral, and outcome evidence
   topic-architecture-map.csv  internal-link-ledger.csv
   press-release-distribution-registry.csv  tiny-loop-opportunity-map.csv
@@ -131,7 +133,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (67 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -349,3 +351,20 @@ endorsed by the course author.
 
 **License:** MIT — see [`LICENSE`](LICENSE). Covers the original work in this repo (playbooks, course index, workflows,
 scripts, templates). Course transcripts are not included and are not covered.
+
+### Source-led backlink method review — 24 October 2026
+
+The [authority playbook](references/playbooks/authority/other-link-building.md#source-led-product-and-resource-methods--24-october-2026) now covers Fern documentation reports and 11 related product-distribution methods, plus previously saved resource, case-study, widget, publicity and directory methods. The [26-row research inventory](assets/backlink-method-research.csv) and [source review](assets/backlink-method-source-review-20261024.json) preserve provenance and observed comment coverage. These are research leads, not 26 verified backlinks or permission to install, submit, publish, send or spend. Existing directory review PRs and completed submissions stay separate.
+
+
+### Backlinks: agent-friendly surfaces and citations
+
+The existing authority workflow now includes a reuse-first agent-surface lane in
+`references/playbooks/authority/other-link-building.md`. The complete 27-post Taras source is
+preserved at `references/sources/2026-11-09-taras-complete-quote-chain.md`. Its 26 listing posts
+map to 12 existing plus 14 new methods in `assets/agent-friendly-surface-research-20261109.json`;
+`assets/backlink-method-research.csv` now has 40 research methods in total, not 40 backlinks.
+Real API/docs, skills, MCP/OAuth connectors, native apps, CLI packages and useful extensions come
+first. Public links, usable integrations, measured provider citations and business outcomes stay
+separate. Source DR/dofollow/cost/approval claims remain unverified. No new playbook, workflow,
+installed skill, account, package, production integration or submitted listing is created here.

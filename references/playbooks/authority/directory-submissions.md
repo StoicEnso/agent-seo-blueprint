@@ -168,3 +168,50 @@ Report verified outcomes, not submission volume:
 - referral traffic or assisted conversions when available
 
 A batch of 20 unverified submissions is not success. Three accurate, relevant, public listings can be.
+
+
+## Agent-friendly surfaces and citations under backlinks
+
+For real skills, API workspaces, MCP registries, apps, connectors, packages and extensions,
+load the “Building agent-friendly surfaces and citations — under backlinks” section of
+[other-link-building.md](other-link-building.md) and its 26-surface research crosswalk. This
+extends the existing authority workflow; it does not create another directory submission queue.
+Reuse existing integrations and receipts first. Verify each destination's current official
+programme, eligibility and terms. A private/noindex install surface may have distribution value
+but must not be counted as an indexable backlink; it does not bypass the public-directory gate.
+Keep observed links, usable integrations, measured provider citations and business results separate.
+
+
+## Seonatia startup-source delta — 9 November 2026
+
+[Full source and image](../../sources/2026-11-09-seonatia-startup-backlinks.md) and
+[21-entry crosswalk](../../../assets/seonatia-backlink-crosswalk-20261109.json).
+Compared platform names, aliases, domains, authority workflows and pending review refs in both
+repos: **8 missing research leads; 12 already covered entries; 1 partly ambiguous row.**
+Reuse Chrome Web Store, GitHub Pages, TrustMRR, Medium, Crunchbase, DevTo/DEV Community,
+Hashnode, Substack, Product Hunt, About.me, Indie Page and Gumroad. Capterra also exists; literal GT in
+GT / Capterra is unresolved, not an authorised correction to G2. Full text contains 21 entries;
+the image contains only 18. Domain Rating (DR) is a source claim, not a Google metric.
+
+| Missing platform | Genuine route and qualification |
+| --- | --- |
+| Behance | creative_portfolio: Original rights-cleared design case study, not generic SaaS directory. Homepage returned 403; current eligibility, costs and link slots unknown. |
+| Stripe Climate | contribution_profile: Official overview describes revenue contributions or carbon-removal purchases. Not verified free. Consider an existing genuine participant only; no purchase for ranking credit. |
+| Dribbble | creative_portfolio: Genuine original design portfolio only. Official search result describes designer portfolios; homepage extraction failed. Publication/link eligibility and costs unknown. |
+| Carrd | hosted_microsite: Source carrd.co redirects to carrd.com. Official page offers three free core sites and paid features. Use a genuinely useful owned landing/resource page, not a duplicate doorway site or independent editorial endorsement. |
+| Linktree | link_in_bio: Official pricing describes free and paid tiers. Useful canonical audience hub only; inspect actual page, href/rel and indexing. No mass profile replication. |
+| mssg.me | link_in_bio: Official homepage describes a free link-in-bio/site builder. Exact feature limits and public link/index state unverified; genuine audience/contact job only. |
+| Taplink | link_in_bio: Official homepage describes multiple links and micro landing pages. Current price/feature limits and exact public link state unknown. No thin profiles. |
+| Viral Marketing Lab | product_directory: Official Add Product page is tagged sponsor and links to Dodo Payments checkout. No free submission verified; exact amount unknown. Paid-placement gate, not free backlink endorsement; qualify paid links appropriately. |
+
+All eight additions remain `UNVERIFIED_SOURCE_LEAD` rows in the existing candidate file,
+not a second submission queue. No new playbook/workflow. Existing 40-method agent-surface
+register stays intact. Keep owned microsites/link hubs, portfolios, contribution profiles
+and editorial/directory listings separate. Owned links are not independent endorsements.
+Paid profiles are not free backlinks. Reject doorway microsites, irrelevant portfolios,
+mass profile spam and payments for ranking credit.
+
+No rendered listing href/rel, indexing, provider citation or qualified referral was verified.
+Use the destination-owned verification gate before recommendations. Preserve payment, account,
+connection and publication approval gates. This research does not approve accounts, revenue
+connections, carbon-removal purchases, sponsor fees, submissions or deployments.
