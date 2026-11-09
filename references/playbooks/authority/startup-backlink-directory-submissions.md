@@ -45,3 +45,14 @@ Every state change needs dated evidence. Creating accounts, posting, submitting,
 ## Done condition
 
 The selected candidate batch is source-audited, deduplicated, classified, and live-verified with first-party route evidence, discrepancy notes, and rejection reasons. No row is called a backlink win until a public listing URL and observed link/indexability evidence exist.
+
+
+### Seonatia source reconciliation — 9 November 2026
+
+Use `assets/seonatia-backlink-crosswalk-20261109.json` and the Seonatia source delta in
+[directory-submissions.md](directory-submissions.md). Eight missing platforms extend the
+existing candidate register to 150 rows; twelve entries reused, GT/Capterra ambiguity retained.
+These are research leads, not 150 verified links. Portfolio, microsite, link-in-bio and
+contribution routes are not generic SaaS directories. Stripe Climate contribution and Viral
+Marketing Lab checkout signals contradict blanket free claims; Indie Page has paid-publication
+signals. No payment/publication authority granted.
