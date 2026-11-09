@@ -55,3 +55,45 @@ tools: [ahrefs, serp]
 - Forgetting CPC — building for traffic nobody will pay for.
 
 **Related.** [[seo-metrics]], [[match-and-exceed]], [[competitor-research]], [[keyword-to-sitemap]], [[research-for-existing-sites]], [[keyword-fundamentals]]. Course refs: 02-09 (finding new niches), 02-10 (validating new niches), 02-13 (spotting bad niches).
+
+
+## Viral-content / app-market comparability gate
+
+Use this as a research sub-step, not a product-build or SEO opportunity verdict. The
+[source review](../../sources/2026-11-09-viral-content-and-app-market-claims.md) separates
+David's endorsement, Julia's untranscribed conversion video, Jah's room-repair/redesign
+comparison and its quoted survival example. A visual view counter is not payment evidence.
+No psychology tactic is inferred from an unavailable audio transcript.
+
+Before comparing social attention with app revenue, fill
+[`assets/content-to-demand-comparison.json`](../../../assets/content-to-demand-comparison.json):
+
+1. **Fix the user job and comparison unit.** Repair advice, hiring a tradesperson, room
+   visualisation and a paid redesign tool are different jobs and substitutes. A popular DIY
+   demonstration may satisfy demand without an app; repair and redesign are not equivalent
+   cohorts merely because both show a room. Do not infer that viewers value appearance more
+   than safety or that low estimated app revenue means the underlying problem is unimportant.
+2. **Make numbers comparable or mark them incomparable.** Record source URL, capture date,
+   app identity, geography, currency, platform, period, gross/net basis, subscriptions versus
+   total revenue, estimation source and uncertainty. Separate one app from a category total.
+   Monthly estimate versus lifetime revenue, gross versus net, or mismatched countries is
+   not a valid ratio. Missing fields mean `INCOMPARABLE`, not a revenue ceiling or an easy gap.
+3. **Audit the social denominator.** Record unique posts/creators, snapshot period, platform,
+   possible cross-post/reupload overlap and views versus unique viewers. A screenshot sum
+   is not a unique audience, search volume, install forecast or addressable market size.
+4. **Look for a buyer journey.** Check genuine audience questions and observed search intent,
+   then map a truthful native demonstration to a fitting product job, landing page and
+   explicit call to action. Keep views, visits, installs, activations, paid users, refunds and
+   retained revenue separate; label attribution windows and missing data. A download is not
+   a paying user. Never backfill conversion rates from a creator's headline.
+5. **Choose one reversible test only if justified.** Define a buyer/problem segment, hypothesis,
+   proof asset, ethical call to action, observable qualified response, minimum useful sample,
+   time/cost cap, guardrails and `continue | revise | stop | inconclusive` decision in advance.
+   Payment willingness and retention need their own evidence; do not ship an app or mass page
+   cluster because unrelated videos went viral. Publication, account access, partnerships,
+   revenue connections and spend require their normal separate authority.
+
+Reuse the existing proof-led native-asset and search-led-answer methods rather than copying
+scripts or adding another distribution programme. Social attention, search demand, provider
+citations, qualified intent, revenue and causal lift remain separate. Never treat source claims
+of 14M downloads, $1M/month, $10k/month, 46M views or 175M views as verified baselines or forecasts.

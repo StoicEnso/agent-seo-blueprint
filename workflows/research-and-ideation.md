@@ -88,3 +88,12 @@ outputs:
 - `research/<date>_tiny-loop-opportunity-map.csv` — optional evidence and safety screen for one avoided-loop wedge.
 
 **Done when.** At least one niche/keyword cluster has passed the full gauntlet (or all are correctly rejected), the keyword map CSV exists, and every validated keyword has a home in the sitemap plan with an intent-matched format chosen. Any cluster advanced to production also has distinct page roles and contextual-link rows without thin depth inflation. A tiny-loop input also has an explicit approval boundary and independent demand evidence before it enters the build backlog. Hand the sitemap plan + keyword map to `content-production.md`; hand any "needs authority first" keywords to `authority-and-links.md`.
+
+
+### Social-attention / app-demand source intake
+
+When a creator compares viral clips with app earnings, use the comparability gate in
+`finding-and-validating-niches.md` and `assets/content-to-demand-comparison.json` before
+choosing a niche. Missing identity/country/period/revenue basis means INCOMPARABLE. Native
+reach is not search demand, downloads are not paying users, and creator psychology claims
+need source review and a bounded test. No app build, outreach or publication is authorised.
