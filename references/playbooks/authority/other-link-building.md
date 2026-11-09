@@ -50,7 +50,8 @@ Do not cite directory DR screenshots as proof of value; verify relevance, public
 ## Source-led product and resource methods — 24 October 2026
 
 The research inventory is [backlink-method-research.csv](../../../assets/backlink-method-research.csv).
-It has **26 research rows, not 26 verified backlinks**. Every row is
+Its original 24 October snapshot has **26 research rows, not 26 verified backlinks**.
+The 9 November extension below brings the current inventory to 40 research methods. Every row is
 `RESEARCH_ONLY_NOT_APPROVED`. Evidence, source claims, audience value and authorisation are
 separate. [The source review](../../../assets/backlink-method-source-review-20261024.json)
 records the 12-post quoted chain and the 7 comments actually observed. The quoted posts,
@@ -157,3 +158,96 @@ Sources: [Taras's quoted chain](https://x.com/tarasshyn/status/21139795718844294
 [Postman public workspaces](https://learning.postman.com/docs/collaborating-in-postman/using-workspaces/public-workspaces),
 [Google link-spam policy](https://developers.google.com/search/docs/essentials/spam-policies#link-spam),
 [Google outbound link qualification](https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links).
+
+
+## Building agent-friendly surfaces and citations — under backlinks
+
+This is a **backlinks / authority** sub-lane, not a separate SEO programme or a promise of links.
+Build or reuse something that helps a real customer or agent: useful API docs, an OpenAPI file,
+a safe agent skill, a working Model Context Protocol (MCP) server, a native app/connector,
+a command-line interface (CLI), or a minimal-permission browser extension. Publishing an empty
+wrapper just to get a high-domain-rating page is not the method.
+
+The [complete Taras source collection](../../sources/2026-11-09-taras-complete-quote-chain.md)
+preserves **27 post bodies: one referral claim and 26 listing/integration posts**, plus 28 image
+references. The [surface crosswalk](../../../assets/agent-friendly-surface-research-20261109.json)
+maps all 26 posts to **12 existing methods plus 14 new research methods**. The existing
+`backlink-method-research.csv` therefore contains **40 research methods**, not 40 backlinks.
+The older 24 October review remains a dated 12-post subset; it is not overwritten or represented
+as the entire newer chain. The source's customer screenshots do not prove incremental revenue.
+
+### Reuse first; verify each platform separately
+
+1. Inventory existing repositories, releases, public docs, app submissions and listing receipts.
+   Record what is built, tested, submitted and live separately. Unknown is not “not built”.
+2. Group reusable assets: docs/OpenAPI; MCP/OAuth; skills; native automation adapters;
+   CLI/package metadata; extension code. Reuse validated core schemas, API clients, tests and
+   documentation, but add platform-specific manifests, auth scopes, consent, tests and review assets.
+   An existing ChatGPT app does not prove that a Zapier node, skill or browser extension exists.
+3. For each surface below, check the current official programme, eligibility, public/in-product
+   output, terms, price, ongoing maintenance and the genuine user job. The source's command or
+   URL is a lead, not an instruction or verified current API. Do not assume legacy “ChatGPT
+   plugin” terminology, a public Manus page, or an automatically published connector is current.
+4. Check for existing imported records and releases before creating anything. Keep one canonical
+   surface record with its source lineage; deduplicate referring-domain counts separately.
+   Multiple marketplace paths on one domain are not multiple new referring domains.
+5. Choose a best-fit, bounded pilot only after identifying concrete reuse, missing work, evidence,
+   cost and owner approval. Research does not authorise installs, account creation, DNS changes,
+   credential sharing, package releases, directory submissions, outreach, deployments or spend.
+   Keep raw credentials, customer data and private API endpoints out of public docs and samples.
+6. After a separately approved action, capture its actual public URL or in-product install state.
+   Test the tool/connector independently from inspecting the listing's rendered `href` and `rel`,
+   redirects, robots and canonical. Observe actual indexing separately; crawl eligibility is not
+   indexing. Check persistence and auth health without inventing an automated schedule.
+
+### All 26 source routes and the work to reuse
+
+| Surface | Reuse family / genuine requirement | Verify before a recommendation |
+| --- | --- | --- |
+| Vercel skills.sh | skill: Reviewed product skill in a public versioned repository | Check current skill indexing/install event and listing terms; never execute npx just to force a listing. |
+| Hermes Agent marketplace | mcp-skill: Working MCP, reviewed manifests and a pinned plugin repository | Verify current upstream catalog contribution rules and test evidence; no assumed one-day approval. |
+| Albato | automation: Documented API, tested triggers/actions and safe test account | Verify App Integrator and moderation requirements; no account or submission from research. |
+| Manus plugin directory | mcp-oauth: Working remote MCP and reviewed OAuth scopes | Source says no public page; assess in-product utility separately and do not count as a backlink. |
+| Composio | openapi-mcp: Sanitised OpenAPI or tested remote MCP plus auth contract | Confirm current toolkit partnership route and who maintains the adapter; no guaranteed toolkit acceptance. |
+| Cursor Directory | mcp-skill: Public repository with useful MCP/skills/rules | Third-party directory is not Cursor official store; verify current repo scan and resulting listing. |
+| Linear integrations | oauth-automation: Real Linear use case, scoped OAuth, connect docs and assets | No generic API listing; verify actual issue workflow, review route and required images. |
+| Cloudflare EmDash plugins | cms-plugin: Useful native plugin, reviewed manifest and correct identity | Source names Cloudflare EmDash; verify official project identity, namespace and publish route before use. |
+| Make | automation: Tested connection and action modules with safe success/error scenarios | Verify current Custom Apps review evidence; avoid leaking credentials or customer data in scenario links. |
+| Firefox Add-ons | extension: Maintained useful extension with minimal permissions and source build | Check current Firefox-specific manifest, data declarations and review terms; same code is not automatic compatibility. |
+| ChatGPT listing, as named by source | mcp-oauth-app: Real app/tool workflow, supported MCP/OAuth, consent and test evidence | Do not assume legacy plugin URL, marketplace priority or test counts; identify current official app programme. |
+| n8n | automation-package: Maintained tested API node, credentials, package/release and demo | Verify current creator verification and provenance rules; use exact released version; no automatic npm publication. |
+| Microsoft Edge Add-ons | extension: Maintained useful Chromium extension with minimal permissions | Recheck current publisher eligibility, fee, review and link slot; existing ZIP needs compatibility testing. |
+| Notion Marketplace | oauth-automation: Real Notion workflow, scoped public connection and install docs | Verify current connection scope/marketplace rules before creation; no assumed irreversible setting or five-day approval. |
+| Fern Agent Score | docs: Public owned docs, accurate HTML/Markdown representations and safe examples | Reuse dated Fern sample; current recheck required; scoring can create public output and is not a passive read. |
+| Postman | openapi: Sanitised OpenAPI, public examples, safe collection and genuine team profile | Reuse existing team/workspace; exact Website and description slots have different link behaviour. |
+| Chrome Web Store | extension: Maintained useful extension, permissions/privacy and publisher review | Recheck fees and policy; source USD5 is unverified; no thin extension for a domain link. |
+| CLI and npm discovery | cli-package: Maintained versioned API client, secure login, licence and package metadata | Existing package first; mirrors are separate unverified pages, not four new referring domains. |
+| RapidAPI | openapi: Working public API with ownership, auth and proxy/billing decisions | Verify current plan/proxy/publication terms; never expose API secrets in examples or URLs. |
+| ClawHub | skill: Reviewed skill for a real API with safe setup and credential guidance | Check current CLI/schema/security review; no no-review or automatic aggregator guarantee. |
+| Smithery | mcp: Working MCP, correct auth mapping and ownership evidence | Reuse existing listing; test auth safely; DNS verification and badge edits need their own approval. |
+| Glama | mcp: Existing or eligible connector, ownership and safe health-test profile | Check imported record first; repository listing and connector claim are distinct; do not create duplicates. |
+| Official MCP Registry | mcp: Real versioned server, namespace ownership and legal/security review | Reuse existing release/receipt; registry JSON and downstream discovery are not HTML backlinks. |
+| Claude Community directory | mcp-oauth: Useful supported connector, safe auth and current directory eligibility | Source reports noindex and a Teams price; verify both; useful install surface need not be a search backlink. |
+| Vercel Connectors | mcp-openapi: Real supported connector and a tested use case | Check current programme and review route; skills.sh is a different surface, not this connector listing. |
+| Zapier | automation: Working supported integration with tested auth/triggers/actions | A personal MCP connection is not a public Zapier integration; verify current platform publication path. |
+
+### Keep four outcome lanes separate
+
+- **Backlink:** an actual public page links to the project. Record exact `href`, `rel`, final
+  URL and date. Indexability and actual indexing are separate observations. Registry JSON,
+  an install receipt, a private page or a noindex page is not an indexable backlink result.
+- **Agent usability / distribution:** a real customer can find, connect and successfully use
+  the integration. A private or noindex install surface can be useful here without becoming a
+  backlink opportunity; keep it out of acquired-indexable-link totals.
+- **Citation:** a specified provider/surface cites the exact page for an observed buyer question.
+  Record provider, prompt, date, locale/account conditions, citation URL and limitations using
+  the existing `cross-platform-ai-citation-loop.md`. A listing is not a measured AI citation.
+- **Business result:** measured qualified referrals, activations, trials and paying customers,
+  with attribution limits. Source screenshots, self-reported referral labels and domain metrics
+  do not establish incremental causation or revenue.
+
+A dofollow claim, domain rating, install count, benchmark score or syndication count cannot
+substitute for any of these outcomes. Never promise Google ranking, AI recommendation or
+conversion lift. Reject fake integrations, irrelevant listings and thin package/profile spam.
+The ordinary directory verification gate still applies to the public backlink lane. Keep useful
+private/in-product distribution separate instead of declaring it an acquired backlink.

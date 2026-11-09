@@ -15,9 +15,9 @@ class BacklinkMethodsResearchTests(unittest.TestCase):
         cls.review = json.loads((ROOT / "assets/backlink-method-source-review-20261024.json").read_text())
         cls.doc = (ROOT / "references/playbooks/authority/other-link-building.md").read_text()
 
-    def test_exact_26_unique_research_rows(self):
-        self.assertEqual(len(self.rows), 26)
-        self.assertEqual({r["method_id"] for r in self.rows}, {f"BM{i:02}" for i in range(1, 27)})
+    def test_exact_40_unique_research_rows(self):
+        self.assertEqual(len(self.rows), 40)
+        self.assertEqual({r["method_id"] for r in self.rows}, {f"BM{i:02}" for i in range(1, 41)})
         self.assertTrue(all(r["action_status"] == "RESEARCH_ONLY_NOT_APPROVED" for r in self.rows))
 
     def test_all_rows_have_real_source_and_fit(self):

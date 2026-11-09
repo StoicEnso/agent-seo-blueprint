@@ -168,3 +168,15 @@ Report verified outcomes, not submission volume:
 - referral traffic or assisted conversions when available
 
 A batch of 20 unverified submissions is not success. Three accurate, relevant, public listings can be.
+
+
+## Agent-friendly surfaces and citations under backlinks
+
+For real skills, API workspaces, MCP registries, apps, connectors, packages and extensions,
+load the “Building agent-friendly surfaces and citations — under backlinks” section of
+[other-link-building.md](other-link-building.md) and its 26-surface research crosswalk. This
+extends the existing authority workflow; it does not create another directory submission queue.
+Reuse existing integrations and receipts first. Verify each destination's current official
+programme, eligibility and terms. A private/noindex install surface may have distribution value
+but must not be counted as an indexable backlink; it does not bypass the public-directory gate.
+Keep observed links, usable integrations, measured provider citations and business results separate.

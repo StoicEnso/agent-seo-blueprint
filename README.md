@@ -355,3 +355,16 @@ scripts, templates). Course transcripts are not included and are not covered.
 ### Source-led backlink method review — 24 October 2026
 
 The [authority playbook](references/playbooks/authority/other-link-building.md#source-led-product-and-resource-methods--24-october-2026) now covers Fern documentation reports and 11 related product-distribution methods, plus previously saved resource, case-study, widget, publicity and directory methods. The [26-row research inventory](assets/backlink-method-research.csv) and [source review](assets/backlink-method-source-review-20261024.json) preserve provenance and observed comment coverage. These are research leads, not 26 verified backlinks or permission to install, submit, publish, send or spend. Existing directory review PRs and completed submissions stay separate.
+
+
+### Backlinks: agent-friendly surfaces and citations
+
+The existing authority workflow now includes a reuse-first agent-surface lane in
+`references/playbooks/authority/other-link-building.md`. The complete 27-post Taras source is
+preserved at `references/sources/2026-11-09-taras-complete-quote-chain.md`. Its 26 listing posts
+map to 12 existing plus 14 new methods in `assets/agent-friendly-surface-research-20261109.json`;
+`assets/backlink-method-research.csv` now has 40 research methods in total, not 40 backlinks.
+Real API/docs, skills, MCP/OAuth connectors, native apps, CLI packages and useful extensions come
+first. Public links, usable integrations, measured provider citations and business outcomes stay
+separate. Source DR/dofollow/cost/approval claims remain unverified. No new playbook, workflow,
+installed skill, account, package, production integration or submitted listing is created here.
