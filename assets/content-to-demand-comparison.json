@@ -1,0 +1,68 @@
+{
+  "status": "DRAFT_RESEARCH_ONLY",
+  "source_review": "references/sources/2026-11-09-viral-content-and-app-market-claims.md",
+  "source_urls": [
+    "https://x.com/david_attisaas/status/2119464939572134143",
+    "https://x.com/juliapintar/status/2119461365652083025",
+    "https://x.com/itsjahmills/status/2119563814265889259",
+    "https://x.com/itsjahmills/status/2119213965284667887"
+  ],
+  "comparison_status": "INCOMPARABLE",
+  "audience_job": null,
+  "substitute_jobs": [],
+  "revenue_observations": [],
+  "required_revenue_fields": [
+    "app_identity",
+    "source_url",
+    "capture_date",
+    "country",
+    "currency",
+    "platform",
+    "period",
+    "gross_or_net",
+    "revenue_scope",
+    "estimate_provider",
+    "uncertainty"
+  ],
+  "social_observations": [],
+  "required_social_fields": [
+    "source_url",
+    "capture_date",
+    "platform",
+    "post_ids",
+    "creator_ids",
+    "period",
+    "views_or_unique_viewers",
+    "crosspost_overlap"
+  ],
+  "funnel": {
+    "views": null,
+    "visits": null,
+    "installs": null,
+    "activations": null,
+    "paid_users": null,
+    "refunds": null,
+    "retained_revenue": null,
+    "attribution_window": null
+  },
+  "search_demand_evidence": [],
+  "pilot": {
+    "hypothesis": null,
+    "buyer_segment": null,
+    "proof_asset": null,
+    "ethical_cta": null,
+    "qualified_response": null,
+    "minimum_sample": null,
+    "time_cap": null,
+    "cost_cap": null,
+    "guardrails": [],
+    "decision_rule": null
+  },
+  "publication_status": "NOT_APPROVED",
+  "julia_audio_status": "OFFICE_HOST_OFFLINE_NO_TRANSCRIPT",
+  "limitations": [
+    "Source metrics unverified",
+    "Screenshots are not a measured view-to-paying-user funnel",
+    "No audio-derived psychology tactics imported"
+  ]
+}

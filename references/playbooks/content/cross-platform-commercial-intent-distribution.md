@@ -191,3 +191,16 @@ For UK-facing work, commercial intent and affiliate relationships must be made c
 ## Done when
 
 The query and locale are fixed; live surface evidence is dated; one primary and at most two supporting surfaces are selected; every asset has distinct native value, a claim boundary, and a disclosure plan; the owned evidence hub remains clear; the journey and metrics stay separated; publication remains approval-gated; and no copied, deceptive, spammy, or ban-evasion tactic survives the plan. A search-led answer series also has a source-backed question bank, a 3–10-question pilot, an owned-page and cannibalization check, a real expert/proof packet, and one row per question and surface in `assets/search-led-expert-answer-map.csv`.
+
+
+## Viral reach versus paid demand — source comparison
+
+Before using social-view/app-revenue screenshots to choose a niche or forecast a native
+asset, run the “Viral-content / app-market comparability gate” in
+[finding-and-validating-niches.md](../research/finding-and-validating-niches.md) and fill
+`assets/content-to-demand-comparison.json`. Match app identity, geography, period, currency
+and revenue basis; count social posts/overlap; separate views, visits, installs, activation,
+paid users and retention. The four-post David/Julia/Jah source review preserves claims and
+visual samples without turning an unavailable audio transcript into psychology advice.
+Existing proof-led assets and bounded pilots already cover the general tactic; do not clone
+that workflow or invent backlink opportunities from these posts.
