@@ -97,3 +97,7 @@ python3 scripts/forecast.py --in pools.json --aio-haircut 0.5
 ## Next — operational rollout
 
 Once the plan exists and the user wants the operating sequence ("roll out BOFU, then mid, then top of funnel"), run **[full-funnel-rollout.md](./full-funnel-rollout.md)** (`scripts/funnel_rollout_cascade.mjs`): it extends this plan into a wave-by-wave BOFU→MOFU→TOFU rollout with entry/exit/KILL gates and the down-funnel handoff plumbing — TOFU as reach/citation only, built last, never a revenue line.
+
+## Tibo source cross-check (optional)
+
+Keep the normal master-plan pipeline as the default. Map useful source lessons to its existing research/content/authority/monitoring work; the optional Tibo path is a coordinated pilot, not a replacement plan. Read `references/tibo-growth-lessons.md` and the complete eleven-row `assets/tibo-growth-lessons.csv`. The optional coordinated entry is `workflows/ai-answer-visibility-loop.md#optional-tibo-path`; it preserves this workflow's existing approval and evidence gates.

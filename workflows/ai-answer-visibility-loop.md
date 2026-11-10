@@ -235,3 +235,16 @@ Stop and mark the lane blocked when:
 ## Done condition
 
 The workspace contains validated product truth, a versioned ten-question panel, raw provider-specific answer runs, deterministic separated metrics, raw public social captures, a ranked research-only opportunity file, and an approval queue with no externally executed action. Findings state sample sizes and limitations. Every proposed page or draft maps to a real observed gap and preserves human approval.
+
+## Optional Tibo path
+
+Use this path only when the user asks for Tibo's coordinated growth loop. The normal workflows remain the default. Read `references/tibo-growth-lessons.md` and copy `assets/tibo-growth-lessons.csv`; all eleven lessons are mapped, but select only the rows supported for this project.
+
+1. Freeze one product, audience, literal buyer-question panel and dated baseline. Keep provider observations separate.
+2. Route dated community questions and niche ideas to `workflows/research-and-ideation.md` (T01/T03/T04). Reject unsupported demand and reuse adequate existing pages.
+3. Route one owned answer, material refresh or genuinely useful free-tool brief to `workflows/content-production.md` (T03/T05/T06/T08). Retain article QA and the publication gate.
+4. Route suitable editorial opportunities, verified placements, voluntary reviews and disclosed affiliate proposals to `workflows/authority-and-links.md` (T02/T07/T10/T11). DRAFT only; no fake reviews, top-reply manipulation or guaranteed ranking placement.
+5. Record the exact pilot contract in `research/<date>_tibo-pilot.json`. Require exact approval before any external action, paid call, live change or new schedule.
+6. Route the stable provider panel and same-period search/product outcomes to `workflows/monitoring.md` (T06/T09/T11). Keep mentions, citations, referrals, activation and net contribution separate; close as adopt/revise/reject/inconclusive before any expansion.
+
+No purchase of Bazzly or Outrank, daily article quota, weekly backlink quota, monthly automation, additional worker fleet or automatic deployment is implied.
