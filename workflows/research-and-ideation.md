@@ -88,3 +88,7 @@ outputs:
 - `research/<date>_tiny-loop-opportunity-map.csv` — optional evidence and safety screen for one avoided-loop wedge.
 
 **Done when.** At least one niche/keyword cluster has passed the full gauntlet (or all are correctly rejected), the keyword map CSV exists, and every validated keyword has a home in the sitemap plan with an intent-matched format chosen. Any cluster advanced to production also has distinct page roles and contextual-link rows without thin depth inflation. A tiny-loop input also has an explicit approval boundary and independent demand evidence before it enters the build backlog. Hand the sitemap plan + keyword map to `content-production.md`; hand any "needs authority first" keywords to `authority-and-links.md`.
+
+## Tibo source cross-check (optional)
+
+T03/T04: retain dated buyer-question evidence, validate one audience and inspect existing pages before proposing a new niche or URL. Read `references/tibo-growth-lessons.md` and the complete eleven-row `assets/tibo-growth-lessons.csv`. The optional coordinated entry is `workflows/ai-answer-visibility-loop.md#optional-tibo-path`; it preserves this workflow's existing approval and evidence gates.

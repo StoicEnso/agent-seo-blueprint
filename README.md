@@ -26,7 +26,7 @@ Think of it as two planes that reference each other:
 - [Highlights](#highlights)
 - [How it works](#how-it-works)
 - [Repository layout](#repository-layout)
-- [The knowledge layer](#the-knowledge-layer-66-playbooks)
+- [The knowledge layer](#the-knowledge-layer-67-playbooks)
 - [The workflows](#the-workflows-11-runbooks)
 - [Data integrations](#data-integrations)
 - [ICP persona subagents](#icp-persona-subagents)
@@ -46,7 +46,7 @@ Think of it as two planes that reference each other:
 - **Searchable course brain** — `search_course.py "<topic>"` ranks all 62 lessons (titles, intent aliases, takeaways,
   summaries) and returns the matching **distilled playbooks** to read. Natural phrasing works: *"niche to build a
   startup"*, *"latent semantic keywords"*, *"keyword gap analysis"*.
-- **66 playbooks**: 36 original course distillations plus 30 operational additions for article QA, schema/E-E-A-T,
+- **67 playbooks**: 36 original course distillations plus 31 operational additions for article QA, schema/E-E-A-T,
   programmatic patterns, authority acquisition, statistics-page link earning, technical maintenance, GSC opportunity mining, Google-only AI visibility,
   cross-platform citation evidence, mechanic-first experiments, topic architecture, evidence-led hosted publishing and press releases,
   government supplier registry screening, deterministic planning, SERP-regime grading, and adversarial rollout design;
@@ -90,7 +90,7 @@ SKILL.md                       # intent router + how-to-use (the entry point)
 DESIGN.md                      # architecture & design spec
 README.md                      # this file
 references/
-  playbooks/                   # 36 course distillations + 30 operational additions
+  playbooks/                   # 36 course distillations + 31 operational additions
     research/        (11)       # keyword research, intent, metrics, winnability, number reconciliation…
     content/         (18)       # programmatic SEO, topic architecture, schema/E-E-A-T, image search, articles…
     authority/       (18)       # editorial intent, statistics pages, supplier registries, hosted publishing, press releases, directories, Wikipedia, affiliate, outreach…
@@ -131,7 +131,7 @@ _source/                       # PRIVATE, gitignored — paid-course transcripts
 
 ---
 
-## The knowledge layer (66 playbooks)
+## The knowledge layer (67 playbooks)
 
 Each playbook is original wording with a consistent shape: **What it is · When to use · Method · Decision criteria /
 heuristics · Example · Pitfalls · Related**. Frontmatter tags the `source_lessons` and any `tools` it uses.
@@ -186,6 +186,12 @@ Each runbook has frontmatter (`goal`, `playbooks`, `scripts`, `integrations`, `o
 | **full-funnel-rollout** | extend an existing plan into gated BOFU→MOFU→TOFU delivery waves | rollout plan, funnel map, entry/exit/kill gates |
 
 ---
+
+## Normal and optional Tibo paths
+
+The normal research -> content -> authority -> monitoring plan stays the default. For the complete eleven-lesson source review, read `references/tibo-growth-lessons.md` and use `assets/tibo-growth-lessons.csv`. Each row reuses an existing workflow and playbook; no vendor subscription is required.
+
+For an explicitly requested coordinated Tibo pilot, use `workflows/ai-answer-visibility-loop.md#optional-tibo-path`. It returns to the same normal workflows, holds external actions for exact approval, avoids review/engagement manipulation and measures provider observations separately from product outcomes. This adds no new workflow count, scheduler or installed integration.
 
 ## Data integrations
 
